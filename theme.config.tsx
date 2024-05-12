@@ -7,11 +7,11 @@ const config: DocsThemeConfig = {
   //   link: 'https://github.com/shuding/nextra-docs-template',
   // },
   chat: {
-    link: 'https://discord.com/channels/456889434672201729/1233146182835114035',
+    link: 'https://discord.gg/supergiant',
   },
   // docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
   footer: {
-    text: "Hades 2 - The Crossroads",
+    component: null,
   },
   editLink: {
     component: null,
