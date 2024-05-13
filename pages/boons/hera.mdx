@@ -1,3 +1,4 @@
+import { Boon } from "@/components/Boon";
 import { TextHighlight } from "@/components/TextHighlight";
 
 import FuneralPyre from "@/components/duos/FuneralPyre.mdx";
@@ -13,45 +14,66 @@ import QueensRansom from "@/components/duos/QueensRansom.mdx";
 > The revered Queen of Olympus. She has more in common with us than one may first expect.\
 > She ensures some level of order on Olympus is maintained, but there is only so much she can do. You wonder if you can help her.
 
-**Hitch** _(Curse):_ Afflicted foes take **30%** of damage dealt to other afflicted foes. Lasts **8 Sec.**
+<Boon className='mt-4'>
+  **Hitch** _(Curse):_ Afflicted foes take **30%** of damage dealt to other
+  afflicted foes. Lasts **8 Sec.**
+</Boon>
 
 ## Core
 
 ### Sworn Strike (Attack)
 
+<Boon>
 Your **Attacks** deal more damage and inflict **Hitch**.
 
 - Attack Damage: **+50%**
 
+</Boon>
+
 ### Sworn Flourish (Special)
 
+<Boon>
 Your **Specials** deal more damage and inflict **Hitch**.
 
 - Special Damage: **+60%**
 
+</Boon>
+
 ### Engagement Ring (Cast)
 
+<Boon>
 Your **Casts** last **200%** longer and deal damage to _every_ foe that joins the **Encounter**.
 
 - On-Spawn Damage: **70**
 
+</Boon>
+
 ### Nexus Sprint (Sprint)
 
+<Boon>
 Your **Sprint** inflicts **Hitch** on nearby foes, which spreads to other foes near _them_.
 
 - Additional Foes Hitched: **+1**
 
+</Boon>
+
 ### Born Gain (Magick)
 
+<Boon>
 Whenever you run out of **Magick**, **Prime** to restore _all_ **Magick** up to the reduced limit.
 
 - Magick Primed: **10**
 
+</Boon>
+
 ### Proper Upbringing (Infusion)
 
+<Boon>
 While you have at least **3 Earth**, _all_ your **Common Boons** gain **Rarity**.
 
 - Improved Rarity: **Rare**
+
+</Boon>
 
 **Required: 1 Earth**
 
@@ -59,39 +81,57 @@ While you have at least **3 Earth**, _all_ your **Common Boons** gain **Rarity**
 
 ### Bridal Glow
 
+<Boon>
 Your **Boons** become **Heroic**, then lose **Rarity** every **5 Encounters**.
 
 - Random Boons Affected: **2**
 
+</Boon>
+
 ### Uncommon Grace
 
+<Boon>
 While none of your other **Boons** are **Common**, deal more damage.
 
 - Common-Less Bonus Damage: **+10%**
 
+</Boon>
+
 ### Nasty Comeback
 
+<Boon>
 After you take damage, inflict your foe with **Hitch** and deal damage in greater measure.
 
 - Damage Reflected: **500%**
 
+</Boon>
+
 ### Keen Intuition
 
+<Boon>
 Whenever you use **Ω Moves** while you have **100% Magick**, they deal more damage.
 
 - Omega Damage: **+30%**
 
+</Boon>
+
 ### Family Trade
 
+<Boon>
 Any **Sacrifice Boons** you choose are stronger. One will be offered as soon as possible.
 
 - Bonus Lv.: **+2**
 
+</Boon>
+
 ### Hereditary Bane
 
+<Boon>
 Your **Hitch** effects deal more damage and last **+5 Sec**.
 
 - Hitch Damage: **+10%**
+
+</Boon>
 
 **Required** _(one of the following):_
 
@@ -102,9 +142,12 @@ Your **Hitch** effects deal more damage and last **+5 Sec**.
 
 ### Dying Wish
 
+<Boon>
 Whenever **Hitch**-afflicted foes are slain, damage all other **Hitch**-afflicted foes.
 
 - Hitch Death Damage: **40**
+
+</Boon>
 
 **Required** _(one of the following):_
 
@@ -117,9 +160,12 @@ Whenever **Hitch**-afflicted foes are slain, damage all other **Hitch**-afflicte
 
 ### <TextHighlight type="legendary">Brave Face</TextHighlight>
 
+<Boon>
 Automatically use **Magick** to resist up to **50%** of any damage.
 
 - Magick Cost per Damage Point: **5**
+
+</Boon>
 
 **Required** _(one of the following):_
 
