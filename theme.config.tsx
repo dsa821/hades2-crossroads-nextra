@@ -3,6 +3,8 @@ import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
   logo: <span>Hades 2 - The Crossroads</span>,
+  primaryHue: 156.2,
+  primarySaturation: 72.6,
   // project: {
   //   link: 'https://github.com/shuding/nextra-docs-template',
   // },
