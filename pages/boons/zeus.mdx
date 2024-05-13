@@ -1,4 +1,5 @@
 import { TextHighlight } from "@/components/TextHighlight.tsx";
+import { Boon } from "@/components/Boon.tsx";
 
 import GloriousDisaster from "@/components/duos/GloriousDisaster.mdx";
 import ApocalypticStorm from "@/components/duos/ApocalypticStorm.mdx";
@@ -19,69 +20,96 @@ import KingsRansom from "@/components/duos/KingsRansom.mdx";
 
 ### Heaven Strike (Attack)
 
-Your **Attacks** inflict **Blitz**.
+<Boon>Your **Attacks** inflict **Blitz**.</Boon>
 
 ### Heaven Flourish (Special)
 
-Your **Specials** inflict **Blitz**.
+<Boon>Your **Specials** inflict **Blitz**.</Boon>
 
 ### Storm Ring (Cast)
 
-Your **Ω Cast** also causes lightning bolts to repeatedly strike **1** foe at a time.
+<Boon>
+  Your **Ω Cast** also causes lightning bolts to repeatedly strike **1** foe at
+  a time.
 
 - Bolt Damage: **30** _(every 0.25 Sec.)_
 
+</Boon>
+
 ### Thunder Sprint (Sprint)
 
+<Boon>
 Your **Sprint** causes nearby foes to be struck by lightning bolts, which use **3 Magick** each.
 
 - Bolt Damage: **20** _(every 0.15 Sec.)_
 
+</Boon>
+
 ### Ionic Gain (Magick)
 
+<Boon>
 Gradually restore **Magick**, but your total amount is reduced by 70%.
 
 - Magick Restoration: **+4** _(every 1 Sec.)_
 
+</Boon>
+
 ### Air Quality (Infusion)
 
+<Boon>
 While you have at least **5 Air**, you can never deal less damage than the limit.
 
 - Min Damage per Hit: **30**
 
+</Boon>
 **Required: 2 Air**
 
 ## Support
 
 ### Divine Vengeance
 
+<Boon>
 After you take damage, your foe is struck by lightning, and again **50%** of the time.
 
 - Bolt Damage: **100** _(up to **2** times)_
 
+</Boon>
+
 ### Lightning Lance
 
+<Boon>
 Hold **Cast** to aim where the binding circle appears. Foes within are struck by lightning.
 
 - Bolt Damage: **50**
 
+</Boon>
+
 ### Static Shock (Prime)
 
+<Boon>
 After you enter a **Location**, **Prime 50 Magick** to make your strikes emit chain-lightning.
 
 - Lightning Damage: **10**
 
+</Boon>
+
 ### Spirit Surge
 
+<Boon>
 While you have no more than **10 Magick**, _all_ foes are occasionally struck by lightning.
 
 - Bolt Damage: **60** _(every 5 Sec.)_
 
+</Boon>
+
 ### Double Strike
 
+<Boon>
 Your lightning bolt effects may strike **1** more time.
 
 - Bonus Strike Chance: **+5%**
+
+</Boon>
 
 **Required** _(one of the following):_
 
@@ -95,9 +123,12 @@ Your lightning bolt effects may strike **1** more time.
 
 ### Toasting Fork
 
+<Boon>
 Your **Blitz** effects deal damage even if they expire without being activated.
 
 - Blitz Expiration Damage: **75%**
+
+</Boon>
 
 **Required** _(one of the following):_
 
@@ -106,9 +137,12 @@ Your **Blitz** effects deal damage even if they expire without being activated.
 
 ### Electric Overload
 
+<Boon>
 Whenever your Blitz effects activate, a bolt of chain-lightning fires from the foe.
 
 - Lightning Damage: **10**
+
+</Boon>
 
 **Required** _(one of the following):_
 
@@ -119,9 +153,12 @@ Whenever your Blitz effects activate, a bolt of chain-lightning fires from the f
 
 ### <TextHighlight type="legendary">Shocking Loss</TextHighlight>
 
+<Boon>
 Most foes may be instantly destroyed as soon as they enter the **Encounter**.
 
 - Instant Destruction Chance: **7%**
+
+</Boon>
 
 **Required** _(one of the following):_
 
@@ -145,28 +182,42 @@ Most foes may be instantly destroyed as soon as they enter the **Encounter**.
 
 ### <TextHighlight type="duo">Glorious Disaster (Apollo)</TextHighlight>
 
-<GloriousDisaster />
+<Boon>
+  <GloriousDisaster />
+</Boon>
 
 ### <TextHighlight type="duo">Apocalyptic Storm (Demeter)</TextHighlight>
 
-<ApocalypticStorm />
+<Boon>
+  <ApocalypticStorm />
+</Boon>
 
 ### <TextHighlight type="duo">Thermal Dynamics (Hestia)</TextHighlight>
 
-<ThermalDynamics />
+<Boon>
+	<ThermalDynamics />
+</Boon>
 
 ### <TextHighlight type="duo">Killer Current (Poseidon)</TextHighlight>
 
-<KillerCurrent />
+<Boon>
+	<KillerCurrent />
+</Boon>
 
 ### <TextHighlight type="duo">Master Conductor (Hephaestus)</TextHighlight>
 
-<MasterConductor />
+<Boon>
+	<MasterConductor />
+</Boon>
 
 ### <TextHighlight type="duo">Romantic Spark (Aphrodite)</TextHighlight>
 
-<RomanticSpark />
+<Boon>
+	<RomanticSpark />
+</Boon>
 
 ### <TextHighlight type="duo">King's Ransom (Hera)</TextHighlight>
 
-<KingsRansom />
+<Boon>
+	<KingsRansom />
+</Boon>

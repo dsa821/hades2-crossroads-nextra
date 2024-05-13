@@ -1,13 +1,12 @@
 import { FC } from "react";
+import { Rarity } from "models/types";
 
 type TextHighlightProps = {
   type: Rarity;
 };
 
-type Rarity = "common" | "rare" | "epic" | "heroic" | "legendary" | "duo";
-
 function getClassName(type: Rarity) {
-  switch(type) {
+  switch (type) {
     case "rare":
       return "text-blue-500";
     case "epic":
