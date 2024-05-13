@@ -1,15 +1,16 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
-  "contact": {
-    "title": "Contact ↗",
+  "index": "Home",
+  "weapons": "Nocturnal Arms",
+  "supergiant": {
+    "title": "Supergiant",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://www.supergiantgames.com/games/hades-ii/",
+    "newWindow": true
+  },
+  "steam": {
+    "title": "Steam",
+    "type": "page",
+    "href": "https://store.steampowered.com/app/1145350/Hades_II/",
     "newWindow": true
   }
 }
