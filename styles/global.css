@@ -6,3 +6,7 @@ h5,
 h6 {
   font-family: var(--font-header);
 }
+
+ul {
+  margin-top: 0 !important;
+}

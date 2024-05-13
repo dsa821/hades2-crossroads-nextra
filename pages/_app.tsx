@@ -1,5 +1,5 @@
 import "../styles/global.css";
-import { Anybody, Raleway } from "next/font/google";
+import { Anybody, Inter } from "next/font/google";
 
 // If loading a variable font, you don't need to specify the font weight
 const headerFont = Anybody({
@@ -7,7 +7,7 @@ const headerFont = Anybody({
   variable: "--font-header",
   subsets: ["latin"],
 });
-const textFont = Raleway({ display: "swap", subsets: ["latin"] });
+const textFont = Inter({ display: "swap", subsets: ["latin"] });
 
 export default function MyApp({ Component, pageProps }) {
   return (
