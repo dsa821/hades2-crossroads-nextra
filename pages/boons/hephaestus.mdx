@@ -1,0 +1,204 @@
+import { Boon, TextHighlight } from "@/components";
+
+import RoomTemperature from "@/components/duos/RoomTemperature.mdx";
+import ChainReaction from "@/components/duos/ChainReaction.mdx";
+import SpitefulStrength from "@/components/duos/SpitefulStrength.mdx";
+import SoftCaress from "@/components/duos/SoftCaress.mdx";
+import StellarSlam from "@/components/duos/StellarSlam.mdx";
+import SeismicHammer from "@/components/duos/SeismicHammer.mdx";
+import MasterConductor from "@/components/duos/MasterConductor.mdx";
+
+# Hephaestus
+
+> You do not know what to make of this one. He rejects our craft, believes only in what he can grasp with his thick hands.\
+> But he is a recluse in his own realm. In that you feel a connection.
+
+<Boon className='mt-4'>
+  **Vent** _(Curse):_ After **5 Sec.**, afflicted foes take a burst of damage. Timer resets if re-applied.
+</Boon>
+
+## Core
+
+### Volcanic Strike (Attack)
+
+<Boon>
+Your **Attacks** occasionally create a blast that deals **200** damage in the area.
+
+- Blast Recharge Time: **12 Sec.**
+
+</Boon>
+
+### Volcanic Flourish (Special)
+
+<Boon>
+Your **Specials** occasionally create a blast that deals **400** damage in the area.
+
+- Blast Recharge Time: **+20 Sec.**
+
+</Boon>
+
+### Anvil Ring (Cast)
+
+<Boon>
+Your **Casts** deal damage **3** times in succession, but in a smaller area.
+
+- Cast Damage: **50** _(every 1 Sec.)_
+
+</Boon>
+
+### Smithy Sprint (Sprint)
+
+<Boon>
+After you **Sprint** for **1 Sec.**, use **10 Magick** to create a blast that deals damage to nearby foes.
+
+- Area Damage: **200**
+
+</Boon>
+
+### Fixed Gain (Magick)
+
+<Boon>
+You take **-10%** damage, and restore some **Magick** whenever you take damage.
+
+- Magick Restored from Damage: **50**
+
+</Boon>
+
+### Martial Art (Infusion)
+
+<Boon>
+Your **Attack** and **Special** deal more damage for each **Earth** you have.
+
+- Damage per Earth Boon: **+5%**
+
+</Boon>
+**Required: 1 Earth**
+
+## Support
+
+### Molten Touch
+
+<Boon>
+Your **Attacks** and **Specials** deal bonus damage to **Armor**.
+
+- Damage vs. Armor: **+20%**
+
+</Boon>
+
+### Trusty Shield
+
+<Boon>
+After you enter a **Location**, **Prime 30 Magick** to gain **Armor** until the next **Location**.
+
+- Starting Armor: **+10**
+
+</Boon>
+
+### Tough Trade
+
+<Boon>
+If you take damage during your **Attacks** or **Specials**, they are stronger if they hit.
+
+- Bonus Weapon Damage: **+100%**
+
+</Boon>
+
+### Mint Condition
+
+<Boon>
+At the start of each **Encounter**, you are briefly **Impervious**.
+
+- Impervious Duration: **8 Sec.**
+
+</Boon>
+
+### Heavy Metal
+
+<Boon>
+Gain some **Armor**. Foes' attacks cannot knock you away.
+
+- Armor Gained: **+50**
+
+</Boon>
+
+### Uncanny Fortitude
+
+<Boon>
+Gain bonus **Max Life** based on your **Magick** limit.
+
+- Max Life from Magick: **+20%**
+
+</Boon>
+
+### Furnace Blast
+
+<Boon>
+Your blast effects from **Hephaestus** also inflict **Vent** on foes.
+
+- Vent Damage: **300**
+
+</Boon>
+
+**Required** _(one of the following)_:
+
+- Volcanic Strike
+- Volcanic Flourish
+- Smithy Sprint
+
+## <TextHighlight type="legendary">Legendary</TextHighlight>
+
+### <TextHighlight type="legendary">Fine Tuning</TextHighlight>
+
+<Boon>
+Your **Aspect** of the **Nocturnal Arms** is even stronger.
+
+- Bonus Aspect Ranks: **+1**
+
+</Boon>
+
+**Required** _(one of the following):_
+
+- Volcanic Strike
+- Volcanic Flourish
+
+**Required** _(one of the following):_
+
+- Heavy Metal
+- Trusty Shield
+- Mint Condition
+
+**Required** _(one of the following):_
+
+- Tough Trade
+- Molten Touch
+- Furnace Blast
+
+## <TextHighlight type="duo">Duos</TextHighlight>
+
+### <TextHighlight type="duo">Room Temperature (Demeter)</TextHighlight>
+
+<RoomTemperature />
+
+### <TextHighlight type="duo">Chain Reaction (Hestia)</TextHighlight>
+
+<ChainReaction />
+
+### <TextHighlight type="duo">Spiteful Strength (Hera)</TextHighlight>
+
+<SpitefulStrength />
+
+### <TextHighlight type="duo">Soft Caress (Aphrodite)</TextHighlight>
+
+<SoftCaress />
+
+### <TextHighlight type="duo">Stellar Slam (Apollo)</TextHighlight>
+
+<StellarSlam />
+
+### <TextHighlight type="duo">Seismic Hammer (Poseidon)</TextHighlight>
+
+<SeismicHammer />
+
+### <TextHighlight type="duo">Master Conductor (Zeus)</TextHighlight>
+
+<MasterConductor />
