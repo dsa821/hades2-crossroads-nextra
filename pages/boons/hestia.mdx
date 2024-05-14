@@ -1,0 +1,224 @@
+import { Boon, TextHighlight } from "@/components";
+
+import FuneralPyre from "@/components/duos/FuneralPyre.mdx";
+import PhoenixSkin from "@/components/duos/PhoenixSkin.mdx";
+import FreezerBurn from "@/components/duos/FreezerBurn.mdx";
+import ChainReaction from "@/components/duos/ChainReaction.mdx";
+import ThermalDynamics from "@/components/duos/ThermalDynamics.mdx";
+import BurningDesire from "@/components/duos/BurningDesire.mdx";
+import ScaldingVapor from "@/components/duos/ScaldingVapor.mdx";
+
+# Hestia
+
+> The goddess of the hearth is very wise, inasmuch as she altogether avoids most matters of familial politics. But there are some matters in which even she must become involved.\
+> She likes you, and you like her. She does not stand on ceremony. You could learn a thing or two of that.
+
+<Boon className='mt-4'>
+  **Scorch** _(Curse):_ Afflicted foes take **40** damage accrued from this every **1 Sec.**
+</Boon>
+
+## Core
+
+### Flame Strike (Attack)
+
+<Boon>
+Your **Attacks** inflict **Scorch**.
+
+- Scorch Damage: **20**
+
+</Boon>
+
+### Flame Flourish (Special)
+
+<Boon>
+Your **Specials** inflict **Scorch**.
+
+- Scorch Damage: **15**
+
+</Boon>
+
+### Smolder Ring (Cast)
+
+<Boon>
+Your **Casts** repeatedly inflict **Scorch** on foes.
+
+- Scorch Damage: **30** _(every 1 Sec.)_
+
+</Boon>
+
+### Soot Sprint (Sprint)
+
+<Boon>
+Your **Sprint** destroys most ranged shots near you, and inflicts **Scorch** on foes that fired.
+
+- Scorch Damage per Projectile: **2**
+
+</Boon>
+
+### Hearth Gain (Magick)
+
+<Boon>
+Rapidly restore **Magick**, but you have **-20% Max Life**
+
+- Magick Restoration: **7** _(every 1 Sec.)_
+
+</Boon>
+
+### Slow Cooker (Infusion)
+
+<Boon>
+Your **Attacks** and **Specials** gain **Power** for each **Fire** you have.
+
+- Power per Fire Boon: **+2**
+
+</Boon>
+
+**Required: 1 Fire**
+
+## Support
+
+### Glowing Coal
+
+<Boon>
+Hold **Cast** to aim a fiery projectile that explodes on impact. The binding circle forms there.
+
+- Blast Damage: **50**
+
+</Boon>
+
+### Controlled Burn
+
+<Boon>
+Your **Ω Special** also launches a fiery projectile, but uses **+10 Magick**
+
+- Blast Damage: **80**
+
+</Boon>
+
+### Burnt Offering
+
+<Boon>
+Gain **Max Life** and **Max Magick**, but give up **1 Boon** selected by **Hestia**.
+
+- Max Life & Magick: **+50**
+
+</Boon>
+
+### Flammable Coating
+
+<Boon>
+Your **Scorch** effects deal bonus damage to **Armor**.
+
+- Scorch Damage vs. Armor: **+100%**
+
+</Boon>
+
+**Required** _(one of the following):_
+
+- Flame Strike
+- Flame Flourish
+- Smolder Ring
+- Spontaneous Combustion
+
+### Fire Extinguisher
+
+<Boon>
+Foes with at least **300 Scorch** take a burst of damage that consumes the effect.
+
+- Damage from Scorch: **50%**
+
+</Boon>
+
+**Required** _(one of the following):_
+
+- Flame Strike
+- Flame Flourish
+- Smolder Ring
+- Spontaneous Combustion
+
+### Natural Gas
+
+<Boon>
+Whenever **Scorch**-afflicted foes are slain, they damage nearby foes.
+
+- Blast Damage: **60**
+
+</Boon>
+
+**Required** _(one of the following):_
+
+- Flame Strike
+- Flame Flourish
+- Smolder Ring
+- Spontaneous Combustion
+
+### Spontaneous Combustion
+
+<Boon>
+Your **Ω Special** inflicts bonus **Scorch** if foes are unafflicted.
+
+- Scorch Damage: **60**
+
+</Boon>
+
+**Required**:
+
+- Flame Flourish
+
+## <TextHighlight type="legendary">Legendary</TextHighlight>
+
+### <TextHighlight type="legendary">Pyro Technique</TextHighlight>
+
+<Boon>
+Your **Scorch** effects deal damage faster.
+
+- Scorch Damage Rate: **+100%**
+
+</Boon>
+
+**Required** _(one of the following):_
+
+- Flame Strike
+- Flame Flourish
+- Smolder Ring
+- Spontaneous Combustion
+
+**Required** _(one of the following):_
+
+- Natural Gas
+- Flammable Coating
+
+**Required** _(one of the following):_
+
+- Glowing Coal
+- Controlled Burn
+
+## <TextHighlight type="duo">Duos</TextHighlight>
+
+### <TextHighlight type="duo">Funeral Pyre (Hera)</TextHighlight>
+
+<FuneralPyre />
+
+### <TextHighlight type="duo">Phoenix Skin (Apollo)</TextHighlight>
+
+<PhoenixSkin />
+
+### <TextHighlight type="duo">Freezer Burn (Demeter)</TextHighlight>
+
+<FreezerBurn />
+
+### <TextHighlight type="duo">Chain Reaction (Hephaestus)</TextHighlight>
+
+<ChainReaction />
+
+### <TextHighlight type="duo">Thermal Dynamics (Zeus)</TextHighlight>
+
+<ThermalDynamics />
+
+### <TextHighlight type="duo">Burning Desire (Aphrodite)</TextHighlight>
+
+<BurningDesire />
+
+### <TextHighlight type="duo">Scalding Vapor (Poseidon)</TextHighlight>
+
+<ScaldingVapor />
