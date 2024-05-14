@@ -1,0 +1,208 @@
+import { Boon, TextHighlight } from "@/components";
+import {
+  TorrentialDownpour,
+  RoomTemperature,
+  FreezerBurn,
+  ApocalypticStorm,
+  NaturalSelection,
+  CherishedHeirloom,
+  HeartyAppetite,
+} from "@/components/duos";
+
+# Demeter
+
+> Your mother once fled from her, such is her doting and particular nature, our great goddess of seasons.\
+> Her long life has fueled in her a particular king of wrath that is feared even on her mountain. It is fortunate she likes you.
+
+<Boon className='mt-4'>
+  **Freeze** _(Curse):_ Afflicted foes are stopped for **2 Sec.** Can be
+  re-applied after **10 Sec.** Lasts **8 Sec.**
+</Boon>
+
+## Core
+
+### Ice Strike (Attack)
+
+<Boon>
+Your **Attacks** deal more damage and inflict **Freeze**.
+
+- Attack Damage: **+30%**
+
+</Boon>
+
+### Ice Flourish (Special)
+
+<Boon>
+Your **Specials** deal more damage and inflict **Freeze**.
+
+- Special Damage: **+40%**
+
+</Boon>
+
+### Arctic Ring (Cast)
+
+<Boon>
+Your **Casts** repeatedly deal damage in the area and inflict **Freeze**.
+
+- Cast Damage: **10** _(every 0.5 Sec.)_
+
+</Boon>
+
+### Frigid Sprint (Sprint)
+
+<Boon>
+Your **Sprint** forms a **Cyclone** around you that lingers after you stop.
+
+- Cyclone Damage: **4** _(every 0.25 Sec.)_
+
+**Cyclone**: A vortex that makes foes **20%** slower and their ranged shots **60%** slower. Lasts **3 Sec.**
+
+</Boon>
+
+### Tranquil Gain (Magick)
+
+<Boon>
+After remaining inactive for **1 Sec.**, rapidly restore **Magick** until you act.
+
+- Magick Restoration: **+25** _(every 1 Sec.)_
+
+</Boon>
+
+### Coarse Grit (Infusion)
+
+<Boon>
+While you have at least **6 Earth**, you cannot take more damage per hit than the limit.
+
+- Max Damage per Hit: **15**
+
+</Boon>
+
+**Required: 1 Earth**
+
+## Support
+
+### Rare Crop
+
+<Boon>
+Your **Boons** become **Common**, then gain **Rarity** every **3 Encounters**.
+
+- Random Boons Affected: **1**
+
+</Boon>
+
+### Local Climate
+
+<Boon>
+Your **Ω Cast** deals bonus damage and follows you, even as you start to **Channel** it.
+
+- Cast Damage: **+20%**
+
+</Boon>
+
+### Gale Force
+
+<Boon>
+Your **Casts** also create a **Cyclone** at the binding circle.
+
+- Cyclone Damage: **4** _(every 0.25 Sec.)_
+
+**Cyclone**: A vortex that makes foes **20%** slower and their ranged shots **60%** slower. Lasts **3 Sec.**
+
+</Boon>
+
+### Plentiful Forage
+
+<Boon>
+Whenever you gather plants, seeds, or mushrooms, gain **Max Life**. Receive **1 Mystery Seed** now.
+
+- Max Life from Gathering: **5**
+
+</Boon>
+
+### Winter Coat (Prime)
+
+<Boon>
+After you enter a **Location**, **Prime** a barrier that absorbs **1** instance of damage.
+
+- Magick Primed: **20**
+
+</Boon>
+
+### Weed Killer
+
+<Boon>
+Your **Ω Attack** deals more damage, but uses **+10 Magick**.
+
+- Omega Attack Damage: **+50%**
+
+</Boon>
+
+### Cold Storage
+
+<Boon>
+Your **Freeze** effects last longer.
+
+- Freeze Duration: **+ 2 Sec.**
+
+</Boon>
+
+**Required** _(one of the following):_
+
+- Ice Strike
+- Ice Flourish
+
+## <TextHighlight type="legendary">Legendary</TextHighlight>
+
+### <TextHighlight type="legendary">Winter Harvest</TextHighlight>
+
+<Boon>
+**Freeze**-afflicted foes shatter at **10% Life**, dealing damage in the area.
+
+- Shatter Area Damage: **100**
+
+</Boon>
+
+**Required** _(one of the following):_
+
+- Ice Strike
+- Ice Flourish
+
+**Required** _(one of the following):_
+
+- Plentiful Forage
+- Winter Coat
+
+**Required** _(one of the following):_
+
+- Weed Killer
+- Cold Storage
+
+## <TextHighlight type="duo">Duos</TextHighlight>
+
+### <TextHighlight type="duo">Torrential Downpour (Apollo)</TextHighlight>
+
+<TorrentialDownpour />
+
+### <TextHighlight type="duo">Room Temperature (Hephaestus)</TextHighlight>
+
+<RoomTemperature />
+
+### <TextHighlight type="duo">Freezer Burn (Hestia)</TextHighlight>
+
+<FreezerBurn />
+
+### <TextHighlight type="duo">Apocalyptic Storm (Zeus)</TextHighlight>
+
+<ApocalypticStorm />
+
+### <TextHighlight type="duo">Natural Selection (Poseidon)</TextHighlight>
+
+<NaturalSelection />
+
+### <TextHighlight type="duo">Cherished Heirloom (Hera)</TextHighlight>
+
+<CherishedHeirloom />
+
+### <TextHighlight type="duo">Hearty Appetite (Aphrodite)</TextHighlight>
+
+<HeartyAppetite />
