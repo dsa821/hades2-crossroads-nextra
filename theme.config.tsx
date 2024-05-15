@@ -4,6 +4,12 @@ import { useRouter } from "next/router";
 
 const config: DocsThemeConfig = {
   logo: <span>Hades 2 - The Crossroads</span>,
+  head: (
+    <>
+      <meta property='og:title' content='Hades 2 - The Crossroads' />
+      <meta property='og:description' content='A general resource for Hades 2.' />
+    </>
+  ),
   primaryHue: 156.2,
   primarySaturation: 72.6,
   // project: {
