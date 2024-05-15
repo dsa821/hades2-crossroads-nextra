@@ -7,7 +7,10 @@ const config: DocsThemeConfig = {
   head: (
     <>
       <meta property='og:title' content='Hades 2 - The Crossroads' />
-      <meta property='og:description' content='A general resource for Hades 2.' />
+      <meta
+        property='og:description'
+        content='A general resource for Hades 2.'
+      />
     </>
   ),
   primaryHue: 156.2,
@@ -32,9 +35,11 @@ const config: DocsThemeConfig = {
 
   useNextSeoProps() {
     const { asPath } = useRouter();
+    const seoProps = { titleTemplate: "Hades 2: The Crossroads " };
     if (asPath !== "/") {
-      return { titleTemplate: "%s - Hades 2: The Crossroads" };
+      seoProps.titleTemplate = "%s - Hades 2: The Crossroads";
     }
+    return seoProps;
   },
 };
 
