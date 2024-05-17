@@ -25,7 +25,7 @@ export const Arcana: FC<ArcanaProps> = (props) => {
           </div>
         </div>
 
-        <div className='font-bold text-xl text-white bg-emerald-500 rounded-full px-2 py-0.5'>
+        <div className='font-bold text-lg text-white bg-emerald-500 rounded-full px-2.5 py-0.5'>
           {props.grasp}
         </div>
       </div>

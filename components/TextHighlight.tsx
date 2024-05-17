@@ -21,5 +21,7 @@ function getClassName(type: Rarity) {
 }
 
 export const TextHighlight: FC<TextHighlightProps> = ({ type, children }) => {
-  return <span className={getClassName(type)}>{children}</span>;
+  return (
+    <span className={`drop-shadow-lg ${getClassName(type)}`}>{children}</span>
+  );
 };
