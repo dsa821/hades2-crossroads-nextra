@@ -1,10 +1,10 @@
 {
-  "index": "Home",
+  "index": { "title": "Home", "theme": { "toc": false } },
   "weapons": "Nocturnal Arms",
   "arcana": "Altar of Ashes",
   "keepsakes": "Keepsakes",
   "boons": "Boons",
-  
+
   "supergiant": {
     "title": "Supergiant",
     "type": "page",
