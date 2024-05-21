@@ -4,7 +4,13 @@ description: Boons for Hestia in Hades 2.
 ---
 
 import { Boon, TextHighlight } from "@/components";
-import { IconFire } from "@/components/icons";
+import {
+  IconFire,
+  IconLife,
+  IconMagick,
+  IconMaxLife,
+  IconMaxMagick,
+} from "@/components/icons";
 
 import FuneralPyre from "@/components/duos/FuneralPyre.mdx";
 import PhoenixSkin from "@/components/duos/PhoenixSkin.mdx";
@@ -68,7 +74,7 @@ Your **Sprint** destroys most ranged shots near you, and inflicts **Scorch** on 
 ### Hearth Gain (Magick) [#hearth-gain]
 
 <Boon element="fire">
-Rapidly restore **Magick**, but you have **-20% Max Life**
+Rapidly restore <IconMagick />, but you have **-20%** <IconMaxLife />.
 
 - Magick Restoration: **7** _(every 1 Sec.)_
 
@@ -99,7 +105,7 @@ Hold **Cast** to aim a fiery projectile that explodes on impact. The binding cir
 ### Controlled Burn
 
 <Boon element="fire">
-Your **Ω Special** also launches a fiery projectile, but uses **+10 Magick**
+Your **Ω Special** also launches a fiery projectile, but uses **+10** <IconMagick />
 
 - Blast Damage: **80**
 
@@ -108,7 +114,7 @@ Your **Ω Special** also launches a fiery projectile, but uses **+10 Magick**
 ### Burnt Offering
 
 <Boon element="fire">
-Gain **Max Life** and **Max Magick**, but give up **1 Boon** selected by **Hestia**.
+Gain <IconMaxLife /> and <IconMaxMagick /> but give up **1 Boon** selected by **Hestia**.
 
 - Max Life & Magick: **+50**
 
@@ -125,10 +131,10 @@ Your **Scorch** effects deal bonus damage to **Armor**.
 
 **Required** _(one of the following):_
 
-- Flame Strike
-- Flame Flourish
-- Smolder Ring
-- Spontaneous Combustion
+- [Flame Strike](#flame-strike)
+- [Flame Flourish](#flame-flourish)
+- [Smolder Ring](#smolder-ring)
+- [Spontaneous Combustion](#spontaneous-combustion)
 
 ### Fire Extinguisher
 
@@ -141,10 +147,10 @@ Foes with at least **300 Scorch** take a burst of damage that consumes the effec
 
 **Required** _(one of the following):_
 
-- Flame Strike
-- Flame Flourish
-- Smolder Ring
-- Spontaneous Combustion
+- [Flame Strike](#flame-strike)
+- [Flame Flourish](#flame-flourish)
+- [Smolder Ring](#smolder-ring)
+- [Spontaneous Combustion](#spontaneous-combustion)
 
 ### Natural Gas
 
@@ -157,10 +163,10 @@ Whenever **Scorch**-afflicted foes are slain, they damage nearby foes.
 
 **Required** _(one of the following):_
 
-- Flame Strike
-- Flame Flourish
-- Smolder Ring
-- Spontaneous Combustion
+- [Flame Strike](#flame-strike)
+- [Flame Flourish](#flame-flourish)
+- [Smolder Ring](#smolder-ring)
+- [Spontaneous Combustion](#spontaneous-combustion)
 
 ### Spontaneous Combustion
 
@@ -173,7 +179,7 @@ Your **Ω Special** inflicts bonus **Scorch** if foes are unafflicted.
 
 **Required**:
 
-- Flame Flourish
+- [Flame Flourish](#flame-flourish)
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
@@ -188,20 +194,20 @@ Your **Scorch** effects deal damage faster.
 
 **Required** _(one of the following):_
 
-- Flame Strike
-- Flame Flourish
-- Smolder Ring
-- Spontaneous Combustion
+- [Flame Strike](#flame-strike)
+- [Flame Flourish](#flame-flourish)
+- [Smolder Ring](#smolder-ring)
+- [Spontaneous Combustion](#spontaneous-combustion)
 
 **Required** _(one of the following):_
 
-- Natural Gas
-- Flammable Coating
+- [Natural Gas](#natural-gas)
+- [Flammable Coating](#flammable-coating)
 
 **Required** _(one of the following):_
 
-- Glowing Coal
-- Controlled Burn
+- [Glowing Coal](#glowing-coal)
+- [Controlled Burn](#controlled-burn)
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
 

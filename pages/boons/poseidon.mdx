@@ -4,7 +4,14 @@ description: Boons for Poseidon in Hades 2.
 ---
 
 import { Boon, TextHighlight } from "@/components";
-import { IconWater } from "@/components/icons";
+import {
+  IconAshes,
+  IconGold,
+  IconHealing,
+  IconMagick,
+  IconPsyche,
+  IconWater,
+} from "@/components/icons";
 
 import IslandGetaway from "@/components/duos/IslandGetaway.mdx";
 import NaturalSelection from "@/components/duos/NaturalSelection.mdx";
@@ -58,7 +65,7 @@ Your **Ω Cast** immediately detonates, dealing damage and knocking foes away.
 ### Breaker Sprint (Sprint) [#breaker-sprint]
 
 <Boon element="water">
-Your **Sprint** deals damage on impact and knocks foes away, but uses **5 Magick** per hit.
+Your **Sprint** deals damage on impact and knocks foes away, but uses **5** <IconMagick /> per hit.
 
 - Impact Damage: **80**
 
@@ -71,8 +78,8 @@ After you strike foes with your **Weapon**, a **Spirit Bubble** may appear.
 
 - Spirit Bubble Chance: **10%**
 
-**Spirit Bubble**: Restores **20 Magick** when you touch it. Expires when used,
-or after **30 Sec.**
+**Spirit Bubble**: Restores **20** <IconMagick /> when you touch it. Expires
+when used, or after **30 Sec.**
 
 </Boon>
 
@@ -109,7 +116,7 @@ At the start of each **Encounter**, your **Attacks** and **Specials** are strong
 ### Flood Control (Prime) [#flood-control]
 
 <Boon element="water">
-After you enter a **Location**, **Prime 30 Magick** to reduce any damage you would take.
+After you enter a **Location**, **Prime 30** <IconMagick /> to reduce any damage you would take.
 
 - Damage Reduction per Hit: **-2**
 
@@ -118,7 +125,7 @@ After you enter a **Location**, **Prime 30 Magick** to reduce any damage you wou
 ### Sunken Treasure
 
 <Boon element="water">
-Gain **Gold Crowns**, **Healing**, and sometimes **Ashes** and **Psyche**.
+Gain <IconGold />, <IconHealing />, and sometimes <IconAshes /> and <IconPsyche />.
 
 - Gold Received: **+90**
 
@@ -127,7 +134,7 @@ Gain **Gold Crowns**, **Healing**, and sometimes **Ashes** and **Psyche**.
 ### Ocean's Bounty
 
 <Boon element="water">
-Any **Minor Finds** and **Gold Crowns** are worth more.
+Any **Minor Finds** and <IconGold /> are worth more.
 
 - Reward Value: **+50%**
 
@@ -144,8 +151,8 @@ Your splash effects from **Poseidon** also inflict **Slip** on foes.
 
 **Required** _(one of the following):_
 
-- Wave Strike
-- Wave Flourish
+- [Wave Strike](#wave-strike)
+- [Wave Flourish](#wave-flourish)
 
 ### Crashing Wave
 
@@ -158,10 +165,10 @@ Whenever your knock-away effects slam foes into barriers, create a blast in the 
 
 **Required** _(one of the following):_
 
-- Wave Strike
-- Wave Flourish
-- Geyser Ring
-- Breaker Sprint
+- [Wave Strike](#wave-strike)
+- [Wave Flourish](#wave-flourish)
+- [Geyser Ring](#geyser-ring)
+- [Breaker Sprint](#breaker-sprint)
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
@@ -176,13 +183,13 @@ Your splash effects from **Poseidon** are larger and deal bonus damage to **Guar
 
 **Required** _(one of the following):_
 
-- Wave Strike
-- Wave Flourish
+- [Wave Strike](#wave-strike)
+- [Wave Flourish](#wave-flourish)
 
 **Required**:
 
-- Slippery Slope
-- Crashing Wave
+- [Slippery Slope](#slippery-slope)
+- [Crashing Wave](#crashing-wave)
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
 

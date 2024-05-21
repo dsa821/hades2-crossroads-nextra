@@ -4,7 +4,12 @@ description: Boons for Hephaestus in Hades 2.
 ---
 
 import { Boon, TextHighlight } from "@/components";
-import { IconEarth } from "@/components/icons";
+import {
+  IconArmor,
+  IconEarth,
+  IconMagick,
+  IconMaxLife,
+} from "@/components/icons";
 
 import RoomTemperature from "@/components/duos/RoomTemperature.mdx";
 import ChainReaction from "@/components/duos/ChainReaction.mdx";
@@ -57,7 +62,7 @@ Your **Casts** deal damage **3** times in succession, but in a smaller area.
 ### Smithy Sprint (Sprint) [#smithy-sprint]
 
 <Boon element="fire">
-After you **Sprint** for **1 Sec.**, use **10 Magick** to create a blast that deals damage to nearby foes.
+After you **Sprint** for **1 Sec.**, use **10** <IconMagick /> to create a blast that deals damage to nearby foes.
 
 - Area Damage: **200**
 
@@ -66,7 +71,7 @@ After you **Sprint** for **1 Sec.**, use **10 Magick** to create a blast that de
 ### Fixed Gain (Magick) [#fixed-gain]
 
 <Boon element="earth">
-You take **-10%** damage, and restore some **Magick** whenever you take damage.
+You take **-10%** damage, and restore some <IconMagick /> whenever you take damage.
 
 - Magick Restored from Damage: **50**
 
@@ -96,7 +101,7 @@ Your **Attacks** and **Specials** deal bonus damage to **Armor**.
 ### Trusty Shield
 
 <Boon element="earth">
-After you enter a **Location**, **Prime 30 Magick** to gain **Armor** until the next **Location**.
+After you enter a **Location**, **Prime 30** <IconMagick /> to gain <IconArmor /> until the next **Location**.
 
 - Starting Armor: **+10**
 
@@ -123,7 +128,7 @@ At the start of each **Encounter**, you are briefly **Impervious**.
 ### Heavy Metal
 
 <Boon element="earth">
-Gain some **Armor**. Foes' attacks cannot knock you away.
+Gain some <IconArmor />. Foes' attacks cannot knock you away.
 
 - Armor Gained: **+50**
 
@@ -132,7 +137,7 @@ Gain some **Armor**. Foes' attacks cannot knock you away.
 ### Uncanny Fortitude
 
 <Boon element="earth">
-Gain bonus **Max Life** based on your **Magick** limit.
+Gain bonus <IconMaxLife /> based on your <IconMagick /> limit.
 
 - Max Life from Magick: **+20%**
 
@@ -149,9 +154,9 @@ Your blast effects from **Hephaestus** also inflict **Vent** on foes.
 
 **Required** _(one of the following)_:
 
-- Volcanic Strike
-- Volcanic Flourish
-- Smithy Sprint
+- [Volcanic Strike](#volcanic-strike)
+- [Volcanic Flourish](#volcanic-flourish)
+- [Smithy Sprint](#smithy-sprint)
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
@@ -166,20 +171,20 @@ Your **Aspect** of the **Nocturnal Arms** is even stronger.
 
 **Required** _(one of the following):_
 
-- Volcanic Strike
-- Volcanic Flourish
+- [Volcanic Strike](#volcanic-strike)
+- [Volcanic Flourish](#volcanic-flourish)
 
 **Required** _(one of the following):_
 
-- Heavy Metal
-- Trusty Shield
-- Mint Condition
+- [Heavy Metal](#heavy-metal)
+- [Trusty Shield](#trusty-shield)
+- [Mint Condition](#mint-condition)
 
 **Required** _(one of the following):_
 
-- Tough Trade
-- Molten Touch
-- Furnace Blast
+- [Tough Trade](#tough-trade)
+- [Molten Touch](#molten-touch)
+- [Furnace Blast](#furnace-blast)
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
 

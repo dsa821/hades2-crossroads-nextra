@@ -4,7 +4,12 @@ description: Boons for Demeter in Hades 2.
 ---
 
 import { Boon, TextHighlight } from "@/components";
-import { IconEarth } from '@/components/icons';
+import {
+  IconEarth,
+  IconMagick,
+  IconMaxLife,
+  IconMysterySeed,
+} from "@/components/icons";
 
 import TorrentialDownpour from "@/components/duos/TorrentialDownpour.mdx";
 import RoomTemperature from "@/components/duos/RoomTemperature.mdx";
@@ -16,10 +21,12 @@ import HeartyAppetite from "@/components/duos/HeartyAppetite.mdx";
 
 # Demeter
 
-> Your mother once fled from her, such is her doting and particular nature, our great goddess of seasons.\
-> Her long life has fueled in her a particular king of wrath that is feared even on her mountain. It is fortunate she likes you.
+> Your mother once fled from her, such is her doting and particular nature, our
+> great goddess of seasons.\
+> Her long life has fueled in her a particular king of wrath that is feared even
+> on her mountain. It is fortunate she likes you.
 
-<Boon className='mt-4'>
+<Boon className="mt-4">
   **Freeze** _(Curse):_ Afflicted foes are stopped for **2 Sec.** Can be
   re-applied after **10 Sec.** Lasts **8 Sec.**
 </Boon>
@@ -60,14 +67,15 @@ Your **Sprint** forms a **Cyclone** around you that lingers after you stop.
 
 - Cyclone Damage: **4** _(every 0.25 Sec.)_
 
-**Cyclone**: A vortex that makes foes **20%** slower and their ranged shots **60%** slower. Lasts **3 Sec.**
+**Cyclone**: A vortex that makes foes **20%** slower and their ranged shots
+**60%** slower. Lasts **3 Sec.**
 
 </Boon>
 
 ### Tranquil Gain (Magick) [#tranquil-gain]
 
 <Boon element="earth">
-After remaining inactive for **1 Sec.**, rapidly restore **Magick** until you act.
+After remaining inactive for **1 Sec.**, rapidly restore <IconMagick /> until you act.
 
 - Magick Restoration: **+25** _(every 1 Sec.)_
 
@@ -111,14 +119,15 @@ Your **Casts** also create a **Cyclone** at the binding circle.
 
 - Cyclone Damage: **4** _(every 0.25 Sec.)_
 
-**Cyclone**: A vortex that makes foes **20%** slower and their ranged shots **60%** slower. Lasts **3 Sec.**
+**Cyclone**: A vortex that makes foes **20%** slower and their ranged shots
+**60%** slower. Lasts **3 Sec.**
 
 </Boon>
 
 ### Plentiful Forage
 
 <Boon element="earth">
-Whenever you gather plants, seeds, or mushrooms, gain **Max Life**. Receive **1 Mystery Seed** now.
+Whenever you gather plants, seeds, or mushrooms, gain <IconMaxLife />. Receive **1** <IconMysterySeed /> now.
 
 - Max Life from Gathering: **5**
 
@@ -136,7 +145,7 @@ After you enter a **Location**, **Prime** a barrier that absorbs **1** instance 
 ### Weed Killer
 
 <Boon element="earth">
-Your **Ω Attack** deals more damage, but uses **+10 Magick**.
+Your **Ω Attack** deals more damage, but uses **+10** <IconMagick />.
 
 - Omega Attack Damage: **+50%**
 
@@ -153,8 +162,8 @@ Your **Freeze** effects last longer.
 
 **Required** _(one of the following):_
 
-- Ice Strike
-- Ice Flourish
+- [Ice Strike](#ice-strike)
+- [Ice Flourish](#ice-flourish)
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
@@ -169,18 +178,18 @@ Your **Freeze** effects last longer.
 
 **Required** _(one of the following):_
 
-- Ice Strike
-- Ice Flourish
+- [Ice Strike](#ice-strike)
+- [Ice Flourish](#ice-flourish)
 
 **Required** _(one of the following):_
 
-- Plentiful Forage
-- Winter Coat
+- [Plentiful Forage](#plentiful-forage)
+- [Winter Coat](#winter-coat)
 
 **Required** _(one of the following):_
 
-- Weed Killer
-- Cold Storage
+- [Weed Killer](#weed-killer)
+- [Cold Storage](#cold-storage)
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
 
