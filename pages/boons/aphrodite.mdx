@@ -4,6 +4,7 @@ description: Boons for Aphrodite in Hades 2.
 ---
 
 import { Boon, TextHighlight } from "@/components";
+import { IconElement } from "@/components/icons";
 
 import IslandGetaway from "@/components/duos/IslandGetaway.mdx";
 import SoftCaress from "@/components/duos/SoftCaress.mdx";
@@ -16,9 +17,10 @@ import RomanticSpark from "@/components/duos/RomanticSpark.mdx";
 # Aphrodite
 
 > You have much to learn from her, at some point.\
-> She is more than she appears. For instance, she is much older than most of the others on her mountain, yet holds fast to her carefree look and spirit.
+> She is more than she appears. For instance, she is much older than most of the
+> others on her mountain, yet holds fast to her carefree look and spirit.
 
-<Boon className='mt-4'>
+<Boon className="mt-4">
   **Weak** _(Curse):_ Afflicted foes deal at least **10%** less damage. Lasts
   **3 Sec.**
 </Boon>
@@ -27,7 +29,7 @@ import RomanticSpark from "@/components/duos/RomanticSpark.mdx";
 
 ### Flutter Strike (Attack) [#flutter-strike]
 
-<Boon>
+<Boon element="water">
 Your **Attacks** deal more damage to nearby foes.
 
 - Close-Up Damage: **+80%**
@@ -36,7 +38,7 @@ Your **Attacks** deal more damage to nearby foes.
 
 ### Flutter Flourish (Special) [#flutter-flourish]
 
-<Boon>
+<Boon element="water">
 Your **Specials** deal more damage to nearby foes.
 
 - Close-Up Damage: **+100%**
@@ -45,7 +47,7 @@ Your **Specials** deal more damage to nearby foes.
 
 ### Rapture Ring (Cast) [#rapture-ring]
 
-<Boon>
+<Boon element="air">
 Your **Casts** drag foes in and inflict **Weak**.
 
 - Weak Damage Reduction: **+10%**
@@ -54,7 +56,7 @@ Your **Casts** drag foes in and inflict **Weak**.
 
 ### Passion Dash (Dash) [#passion-dash]
 
-<Boon>
+<Boon element="air">
 Your **Dash** blasts foes near where you start and end, and inflicts **Weak**.
 
 - Blast Damage: **20**
@@ -63,7 +65,7 @@ Your **Dash** blasts foes near where you start and end, and inflicts **Weak**.
 
 ### Glamour Gain (Magick) [#glamour-gain]
 
-<Boon>
+<Boon element="air">
 In each **Encounter**, **1** foe is always **Weak**. You gradually restore **Magick** near **Weak** foes.
 
 - Magick Restoration: **6** _(every 1 Sec.)_
@@ -73,7 +75,7 @@ In each **Encounter**, **1** foe is always **Weak**. You gradually restore **Mag
 ### Wispy Wiles (Infusion) [#wispy-wiles]
 
 <Boon>
-While you have at least **4 Air**, you may **Dodge** any damage.
+While you have at least **4** <IconElement element="air" />, you may **Dodge** any damage.
 
 - Dodge Chance: **+15%**
 
@@ -85,7 +87,7 @@ While you have at least **4 Air**, you may **Dodge** any damage.
 
 ### Healthy Rebound
 
-<Boon>
+<Boon element="water">
 Whenever you exit a **Location**, restore **100% Life** if you have not lost too much.
 
 - Min Life Required: **80%**
@@ -94,7 +96,7 @@ Whenever you exit a **Location**, restore **100% Life** if you have not lost too
 
 ### Secret Crush
 
-<Boon>
+<Boon element="air">
 After you enter a **Location**, **Prime 20 Magick** to add **Power** to your **Attack**.
 
 - Attack Power: **+5%**
@@ -103,7 +105,7 @@ After you enter a **Location**, **Prime 20 Magick** to add **Power** to your **A
 
 ### Life Affirmation
 
-<Boon>
+<Boon element="air">
 Any **Max Life** rewards you find have a greater effect.
 
 - Bonus Life Gain: **+40%**
@@ -112,7 +114,7 @@ Any **Max Life** rewards you find have a greater effect.
 
 ### Shameless Attitude
 
-<Boon>
+<Boon element="air">
 While you have at least **80% Life**, you deal more damage.
 
 - High-Life Bonus Damage: **+10%**
@@ -121,18 +123,19 @@ While you have at least **80% Life**, you deal more damage.
 
 ### Heart Breaker
 
-<Boon>
+<Boon element="water">
 Whenever you use **30 Magick**, create a **Heartthrob**.
 
 - Heartthrob Area Damage: **120**
 
-**Heartthrobs**: Explosive projectiles that revolves around you. Expire after **20 Sec.**
+**Heartthrobs**: Explosive projectiles that revolves around you. Expire after
+**20 Sec.**
 
 </Boon>
 
 ### Broken Resolve
 
-<Boon>
+<Boon element="water">
 Your **Weak** effects are more potent.
 
 - Weak Damage Reduction: **+10%**
@@ -147,7 +150,7 @@ Your **Weak** effects are more potent.
 
 ### Sweet Surrender
 
-<Boon>
+<Boon element="water">
 **Weak**-afflicted foes take more damage.
 
 - Damage vs. Weak: **+10%**
@@ -164,7 +167,7 @@ Your **Weak** effects are more potent.
 
 ### <TextHighlight type="legendary">Ecstatic Obsession</TextHighlight>
 
-<Boon>
+<Boon element="air">
 During **Encounters** with multiple foes, **1** foe is always afflicted with **Charm**.
 
 - Foes Required: **3** _(or more)_

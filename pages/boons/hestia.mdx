@@ -4,6 +4,7 @@ description: Boons for Hestia in Hades 2.
 ---
 
 import { Boon, TextHighlight } from "@/components";
+import { IconElement } from "@/components/icons";
 
 import FuneralPyre from "@/components/duos/FuneralPyre.mdx";
 import PhoenixSkin from "@/components/duos/PhoenixSkin.mdx";
@@ -15,10 +16,13 @@ import ScaldingVapor from "@/components/duos/ScaldingVapor.mdx";
 
 # Hestia
 
-> The goddess of the hearth is very wise, inasmuch as she altogether avoids most matters of familial politics. But there are some matters in which even she must become involved.\
-> She likes you, and you like her. She does not stand on ceremony. You could learn a thing or two of that.
+> The goddess of the hearth is very wise, inasmuch as she altogether avoids most
+> matters of familial politics. But there are some matters in which even she
+> must become involved.\
+> She likes you, and you like her. She does not stand on ceremony. You could learn
+> a thing or two of that.
 
-<Boon className='mt-4'>
+<Boon className="mt-4">
   **Scorch** _(Curse):_ Afflicted foes take **40** damage accrued from this
   every **1 Sec.**
 </Boon>
@@ -27,7 +31,7 @@ import ScaldingVapor from "@/components/duos/ScaldingVapor.mdx";
 
 ### Flame Strike (Attack) [#flame-strike]
 
-<Boon>
+<Boon element="fire">
 Your **Attacks** inflict **Scorch**.
 
 - Scorch Damage: **20**
@@ -36,7 +40,7 @@ Your **Attacks** inflict **Scorch**.
 
 ### Flame Flourish (Special) [#flame-flourish]
 
-<Boon>
+<Boon element="fire">
 Your **Specials** inflict **Scorch**.
 
 - Scorch Damage: **15**
@@ -45,7 +49,7 @@ Your **Specials** inflict **Scorch**.
 
 ### Smolder Ring (Cast) [#smolder-ring]
 
-<Boon>
+<Boon element="fire">
 Your **Casts** repeatedly inflict **Scorch** on foes.
 
 - Scorch Damage: **30** _(every 1 Sec.)_
@@ -54,7 +58,7 @@ Your **Casts** repeatedly inflict **Scorch** on foes.
 
 ### Soot Sprint (Sprint) [#soot-sprint]
 
-<Boon>
+<Boon element="fire">
 Your **Sprint** destroys most ranged shots near you, and inflicts **Scorch** on foes that fired.
 
 - Scorch Damage per Projectile: **2**
@@ -63,7 +67,7 @@ Your **Sprint** destroys most ranged shots near you, and inflicts **Scorch** on 
 
 ### Hearth Gain (Magick) [#hearth-gain]
 
-<Boon>
+<Boon element="fire">
 Rapidly restore **Magick**, but you have **-20% Max Life**
 
 - Magick Restoration: **7** _(every 1 Sec.)_
@@ -73,7 +77,7 @@ Rapidly restore **Magick**, but you have **-20% Max Life**
 ### Slow Cooker (Infusion) [#slow-cooker]
 
 <Boon>
-Your **Attacks** and **Specials** gain **Power** for each **Fire** you have.
+Your **Attacks** and **Specials** gain **Power** for each <IconElement element="fire" /> you have.
 
 - Power per Fire Boon: **+2**
 
@@ -85,7 +89,7 @@ Your **Attacks** and **Specials** gain **Power** for each **Fire** you have.
 
 ### Glowing Coal
 
-<Boon>
+<Boon element="fire">
 Hold **Cast** to aim a fiery projectile that explodes on impact. The binding circle forms there.
 
 - Blast Damage: **50**
@@ -94,7 +98,7 @@ Hold **Cast** to aim a fiery projectile that explodes on impact. The binding cir
 
 ### Controlled Burn
 
-<Boon>
+<Boon element="fire">
 Your **Ω Special** also launches a fiery projectile, but uses **+10 Magick**
 
 - Blast Damage: **80**
@@ -103,7 +107,7 @@ Your **Ω Special** also launches a fiery projectile, but uses **+10 Magick**
 
 ### Burnt Offering
 
-<Boon>
+<Boon element="fire">
 Gain **Max Life** and **Max Magick**, but give up **1 Boon** selected by **Hestia**.
 
 - Max Life & Magick: **+50**
@@ -112,7 +116,7 @@ Gain **Max Life** and **Max Magick**, but give up **1 Boon** selected by **Hesti
 
 ### Flammable Coating
 
-<Boon>
+<Boon element="fire">
 Your **Scorch** effects deal bonus damage to **Armor**.
 
 - Scorch Damage vs. Armor: **+100%**
@@ -128,7 +132,7 @@ Your **Scorch** effects deal bonus damage to **Armor**.
 
 ### Fire Extinguisher
 
-<Boon>
+<Boon element="fire">
 Foes with at least **300 Scorch** take a burst of damage that consumes the effect.
 
 - Damage from Scorch: **50%**
@@ -144,7 +148,7 @@ Foes with at least **300 Scorch** take a burst of damage that consumes the effec
 
 ### Natural Gas
 
-<Boon>
+<Boon element="fire">
 Whenever **Scorch**-afflicted foes are slain, they damage nearby foes.
 
 - Blast Damage: **60**
@@ -160,7 +164,7 @@ Whenever **Scorch**-afflicted foes are slain, they damage nearby foes.
 
 ### Spontaneous Combustion
 
-<Boon>
+<Boon element="fire">
 Your **Ω Special** inflicts bonus **Scorch** if foes are unafflicted.
 
 - Scorch Damage: **60**
@@ -175,7 +179,7 @@ Your **Ω Special** inflicts bonus **Scorch** if foes are unafflicted.
 
 ### <TextHighlight type="legendary">Pyro Technique</TextHighlight>
 
-<Boon>
+<Boon element="fire">
 Your **Scorch** effects deal damage faster.
 
 - Scorch Damage Rate: **+100%**

@@ -4,6 +4,7 @@ description: Boons for Hephaestus in Hades 2.
 ---
 
 import { Boon, TextHighlight } from "@/components";
+import { IconElement } from "@/components/icons";
 
 import RoomTemperature from "@/components/duos/RoomTemperature.mdx";
 import ChainReaction from "@/components/duos/ChainReaction.mdx";
@@ -15,10 +16,11 @@ import MasterConductor from "@/components/duos/MasterConductor.mdx";
 
 # Hephaestus
 
-> You do not know what to make of this one. He rejects our craft, believes only in what he can grasp with his thick hands.\
+> You do not know what to make of this one. He rejects our craft, believes only
+> in what he can grasp with his thick hands.\
 > But he is a recluse in his own realm. In that you feel a connection.
 
-<Boon className='mt-4'>
+<Boon className="mt-4">
   **Vent** _(Curse):_ After **5 Sec.**, afflicted foes take a burst of damage.
   Timer resets if re-applied.
 </Boon>
@@ -27,7 +29,7 @@ import MasterConductor from "@/components/duos/MasterConductor.mdx";
 
 ### Volcanic Strike (Attack) [#volcanic-strike]
 
-<Boon>
+<Boon element="fire">
 Your **Attacks** occasionally create a blast that deals **200** damage in the area.
 
 - Blast Recharge Time: **12 Sec.**
@@ -36,7 +38,7 @@ Your **Attacks** occasionally create a blast that deals **200** damage in the ar
 
 ### Volcanic Flourish (Special) [#volcanic-flourish]
 
-<Boon>
+<Boon element="fire">
 Your **Specials** occasionally create a blast that deals **400** damage in the area.
 
 - Blast Recharge Time: **+20 Sec.**
@@ -45,7 +47,7 @@ Your **Specials** occasionally create a blast that deals **400** damage in the a
 
 ### Anvil Ring (Cast) [#anvil-ring]
 
-<Boon>
+<Boon element="earth">
 Your **Casts** deal damage **3** times in succession, but in a smaller area.
 
 - Cast Damage: **50** _(every 1 Sec.)_
@@ -54,7 +56,7 @@ Your **Casts** deal damage **3** times in succession, but in a smaller area.
 
 ### Smithy Sprint (Sprint) [#smithy-sprint]
 
-<Boon>
+<Boon element="fire">
 After you **Sprint** for **1 Sec.**, use **10 Magick** to create a blast that deals damage to nearby foes.
 
 - Area Damage: **200**
@@ -63,7 +65,7 @@ After you **Sprint** for **1 Sec.**, use **10 Magick** to create a blast that de
 
 ### Fixed Gain (Magick) [#fixed-gain]
 
-<Boon>
+<Boon element="earth">
 You take **-10%** damage, and restore some **Magick** whenever you take damage.
 
 - Magick Restored from Damage: **50**
@@ -73,7 +75,7 @@ You take **-10%** damage, and restore some **Magick** whenever you take damage.
 ### Martial Art (Infusion) [#martial-art]
 
 <Boon>
-Your **Attack** and **Special** deal more damage for each **Earth** you have.
+Your **Attack** and **Special** deal more damage for each <IconElement element="earth" /> you have.
 
 - Damage per Earth Boon: **+5%**
 
@@ -84,7 +86,7 @@ Your **Attack** and **Special** deal more damage for each **Earth** you have.
 
 ### Molten Touch
 
-<Boon>
+<Boon element="fire">
 Your **Attacks** and **Specials** deal bonus damage to **Armor**.
 
 - Damage vs. Armor: **+20%**
@@ -93,7 +95,7 @@ Your **Attacks** and **Specials** deal bonus damage to **Armor**.
 
 ### Trusty Shield
 
-<Boon>
+<Boon element="earth">
 After you enter a **Location**, **Prime 30 Magick** to gain **Armor** until the next **Location**.
 
 - Starting Armor: **+10**
@@ -102,7 +104,7 @@ After you enter a **Location**, **Prime 30 Magick** to gain **Armor** until the 
 
 ### Tough Trade
 
-<Boon>
+<Boon element="fire">
 If you take damage during your **Attacks** or **Specials**, they are stronger if they hit.
 
 - Bonus Weapon Damage: **+100%**
@@ -111,7 +113,7 @@ If you take damage during your **Attacks** or **Specials**, they are stronger if
 
 ### Mint Condition
 
-<Boon>
+<Boon element="earth">
 At the start of each **Encounter**, you are briefly **Impervious**.
 
 - Impervious Duration: **8 Sec.**
@@ -120,7 +122,7 @@ At the start of each **Encounter**, you are briefly **Impervious**.
 
 ### Heavy Metal
 
-<Boon>
+<Boon element="earth">
 Gain some **Armor**. Foes' attacks cannot knock you away.
 
 - Armor Gained: **+50**
@@ -129,7 +131,7 @@ Gain some **Armor**. Foes' attacks cannot knock you away.
 
 ### Uncanny Fortitude
 
-<Boon>
+<Boon element="earth">
 Gain bonus **Max Life** based on your **Magick** limit.
 
 - Max Life from Magick: **+20%**
@@ -138,7 +140,7 @@ Gain bonus **Max Life** based on your **Magick** limit.
 
 ### Furnace Blast
 
-<Boon>
+<Boon element="fire">
 Your blast effects from **Hephaestus** also inflict **Vent** on foes.
 
 - Vent Damage: **300**
@@ -155,7 +157,7 @@ Your blast effects from **Hephaestus** also inflict **Vent** on foes.
 
 ### <TextHighlight type="legendary">Fine Tuning</TextHighlight>
 
-<Boon>
+<Boon element="earth">
 Your **Aspect** of the **Nocturnal Arms** is even stronger.
 
 - Bonus Aspect Ranks: **+1**
