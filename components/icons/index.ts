@@ -3,8 +3,11 @@ export * from "./IconEarth";
 export * from "./IconFire";
 export * from "./IconWater";
 
+export * from "./IconArmor";
 export * from "./IconDeathDefiance";
 export * from "./IconGold";
+export * from "./IconHammer";
+export * from "./IconHealing";
 export * from "./IconLife";
 export * from "./IconMagick";
 export * from "./IconMaxLife";
