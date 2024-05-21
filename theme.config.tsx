@@ -3,6 +3,8 @@ import { DocsThemeConfig } from "nextra-theme-docs";
 import { useRouter } from "next/router";
 import Image from "next/image";
 
+import { Head } from './components/Head';
+
 const config: DocsThemeConfig = {
   logo: (
     <Image
@@ -13,15 +15,7 @@ const config: DocsThemeConfig = {
     ></Image>
   ),
   logoLink: true,
-  head: (
-    <>
-      <meta property="og:title" content="Hades 2 - The Crossroads" />
-      <meta
-        property="og:description"
-        content="A general resource for Hades 2."
-      />
-    </>
-  ),
+  head: <Head />,
 
   primaryHue: 156.2,
   primarySaturation: 72.6,
