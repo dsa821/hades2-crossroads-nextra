@@ -4,6 +4,7 @@ description: Boons for Hera in Hades 2.
 ---
 
 import { Boon, TextHighlight } from "@/components";
+import { IconEarth, IconHera, IconMagick } from "@/components/icons";
 
 import FuneralPyre from "@/components/duos/FuneralPyre.mdx";
 import SpitefulStrength from "@/components/duos/SpitefulStrength.mdx";
@@ -13,12 +14,14 @@ import GoldenRule from "@/components/duos/GoldenRule.mdx";
 import SunWorshiper from "@/components/duos/SunWorshiper.mdx";
 import QueensRansom from "@/components/duos/QueensRansom.mdx";
 
-# Hera
+# <IconHera className="mb-2" /> Hera
 
-> The revered Queen of Olympus. She has more in common with us than one may first expect.\
-> She ensures some level of order on Olympus is maintained, but there is only so much she can do. You wonder if you can help her.
+> The revered Queen of Olympus. She has more in common with us than one may
+> first expect.\
+> She ensures some level of order on Olympus is maintained, but there is only so
+> much she can do. You wonder if you can help her.
 
-<Boon className='mt-4'>
+<Boon className="mt-4">
   **Hitch** _(Curse):_ Afflicted foes take **30%** of damage dealt to other
   afflicted foes. Lasts **8 Sec.**
 </Boon>
@@ -27,7 +30,7 @@ import QueensRansom from "@/components/duos/QueensRansom.mdx";
 
 ### Sworn Strike (Attack) [#sworn-strike]
 
-<Boon>
+<Boon element="earth">
 Your **Attacks** deal more damage and inflict **Hitch**.
 
 - Attack Damage: **+50%**
@@ -36,7 +39,7 @@ Your **Attacks** deal more damage and inflict **Hitch**.
 
 ### Sworn Flourish (Special) [#sworn-flourish]
 
-<Boon>
+<Boon element="earth">
 Your **Specials** deal more damage and inflict **Hitch**.
 
 - Special Damage: **+60%**
@@ -45,7 +48,7 @@ Your **Specials** deal more damage and inflict **Hitch**.
 
 ### Engagement Ring (Cast) [#engagement-ring]
 
-<Boon>
+<Boon element="earth">
 Your **Casts** last **200%** longer and deal damage to _every_ foe that joins the **Encounter**.
 
 - On-Spawn Damage: **70**
@@ -54,7 +57,7 @@ Your **Casts** last **200%** longer and deal damage to _every_ foe that joins th
 
 ### Nexus Sprint (Sprint) [#nexus-sprint]
 
-<Boon>
+<Boon element="earth">
 Your **Sprint** inflicts **Hitch** on nearby foes, which spreads to other foes near _them_.
 
 - Additional Foes Hitched: **+1**
@@ -63,8 +66,8 @@ Your **Sprint** inflicts **Hitch** on nearby foes, which spreads to other foes n
 
 ### Born Gain (Magick) [#born-gain]
 
-<Boon>
-Whenever you run out of **Magick**, **Prime** to restore _all_ **Magick** up to the reduced limit.
+<Boon element="earth">
+Whenever you run out of <IconMagick />, **Prime** to restore _all_ <IconMagick /> up to the reduced limit.
 
 - Magick Primed: **10**
 
@@ -73,7 +76,7 @@ Whenever you run out of **Magick**, **Prime** to restore _all_ **Magick** up to 
 ### Proper Upbringing (Infusion) [#proper-upbringing]
 
 <Boon>
-While you have at least **3 Earth**, _all_ your **Common Boons** gain **Rarity**.
+While you have at least **3** <IconEarth />, _all_ your **Common Boons** gain **Rarity**.
 
 - Improved Rarity: **Rare**
 
@@ -85,7 +88,7 @@ While you have at least **3 Earth**, _all_ your **Common Boons** gain **Rarity**
 
 ### Bridal Glow
 
-<Boon>
+<Boon element="earth">
 Your **Boons** become **Heroic**, then lose **Rarity** every **5 Encounters**.
 
 - Random Boons Affected: **2**
@@ -94,7 +97,7 @@ Your **Boons** become **Heroic**, then lose **Rarity** every **5 Encounters**.
 
 ### Uncommon Grace
 
-<Boon>
+<Boon  element="earth">
 While none of your other **Boons** are **Common**, deal more damage.
 
 - Common-Less Bonus Damage: **+10%**
@@ -103,7 +106,7 @@ While none of your other **Boons** are **Common**, deal more damage.
 
 ### Nasty Comeback
 
-<Boon>
+<Boon element="earth">
 After you take damage, inflict your foe with **Hitch** and deal damage in greater measure.
 
 - Damage Reflected: **500%**
@@ -112,8 +115,8 @@ After you take damage, inflict your foe with **Hitch** and deal damage in greate
 
 ### Keen Intuition
 
-<Boon>
-Whenever you use **Ω Moves** while you have **100% Magick**, they deal more damage.
+<Boon element="earth">
+Whenever you use **Ω Moves** while you have **100%** <IconMagick />, they deal more damage.
 
 - Omega Damage: **+30%**
 
@@ -121,7 +124,7 @@ Whenever you use **Ω Moves** while you have **100% Magick**, they deal more dam
 
 ### Family Trade
 
-<Boon>
+<Boon element="earth">
 Any **Sacrifice Boons** you choose are stronger. One will be offered as soon as possible.
 
 - Bonus Lv.: **+2**
@@ -130,7 +133,7 @@ Any **Sacrifice Boons** you choose are stronger. One will be offered as soon as 
 
 ### Hereditary Bane
 
-<Boon>
+<Boon element="earth">
 Your **Hitch** effects deal more damage and last **+5 Sec**.
 
 - Hitch Damage: **+10%**
@@ -139,14 +142,14 @@ Your **Hitch** effects deal more damage and last **+5 Sec**.
 
 **Required** _(one of the following):_
 
-- Sworn Strike
-- Sworn Flourish
-- Nexus Sprint
-- Nasty Comeback
+- [Sworn Strike](#sworn-strike)
+- [Sworn Flourish](#sworn-flourish)
+- [Nexus Sprint](#nexus-sprint)
+- [Nasty Comeback](#nasty-comeback)
 
 ### Dying Wish
 
-<Boon>
+<Boon element="earth">
 Whenever **Hitch**-afflicted foes are slain, damage all other **Hitch**-afflicted foes.
 
 - Hitch Death Damage: **40**
@@ -155,17 +158,17 @@ Whenever **Hitch**-afflicted foes are slain, damage all other **Hitch**-afflicte
 
 **Required** _(one of the following):_
 
-- Sworn Strike
-- Sworn Flourish
-- Nexus Sprint
-- Nasty Comeback
+- [Sworn Strike](#sworn-strike)
+- [Sworn Flourish](#sworn-flourish)
+- [Nexus Sprint](#nexus-sprint)
+- [Nasty Comeback](#nasty-comeback)
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
 ### <TextHighlight type="legendary">Brave Face</TextHighlight>
 
-<Boon>
-Automatically use **Magick** to resist up to **50%** of any damage.
+<Boon element="earth">
+Automatically use <IconMagick /> to resist up to **50%** of any damage.
 
 - Magick Cost per Damage Point: **5**
 
@@ -173,18 +176,18 @@ Automatically use **Magick** to resist up to **50%** of any damage.
 
 **Required** _(one of the following):_
 
-- Sworn Strike
-- Sworn Flourish
+- [Sworn Strike](#sworn-strike)
+- [Sworn Flourish](#sworn-flourish)
 
 **Required** _(one of the following):_
 
-- Born Gain
-- Keen Intuition
+- [Born Gain](#born-gain)
+- [Keen Intuition](#keen-intuition)
 
 **Required** _(one of the following):_
 
-- Hereditary Bane
-- Dying Wish
+- [Hereditary Bane](#hereditary-bane)
+- [Dying Wish](#dying-wish)
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
 

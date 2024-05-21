@@ -4,6 +4,13 @@ description: Boons for Demeter in Hades 2.
 ---
 
 import { Boon, TextHighlight } from "@/components";
+import {
+  IconDemeter,
+  IconEarth,
+  IconMagick,
+  IconMaxLife,
+  IconMysterySeed,
+} from "@/components/icons";
 
 import TorrentialDownpour from "@/components/duos/TorrentialDownpour.mdx";
 import RoomTemperature from "@/components/duos/RoomTemperature.mdx";
@@ -13,12 +20,14 @@ import NaturalSelection from "@/components/duos/NaturalSelection.mdx";
 import CherishedHeirloom from "@/components/duos/CherishedHeirloom.mdx";
 import HeartyAppetite from "@/components/duos/HeartyAppetite.mdx";
 
-# Demeter
+# <IconDemeter className="mb-1" /> Demeter
 
-> Your mother once fled from her, such is her doting and particular nature, our great goddess of seasons.\
-> Her long life has fueled in her a particular king of wrath that is feared even on her mountain. It is fortunate she likes you.
+> Your mother once fled from her, such is her doting and particular nature, our
+> great goddess of seasons.\
+> Her long life has fueled in her a particular king of wrath that is feared even
+> on her mountain. It is fortunate she likes you.
 
-<Boon className='mt-4'>
+<Boon className="mt-4">
   **Freeze** _(Curse):_ Afflicted foes are stopped for **2 Sec.** Can be
   re-applied after **10 Sec.** Lasts **8 Sec.**
 </Boon>
@@ -27,7 +36,7 @@ import HeartyAppetite from "@/components/duos/HeartyAppetite.mdx";
 
 ### Ice Strike (Attack) [#ice-strike]
 
-<Boon>
+<Boon element="water">
 Your **Attacks** deal more damage and inflict **Freeze**.
 
 - Attack Damage: **+30%**
@@ -36,7 +45,7 @@ Your **Attacks** deal more damage and inflict **Freeze**.
 
 ### Ice Flourish (Special) [#ice-flourish]
 
-<Boon>
+<Boon element="water">
 Your **Specials** deal more damage and inflict **Freeze**.
 
 - Special Damage: **+40%**
@@ -45,7 +54,7 @@ Your **Specials** deal more damage and inflict **Freeze**.
 
 ### Arctic Ring (Cast) [#arctic-ring]
 
-<Boon>
+<Boon element="water">
 Your **Casts** repeatedly deal damage in the area and inflict **Freeze**.
 
 - Cast Damage: **10** _(every 0.5 Sec.)_
@@ -54,19 +63,20 @@ Your **Casts** repeatedly deal damage in the area and inflict **Freeze**.
 
 ### Frigid Sprint (Sprint) [#frigid-sprint]
 
-<Boon>
+<Boon element="water">
 Your **Sprint** forms a **Cyclone** around you that lingers after you stop.
 
 - Cyclone Damage: **4** _(every 0.25 Sec.)_
 
-**Cyclone**: A vortex that makes foes **20%** slower and their ranged shots **60%** slower. Lasts **3 Sec.**
+**Cyclone**: A vortex that makes foes **20%** slower and their ranged shots
+**60%** slower. Lasts **3 Sec.**
 
 </Boon>
 
 ### Tranquil Gain (Magick) [#tranquil-gain]
 
-<Boon>
-After remaining inactive for **1 Sec.**, rapidly restore **Magick** until you act.
+<Boon element="earth">
+After remaining inactive for **1 Sec.**, rapidly restore <IconMagick /> until you act.
 
 - Magick Restoration: **+25** _(every 1 Sec.)_
 
@@ -75,7 +85,7 @@ After remaining inactive for **1 Sec.**, rapidly restore **Magick** until you ac
 ### Coarse Grit (Infusion) [#coarse-grit]
 
 <Boon>
-While you have at least **6 Earth**, you cannot take more damage per hit than the limit.
+While you have at least **6** <IconEarth />, you cannot take more damage per hit than the limit.
 
 - Max Damage per Hit: **15**
 
@@ -87,7 +97,7 @@ While you have at least **6 Earth**, you cannot take more damage per hit than th
 
 ### Rare Crop
 
-<Boon>
+<Boon element="earth">
 Your **Boons** become **Common**, then gain **Rarity** every **3 Encounters**.
 
 - Random Boons Affected: **1**
@@ -96,7 +106,7 @@ Your **Boons** become **Common**, then gain **Rarity** every **3 Encounters**.
 
 ### Local Climate
 
-<Boon>
+<Boon element="earth">
 Your **Ω Cast** deals bonus damage and follows you, even as you start to **Channel** it.
 
 - Cast Damage: **+20%**
@@ -105,19 +115,20 @@ Your **Ω Cast** deals bonus damage and follows you, even as you start to **Chan
 
 ### Gale Force
 
-<Boon>
+<Boon element="water">
 Your **Casts** also create a **Cyclone** at the binding circle.
 
 - Cyclone Damage: **4** _(every 0.25 Sec.)_
 
-**Cyclone**: A vortex that makes foes **20%** slower and their ranged shots **60%** slower. Lasts **3 Sec.**
+**Cyclone**: A vortex that makes foes **20%** slower and their ranged shots
+**60%** slower. Lasts **3 Sec.**
 
 </Boon>
 
 ### Plentiful Forage
 
-<Boon>
-Whenever you gather plants, seeds, or mushrooms, gain **Max Life**. Receive **1 Mystery Seed** now.
+<Boon element="earth">
+Whenever you gather plants, seeds, or mushrooms, gain <IconMaxLife />. Receive **1** <IconMysterySeed /> now.
 
 - Max Life from Gathering: **5**
 
@@ -125,7 +136,7 @@ Whenever you gather plants, seeds, or mushrooms, gain **Max Life**. Receive **1 
 
 ### Winter Coat (Prime) [#winter-coat]
 
-<Boon>
+<Boon element="earth">
 After you enter a **Location**, **Prime** a barrier that absorbs **1** instance of damage.
 
 - Magick Primed: **20**
@@ -134,8 +145,8 @@ After you enter a **Location**, **Prime** a barrier that absorbs **1** instance 
 
 ### Weed Killer
 
-<Boon>
-Your **Ω Attack** deals more damage, but uses **+10 Magick**.
+<Boon element="earth">
+Your **Ω Attack** deals more damage, but uses **+10** <IconMagick />.
 
 - Omega Attack Damage: **+50%**
 
@@ -143,7 +154,7 @@ Your **Ω Attack** deals more damage, but uses **+10 Magick**.
 
 ### Cold Storage
 
-<Boon>
+<Boon element="water">
 Your **Freeze** effects last longer.
 
 - Freeze Duration: **+ 2 Sec.**
@@ -152,14 +163,14 @@ Your **Freeze** effects last longer.
 
 **Required** _(one of the following):_
 
-- Ice Strike
-- Ice Flourish
+- [Ice Strike](#ice-strike)
+- [Ice Flourish](#ice-flourish)
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
 ### <TextHighlight type="legendary">Winter Harvest</TextHighlight>
 
-<Boon>
+<Boon element="earth">
 **Freeze**-afflicted foes shatter at **10% Life**, dealing damage in the area.
 
 - Shatter Area Damage: **100**
@@ -168,18 +179,18 @@ Your **Freeze** effects last longer.
 
 **Required** _(one of the following):_
 
-- Ice Strike
-- Ice Flourish
+- [Ice Strike](#ice-strike)
+- [Ice Flourish](#ice-flourish)
 
 **Required** _(one of the following):_
 
-- Plentiful Forage
-- Winter Coat
+- [Plentiful Forage](#plentiful-forage)
+- [Winter Coat](#winter-coat)
 
 **Required** _(one of the following):_
 
-- Weed Killer
-- Cold Storage
+- [Weed Killer](#weed-killer)
+- [Cold Storage](#cold-storage)
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
 

@@ -4,6 +4,15 @@ description: Boons for Poseidon in Hades 2.
 ---
 
 import { Boon, TextHighlight } from "@/components";
+import {
+  IconAshes,
+  IconGold,
+  IconHealing,
+  IconMagick,
+  IconPoseidon,
+  IconPsyche,
+  IconWater,
+} from "@/components/icons";
 
 import IslandGetaway from "@/components/duos/IslandGetaway.mdx";
 import NaturalSelection from "@/components/duos/NaturalSelection.mdx";
@@ -13,12 +22,14 @@ import GoldenRule from "@/components/duos/GoldenRule.mdx";
 import BeachBall from "@/components/duos/BeachBall.mdx";
 import ScaldingVapor from "@/components/duos/ScaldingVapor.mdx";
 
-# Poseidon
+# <IconPoseidon className="mb-2" /> Poseidon
 
-> Your boisterous uncle, sometimes called the Earthshaker, although he is best known for the seas which smother much of the surface.\
-> He is comfortable in adverse situations, and quite unable to hold still much like the seas themselves.
+> Your boisterous uncle, sometimes called the Earthshaker, although he is best
+> known for the seas which smother much of the surface.\
+> He is comfortable in adverse situations, and quite unable to hold still much like
+> the seas themselves.
 
-<Boon className='mt-4'>
+<Boon className="mt-4">
   **Slip** _(Curse):_ Afflicted foes take more damage and are knocked farther
   away. Lasts **3 Sec.**
 </Boon>
@@ -27,7 +38,7 @@ import ScaldingVapor from "@/components/duos/ScaldingVapor.mdx";
 
 ### Wave Strike (Attack) [#wave-strike]
 
-<Boon>
+<Boon element="water">
 Your **Attacks** hit foes with a splash that knocks other foes away.
 
 - Splash Damage: **15**
@@ -36,7 +47,7 @@ Your **Attacks** hit foes with a splash that knocks other foes away.
 
 ### Wave Flourish (Special) [#wave-flourish]
 
-<Boon>
+<Boon element="water">
 Your **Specials** hit foes with a splash that knocks other foes away.
 
 - Splash Damage: **20**
@@ -45,7 +56,7 @@ Your **Specials** hit foes with a splash that knocks other foes away.
 
 ### Geyser Ring (Cast) [#geyser-ring]
 
-<Boon>
+<Boon element="water">
 Your **Ω Cast** immediately detonates, dealing damage and knocking foes away.
 
 - Omega Cast Damage: **100**
@@ -54,8 +65,8 @@ Your **Ω Cast** immediately detonates, dealing damage and knocking foes away.
 
 ### Breaker Sprint (Sprint) [#breaker-sprint]
 
-<Boon>
-Your **Sprint** deals damage on impact and knocks foes away, but uses **5 Magick** per hit.
+<Boon element="water">
+Your **Sprint** deals damage on impact and knocks foes away, but uses **5** <IconMagick /> per hit.
 
 - Impact Damage: **80**
 
@@ -63,19 +74,20 @@ Your **Sprint** deals damage on impact and knocks foes away, but uses **5 Magick
 
 ### Fluid Gain (Magick) [#fluid-gain]
 
-<Boon>
+<Boon element="water">
 After you strike foes with your **Weapon**, a **Spirit Bubble** may appear.
 
 - Spirit Bubble Chance: **10%**
 
-**Spirit Bubble**: Restores **20 Magick** when you touch it. Expires when used, or after **30 Sec.**
+**Spirit Bubble**: Restores **20** <IconMagick /> when you touch it. Expires
+when used, or after **30 Sec.**
 
 </Boon>
 
 ### Water Fitness (Infusion) [#water-fitness]
 
 <Boon>
-While you have at least **4 Water**, gain Max Life.
+While you have at least **4** <IconWater />, gain Max Life.
 
 - Max Life: **+100**
 
@@ -86,7 +98,7 @@ While you have at least **4 Water**, gain Max Life.
 
 ### Double Up
 
-<Boon>
+<Boon element="water">
 Whenever you claim a **Minor Find** or similar resource reward, a copy may appear.
 
 - Double Reward Chance: **20%**
@@ -95,7 +107,7 @@ Whenever you claim a **Minor Find** or similar resource reward, a copy may appea
 
 ### Hydraulic Might
 
-<Boon>
+<Boon element="water">
 At the start of each **Encounter**, your **Attacks** and **Specials** are stronger for **10 Sec.**
 
 - Initial Damage Bonus: **+100%**
@@ -104,8 +116,8 @@ At the start of each **Encounter**, your **Attacks** and **Specials** are strong
 
 ### Flood Control (Prime) [#flood-control]
 
-<Boon>
-After you enter a **Location**, **Prime 30 Magick** to reduce any damage you would take.
+<Boon element="water">
+After you enter a **Location**, **Prime 30** <IconMagick /> to reduce any damage you would take.
 
 - Damage Reduction per Hit: **-2**
 
@@ -113,8 +125,8 @@ After you enter a **Location**, **Prime 30 Magick** to reduce any damage you wou
 
 ### Sunken Treasure
 
-<Boon>
-Gain **Gold Crowns**, **Healing**, and sometimes **Ashes** and **Psyche**.
+<Boon element="water">
+Gain <IconGold />, <IconHealing />, and sometimes <IconAshes /> and <IconPsyche />.
 
 - Gold Received: **+90**
 
@@ -122,8 +134,8 @@ Gain **Gold Crowns**, **Healing**, and sometimes **Ashes** and **Psyche**.
 
 ### Ocean's Bounty
 
-<Boon>
-Any **Minor Finds** and **Gold Crowns** are worth more.
+<Boon element="water">
+Any **Minor Finds** and <IconGold /> are worth more.
 
 - Reward Value: **+50%**
 
@@ -131,7 +143,7 @@ Any **Minor Finds** and **Gold Crowns** are worth more.
 
 ### Slippery Slope
 
-<Boon>
+<Boon element="water">
 Your splash effects from **Poseidon** also inflict **Slip** on foes.
 
 - Slip Bonus Damage: **+5%**
@@ -140,12 +152,12 @@ Your splash effects from **Poseidon** also inflict **Slip** on foes.
 
 **Required** _(one of the following):_
 
-- Wave Strike
-- Wave Flourish
+- [Wave Strike](#wave-strike)
+- [Wave Flourish](#wave-flourish)
 
 ### Crashing Wave
 
-<Boon>
+<Boon element="water">
 Whenever your knock-away effects slam foes into barriers, create a blast in the area.
 
 - Blast Damage: **50**
@@ -154,16 +166,16 @@ Whenever your knock-away effects slam foes into barriers, create a blast in the 
 
 **Required** _(one of the following):_
 
-- Wave Strike
-- Wave Flourish
-- Geyser Ring
-- Breaker Sprint
+- [Wave Strike](#wave-strike)
+- [Wave Flourish](#wave-flourish)
+- [Geyser Ring](#geyser-ring)
+- [Breaker Sprint](#breaker-sprint)
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
 ### <TextHighlight type="legendary">King Tide</TextHighlight>
 
-<Boon>
+<Boon element="water">
 Your splash effects from **Poseidon** are larger and deal bonus damage to **Guardians**.
 
 - Splash Damage vs. Guardians: **+150%**
@@ -172,13 +184,13 @@ Your splash effects from **Poseidon** are larger and deal bonus damage to **Guar
 
 **Required** _(one of the following):_
 
-- Wave Strike
-- Wave Flourish
+- [Wave Strike](#wave-strike)
+- [Wave Flourish](#wave-flourish)
 
 **Required**:
 
-- Slippery Slope
-- Crashing Wave
+- [Slippery Slope](#slippery-slope)
+- [Crashing Wave](#crashing-wave)
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
 

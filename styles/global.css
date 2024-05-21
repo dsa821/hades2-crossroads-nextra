@@ -10,3 +10,7 @@ h5,
 h6 {
   font-family: var(--font-header);
 }
+
+.page-icon-title {
+  @apply flex items-start gap-2;
+}
