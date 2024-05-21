@@ -18,3 +18,5 @@ export * from "./IconMysterySeed";
 export * from "./IconPsyche";
 export * from "./IconReroll";
 export * from "./IconShell";
+
+export * from './gods';
