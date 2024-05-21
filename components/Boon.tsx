@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { BoonElement, Rarity } from "models/types";
 import { TextHighlight } from "./TextHighlight";
-import { IconElement } from "./icons";
+import { IconBase } from "./icons/IconBase";
 
 type BoonProps = {
   title: string;
@@ -33,7 +33,7 @@ export const Boon: FC<BoonProps> = (props) => {
 
         {props.element != null && (
           <div>
-            <IconElement element={props.element} size={36} />
+            <IconBase iconKey={props.element} size={32} />
           </div>
         )}
       </div>

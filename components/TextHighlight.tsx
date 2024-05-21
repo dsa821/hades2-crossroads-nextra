@@ -10,7 +10,7 @@ function getClassName(type: Rarity) {
     case "rare":
       return "text-blue-500";
     case "epic":
-      return "text-violet-700";
+      return "text-violet-500";
     case "heroic":
       return "text-rose-500";
     case "legendary":

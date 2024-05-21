@@ -7,7 +7,15 @@ import Image from "next/image";
 import { Callout } from "nextra/components";
 
 import { Arcana, TextHighlight } from "@/components";
-import { MaxLife, MaxMagick } from "@/components/icons";
+import {
+  IconDeathDefiance,
+  IconGold,
+  IconLife,
+  IconMagick,
+  IconMaxLife,
+  IconMaxMagick,
+  IconReroll,
+} from "@/components/icons";
 
 # Arcana Cards
 
@@ -32,8 +40,8 @@ import { MaxLife, MaxMagick } from "@/components/icons";
   grasp="1"
   flavor="Even the Underworld itself struggled to contain him, such was his lust for life"
 >
-  After you exit a **Location**, restore **4 Life**, or twice that if you have
-  no more than **30% Life**
+  After you exit a **Location**, restore **4** <IconLife />, or twice that if
+  you have no more than **30%** <IconLife />.
 </Arcana>
 
 ### The Huntress
@@ -42,8 +50,8 @@ import { MaxLife, MaxMagick } from "@/components/icons";
   grasp="3"
   flavor="Through discipline and instinct comes surpassing skill both in shadow and the light of the Moon."
 >
-  While you have less than **100% Magick**, your **Attack** and **Special** deal
-  **+50%** damage.
+  While you have less than **100%** <IconMagick />, your **Attack** and
+  **Special** deal **+50%** damage.
 </Arcana>
 
 ### Death
@@ -86,7 +94,7 @@ Deal **+30%** damage to foes in your **Casts**.
   grasp="2"
   flavor="He stole from gods the gift of fire, for mortals; thus he suffered, but he grew strong."
 >
-  Gain **+40 Max Life** <MaxLife /> and **+40 Max Magick** <MaxMagick />.
+  Gain **+40** <IconMaxLife /> and **+40** <IconMaxMagick />.
 </Arcana>
 
 ### The Unseen
@@ -95,7 +103,7 @@ Deal **+30%** damage to foes in your **Casts**.
   grasp='5'
   flavor='Upon their ancient oath, in shadow, they serve; and to shadow, they return.'
 >
-Restore **4 Magick** every **1 Sec.**
+Restore **4** <IconMagick /> every **1 Sec.**
 
 </Arcana>
 
@@ -105,8 +113,8 @@ Restore **4 Magick** every **1 Sec.**
   grasp="4"
   flavor="She sprang from Chaos, and formed much of the natural world, above the surface and below."
 >
-  Your **Hex** also charges up automatically as though you used **4 Magick**
-  every **1 Sec.**
+  Your **Hex** also charges up automatically as though you used **4**
+  <IconMagick /> every **1 Sec.**
 </Arcana>
 
 ### The Lovers
@@ -136,7 +144,7 @@ Restore **4 Magick** every **1 Sec.**
   grasp="4"
   flavor="The inevitable cannot be prevented, though perhaps can be forestalled."
 >
-  Set forth each night with **3 Death Defiance**.
+  Set forth each night with **3** <IconDeathDefiance />.
 </Arcana>
 Don't leave home without it. As close to a must-pick as you can get.
 
@@ -146,7 +154,7 @@ Don't leave home without it. As close to a must-pick as you can get.
   grasp='0'
   flavor='Many of the greatest heroes mortalkind has to offer have in common his patient instruction.'
 >
-After every **5 Locations**, gain **+5 Max Life** and **+5 Max Magick**.
+After every **5 Locations**, gain **+5** <IconMaxLife /> and **+5** <IconMaxMagick />.
 
 **Awakening**: _Activate Cards that use **1 Grasp** through **5 Grasp**._
 
@@ -168,8 +176,8 @@ Your **Ω Cast** has **+100 Power** whenever it detonates.
   grasp="5"
   flavor="The power to surpass the might of the gods is one that must always be held in check."
 >
-  While you have no more than **30% Life**, you take **-50%** damage and deal
-  **+50%**.
+  While you have no more than **30%** <IconLife />, you take
+  **-50%** damage and deal **+50%**.
 </Arcana>
 
 ## Row 4
@@ -180,7 +188,7 @@ Your **Ω Cast** has **+100 Power** whenever it detonates.
   grasp="3"
   flavor="Even the gods themselves are subject to the whims of the three weavers of destiny."
 >
-  Set forth each night with **+3 Change of Fate**. You can alter **Location
+  Set forth each night with **+3** <IconReroll />. You can alter **Location
   Rewards**.
 </Arcana>
 
@@ -190,7 +198,8 @@ Your **Ω Cast** has **+100 Power** whenever it detonates.
   grasp="5"
   flavor="Vast riches lie hidden in the realm of the dead; but only a modest fee is needed to get in."
 >
-  Set forth each night with **+300 Gold Crowns**.
+  Set forth each night with **+300**
+  <IconGold />.
 </Arcana>
 
 ### Origination
@@ -233,7 +242,7 @@ Your **Ω Cast** has **+100 Power** whenever it detonates.
   grasp='0'
   flavor='Having been stricken blind, she saw much more than any mortal could.'
 >
-  Set forth each night with +4 **Change of Fate**.
+  Set forth each night with +4 <IconReroll />.
 
 **Awakening**: _Activate each surrounding Card. ([The Fates](/arcana#the-fates),
 [The Boatman](/arcana#the-boatman), [The Champions](/arcana#the-champions))_
@@ -246,7 +255,7 @@ Your **Ω Cast** has **+100 Power** whenever it detonates.
   grasp="4"
   flavor="Once-mortal foes, they found each other once again in death, and were exalted in Elysium."
 >
-  Set forth each night with **+3 Change of Fate**. You can alter **Boons** and
+  Set forth each night with **+3** <IconReroll />. You can alter **Boons** and
   certain other choices.
 </Arcana>
 
