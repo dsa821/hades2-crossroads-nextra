@@ -10,3 +10,4 @@ export * from "./IconMagick";
 export * from "./IconMaxLife";
 export * from "./IconMaxMagick";
 export * from "./IconReroll";
+export * from "./IconShell";
