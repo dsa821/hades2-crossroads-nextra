@@ -33,7 +33,7 @@ export const Boon: FC<BoonProps> = (props) => {
 
         {props.element != null && (
           <div>
-            <IconBase iconKey={props.element} size={32} />
+            <IconBase iconKey={props.element} size={28} />
           </div>
         )}
       </div>
