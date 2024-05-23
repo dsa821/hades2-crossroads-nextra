@@ -5,5 +5,11 @@
   "demeter": "Demeter",
   "apollo": "Apollo",
   "aphrodite": "Aphrodite",
-  "hephaestus": "Hephaestus"
+  "hephaestus": "Hephaestus",
+  "hestia": "Hestia",
+  "---": {
+    "type": "separator"
+  },
+  "artemis": "Artemis",
+  "hermes": "Hermes"
 }

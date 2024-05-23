@@ -6,3 +6,6 @@ export * from "./IconHera";
 export * from "./IconHestia";
 export * from "./IconPoseidon";
 export * from "./IconZeus";
+
+export * from "./IconArtemis";
+export * from "./IconHermes";
