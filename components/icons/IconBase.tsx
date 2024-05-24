@@ -7,7 +7,12 @@ type IconProps = {
   size: number;
 };
 
-export const IconBase: FC<IconProps> = ({ iconKey, alt, size = 24, className }) => {
+export const IconBase: FC<IconProps> = ({
+  iconKey,
+  alt,
+  size = 24,
+  className,
+}) => {
   if (iconKey == null) return;
   if (alt == null) {
     const split = iconKey.split("-");
@@ -21,7 +26,7 @@ export const IconBase: FC<IconProps> = ({ iconKey, alt, size = 24, className }) 
       title={alt}
       width={size}
       height={size}
-      className={ `inline ${className}` }
+      className={`inline ${className}`}
     />
   );
 };

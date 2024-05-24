@@ -20,4 +20,6 @@ export * from "./IconPsyche";
 export * from "./IconReroll";
 export * from "./IconShell";
 
+export * from "./IconBoonBase";
+
 export * from './gods';

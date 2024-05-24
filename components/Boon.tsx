@@ -2,24 +2,40 @@ import { FC } from "react";
 import { BoonElement, Rarity } from "models/types";
 import { TextHighlight } from "./TextHighlight";
 import { IconBase } from "./icons/IconBase";
+import { IconBoonBase } from "./icons/IconBoonBase";
 
 type BoonProps = {
   title: string;
-  rarity: Rarity;
+  type: Rarity;
+  iconKey: string;
   flavor: string;
   element: BoonElement;
 };
 
 export const Boon: FC<BoonProps> = (props) => {
   return (
-    <div
-      className={`card-bg ${props.className}`}
-    >
+    <div className={`card-bg ${props.className}`}>
       <div className="flex">
         <div className="flex-1">
           {props.title != null && (
-            <div className="font-bold text-2xl">
-              <TextHighlight type={props.rarity}>{props.title}</TextHighlight>
+            <div className="flex items-center gap-4">
+              {props.iconKey != null && (
+                <IconBoonBase
+                  iconKey={props.iconKey}
+                  alt={props.title}
+                  type={props.type}
+                />
+              )}
+
+              <div className="font-bold text-3xl small-caps tracking-wide flex-1">
+                <TextHighlight type={props.type}>{props.title}</TextHighlight>
+              </div>
+
+              {props.element != null && (
+                <div>
+                  <IconBase iconKey={props.element} size={28} />
+                </div>
+              )}
             </div>
           )}
           {props.children}
@@ -30,12 +46,6 @@ export const Boon: FC<BoonProps> = (props) => {
             </div>
           )}
         </div>
-
-        {props.element != null && (
-          <div>
-            <IconBase iconKey={props.element} size={28} />
-          </div>
-        )}
       </div>
     </div>
   );
