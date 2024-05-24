@@ -3,13 +3,14 @@ title: Zeus
 description: Boons for Zeus in Hades 2.
 ---
 
-import { Boon, TextHighlight } from "@/components";
+import { Boon, BoonTest, Box, TextHighlight } from "@/components";
 import {
   IconAir,
   IconMagick,
   IconZeus,
   IconBoonBase,
 } from "@/components/icons";
+import { DbBoonsZeus } from "@/db/boons";
 
 import GloriousDisaster from "@/components/duos/GloriousDisaster.mdx";
 import ApocalypticStorm from "@/components/duos/ApocalypticStorm.mdx";
@@ -24,21 +25,21 @@ import KingsRansom from "@/components/duos/KingsRansom.mdx";
 > Your father's younger brother, who took Olympus after deposing his own father, Chronos.\
 > He has few checks on his power. We are one of them.
 
-<Boon className="mt-4">
+<Box className="mt-4">
   **Blitz** _(Curse):_ After taking **120** damage, afflicted foes get struck by
   lightning. Lasts **3 Sec**.
-</Boon>
+</Box>
 
 ## Core
 
 ### Heaven Strike (Attack) [#heaven-strike]
 
-<Boon title="Heaven Strike" iconKey="zeus/heaven-strike" element="air">
+<BoonTest boon={DbBoonsZeus.heavenStrike}>
 Your **Attacks** inflict **Blitz**.
 
 - Blitz Damage: **80**
 
-</Boon>
+</BoonTest>
 
 ### Heaven Flourish (Special) [#heaven-flourish]
 
