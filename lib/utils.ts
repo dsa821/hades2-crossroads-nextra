@@ -21,7 +21,7 @@ export function getRarityTextColor(type: Rarity) {
 export function getRarityBorderColor(type: Rarity) {
   switch (type) {
 		case "common":
-			return "border-white";
+			return "border-slate-500";
     case "rare":
       return "border-blue-500";
     case "epic":
@@ -35,5 +35,8 @@ export function getRarityBorderColor(type: Rarity) {
 
 		case "infusion":
 			return "border-fuchsia-500";
+      
+    default:
+      return "border-slate-500";
   }
 }

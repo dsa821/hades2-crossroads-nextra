@@ -19,7 +19,7 @@ export const IconBoonBase: FC<IconBoonBaseProps> = ({ iconKey, alt, size = 72, t
       iconKey={`boons/${iconKey}`}
       size={size}
       alt={alt}
-      className={`rounded-xl border-[3px] ${classNames}`}
+      className={`rounded-3xl border-[3px] ${classNames}`}
     />
   );
 };
