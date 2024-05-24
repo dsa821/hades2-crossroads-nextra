@@ -81,7 +81,7 @@ export const BoonTest: FC<BoonTestProps> = ({
         className="flex flex-col gap-2 items-center w-28"
       >
         <div>{boonIcon}</div>
-        <div className="text-center font-bold text-lg small-caps">
+        <div className="text-center font-bold text-xl small-caps">
           {boonNameHighlight}
         </div>
       </Link>
@@ -102,7 +102,7 @@ export const BoonTest: FC<BoonTestProps> = ({
 
               {boon.element != null && (
                 <div>
-                  <IconBase iconKey={boon.element} size={28} />
+                  <IconBase iconKey={boon.element} size={32} />
                 </div>
               )}
             </div>

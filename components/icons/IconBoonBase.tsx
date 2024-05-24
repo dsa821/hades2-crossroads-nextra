@@ -11,7 +11,7 @@ type IconBoonBaseProps = {
   type: Rarity;
 };
 
-export const IconBoonBase: FC<IconBoonBaseProps> = ({ iconKey, alt, size = 60, type }) => {
+export const IconBoonBase: FC<IconBoonBaseProps> = ({ iconKey, alt, size = 72, type }) => {
   const classNames = getRarityBorderColor(type);
 
   return (

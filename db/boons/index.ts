@@ -1,7 +1,13 @@
 import { DbBoonsApollo } from "./apollo.db";
+import { DbBoonsDemeter } from "./demeter.db";
 import { DbBoonsZeus } from "./zeus.db";
 
 import { DbBoonsDuos } from "./duos.db";
 
-const Boons = { Apollo: DbBoonsApollo, Zeus: DbBoonsZeus, Duos: DbBoonsDuos };
-export { Boons as DbBoons };
+const DbBoons = {
+  Apollo: DbBoonsApollo,
+  Demeter: DbBoonsDemeter,
+  Zeus: DbBoonsZeus,
+  Duos: DbBoonsDuos,
+};
+export { DbBoons };
