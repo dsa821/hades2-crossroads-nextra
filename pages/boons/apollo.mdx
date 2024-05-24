@@ -3,8 +3,9 @@ title: Apollo
 description: Boons for Apollo in Hades 2.
 ---
 
-import { Boon, TextHighlight } from "@/components";
+import { BoonTest, Box, TextHighlight } from "@/components";
 import { IconApollo, IconFire, IconLife, IconMagick } from "@/components/icons";
+import { DbBoons } from "@/db/boons";
 
 import GloriousDisaster from "@/components/duos/GloriousDisaster.mdx";
 import TorrentialDownpour from "@/components/duos/TorrentialDownpour.mdx";
@@ -21,114 +22,115 @@ import SunWorshiper from "@/components/duos/SunWorshiper.mdx";
 > Conflict is not really in his nature, thus he is often out of his depth, despite
 > how well he gets on anyway.
 
-<Boon className="mt-4">
+<Box className="mt-4">
   **Daze** _(Curse):_ Afflicted foes have **20%** chance to deal no damage.
   Lasts **9 Sec.**
-</Boon>
+</Box>
 
 ## Core
 
 ### Nova Strike (Attack) [#nova-strike]
 
-<Boon title="Nova Strike" iconKey="apollo/nova-strike" element="air">
+<BoonTest boon={DbBoons.Apollo.novaStrike}>
 Your **Attacks** deal more damage in a larger area.
 
 - Attack Damage: **+40%**
 
-</Boon>
+</BoonTest>
 
 ### Nova Flourish (Special) [#nova-flourish]
 
-<Boon title="Nova Flourish" iconKey="apollo/nova-flourish" element="air">
+<BoonTest boon={DbBoons.Apollo.novaFlourish}>
 Your **Specials** deal more damage in a larger area.
 
 - Special Damage: **+60%**
 
-</Boon>
+</BoonTest>
 
 ### Solar Ring (Cast) [#solar-ring]
 
-<Boon title="Solar Ring" iconKey="apollo/solar-ring" element="fire">
+<BoonTest boon={DbBoons.Apollo.solarRing}>
 After your **Ω Cast** expires, rapidly deal damage in the area for **2 Sec.**
 
 - Omega Cast Damage: **10** _(every 0.13 Sec.)_
 
-</Boon>
+</BoonTest>
 
 ### Blinding Sprint (Sprint) [#blinding-sprint]
 
-<Boon title="Blinding Sprint" iconKey="apollo/blinding-sprint" element="fire">
+<BoonTest boon={DbBoons.Apollo.blindingSprint}>
 Your **Sprint** is faster and inflicts **Daze** on nearby foes.
 
 - Sprint Speed: **+30%**
 
-</Boon>
+</BoonTest>
 
 ### Lucid Gain (Magick) [#lucid-gain]
 
-<Boon title="Lucid Gain" iconKey="apollo/lucid-gain" element="air">
+<BoonTest boon={DbBoons.Apollo.lucidGain}>
 While standing in your **Casts**, gradually restore <IconMagick />.
 
 - Magick Restoration: **+12** _(every 1 Sec.)_
 
-</Boon>
+</BoonTest>
 
-### Self Healing (Infusion) [#self-healing]
+## Support
 
-<Boon title="Self Healing" iconKey="apollo/self-healing" type="infusion">
+### <TextHighlight type="infusion">Self Healing (Infusion)</TextHighlight> [#self-healing]
+
+<BoonTest boon={DbBoons.Apollo.selfHealing}>
 While you have at least **3** <IconFire />, whenever you take damage, restore some <IconLife />.
 
 - Damage Recovered: **30%** _(over 5 Sec.)_
 
-</Boon>
-**Required: 1 Fire**
+</BoonTest>
 
-## Support
+**Required: 1** <IconFire />
 
 ### Super Nova
 
-<Boon title="Super Nova" iconKey="apollo/super-nova" element="air">
+<BoonTest boon={DbBoons.Apollo.superNova}>
 Your **Casts** expand in size until they expire.
 
 - Max Cast Size: **+40%**
 
-</Boon>
+</BoonTest>
 
 ### Light Smite
 
-<Boon title="Light Smite" iconKey="apollo/light-smite" element="fire">
+<BoonTest boon={DbBoons.Apollo.lightSmite}>
 After you take damage, your foe takes damage and you inflict **Daze** on _all_ foes.
 
 - Revenge Damage: **50**
 
-</Boon>
+</BoonTest>
 
 ### Extra Dose
 
-<Boon title="Extra Dose" iconKey="apollo/extra-dose" element="fire">
+<BoonTest boon={DbBoons.Apollo.extraDose}>
 Your **Attack** has a chance to hit **2** times.
 
 - Double Strike Chance: **+5%**
 
-</Boon>
+</BoonTest>
 
 ### Perfect Image
 
-<Boon title="Perfect Image" iconKey="apollo/perfect-image" element="air">
+<BoonTest boon={DbBoons.Apollo.perfectImage}>
 In each **Encounter**, you deal more damage until you take damage.
 
 - No-Hit Bonus Damage: **+10%**
 
-</Boon>
+</BoonTest>
 
 ### Back Burner
 
-<Boon title="Back Burner" iconKey="apollo/back-burner" element="fire">
+<BoonTest boon={DbBoons.Apollo.backBurner}>
 Foes with **Daze** take more damage if struck from behind.
 
 - Backstab Damage: **+50%**
 
-</Boon>
+</BoonTest>
 
 **Required**: _(one of the following):_
 
@@ -138,12 +140,12 @@ Foes with **Daze** take more damage if struck from behind.
 
 ### Critical Miss
 
-<Boon title="Critical Miss" iconKey="apollo/critical-miss" element="air">
+<BoonTest boon={DbBoons.Apollo.criticalMiss}>
 Foes take damage whenever **Daze** causes them to miss.
 
 - Miss Damage: **100**
 
-</Boon>
+</BoonTest>
 
 **Required**: _(one of the following):_
 
@@ -153,12 +155,12 @@ Foes take damage whenever **Daze** causes them to miss.
 
 ### Dazzling Display
 
-<Boon title="Dazzling Display" iconKey="apollo/dazzling-display" element="fire">
+<BoonTest boon={DbBoons.Apollo.dazzlingDisplay}>
 Your **Attacks** may inflict **Daze**.
 
 - Daze Chance: **+10%**
 
-</Boon>
+</BoonTest>
 
 **Required**:
 
@@ -168,12 +170,12 @@ Your **Attacks** may inflict **Daze**.
 
 ### <TextHighlight type="legendary">Exceptional Talent</TextHighlight>
 
-<Boon title="Exceptional Talent" iconKey="apollo/exceptional-talent" element="air" type="legendary">
+<BoonTest boon={DbBoons.Apollo.exceptionalTalent}>
 Your **Ω Attack** and **Ω Special** fire **2** more times, but use more <IconMagick />.
 
 - Omega Move Cost: **+20 Magick**
 
-</Boon>
+</BoonTest>
 
 **Required** _(one of the following):_
 

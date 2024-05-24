@@ -40,7 +40,6 @@ export const DbBoonsZeus: Record<string, BoonData> = {
     name: "Air Quality",
     key: "air-quality",
     god: "zeus",
-    element: "air",
     type: "infusion",
   },
 

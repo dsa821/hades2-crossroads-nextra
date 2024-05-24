@@ -1,5 +1,6 @@
 import { FC } from "react";
 
+import { Box } from "./Box";
 import { IconGrasp } from "./icons";
 
 type ArcanaProps = {
@@ -10,9 +11,7 @@ type ArcanaProps = {
 
 export const Arcana: FC<ArcanaProps> = (props) => {
   return (
-    <div
-      className={`card-bg ${props.className}`}
-    >
+    <Box className={props.className}>
       {props.title != null && (
         <div className="font-bold text-2xl">{props.title}</div>
       )}
@@ -30,6 +29,6 @@ export const Arcana: FC<ArcanaProps> = (props) => {
           <IconGrasp />
         </div>
       </div>
-    </div>
+    </Box>
   );
 };
