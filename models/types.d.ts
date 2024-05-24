@@ -8,6 +8,7 @@ export type Rarity =
   | "infusion";
 
 export type BoonElement = "water" | "earth" | "fire" | "air";
+
 export type God =
   | "aphrodite"
   | "apollo"
@@ -18,13 +19,14 @@ export type God =
   | "hermes"
   | "hestia"
   | "poseidon"
-  | "zeus";
+  | "zeus"
+  | "duos";
 
 export type BoonData = {
-  title: string;
-  god: God;
+  name: string;
   key: string;
+  god: God;
   type?: Rarity;
-  element: BoonElement;
+  element?: BoonElement;
   flavor?: string;
 };

@@ -57,27 +57,47 @@ export const Boon: FC<BoonProps> = (props) => {
 type BoonTestProps = {
   boon: BoonData;
   compact: boolean;
+  linkOverride?: string;
 };
-export const BoonTest: FC<BoonTestProps> = ({ boon, compact, ...props }) => {
+export const BoonTest: FC<BoonTestProps> = ({
+  boon,
+  compact,
+  linkOverride,
+  ...props
+}) => {
   const iconKey = `${boon.god}/${boon.key}`;
   const boonIcon = (
-    <IconBoonBase iconKey={iconKey} alt={boon.title} type={boon.type} />
+    <IconBoonBase iconKey={iconKey} alt={boon.name} type={boon.type} />
+  );
+  const boonNameHighlight = (
+    <TextHighlight type={boon.type}>{boon.name}</TextHighlight>
   );
 
   if (compact) {
-    return <Link href={`/boons/${boon.god}#${boon.key}`}>{boonIcon}</Link>;
+    const link = linkOverride ?? `${boon.god}#${boon.key}`;
+    return (
+      <Link
+        href={`/boons/${link}`}
+        className="flex flex-col gap-2 items-center w-28"
+      >
+        <div>{boonIcon}</div>
+        <div className="text-center font-bold text-lg small-caps">
+          {boonNameHighlight}
+        </div>
+      </Link>
+    );
   }
 
   return (
     <Box className={props.className}>
       <div className="flex">
         <div className="flex-1">
-          {boon.title != null && (
+          {boon.name != null && (
             <div className="flex items-center gap-4">
               {iconKey != null && boonIcon}
 
               <div className="font-bold text-3xl small-caps tracking-wide flex-1">
-                <TextHighlight type={boon.type}>{boon.title}</TextHighlight>
+                {boonNameHighlight}
               </div>
 
               {boon.element != null && (
