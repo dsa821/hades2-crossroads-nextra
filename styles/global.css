@@ -11,6 +11,6 @@ h6 {
   font-family: var(--font-header);
 }
 
-.page-icon-title {
-  @apply flex items-start gap-2;
+.card-bg {
+  @apply relative bg-gradient-to-r from-slate-800 to-slate-700 text-white rounded p-4;
 }

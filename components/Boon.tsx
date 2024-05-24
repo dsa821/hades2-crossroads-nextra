@@ -13,7 +13,7 @@ type BoonProps = {
 export const Boon: FC<BoonProps> = (props) => {
   return (
     <div
-      className={`relative bg-gradient-to-r from-slate-800 to-slate-700 text-white rounded p-4 ${props.className}`}
+      className={`card-bg ${props.className}`}
     >
       <div className="flex">
         <div className="flex-1">

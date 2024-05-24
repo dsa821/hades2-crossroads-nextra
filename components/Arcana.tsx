@@ -11,7 +11,7 @@ type ArcanaProps = {
 export const Arcana: FC<ArcanaProps> = (props) => {
   return (
     <div
-      className={`bg-gradient-to-r from-slate-800 to-slate-700 text-white rounded p-4 ${props.className}`}
+      className={`card-bg ${props.className}`}
     >
       {props.title != null && (
         <div className="font-bold text-2xl">{props.title}</div>
