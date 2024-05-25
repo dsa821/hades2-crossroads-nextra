@@ -3,6 +3,7 @@ import { DbBoonsApollo } from "./apollo.db";
 import { DbBoonsDemeter } from "./demeter.db";
 import { DbBoonsHephaestus } from "./hephaestus.db";
 import { DbBoonsHera } from "./hera.db";
+import { DbBoonsHestia } from "./hestia.db";
 import { DbBoonsPoseidon } from "./poseidon.db";
 import { DbBoonsZeus } from "./zeus.db";
 
@@ -14,6 +15,7 @@ const DbBoons = {
   Demeter: DbBoonsDemeter,
   Hephaestus: DbBoonsHephaestus,
   Hera: DbBoonsHera,
+	Hestia: DbBoonsHestia,
   Poseidon: DbBoonsPoseidon,
   Zeus: DbBoonsZeus,
   Duos: DbBoonsDuos,
