@@ -6,6 +6,7 @@ import { DbBoonsHera } from "./hera.db";
 import { DbBoonsHestia } from "./hestia.db";
 import { DbBoonsPoseidon } from "./poseidon.db";
 import { DbBoonsZeus } from "./zeus.db";
+import { DbBoonsHermes } from "./hermes.db";
 
 import { DbBoonsDuos } from "./duos.db";
 
@@ -18,6 +19,8 @@ const DbBoons = {
 	Hestia: DbBoonsHestia,
   Poseidon: DbBoonsPoseidon,
   Zeus: DbBoonsZeus,
+	Hermes: DbBoonsHermes,
+	
   Duos: DbBoonsDuos,
 };
 export { DbBoons };
