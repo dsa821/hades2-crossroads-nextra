@@ -29,7 +29,7 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
     return (
       <Link
         href={hrefOverride ?? data.href}
-        className="flex flex-col gap-2 items-center"
+        className="flex flex-col items-center px-2 py-2 transition hover:bg-emerald-800"
       >
         {mainIcon}
         <div className="text-center font-bold text-xl small-caps">
@@ -70,10 +70,15 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
 //
 type CodexGridProps = {
   data: CodexData[];
+  className?: string;
 };
-export const CodexGrid: React.FC<CodexGridProps> = ({ data }) => {
+export const CodexGrid: React.FC<CodexGridProps> = ({ data, className }) => {
   return (
-    <div className="grid lg:grid-cols-6 grid-cols-4 gap-4 items-start">
+    <div
+      className={`grid grid-cols-3 lg:grid-cols-6 gap-1 items-stretch ${
+        className || ""
+      }`}
+    >
       {data.map((d) => {
         return <CodexEntry key={`${d.name}`} data={d} compact />;
       })}

@@ -3,7 +3,8 @@ title: Apollo
 description: Boons for Apollo in Hades 2.
 ---
 
-import { BoonTest, Box, TextHighlight } from "@/components";
+import { Callout } from "nextra/components";
+import { BoonTest, BoonGrid, Box, TextHighlight } from "@/components";
 import { IconApollo, IconFire, IconLife, IconMagick } from "@/components/icons";
 import { DbBoons } from "@/db/boons";
 
@@ -85,7 +86,9 @@ While you have at least **3** <IconFire />, whenever you take damage, restore so
 
 </BoonTest>
 
-**Required: 1** <IconFire />
+<Callout>
+  **Required: 1** <IconFire />
+</Callout>
 
 ### Super Nova
 
@@ -132,11 +135,16 @@ Foes with **Daze** take more damage if struck from behind.
 
 </BoonTest>
 
-**Required**: _(one of the following):_
-
-- [Blinding Sprint](#blinding-sprint)
-- [Light Smite](#light-smite)
-- [Dazzling Display](#dazzling-display)
+<Callout>
+  **Required**: _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Apollo.blindingSprint,
+      DbBoons.Apollo.lightSmite,
+      DbBoons.Apollo.dazzlingDisplay,
+    ]}
+  />
+</Callout>
 
 ### Critical Miss
 
@@ -147,11 +155,16 @@ Foes take damage whenever **Daze** causes them to miss.
 
 </BoonTest>
 
-**Required**: _(one of the following):_
-
-- [Blinding Sprint](#blinding-sprint)
-- [Light Smite](#light-smite)
-- [Dazzling Display](#dazzling-display)
+<Callout>
+  **Required**: _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Apollo.blindingSprint,
+      DbBoons.Apollo.lightSmite,
+      DbBoons.Apollo.dazzlingDisplay,
+    ]}
+  />
+</Callout>
 
 ### Dazzling Display
 
@@ -162,9 +175,10 @@ Your **Attacks** may inflict **Daze**.
 
 </BoonTest>
 
-**Required**:
-
-- [Nova Strike](#nova-strike)
+<Callout>
+  **Required**:
+  <BoonGrid boons={[DbBoons.Apollo.novaStrike]} />
+</Callout>
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
@@ -177,20 +191,20 @@ Your **Ω Attack** and **Ω Special** fire **2** more times, but use more <IconM
 
 </BoonTest>
 
-**Required** _(one of the following):_
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid boons={[DbBoons.Apollo.novaStrike, DbBoons.Apollo.novaFlourish]} />
+</Callout>
 
-- [Nova Strike](#nova-strike)
-- [Nova Flourish](#nova-flourish)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid boons={[DbBoons.Apollo.solarRing, DbBoons.Apollo.lucidGain]} />
+</Callout>
 
-**Required** _(one of the following):_
-
-- [Solar Ring](#solar-ring)
-- [Lucid Gain](#lucid-gain)
-
-**Required** _(one of the following):_
-
-- [Extra Dose](#extra-dose)
-- [Super Nova](#super-nova)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid boons={[DbBoons.Apollo.extraDose, DbBoons.Apollo.superNova]} />
+</Callout>
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
 

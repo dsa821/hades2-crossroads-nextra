@@ -73,7 +73,8 @@ export const BoonTest: React.FC<BoonTestProps> = ({ boon, ...props }) => {
 
 type BoonGridProps = {
   boons: BoonData[];
+  className?: string;
 };
-export const BoonGrid: React.FC<BoonGridProps> = ({ boons }) => {
-  return <CodexGrid data={boons.map(mapBoonToCodex)} />;
+export const BoonGrid: React.FC<BoonGridProps> = ({ boons, ...props }) => {
+  return <CodexGrid data={boons.map(mapBoonToCodex)}  {...props} />;
 };

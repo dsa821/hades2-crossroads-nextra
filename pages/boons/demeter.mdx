@@ -3,7 +3,8 @@ title: Demeter
 description: Boons for Demeter in Hades 2.
 ---
 
-import { BoonTest, Box, TextHighlight } from "@/components";
+import { Callout } from "nextra/components";
+import { BoonTest, BoonGrid, Box, TextHighlight } from "@/components";
 import {
   IconDemeter,
   IconEarth,
@@ -94,7 +95,9 @@ While you have at least **6** <IconEarth />, you cannot take more damage per hit
 
 </BoonTest>
 
-**Required: 1** <IconEarth />
+<Callout>
+  **Required: 1** <IconEarth />
+</Callout>
 
 ### Rare Crop
 
@@ -162,10 +165,10 @@ Your **Freeze** effects last longer.
 
 </BoonTest>
 
-**Required** _(one of the following):_
-
-- [Ice Strike](#ice-strike)
-- [Ice Flourish](#ice-flourish)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid boons={[DbBoons.Demeter.iceStrike, DbBoons.Demeter.iceFlourish]} />
+</Callout>
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
@@ -178,20 +181,22 @@ Your **Freeze** effects last longer.
 
 </BoonTest>
 
-**Required** _(one of the following):_
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid boons={[DbBoons.Demeter.iceStrike, DbBoons.Demeter.iceFlourish]} />
+</Callout>
 
-- [Ice Strike](#ice-strike)
-- [Ice Flourish](#ice-flourish)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[DbBoons.Demeter.plentifulForage, DbBoons.Demeter.winterCoat]}
+  />
+</Callout>
 
-**Required** _(one of the following):_
-
-- [Plentiful Forage](#plentiful-forage)
-- [Winter Coat](#winter-coat)
-
-**Required** _(one of the following):_
-
-- [Weed Killer](#weed-killer)
-- [Cold Storage](#cold-storage)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid boons={[DbBoons.Demeter.weedKiller, DbBoons.Demeter.coldStorage]} />
+</Callout>
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
 

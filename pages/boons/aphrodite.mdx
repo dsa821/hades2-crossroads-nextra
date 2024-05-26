@@ -3,7 +3,8 @@ title: Aphrodite
 description: Boons for Aphrodite in Hades 2.
 ---
 
-import { Boon, BoonTest, Box, TextHighlight } from "@/components";
+import { Callout } from "nextra/components";
+import { BoonTest, BoonGrid, Box, TextHighlight } from "@/components";
 import {
   IconAir,
   IconAphrodite,
@@ -11,7 +12,7 @@ import {
   IconMaxLife,
   IconMagick,
 } from "@/components/icons";
-import { DbBoons } from '@/db/boons';
+import { DbBoons } from "@/db/boons";
 
 import IslandGetaway from "@/components/duos/IslandGetaway.mdx";
 import SoftCaress from "@/components/duos/SoftCaress.mdx";
@@ -90,7 +91,9 @@ While you have at least **4** <IconAir />, you may **Dodge** any damage.
 
 </BoonTest>
 
-**Required: 1** <IconAir />
+<Callout>
+  **Required: 1** <IconAir />
+</Callout>
 
 ### Healthy Rebound
 
@@ -149,11 +152,16 @@ Your **Weak** effects are more potent.
 
 </BoonTest>
 
-**Required** _(one of the following):_
-
-- [Rapture Ring](#rapture-ring)
-- [Passion Dash](#passion-dash)
-- [Glamour Gain](#glamour-gain)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.raptureRing,
+      DbBoons.Aphrodite.passionDash,
+      DbBoons.Aphrodite.glamourGain,
+    ]}
+  />
+</Callout>
 
 ### Sweet Surrender
 
@@ -164,11 +172,16 @@ Your **Weak** effects are more potent.
 
 </BoonTest>
 
-**Required** _(one of the following):_
-
-- [Rapture Ring](#rapture-ring)
-- [Passion Dash](#passion-dash)
-- [Glamour Gain](#glamour-gain)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.raptureRing,
+      DbBoons.Aphrodite.passionDash,
+      DbBoons.Aphrodite.glamourGain,
+    ]}
+  />
+</Callout>
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
@@ -181,21 +194,30 @@ During **Encounters** with multiple foes, **1** foe is always afflicted with **C
 
 </BoonTest>
 
-**Required** _(one of the following):_
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[DbBoons.Aphrodite.brokenResolve, DbBoons.Aphrodite.sweetSurrender]}
+  />
+</Callout>
 
-- [Broken Resolve](#broken-resolve)
-- [Sweet Surrender](#sweet-surrender)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.raptureRing,
+      DbBoons.Aphrodite.passionDash,
+      DbBoons.Aphrodite.glamourGain,
+    ]}
+  />
+</Callout>
 
-**Required** _(one of the following):_
-
-- [Rapture Ring](#rapture-ring)
-- [Passion Dash](#passion-dash)
-- [Glamour Gain](#glamour-gain)
-
-**Required** _(one of the following):_
-
-- [Flutter Strike](#flutter-strike)
-- [Flutter Flourish](#flutter-flourish)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[DbBoons.Aphrodite.flutterStrike, DbBoons.Aphrodite.flutterFlourish]}
+  />
+</Callout>
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
 

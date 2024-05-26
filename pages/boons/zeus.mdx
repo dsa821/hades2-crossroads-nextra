@@ -3,7 +3,8 @@ title: Zeus
 description: Boons for Zeus in Hades 2.
 ---
 
-import { Boon, BoonTest, Box, TextHighlight } from "@/components";
+import { Callout } from "nextra/components";
+import { BoonTest, BoonGrid, Box, TextHighlight } from "@/components";
 import {
   IconAir,
   IconMagick,
@@ -87,7 +88,10 @@ While you have at least **5** <IconAir />, you can never deal less damage than t
 - Min Damage per Hit: **30**
 
 </BoonTest>
-**Required: 2** <IconAir />
+
+<Callout>
+  **Required: 2** <IconAir />
+</Callout>
 
 ### Divine Vengeance
 
@@ -134,15 +138,20 @@ Your lightning bolt effects may strike **1** more time.
 
 </BoonTest>
 
-**Required** _(one of the following):_
-
-- [Heaven Strike](#heaven-strike)
-- [Heaven Flourish](#heaven-flourish)
-- [Storm Ring](#storm-ring)
-- [Thunder Sprint](#thunder-sprint)
-- [Spirit Surge](#spirit-surge)
-- [Divine Vengeance](#divine-vengeance)
-- [Lightning Lance](#lightning-lance)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Zeus.heavenStrike,
+      DbBoons.Zeus.heavenFlourish,
+      DbBoons.Zeus.stormRing,
+      DbBoons.Zeus.thunderSprint,
+      DbBoons.Zeus.spiritSurge,
+      DbBoons.Zeus.divineVengeance,
+      DbBoons.Zeus.lightningLance,
+    ]}
+  />
+</Callout>
 
 ### Toasting Fork
 
@@ -153,10 +162,10 @@ Your **Blitz** effects deal damage even if they expire without being activated.
 
 </BoonTest>
 
-**Required** _(one of the following):_
-
-- [Heaven Strike](#heaven-strike)
-- [Heaven Flourish](#heaven-flourish)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid boons={[DbBoons.Zeus.heavenStrike, DbBoons.Zeus.heavenFlourish]} />
+</Callout>
 
 ### Electric Overload
 
@@ -167,10 +176,10 @@ Whenever your Blitz effects activate, a bolt of chain-lightning fires from the f
 
 </BoonTest>
 
-**Required** _(one of the following):_
-
-- [Heaven Strike](#heaven-strike)
-- [Heaven Flourish](#heaven-flourish)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid boons={[DbBoons.Zeus.heavenStrike, DbBoons.Zeus.heavenFlourish]} />
+</Callout>
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
@@ -183,23 +192,28 @@ Most foes may be instantly destroyed as soon as they enter the **Encounter**.
 
 </BoonTest>
 
-**Required** _(one of the following):_
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Zeus.heavenStrike,
+      DbBoons.Zeus.heavenFlourish,
+      DbBoons.Zeus.stormRing,
+      DbBoons.Zeus.thunderSprint,
+      DbBoons.Zeus.ionicGain,
+    ]}
+  />
+</Callout>
 
-- [Heaven Strike](#heaven-strike)
-- [Heaven Flourish](#heaven-flourish)
-- [Storm Ring](#storm-ring)
-- [Thunder Sprint](#thunder-sprint)
-- [Ionic Gain](#ionic-gain)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid boons={[DbBoons.Zeus.doubleStrike, DbBoons.Zeus.toastingFork]} />
+</Callout>
 
-**Required** _(one of the following):_
-
-- [Double Strike](#double-strike)
-- [Toasting Fork](#toasting-fork)
-
-**Required** _(one of the following):_
-
-- [Static Shock](#static-shock)
-- [Electric Overload](#electric-overload)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid boons={[DbBoons.Zeus.staticShock, DbBoons.Zeus.electricOverload]} />
+</Callout>
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
 
