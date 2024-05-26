@@ -30,3 +30,12 @@ export type BoonData = {
   element?: BoonElement;
   flavor?: string;
 };
+
+export type CodexData = {
+  name: string;
+  type: Rarity;
+  iconUrl: string;
+  href: string;
+  extraIcon: React.ReactNode;
+  flavor?: string;
+}

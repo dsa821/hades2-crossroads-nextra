@@ -1,8 +1,8 @@
-import { FC } from "react";
-import Link from "next/link";
-
+import { mapBoonToCodex } from "lib/utils";
 import { BoonData, BoonElement, Rarity } from "models/types";
+
 import { Box } from "./Box";
+import { CodexEntry, CodexGrid } from "./Codex";
 import { TextHighlight } from "./TextHighlight";
 import { IconBase } from "./icons/IconBase";
 import { IconBoonBase } from "./icons/IconBoonBase";
@@ -13,9 +13,11 @@ type BoonProps = {
   iconKey: string;
   flavor: string;
   element: BoonElement;
+  className: string;
+  children?: React.ReactNode;
 };
 
-export const Boon: FC<BoonProps> = (props) => {
+export const Boon: React.FC<BoonProps> = (props) => {
   return (
     <Box className={props.className}>
       <div className="flex">
@@ -57,65 +59,21 @@ export const Boon: FC<BoonProps> = (props) => {
 type BoonTestProps = {
   boon: BoonData;
   compact: boolean;
-  linkOverride?: string;
+  hrefOverride?: string;
+  className: string;
+  children?: React.ReactNode;
 };
-export const BoonTest: FC<BoonTestProps> = ({
-  boon,
-  compact,
-  linkOverride,
-  ...props
-}) => {
-  const iconKey = `${boon.god}/${boon.key}`;
-  const boonIcon = (
-    <IconBoonBase iconKey={iconKey} alt={boon.name} type={boon.type} />
-  );
-  const boonNameHighlight = (
-    <TextHighlight type={boon.type}>{boon.name}</TextHighlight>
-  );
-
-  if (compact) {
-    const link = linkOverride ?? `${boon.god}#${boon.key}`;
-    return (
-      <Link
-        href={`/boons/${link}`}
-        className="flex flex-col gap-2 items-center w-28"
-      >
-        <div>{boonIcon}</div>
-        <div className="text-center font-bold text-xl small-caps">
-          {boonNameHighlight}
-        </div>
-      </Link>
-    );
-  }
-
+export const BoonTest: React.FC<BoonTestProps> = ({ boon, ...props }) => {
   return (
-    <Box className={props.className}>
-      <div className="flex">
-        <div className="flex-1">
-          {boon.name != null && (
-            <div className="flex items-center gap-4">
-              {iconKey != null && boonIcon}
-
-              <div className="font-bold text-3xl small-caps tracking-wide flex-1">
-                {boonNameHighlight}
-              </div>
-
-              {boon.element != null && (
-                <div>
-                  <IconBase iconKey={boon.element} size={32} />
-                </div>
-              )}
-            </div>
-          )}
-          {props.children}
-
-          {boon.flavor && (
-            <div className="mt-2 italic font-bold text-sm drop-shadow-lg text-indigo-500">
-              {boon.flavor}
-            </div>
-          )}
-        </div>
-      </div>
-    </Box>
+    <CodexEntry data={mapBoonToCodex(boon)} {...props}>
+      {props.children}
+    </CodexEntry>
   );
+};
+
+type BoonGridProps = {
+  boons: BoonData[];
+};
+export const BoonGrid: React.FC<BoonGridProps> = ({ boons }) => {
+  return <CodexGrid data={boons.map(mapBoonToCodex)} />;
 };
