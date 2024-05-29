@@ -3,7 +3,8 @@ title: Hermes
 description: Boons for Hermes in Hades 2.
 ---
 
-import { Boon, TextHighlight } from "@/components";
+import { Callout } from "nextra/components";
+import { BoonTest, BoonGrid, TextHighlight } from "@/components";
 import {
   IconHermes,
   IconGold,
@@ -15,6 +16,8 @@ import {
   IconWater,
 } from "@/components/icons";
 
+import { DbBoons } from "@/db/boons";
+
 # <IconHermes className="mb-2" /> Hermes
 
 > Amongst Olympians, you know him well. His business often takes him to the edge of the Underworld, and sometimes farther below.\
@@ -24,122 +27,135 @@ import {
 
 ### <TextHighlight type="infusion">Tall Order (Infusion)</TextHighlight> [#tall-order]
 
-<Boon>
+<BoonTest boon={DbBoons.Hermes.tallOrder}>
 While you have at least **2** each of <IconEarth /> <IconWater /> <IconAir /> <IconFire /> **Elements**, you deal more damage.
 
 - Infused Damage: **+20%**
 
-</Boon>
+</BoonTest>
 
 ### Greater Evasion
 
-<Boon element="air">
+<BoonTest boon={DbBoons.Hermes.greaterEvasion}>
 Whenever you are struck, you may **Dodge** any damage.
 
 - Dodge Chance: **+10%**
 
-</Boon>
+</BoonTest>
 
 ### Saved Breath
 
-<Boon element="earth">
+<BoonTest boon={DbBoons.Hermes.savedBreath}>
 Your **Ω Cast** uses less <IconMagick />.
 
 - Omega Cast Cost: **-50%**
 
-</Boon>
+</BoonTest>
 
 ### Swift Flourish
 
-<Boon element="earth">
+<BoonTest boon={DbBoons.Hermes.swiftFlourish}>
 Your **Specials** are faster.
 
 - Special Speed: **+15%**
 
-</Boon>
+</BoonTest>
 
 ### Swift Strike
 
-<Boon element="earth">
+<BoonTest boon={DbBoons.Hermes.swiftStrike}>
+
 Your **Attacks** are faster.
 
 - Attack Speed: **+10%**
 
-</Boon>
+</BoonTest>
 
 ### Midnight Oil
 
-<Boon element="air">
+<BoonTest boon={DbBoons.Hermes.midnightOil}>
+
 While your **Hex** is ready, you move and strike faster.
 
 - Bonus Move & Weapon Speed: **+15%**
 
-</Boon>
+</BoonTest>
 
 ### Quick Buck
 
-<Boon element="air">
+<BoonTest boon={DbBoons.Hermes.quickBuck}>
+
 You find <IconGold /> in greater quantities. Receive **100** <IconGold /> now, plus the bonus!
 
 - Bonus Gold: **+20%**
 
-</Boon>
+</BoonTest>
 
 ### Hard Target
 
-<Boon element="air">
+<BoonTest boon={DbBoons.Hermes.hardTarget}>
+
 Most foes' ranged shots are slower.
 
 - Foe Projectile Speed: **-30%**
 
-</Boon>
+</BoonTest>
 
 ### Witty Retort
 
-<Boon element="earth">
+<BoonTest boon={DbBoons.Hermes.wittyRetort}>
+
 Your **Hex** requires using less <IconMagick /> before it is ready.
 
 - Reduced Magick Cost: **-15%**
 
-</Boon>
+</BoonTest>
 
 ### Nitro Boost
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hermes.nitroBoost}>
+
 Your **Sprint** is **15%** faster and gives you a barrier that ignores instances of damage.
 
 - Hits Blocked per Encounter: **1**
 
-</Boon>
+</BoonTest>
 
 ### Mean Streak
 
-<Boon element="air">
+<BoonTest boon={DbBoons.Hermes.meanStreak}>
+
 Each time you slay a foe, deal more damage for the next **30 Sec**.
 
 - Bonus Damage per Slain Foe: **+1%**
 
-</Boon>
+</BoonTest>
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
 ### <TextHighlight type="legendary">Close Call</TextHighlight>
 
-<Boon element="air">
+<BoonTest boon={DbBoons.Hermes.closeCall}>
+
 Gain **+1** use of **Death Defiance** that makes everything else move **90%** slower.
 
 - Slow Duration: **8 Sec.**
 
-</Boon>
+</BoonTest>
 
-**Required** _(one of the following):_
-
-- [Swift Strike](#swift-strike)
-- [Swift Flourish](#swift-flourish)
-- [Hard Target](#hard-target)
-- [Saved Breath](#saved-breath)
-- [Witty Retort](#witty-retort)
-- [Greater Evasion](#greater-evasion)
-- [Midnight Oil](#midnight-oil)
-- [Mean Streak](#mean-streak)
-- [Nitro Boost](#nitro-boost)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hermes.swiftStrike,
+      DbBoons.Hermes.swiftFlourish,
+      DbBoons.Hermes.hardTarget,
+      DbBoons.Hermes.savedBreath,
+      DbBoons.Hermes.wittyRetort,
+      DbBoons.Hermes.greaterEvasion,
+      DbBoons.Hermes.midnightOil,
+      DbBoons.Hermes.meanStreak,
+      DbBoons.Hermes.nitroBoost,
+    ]}
+  />
+</Callout>
