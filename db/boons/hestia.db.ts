@@ -58,7 +58,7 @@ export const DbBoonsHestia: Record<string, BoonData> = {
   },
 
   burntOffering: {
-    name: "Burnt OFfering",
+    name: "Burnt Offering",
     key: "burnt-offering",
     god: "hestia",
     element: "fire",

@@ -3,7 +3,8 @@ title: Hestia
 description: Boons for Hestia in Hades 2.
 ---
 
-import { Boon, TextHighlight } from "@/components";
+import { Callout } from "nextra/components";
+import { BoonTest, BoonGrid, Box, TextHighlight } from "@/components";
 import {
   IconFire,
   IconHestia,
@@ -12,6 +13,8 @@ import {
   IconMaxLife,
   IconMaxMagick,
 } from "@/components/icons";
+
+import { DbBoons } from "@/db/boons";
 
 import FuneralPyre from "@/components/duos/FuneralPyre.mdx";
 import PhoenixSkin from "@/components/duos/PhoenixSkin.mdx";
@@ -23,192 +26,220 @@ import ScaldingVapor from "@/components/duos/ScaldingVapor.mdx";
 
 # <IconHestia className="mb-2" /> Hestia
 
-> The goddess of the hearth is very wise, inasmuch as she altogether avoids most
-> matters of familial politics. But there are some matters in which even she
-> must become involved.\
-> She likes you, and you like her. She does not stand on ceremony. You could learn
-> a thing or two of that.
+> The goddess of the hearth is very wise, inasmuch as she altogether avoids most matters of familial politics. But there are some matters in which even she must become involved.\
+> She likes you, and you like her. She does not stand on ceremony. You could learn a thing or two of that.
 
-<Boon className="mt-4">
+<Box className="mt-4">
   **Scorch** _(Curse):_ Afflicted foes take **40** damage accrued from this
   every **1 Sec.**
-</Boon>
+</Box>
 
 ## Core
 
 ### Flame Strike (Attack) [#flame-strike]
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hestia.flameStrike}>
 Your **Attacks** inflict **Scorch**.
 
 - Scorch Damage: **20**
 
-</Boon>
+</BoonTest>
 
 ### Flame Flourish (Special) [#flame-flourish]
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hestia.flameFlourish}>
 Your **Specials** inflict **Scorch**.
 
 - Scorch Damage: **15**
 
-</Boon>
+</BoonTest>
 
 ### Smolder Ring (Cast) [#smolder-ring]
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hestia.smolderRing}>
 Your **Casts** repeatedly inflict **Scorch** on foes.
 
 - Scorch Damage: **30** _(every 1 Sec.)_
 
-</Boon>
+</BoonTest>
 
 ### Soot Sprint (Sprint) [#soot-sprint]
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hestia.sootSprint}>
 Your **Sprint** destroys most ranged shots near you, and inflicts **Scorch** on foes that fired.
 
 - Scorch Damage per Projectile: **2**
 
-</Boon>
+</BoonTest>
 
 ### Hearth Gain (Magick) [#hearth-gain]
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hestia.hearthGain}>
 Rapidly restore <IconMagick />, but you have **-20%** <IconMaxLife />.
 
 - Magick Restoration: **7** _(every 1 Sec.)_
 
-</Boon>
+</BoonTest>
 
 ## Support
 
 ### <TextHighlight type="infusion">Slow Cooker (Infusion)</TextHighlight> [#slow-cooker]
 
-<Boon>
+<BoonTest boon={DbBoons.Hestia.slowCooker}>
 Your **Attacks** and **Specials** gain **Power** for each <IconFire /> you have.
 
 - Power per Fire Boon: **+2**
 
-</Boon>
+</BoonTest>
 
-**Required: 1** <IconFire />
+<Callout>
+  **Required: 1** <IconFire />
+</Callout>
 
 ### Glowing Coal
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hestia.glowingCoal}>
 Hold **Cast** to aim a fiery projectile that explodes on impact. The binding circle forms there.
 
 - Blast Damage: **50**
 
-</Boon>
+</BoonTest>
 
 ### Controlled Burn
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hestia.controlledBurn}>
 Your **Ω Special** also launches a fiery projectile, but uses **+10** <IconMagick />
 
 - Blast Damage: **80**
 
-</Boon>
+</BoonTest>
 
 ### Burnt Offering
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hestia.burntOffering}>
 Gain <IconMaxLife /> and <IconMaxMagick /> but give up **1 Boon** selected by **Hestia**.
 
 - Max Life & Magick: **+50**
 
-</Boon>
+</BoonTest>
 
 ### Flammable Coating
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hestia.flammableCoating}>
 Your **Scorch** effects deal bonus damage to **Armor**.
 
 - Scorch Damage vs. Armor: **+100%**
 
-</Boon>
+</BoonTest>
 
-**Required** _(one of the following):_
-
-- [Flame Strike](#flame-strike)
-- [Flame Flourish](#flame-flourish)
-- [Smolder Ring](#smolder-ring)
-- [Spontaneous Combustion](#spontaneous-combustion)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hestia.flameStrike,
+      DbBoons.Hestia.flameFlourish,
+      DbBoons.Hestia.smolderRing,
+      DbBoons.Hestia.spontaneousCombustion,
+    ]}
+  />
+</Callout>
 
 ### Fire Extinguisher
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hestia.fireExtinguisher}>
+
 Foes with at least **300 Scorch** take a burst of damage that consumes the effect.
 
 - Damage from Scorch: **50%**
 
-</Boon>
+</BoonTest>
 
-**Required** _(one of the following):_
-
-- [Flame Strike](#flame-strike)
-- [Flame Flourish](#flame-flourish)
-- [Smolder Ring](#smolder-ring)
-- [Spontaneous Combustion](#spontaneous-combustion)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hestia.flameStrike,
+      DbBoons.Hestia.flameFlourish,
+      DbBoons.Hestia.smolderRing,
+      DbBoons.Hestia.spontaneousCombustion,
+    ]}
+  />
+</Callout>
 
 ### Natural Gas
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hestia.naturalGas}>
+
 Whenever **Scorch**-afflicted foes are slain, they damage nearby foes.
 
 - Blast Damage: **60**
 
-</Boon>
+</BoonTest>
 
-**Required** _(one of the following):_
-
-- [Flame Strike](#flame-strike)
-- [Flame Flourish](#flame-flourish)
-- [Smolder Ring](#smolder-ring)
-- [Spontaneous Combustion](#spontaneous-combustion)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hestia.flameStrike,
+      DbBoons.Hestia.flameFlourish,
+      DbBoons.Hestia.smolderRing,
+      DbBoons.Hestia.spontaneousCombustion,
+    ]}
+  />
+</Callout>
 
 ### Spontaneous Combustion
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hestia.spontaneousCombustion}>
+
 Your **Ω Special** inflicts bonus **Scorch** if foes are unafflicted.
 
 - Scorch Damage: **60**
 
-</Boon>
+</BoonTest>
 
-**Required**:
-
-- [Flame Flourish](#flame-flourish)
+<Callout>
+  **Required**:
+  <BoonGrid boons={[DbBoons.Hestia.flameFlourish]} />
+</Callout>
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
 ### <TextHighlight type="legendary">Pyro Technique</TextHighlight>
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hestia.pyroTechnique}>
+
 Your **Scorch** effects deal damage faster.
 
 - Scorch Damage Rate: **+100%**
 
-</Boon>
+</BoonTest>
 
-**Required** _(one of the following):_
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hestia.flameStrike,
+      DbBoons.Hestia.flameFlourish,
+      DbBoons.Hestia.smolderRing,
+      DbBoons.Hestia.spontaneousCombustion,
+    ]}
+  />
+</Callout>
 
-- [Flame Strike](#flame-strike)
-- [Flame Flourish](#flame-flourish)
-- [Smolder Ring](#smolder-ring)
-- [Spontaneous Combustion](#spontaneous-combustion)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[DbBoons.Hestia.naturalGas, DbBoons.Hestia.flammableCoating]}
+  />
+</Callout>
 
-**Required** _(one of the following):_
-
-- [Natural Gas](#natural-gas)
-- [Flammable Coating](#flammable-coating)
-
-**Required** _(one of the following):_
-
-- [Glowing Coal](#glowing-coal)
-- [Controlled Burn](#controlled-burn)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[DbBoons.Hestia.glowingCoal, DbBoons.Hestia.controlledBurn]}
+  />
+</Callout>
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
 
