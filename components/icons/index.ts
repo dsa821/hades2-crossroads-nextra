@@ -8,6 +8,7 @@ export * from "./IconAshes";
 export * from "./IconBoonLvl";
 export * from "./IconDeathDefiance";
 export * from "./IconGold";
+export * from "./IconGrasp";
 export * from "./IconHammer";
 export * from "./IconHealing";
 export * from "./IconLife";
@@ -18,5 +19,7 @@ export * from "./IconMysterySeed";
 export * from "./IconPsyche";
 export * from "./IconReroll";
 export * from "./IconShell";
+
+export * from "./IconBoonBase";
 
 export * from './gods';

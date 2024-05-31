@@ -1,5 +1,12 @@
 import { IconBase } from "../IconBase";
 
-export const IconHermes = ({ size = 36, className }) => {
-  return <IconBase iconKey="hermes" size={size} className={className} />;
+export const IconHermes = ({ size = 42, className }) => {
+  return (
+    <IconBase
+      iconKey="gods/hermes"
+      alt="Hermes"
+      size={size}
+      className={className}
+    />
+  );
 };

@@ -1,11 +1,12 @@
-import { Boon } from "@/components/Boon";
+import { BoonTest } from "@/components/Boon";
+import { DbBoons } from '@/db/boons';
 
-<Boon>
+<BoonTest boon={DbBoons.Duos.islandGetaway}>
 You take less damage from nearby foes. **Boons** of **Aphrodite** treat all foes as nearby.
 
 - Damage Resistance: **+15%**
 
-</Boon>
+</BoonTest>
 
 **Required** _(one of the following from Poseidon):_
 

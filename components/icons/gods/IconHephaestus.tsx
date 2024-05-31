@@ -1,5 +1,12 @@
 import { IconBase } from "../IconBase";
 
-export const IconHephaestus = ({ size = 36 }) => {
-  return <IconBase iconKey="hephaestus" size={size} />;
+export const IconHephaestus = ({ size = 42, className }) => {
+  return (
+    <IconBase
+      iconKey="gods/hephaestus"
+      alt="Hephaestus"
+      size={size}
+      className={className}
+    />
+  );
 };

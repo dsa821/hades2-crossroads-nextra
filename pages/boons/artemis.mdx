@@ -3,8 +3,10 @@ title: Artemis
 description: Boons for Artemis in Hades 2.
 ---
 
-import { Boon, TextHighlight } from "@/components";
+import { BoonTest, BoonGrid, TextHighlight } from "@/components";
 import { IconArtemis, IconLife } from "@/components/icons";
+
+import { DbBoons } from '@/db/boons';
 
 # <IconArtemis className="mb-2" /> Artemis
 
@@ -16,65 +18,65 @@ import { IconArtemis, IconLife } from "@/components/icons";
 
 ### Pressure Points
 
-<Boon element="earth">
+<BoonTest boon={DbBoons.Artemis.pressurePoints}>
 Any damage you deal may be **Critical**.
 
 - Critical Chance: **+3%**
 
-</Boon>
+</BoonTest>
 
 ### Silver Streak
 
-<Boon element="air">
+<BoonTest boon={DbBoons.Artemis.silverStreak}>
 After you **Dash**, your **Ω Moves** deal more damage for **2 Sec**.
 
 - Bonus Omega Damage: **+10%**
 
-</Boon>
+</BoonTest>
 
 ### First Blood
 
-<Boon element="earth">
+<BoonTest boon={DbBoons.Artemis.firstBlood}>
 Foes with at least **80%** <IconLife /> or **80% Armor** may take **Critical** damage.
 
 - Critical Chance: **+10%**
 
-</Boon>
+</BoonTest>
 
 ### Lethal Snare
 
-<Boon element="earth">
+<BoonTest boon={DbBoons.Artemis.lethalSnare}>
 Foes in your **Casts** may take **Critical** damage from your **Attacks**.
 
 - Critical Chance: **+8%**
 
-</Boon>
+</BoonTest>
 
 ### Easy Shot
 
-<Boon element="air">
+<BoonTest boon={DbBoons.Artemis.easyShot}>
 A piercing arrow fires toward any foe damaged by your **Ω Cast**.
 
 - Arrow Damage: **20**
 
-</Boon>
+</BoonTest>
 
 ### Support Fire
 
-<Boon element="air">
+<BoonTest boon={DbBoons.Artemis.supportFire}>
 After you hit with your **Attacks** or **Specials**, fire a seeking arrow.
 
 - Arrow Damage: **10**
 
-</Boon>
+</BoonTest>
 
 ### Death Warrant
 
-<Boon element="earth">
+<BoonTest boon={DbBoons.Artemis.deathWarrant}>
 A random foe occasionally becomes **Marked**. If it takes **Critical** damage, this repeats.
 
 - Time Between Marks: **20 Sec.**
 
 **Marked** _(Curse)_: Afflicted foes have **+30%** chance to take **Critical** damage. Lasts **6 Sec**.
 
-</Boon>
+</BoonTest>

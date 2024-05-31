@@ -3,7 +3,8 @@ title: Hephaestus
 description: Boons for Hephaestus in Hades 2.
 ---
 
-import { Boon, TextHighlight } from "@/components";
+import { Callout } from "nextra/components";
+import { BoonTest, BoonGrid, Box, TextHighlight } from "@/components";
 import {
   IconArmor,
   IconEarth,
@@ -11,6 +12,8 @@ import {
   IconMagick,
   IconMaxLife,
 } from "@/components/icons";
+
+import { DbBoons } from "@/db/boons";
 
 import RoomTemperature from "@/components/duos/RoomTemperature.mdx";
 import ChainReaction from "@/components/duos/ChainReaction.mdx";
@@ -22,170 +25,191 @@ import MasterConductor from "@/components/duos/MasterConductor.mdx";
 
 # <IconHephaestus /> Hephaestus
 
-> You do not know what to make of this one. He rejects our craft, believes only
-> in what he can grasp with his thick hands.\
+> You do not know what to make of this one. He rejects our craft, believes only in what he can grasp with his thick hands.\
 > But he is a recluse in his own realm. In that you feel a connection.
 
-<Boon className="mt-4">
+<Box className="mt-4">
   **Vent** _(Curse):_ After **5 Sec.**, afflicted foes take a burst of damage.
   Timer resets if re-applied.
-</Boon>
+</Box>
 
 ## Core
 
 ### Volcanic Strike (Attack) [#volcanic-strike]
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hephaestus.volcanicStrike}>
 Your **Attacks** occasionally create a blast that deals **200** damage in the area.
 
 - Blast Recharge Time: **12 Sec.**
 
-</Boon>
+</BoonTest>
 
 ### Volcanic Flourish (Special) [#volcanic-flourish]
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hephaestus.volcanicFlourish}>
 Your **Specials** occasionally create a blast that deals **400** damage in the area.
 
 - Blast Recharge Time: **+20 Sec.**
 
-</Boon>
+</BoonTest>
 
 ### Anvil Ring (Cast) [#anvil-ring]
 
-<Boon element="earth">
+<BoonTest boon={DbBoons.Hephaestus.anvilRing}>
 Your **Casts** deal damage **3** times in succession, but in a smaller area.
 
 - Cast Damage: **50** _(every 1 Sec.)_
 
-</Boon>
+</BoonTest>
 
 ### Smithy Sprint (Sprint) [#smithy-sprint]
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hephaestus.smithySprint}>
 After you **Sprint** for **1 Sec.**, use **10** <IconMagick /> to create a blast that deals damage to nearby foes.
 
 - Area Damage: **200**
 
-</Boon>
+</BoonTest>
 
 ### Fixed Gain (Magick) [#fixed-gain]
 
-<Boon element="earth">
+<BoonTest boon={DbBoons.Hephaestus.fixedGain}>
 You take **-10%** damage, and restore some <IconMagick /> whenever you take damage.
 
 - Magick Restored from Damage: **50**
 
-</Boon>
+</BoonTest>
 
-### Martial Art (Infusion) [#martial-art]
+## Support
 
-<Boon>
+### <TextHighlight type="infusion">Martial Art (Infusion)</TextHighlight> [#martial-art]
+
+<BoonTest boon={DbBoons.Hephaestus.martialArt}>
 Your **Attack** and **Special** deal more damage for each <IconEarth /> you have.
 
 - Damage per Earth Boon: **+5%**
 
-</Boon>
-**Required: 1 Earth**
+</BoonTest>
 
-## Support
+<Callout>
+  **Required: 1** <IconEarth />
+</Callout>
 
 ### Molten Touch
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hephaestus.moltenTouch}>
 Your **Attacks** and **Specials** deal bonus damage to **Armor**.
 
 - Damage vs. Armor: **+20%**
 
-</Boon>
+</BoonTest>
 
 ### Trusty Shield
 
-<Boon element="earth">
+<BoonTest boon={DbBoons.Hephaestus.trustyShield}>
 After you enter a **Location**, **Prime 30** <IconMagick /> to gain <IconArmor /> until the next **Location**.
 
 - Starting Armor: **+10**
 
-</Boon>
+</BoonTest>
 
 ### Tough Trade
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hephaestus.toughTrade}>
 If you take damage during your **Attacks** or **Specials**, they are stronger if they hit.
 
 - Bonus Weapon Damage: **+100%**
 
-</Boon>
+</BoonTest>
 
 ### Mint Condition
 
-<Boon element="earth">
+<BoonTest boon={DbBoons.Hephaestus.mintCondition}>
 At the start of each **Encounter**, you are briefly **Impervious**.
 
 - Impervious Duration: **8 Sec.**
 
-</Boon>
+</BoonTest>
 
 ### Heavy Metal
 
-<Boon element="earth">
+<BoonTest boon={DbBoons.Hephaestus.heavyMetal}>
 Gain some <IconArmor />. Foes' attacks cannot knock you away.
 
 - Armor Gained: **+50**
 
-</Boon>
+</BoonTest>
 
 ### Uncanny Fortitude
 
-<Boon element="earth">
+<BoonTest boon={DbBoons.Hephaestus.uncannyFortitude}>
 Gain bonus <IconMaxLife /> based on your <IconMagick /> limit.
 
 - Max Life from Magick: **+20%**
 
-</Boon>
+</BoonTest>
 
 ### Furnace Blast
 
-<Boon element="fire">
+<BoonTest boon={DbBoons.Hephaestus.furnaceBlast}>
 Your blast effects from **Hephaestus** also inflict **Vent** on foes.
 
 - Vent Damage: **300**
 
-</Boon>
+</BoonTest>
 
-**Required** _(one of the following)_:
-
-- [Volcanic Strike](#volcanic-strike)
-- [Volcanic Flourish](#volcanic-flourish)
-- [Smithy Sprint](#smithy-sprint)
+<Callout>
+  **Required** _(one of the following)_:
+  <BoonGrid
+    boons={[
+      DbBoons.Hephaestus.volcanicStrike,
+      DbBoons.Hephaestus.volcanicFlourish,
+      DbBoons.Hephaestus.smithySprint,
+    ]}
+  />
+</Callout>
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
 ### <TextHighlight type="legendary">Fine Tuning</TextHighlight>
 
-<Boon element="earth">
+<BoonTest boon={DbBoons.Hephaestus.fineTuning}>
 Your **Aspect** of the **Nocturnal Arms** is even stronger.
 
 - Bonus Aspect Ranks: **+1**
 
-</Boon>
+</BoonTest>
+<Callout>
+  **Required** _(one of the following):_  
+  <BoonGrid
+    boons={[
+      DbBoons.Hephaestus.volcanicStrike,
+      DbBoons.Hephaestus.volcanicFlourish
+    ]}
+  />
+</Callout>
 
-**Required** _(one of the following):_
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hephaestus.heavyMetal,
+      DbBoons.Hephaestus.trustyShield,
+      DbBoons.Hephaestus.mintCondition,
+    ]}
+  />
+</Callout>
 
-- [Volcanic Strike](#volcanic-strike)
-- [Volcanic Flourish](#volcanic-flourish)
-
-**Required** _(one of the following):_
-
-- [Heavy Metal](#heavy-metal)
-- [Trusty Shield](#trusty-shield)
-- [Mint Condition](#mint-condition)
-
-**Required** _(one of the following):_
-
-- [Tough Trade](#tough-trade)
-- [Molten Touch](#molten-touch)
-- [Furnace Blast](#furnace-blast)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hephaestus.toughTrade,
+      DbBoons.Hephaestus.moltenTouch,
+      DbBoons.Hephaestus.furnaceBlast,
+    ]}
+  />
+</Callout>
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
 

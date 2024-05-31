@@ -3,7 +3,8 @@ title: Aphrodite
 description: Boons for Aphrodite in Hades 2.
 ---
 
-import { Boon, TextHighlight } from "@/components";
+import { Callout } from "nextra/components";
+import { BoonTest, BoonGrid, Box, TextHighlight } from "@/components";
 import {
   IconAir,
   IconAphrodite,
@@ -11,6 +12,7 @@ import {
   IconMaxLife,
   IconMagick,
 } from "@/components/icons";
+import { DbBoons } from "@/db/boons";
 
 import IslandGetaway from "@/components/duos/IslandGetaway.mdx";
 import SoftCaress from "@/components/duos/SoftCaress.mdx";
@@ -26,110 +28,112 @@ import RomanticSpark from "@/components/duos/RomanticSpark.mdx";
 > She is more than she appears. For instance, she is much older than most of the
 > others on her mountain, yet holds fast to her carefree look and spirit.
 
-<Boon className="mt-4">
+<Box className="mt-4">
   **Weak** _(Curse):_ Afflicted foes deal at least **10%** less damage. Lasts
   **3 Sec.**
-</Boon>
+</Box>
 
 ## Core
 
 ### Flutter Strike (Attack) [#flutter-strike]
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Aphrodite.flutterStrike}>
 Your **Attacks** deal more damage to nearby foes.
 
 - Close-Up Damage: **+80%**
 
-</Boon>
+</BoonTest>
 
 ### Flutter Flourish (Special) [#flutter-flourish]
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Aphrodite.flutterFlourish}>
 Your **Specials** deal more damage to nearby foes.
 
 - Close-Up Damage: **+100%**
 
-</Boon>
+</BoonTest>
 
 ### Rapture Ring (Cast) [#rapture-ring]
 
-<Boon element="air">
+<BoonTest boon={DbBoons.Aphrodite.raptureRing}>
 Your **Casts** drag foes in and inflict **Weak**.
 
 - Weak Damage Reduction: **+10%**
 
-</Boon>
+</BoonTest>
 
 ### Passion Dash (Dash) [#passion-dash]
 
-<Boon element="air">
+<BoonTest boon={DbBoons.Aphrodite.passionDash}>
 Your **Dash** blasts foes near where you start and end, and inflicts **Weak**.
 
 - Blast Damage: **20**
 
-</Boon>
+</BoonTest>
 
 ### Glamour Gain (Magick) [#glamour-gain]
 
-<Boon element="air">
+<BoonTest boon={DbBoons.Aphrodite.glamourGain}>
 In each **Encounter**, **1** foe is always **Weak**. You gradually restore <IconMagick /> near **Weak** foes.
 
 - Magick Restoration: **6** _(every 1 Sec.)_
 
-</Boon>
+</BoonTest>
 
-### Wispy Wiles (Infusion) [#wispy-wiles]
+## Support
 
-<Boon>
+### <TextHighlight type="infusion">Wispy Wiles (Infusion)</TextHighlight> [#wispy-wiles]
+
+<BoonTest boon={DbBoons.Aphrodite.wispyWiles}>
 While you have at least **4** <IconAir />, you may **Dodge** any damage.
 
 - Dodge Chance: **+15%**
 
-</Boon>
+</BoonTest>
 
-**Required: 1 Air**
-
-## Support
+<Callout>
+  **Required: 1** <IconAir />
+</Callout>
 
 ### Healthy Rebound
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Aphrodite.healthyRebound}>
 Whenever you exit a **Location**, restore **100%** <IconLife /> if you have not lost too much.
 
 - Min Life Required: **80%**
 
-</Boon>
+</BoonTest>
 
 ### Secret Crush
 
-<Boon element="air">
+<BoonTest boon={DbBoons.Aphrodite.secretCrush}>
 After you enter a **Location**, **Prime 20** <IconMagick /> to add **Power** to your **Attack**.
 
 - Attack Power: **+5%**
 
-</Boon>
+</BoonTest>
 
 ### Life Affirmation
 
-<Boon element="air">
+<BoonTest boon={DbBoons.Aphrodite.lifeAffirmation}>
 Any <IconMaxLife /> rewards you find have a greater effect.
 
 - Bonus Life Gain: **+40%**
 
-</Boon>
+</BoonTest>
 
 ### Shameless Attitude
 
-<Boon element="air">
+<BoonTest boon={DbBoons.Aphrodite.shamelessAttitude}>
 While you have at least **80%** <IconLife />, you deal more damage.
 
 - High-Life Bonus Damage: **+10%**
 
-</Boon>
+</BoonTest>
 
 ### Heart Breaker
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Aphrodite.heartBreaker}>
 Whenever you use **30** <IconMagick />, create a **Heartthrob**.
 
 - Heartthrob Area Damage: **120**
@@ -137,64 +141,83 @@ Whenever you use **30** <IconMagick />, create a **Heartthrob**.
 **Heartthrobs**: Explosive projectiles that revolves around you. Expire after
 **20 Sec.**
 
-</Boon>
+</BoonTest>
 
 ### Broken Resolve
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Aphrodite.brokenResolve}>
 Your **Weak** effects are more potent.
 
 - Weak Damage Reduction: **+10%**
 
-</Boon>
+</BoonTest>
 
-**Required** _(one of the following):_
-
-- [Rapture Ring](#rapture-ring)
-- [Passion Dash](#passion-dash)
-- [Glamour Gain](#glamour-gain)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.raptureRing,
+      DbBoons.Aphrodite.passionDash,
+      DbBoons.Aphrodite.glamourGain,
+    ]}
+  />
+</Callout>
 
 ### Sweet Surrender
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Aphrodite.sweetSurrender}>
 **Weak**-afflicted foes take more damage.
 
 - Damage vs. Weak: **+10%**
 
-</Boon>
+</BoonTest>
 
-**Required** _(one of the following):_
-
-- [Rapture Ring](#rapture-ring)
-- [Passion Dash](#passion-dash)
-- [Glamour Gain](#glamour-gain)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.raptureRing,
+      DbBoons.Aphrodite.passionDash,
+      DbBoons.Aphrodite.glamourGain,
+    ]}
+  />
+</Callout>
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
 ### <TextHighlight type="legendary">Ecstatic Obsession</TextHighlight>
 
-<Boon element="air">
+<BoonTest boon={DbBoons.Aphrodite.ecstaticObsession}>
 During **Encounters** with multiple foes, **1** foe is always afflicted with **Charm**.
 
 - Foes Required: **3** _(or more)_
 
-</Boon>
+</BoonTest>
 
-**Required** _(one of the following):_
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[DbBoons.Aphrodite.brokenResolve, DbBoons.Aphrodite.sweetSurrender]}
+  />
+</Callout>
 
-- [Broken Resolve](#broken-resolve)
-- [Sweet Surrender](#sweet-surrender)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.raptureRing,
+      DbBoons.Aphrodite.passionDash,
+      DbBoons.Aphrodite.glamourGain,
+    ]}
+  />
+</Callout>
 
-**Required** _(one of the following):_
-
-- [Rapture Ring](#rapture-ring)
-- [Passion Dash](#passion-dash)
-- [Glamour Gain](#glamour-gain)
-
-**Required** _(one of the following):_
-
-- [Flutter Strike](#flutter-strike)
-- [Flutter Flourish](#flutter-flourish)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[DbBoons.Aphrodite.flutterStrike, DbBoons.Aphrodite.flutterFlourish]}
+  />
+</Callout>
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
 

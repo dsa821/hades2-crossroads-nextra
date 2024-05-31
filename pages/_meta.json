@@ -1,5 +1,6 @@
 {
   "index": { "title": "Home", "theme": { "toc": false } },
+  "builds": "Builds",
   "weapons": "Nocturnal Arms",
   "arcana": "Altar of Ashes",
   "keepsakes": "Keepsakes",

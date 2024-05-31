@@ -1,13 +1,14 @@
-import { Boon } from "@/components/Boon";
+import { BoonTest } from "@/components/Boon";
 import { TextHighlight } from "@/components/TextHighlight";
 import { IconGold, IconMaxLife, IconMaxMagick } from "@/components/icons";
+import { DbBoons } from '@/db/boons';
 
-<Boon>
+<BoonTest boon={DbBoons.Duos.naturalSelection}>
 **Locations Rewards** exclude <IconMaxLife />, <IconMaxMagick />, and <IconGold />. **Boons** are more likely to be <TextHighlight type="rare">**Rare**</TextHighlight> or better.
 
 - Improved Rarity Chance: **+20%**
 
-</Boon>
+</BoonTest>
 
 **Required** _(one of the following from Poseidon):_
 
