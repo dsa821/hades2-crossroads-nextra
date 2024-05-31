@@ -9,6 +9,7 @@ import { Box } from "./Box";
 type CodexEntryProps = {
   data: CodexData;
   compact: boolean;
+  disableLink?: boolean;
   hrefOverride?: string;
   children?: React.ReactNode;
   className?: string;
@@ -16,7 +17,8 @@ type CodexEntryProps = {
 
 export const CodexEntry: React.FC<CodexEntryProps> = ({
   data,
-  compact,
+  compact = false,
+  disableLink = false,
   hrefOverride,
   ...props
 }) => {
@@ -26,21 +28,21 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
       <IconCodexBase data={data} />
     </div>
   );
-  const nameHighlight = (
-    <TextHighlight type={data.type}>{data.name}</TextHighlight>
-  );
+  const name = <TextHighlight type={data.type}>{data.name}</TextHighlight>;
 
   if (compact) {
-    return (
-      <Link
-        href={hrefOverride ?? data.href}
-        className="flex flex-col items-center px-2 py-2 transition hover:bg-emerald-800"
-      >
+    const compactContent = (
+      <div className="flex flex-col items-center px-2 py-2 transition hover:bg-emerald-800">
         {mainIcon}
-        <div className="text-center font-bold text-lg small-caps">
-          {nameHighlight}
+        <div className="text-center font-bold text-lg mt-2 leading-tight">
+          {name}
         </div>
-      </Link>
+      </div>
+    );
+    return disableLink ? (
+      <>{compactContent}</>
+    ) : (
+      <Link href={hrefOverride ?? data.href}>{compactContent}</Link>
     );
   }
 
@@ -52,8 +54,8 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
             <div className="flex items-center gap-4">
               {mainIcon}
 
-              <div className="font-semibold text-3xl small-caps flex-1">
-                {nameHighlight}
+              <div className="font-semibold text-3xl font-small-caps flex-1">
+                {name}
               </div>
             </div>
           )}

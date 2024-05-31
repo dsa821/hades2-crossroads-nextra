@@ -15,6 +15,15 @@ h6 {
   @apply relative bg-gradient-to-r from-slate-800 to-slate-700 text-white rounded p-4;
 }
 
-.small-caps {
+.font-small-caps {
   font-family: var(--font-small-caps);
+}
+
+.font-greek {
+  @apply tracking-wider;
+  font-family: var(--font-greek);
+}
+
+button.btn-default {
+  @apply h-10 px-5 m-2 text-emerald-100 transition-colors duration-150 bg-emerald-700 rounded-lg hover:bg-emerald-800;
 }
