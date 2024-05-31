@@ -3,16 +3,20 @@ title: Poseidon
 description: Boons for Poseidon in Hades 2.
 ---
 
-import { Boon, TextHighlight } from "@/components";
+import { Callout } from "nextra/components";
+import { BoonTest, BoonGrid, Box, TextHighlight } from "@/components";
 import {
   IconAshes,
   IconGold,
   IconHealing,
   IconMagick,
+  IconMaxLife,
   IconPoseidon,
   IconPsyche,
   IconWater,
 } from "@/components/icons";
+
+import { DbBoons } from "@/db/boons";
 
 import IslandGetaway from "@/components/duos/IslandGetaway.mdx";
 import NaturalSelection from "@/components/duos/NaturalSelection.mdx";
@@ -24,57 +28,55 @@ import ScaldingVapor from "@/components/duos/ScaldingVapor.mdx";
 
 # <IconPoseidon className="mb-2" /> Poseidon
 
-> Your boisterous uncle, sometimes called the Earthshaker, although he is best
-> known for the seas which smother much of the surface.\
-> He is comfortable in adverse situations, and quite unable to hold still much like
-> the seas themselves.
+> Your boisterous uncle, sometimes called the Earthshaker, although he is best known for the seas which smother much of the surface.\
+> He is comfortable in adverse situations, and quite unable to hold still much like the seas themselves.
 
-<Boon className="mt-4">
+<Box className="mt-4">
   **Slip** _(Curse):_ Afflicted foes take more damage and are knocked farther
   away. Lasts **3 Sec.**
-</Boon>
+</Box>
 
 ## Core
 
 ### Wave Strike (Attack) [#wave-strike]
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Poseidon.waveStrike}>
 Your **Attacks** hit foes with a splash that knocks other foes away.
 
 - Splash Damage: **15**
 
-</Boon>
+</BoonTest>
 
 ### Wave Flourish (Special) [#wave-flourish]
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Poseidon.waveFlourish}>
 Your **Specials** hit foes with a splash that knocks other foes away.
 
 - Splash Damage: **20**
 
-</Boon>
+</BoonTest>
 
 ### Geyser Ring (Cast) [#geyser-ring]
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Poseidon.geyserRing}>
 Your **Ω Cast** immediately detonates, dealing damage and knocking foes away.
 
 - Omega Cast Damage: **100**
 
-</Boon>
+</BoonTest>
 
 ### Breaker Sprint (Sprint) [#breaker-sprint]
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Poseidon.breakerSprint}>
 Your **Sprint** deals damage on impact and knocks foes away, but uses **5** <IconMagick /> per hit.
 
 - Impact Damage: **80**
 
-</Boon>
+</BoonTest>
 
 ### Fluid Gain (Magick) [#fluid-gain]
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Poseidon.fluidGain}>
 After you strike foes with your **Weapon**, a **Spirit Bubble** may appear.
 
 - Spirit Bubble Chance: **10%**
@@ -82,115 +84,129 @@ After you strike foes with your **Weapon**, a **Spirit Bubble** may appear.
 **Spirit Bubble**: Restores **20** <IconMagick /> when you touch it. Expires
 when used, or after **30 Sec.**
 
-</Boon>
+</BoonTest>
 
 ## Support
 
 ### <TextHighlight type="infusion">Water Fitness (Infusion)</TextHighlight> [#water-fitness]
 
-<Boon>
-While you have at least **4** <IconWater />, gain Max Life.
+<BoonTest boon={DbBoons.Poseidon.waterFitness}>
+While you have at least **4** <IconWater />, gain <IconMaxLife />.
 
 - Max Life: **+100**
 
-</Boon>
-**Required: 1** <IconWater />
+</BoonTest>
+
+<Callout>
+  **Required: 1** <IconWater />
+</Callout>
 
 ### Double Up
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Poseidon.doubleUp}>
 Whenever you claim a **Minor Find** or similar resource reward, a copy may appear.
 
 - Double Reward Chance: **20%**
 
-</Boon>
+</BoonTest>
 
 ### Hydraulic Might
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Poseidon.hydraulicMight}>
 At the start of each **Encounter**, your **Attacks** and **Specials** are stronger for **10 Sec.**
 
 - Initial Damage Bonus: **+100%**
 
-</Boon>
+</BoonTest>
 
 ### Flood Control (Prime) [#flood-control]
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Poseidon.floodControl}>
 After you enter a **Location**, **Prime 30** <IconMagick /> to reduce any damage you would take.
 
 - Damage Reduction per Hit: **-2**
 
-</Boon>
+</BoonTest>
 
 ### Sunken Treasure
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Poseidon.sunkenTreasure}>
 Gain <IconGold />, <IconHealing />, and sometimes <IconAshes /> and <IconPsyche />.
 
 - Gold Received: **+90**
 
-</Boon>
+</BoonTest>
 
 ### Ocean's Bounty
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Poseidon.oceansBounty}>
 Any **Minor Finds** and <IconGold /> are worth more.
 
 - Reward Value: **+50%**
 
-</Boon>
+</BoonTest>
 
 ### Slippery Slope
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Poseidon.slipperySlope}>
 Your splash effects from **Poseidon** also inflict **Slip** on foes.
 
 - Slip Bonus Damage: **+5%**
 
-</Boon>
+</BoonTest>
 
-**Required** _(one of the following):_
-
-- [Wave Strike](#wave-strike)
-- [Wave Flourish](#wave-flourish)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[DbBoons.Poseidon.waveStrike, DbBoons.Poseidon.waveFlourish]}
+  />
+</Callout>
 
 ### Crashing Wave
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Poseidon.crashingWave}>
 Whenever your knock-away effects slam foes into barriers, create a blast in the area.
 
 - Blast Damage: **50**
 
-</Boon>
+</BoonTest>
 
-**Required** _(one of the following):_
-
-- [Wave Strike](#wave-strike)
-- [Wave Flourish](#wave-flourish)
-- [Geyser Ring](#geyser-ring)
-- [Breaker Sprint](#breaker-sprint)
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Poseidon.waveStrike,
+      DbBoons.Poseidon.waveFlourish,
+      DbBoons.Poseidon.geyserRing,
+      DbBoons.Poseidon.breakerSprint,
+    ]}
+  />
+</Callout>
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
 ### <TextHighlight type="legendary">King Tide</TextHighlight>
 
-<Boon element="water">
+<BoonTest boon={DbBoons.Poseidon.kingTide}>
 Your splash effects from **Poseidon** are larger and deal bonus damage to **Guardians**.
 
 - Splash Damage vs. Guardians: **+150%**
 
-</Boon>
+</BoonTest>
 
-**Required** _(one of the following):_
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[DbBoons.Poseidon.waveStrike, DbBoons.Poseidon.waveFlourish]}
+  />
+</Callout>
 
-- [Wave Strike](#wave-strike)
-- [Wave Flourish](#wave-flourish)
-
-**Required**:
-
-- [Slippery Slope](#slippery-slope)
-- [Crashing Wave](#crashing-wave)
+<Callout>
+  **Required**:
+  <BoonGrid
+    boons={[DbBoons.Poseidon.slipperySlope, DbBoons.Poseidon.crashingWave]}
+  />
+</Callout>
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
 
