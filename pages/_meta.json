@@ -6,6 +6,19 @@
   "keepsakes": "Keepsakes",
   "boons": "Boons",
 
+  "supergiant": {
+    "title": "Supergiant",
+    "type": "page",
+    "href": "https://www.supergiantgames.com/games/hades-ii/",
+    "newWindow": true
+  },
+  "steam": {
+    "title": "Steam",
+    "type": "page",
+    "href": "https://store.steampowered.com/app/1145350/Hades_II/",
+    "newWindow": true
+  },
+
   "tools": {
     "title": "Tools",
     "type": "menu",
