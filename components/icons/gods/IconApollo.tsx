@@ -1,6 +1,6 @@
 import { IconBase } from "../IconBase";
 
-export const IconApollo = ({ size = 42, className }) => {
+export const IconApollo = ({ size = 42, className = '' }) => {
   return (
     <IconBase
       iconKey="gods/apollo"

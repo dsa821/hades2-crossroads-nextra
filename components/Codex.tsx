@@ -37,7 +37,7 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
         className="flex flex-col items-center px-2 py-2 transition hover:bg-emerald-800"
       >
         {mainIcon}
-        <div className="text-center font-bold text-lg small-caps">
+        <div className="text-center font-bold text-lg mt-2 leading-tight">
           {nameHighlight}
         </div>
       </Link>
@@ -52,7 +52,7 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
             <div className="flex items-center gap-4">
               {mainIcon}
 
-              <div className="font-semibold text-3xl small-caps flex-1">
+              <div className="font-semibold text-3xl font-small-caps flex-1">
                 {nameHighlight}
               </div>
             </div>

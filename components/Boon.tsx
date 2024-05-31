@@ -32,7 +32,7 @@ export const Boon: React.FC<BoonProps> = (props) => {
                 />
               )}
 
-              <div className="font-bold text-3xl small-caps tracking-wide flex-1">
+              <div className="font-bold text-3xl font-small-caps tracking-wide flex-1">
                 <TextHighlight type={props.type}>{props.title}</TextHighlight>
               </div>
 
@@ -60,7 +60,7 @@ type BoonTestProps = {
   boon: BoonData;
   compact: boolean;
   hrefOverride?: string;
-  className: string;
+  className?: string;
   children?: React.ReactNode;
 };
 export const BoonTest: React.FC<BoonTestProps> = ({ boon, ...props }) => {

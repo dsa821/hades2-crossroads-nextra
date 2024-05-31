@@ -6,16 +6,18 @@
   "keepsakes": "Keepsakes",
   "boons": "Boons",
 
-  "supergiant": {
-    "title": "Supergiant",
-    "type": "page",
-    "href": "https://www.supergiantgames.com/games/hades-ii/",
-    "newWindow": true
+  "tools": {
+    "title": "Tools",
+    "type": "menu",
+    "items": {
+      "pencil-meta": {
+        "title": "Pencil Meta"
+      }
+    }
   },
-  "steam": {
-    "title": "Steam",
-    "type": "page",
-    "href": "https://store.steampowered.com/app/1145350/Hades_II/",
-    "newWindow": true
+  "pencil-meta": {
+    "display": "hidden",
+
+    "theme": { "breadcrumb": false, "toc": false }
   }
 }
