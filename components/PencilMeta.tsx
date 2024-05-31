@@ -83,7 +83,7 @@ export const PencilMeta: React.FC = () => {
         Reset
       </button>
 
-      <div className="grid grid-cols-4 lg:grid-cols-8 gap-2">
+      <div className="mt-4 grid grid-cols-4 lg:grid-cols-8 gap-2">
         {godData.map((x) => {
 					const godIcon = cloneElement(x.icon, { size: 72 });
           return (
