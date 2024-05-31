@@ -1,17 +1,25 @@
 import "../styles/global.css";
-import { Anybody, Inter } from "next/font/google";
+import { Inter, Spectral, Spectral_SC } from "next/font/google";
 
-// If loading a variable font, you don't need to specify the font weight
-const headerFont = Anybody({
+const headerFont = Spectral({
+  weight: ["400", "600", "700"],
   display: "swap",
-  variable: "--font-header",
   subsets: ["latin"],
+  variable: "--font-header",
 });
 const textFont = Inter({ display: "swap", subsets: ["latin"] });
+const smallCapsFont = Spectral_SC({
+  weight: ["400", "600", "700"],
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-small-caps",
+});
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <div className={`${headerFont.variable} ${textFont.className}`}>
+    <div
+      className={`${headerFont.variable} ${textFont.className} ${smallCapsFont.variable}`}
+    >
       <Component {...pageProps} />
     </div>
   );

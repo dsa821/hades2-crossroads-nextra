@@ -51,6 +51,6 @@ export function mapBoonToCodex(boon: BoonData): CodexData {
     href: `/boons/${boon.god}#${boon.key}`,
     
     flavor: boon.flavor,
-    extraIcon: <IconBase iconKey={boon.element} size={40} />
+    extraIcon: <IconBase iconKey={boon.element} size={42} />
   } as CodexData;
 }

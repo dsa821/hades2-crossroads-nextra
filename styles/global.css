@@ -16,5 +16,5 @@ h6 {
 }
 
 .small-caps {
-  font-variant-caps: small-caps;
+  font-family: var(--font-small-caps);
 }
