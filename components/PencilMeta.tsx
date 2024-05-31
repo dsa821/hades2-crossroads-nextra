@@ -1,4 +1,4 @@
-import { useState } from "react";
+import  { cloneElement, useState } from "react";
 import {
   IconAphrodite,
   IconApollo,
@@ -22,42 +22,42 @@ const godData: {
 }[] = [
   {
     god: "zeus",
-    icon: <IconZeus size={72} />,
+    icon: <IconZeus />,
     boons: DbBoons.Zeus,
   },
   {
     god: "hera",
-    icon: <IconHera size={72} />,
+    icon: <IconHera />,
     boons: DbBoons.Hera,
   },
   {
     god: "poseidon",
-    icon: <IconPoseidon size={72} />,
+    icon: <IconPoseidon />,
     boons: DbBoons.Poseidon,
   },
   {
     god: "demeter",
-    icon: <IconDemeter size={72} />,
+    icon: <IconDemeter />,
     boons: DbBoons.Demeter,
   },
   {
     god: "apollo",
-    icon: <IconApollo size={72} />,
+    icon: <IconApollo  />,
     boons: DbBoons.Apollo,
   },
   {
     god: "aphrodite",
-    icon: <IconAphrodite size={72} />,
+    icon: <IconAphrodite />,
     boons: DbBoons.Aphrodite,
   },
   {
     god: "hephaestus",
-    icon: <IconHephaestus size={72} />,
+    icon: <IconHephaestus />,
     boons: DbBoons.Hephaestus,
   },
   {
     god: "hestia",
-    icon: <IconHestia size={72} />,
+    icon: <IconHestia />,
     boons: DbBoons.Hestia,
   },
 ];
@@ -85,6 +85,7 @@ export const PencilMeta: React.FC = () => {
 
       <div className="grid grid-cols-4 lg:grid-cols-8 gap-2">
         {godData.map((x) => {
+					const godIcon = cloneElement(x.icon, { size: 72 });
           return (
             <GodSelect
               key={x.god}
@@ -92,7 +93,7 @@ export const PencilMeta: React.FC = () => {
               selected={selectedGods.includes(x.god)}
               onClick={handleClick}
             >
-              {x.icon}
+              {godIcon}
             </GodSelect>
           );
         })}
@@ -106,9 +107,7 @@ export const PencilMeta: React.FC = () => {
               <div className="text-3xl font-greek mb-2">{god}</div>
               <div className="grid grid-cols-3 lg:grid-cols-5 gap-1 items-stretch">
                 {Object.values(data.boons).map((d) => (
-                  <div>
-                    <BoonTest boon={d} compact />
-                  </div>
+                  <BoonSelect boon={d} />
                 ))}
               </div>
             </Box>
@@ -133,10 +132,30 @@ const GodSelect: React.FC<GodSelectProps> = ({
 }) => {
   return (
     <div
-      className={`hover:cursor-pointer transition ${!selected && "opacity-30"}`}
+      className={`cursor-pointer transition ${!selected && "opacity-25"}`}
       onClick={() => onClick(god)}
     >
       {children}
+    </div>
+  );
+};
+
+type BoonSelectProps = {
+  boon: BoonData;
+};
+const BoonSelect: React.FC<BoonSelectProps> = ({ boon }) => {
+  const [selected, setSelected] = useState(false);
+
+  function handleClick() {
+    setSelected(!selected);
+  }
+
+  return (
+    <div
+      className={`cursor-pointer transition ${selected && "opacity-25"}`}
+      onClick={handleClick}
+    >
+      <BoonTest boon={boon} compact disableLink />
     </div>
   );
 };

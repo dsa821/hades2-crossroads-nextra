@@ -59,6 +59,7 @@ export const Boon: React.FC<BoonProps> = (props) => {
 type BoonTestProps = {
   boon: BoonData;
   compact: boolean;
+  disableLink?: boolean;
   hrefOverride?: string;
   className?: string;
   children?: React.ReactNode;
