@@ -20,7 +20,12 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
   hrefOverride,
   ...props
 }) => {
-  const mainIcon = <IconCodexBase data={data} />;
+  const mainIcon = (
+    <div className="relative">
+      <div className="absolute -top-4 -right-4">{data.extraIcon}</div>
+      <IconCodexBase data={data} />
+    </div>
+  );
   const nameHighlight = (
     <TextHighlight type={data.type}>{data.name}</TextHighlight>
   );
@@ -32,7 +37,7 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
         className="flex flex-col items-center px-2 py-2 transition hover:bg-emerald-800"
       >
         {mainIcon}
-        <div className="text-center font-bold text-xl small-caps">
+        <div className="text-center font-bold text-lg small-caps">
           {nameHighlight}
         </div>
       </Link>
@@ -47,17 +52,15 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
             <div className="flex items-center gap-4">
               {mainIcon}
 
-              <div className="font-bold text-3xl small-caps tracking-wide flex-1">
+              <div className="font-semibold text-3xl small-caps flex-1">
                 {nameHighlight}
               </div>
-
-              {data.extraIcon}
             </div>
           )}
           {props.children}
 
           {data.flavor && (
-            <div className="mt-2 italic font-bold text-sm drop-shadow-lg text-indigo-500">
+            <div className="mt-2 italic font-semibold text-sm drop-shadow-lg text-indigo-500">
               {data.flavor}
             </div>
           )}

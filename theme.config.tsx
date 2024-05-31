@@ -3,7 +3,7 @@ import { DocsThemeConfig } from "nextra-theme-docs";
 import { useRouter } from "next/router";
 import Image from "next/image";
 
-import { Head } from './components/Head';
+import { Head } from "./components/Head";
 
 const config: DocsThemeConfig = {
   logo: (
@@ -31,6 +31,9 @@ const config: DocsThemeConfig = {
     link: "https://discord.gg/supergiant",
   },
   // docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  search: {
+    placeholder: "Search...",
+  },
   footer: {
     text: <span className="italic">So mote it be...</span>,
   },
