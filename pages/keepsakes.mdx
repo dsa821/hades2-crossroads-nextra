@@ -4,7 +4,7 @@ description: Keepsakes for Hades 2.
 ---
 
 import { Callout } from "nextra/components";
-import { Boon, TextHighlight } from "@/components";
+import { CodexEntry, TextHighlight } from "@/components";
 import {
   IconArmor,
   IconGold,
@@ -13,6 +13,7 @@ import {
   IconLife,
   IconMagick,
 } from "@/components/icons";
+import { DbKeepsakes } from '@/db';
 
 # Keepsakes
 
@@ -20,188 +21,190 @@ import {
 
 ## Offense
 
-### <TextHighlight type="epic">Evil Eye</TextHighlight>
+### Evil Eye
 
-<Boon flavor="From Nemesis">
+<CodexEntry data={DbKeepsakes.evilEye}>
   Deal **+30%** damage to the last foe that vanquished you.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Discordant Bell</TextHighlight>
+### Discordant Bell
 
-<Boon flavor="From Eris">
+<CodexEntry data={DbKeepsakes.discordantBell}>
   After each **Encounter**, you deal **+1.5%** damage, but also take that much
   more.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">White Antler</TextHighlight>
+### White Antler
 
-<Boon flavor="From Artemis">
+<CodexEntry data={DbKeepsakes.whiteAntler}>
   While you have no more than **30** <IconLife />, you have **+40%** chance to
   deal **Critical** damage.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Lion Fang</TextHighlight>
+### Lion Fang
 
-<Boon flavor="From Heracles">
+<CodexEntry data={DbKeepsakes.lionFang}>
   Deal **+50%** bonus damage, but lose **5%** of this after each **Encounter**.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Blackened Fleece</TextHighlight>
+### Blackened Fleece
 
-<Boon flavor="From Medea">
+<CodexEntry data={DbKeepsakes.blackenedFleece}>
   After you take **250** damage, your **Ω Moves** deal **+40%** damage.
-</Boon>
+</CodexEntry>
 
 ## Defense
 
-### <TextHighlight type="epic">Knuckle Bones</TextHighlight>
+### Knuckle Bones
 
-<Boon flavor="From Odysseus">
+<CodexEntry data={DbKeepsakes.knuckleBones}>
   The next **Guardian** loses **-15%** <IconLife />. You take **-15%** damage
   from **Guardians**.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Luckier Tooth</TextHighlight>
+### Luckier Tooth
 
-<Boon flavor="From Schelemeus">
+<CodexEntry data={DbKeepsakes.luckierTooth}>
   After you fall to **0** <IconLife />, automatically restore **101**
   <IconLife /> once this night.
-</Boon>
-### <TextHighlight type="epic">Ghost Onion</TextHighlight>
+</CodexEntry>
 
-<Boon flavor="From Dora">
+### Ghost Onion
+
+<CodexEntry data={DbKeepsakes.ghostOnion}>
   Whenever you exit a **Location**, fully restore your <IconLife />, up to a
   total of **100** <IconHealing /> this night.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Engraved Pin</TextHighlight>
+### Engraved Pin
 
-<Boon flavor="From Moros">
+<CodexEntry data={DbKeepsakes.engravedPin}>
   After you fall to **0** <IconLife />, become **Impervious** for **10 Sec.** If
   no foes remain, restore **50** <IconLife />.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Silken Sash</TextHighlight>
+### Silken Sash
 
-<Boon flavor="From Arachne">
+<CodexEntry data={DbKeepsakes.silkenSash}>
   Gain **+20** <IconArmor />. While you have at least **1** <IconArmor />, gain
   **+4** <IconArmor /> after each **Location**.
-</Boon>
+</CodexEntry>
 
 ## Utility
 
-### <TextHighlight type="epic">Silver Wheel</TextHighlight>
+### Silver Wheel
 
-<Boon flavor="From Hecate">
+<CodexEntry data={DbKeepsakes.silverWheel}>
   After you use <IconMagick />, restore it over **3 Sec.**, up to a total of
   **2000** <IconMagick /> this night.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type='epic'>Gold Purse</TextHighlight>
+### Gold Purse
 
-<Boon flavor="From Charon">
+<CodexEntry data={DbKeepsakes.goldPurse}>
   Gain **+150** <IconGold /> once this night.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Metallic Droplet</TextHighlight>
+### Metallic Droplet
 
-<Boon flavor="From Hermes">
+<CodexEntry data={DbKeepsakes.metallicDroplet}>
   You move, strike, and **Channel 20%** faster for the next **300 Sec.**
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type='epic'>Moon Beam</TextHighlight>
+### Moon Beam
 
-<Boon flavor="From Selene">
+<CodexEntry data={DbKeepsakes.moonBeam}>
   You gain **+3** upgrades for your **Hex** from the next **Path of Stars** you
   find.
-</Boon>
-### <TextHighlight type="epic">Crystal Figurine</TextHighlight>
+</CodexEntry>
 
-<Boon flavor="From Circe">
+### Crystal Figurine
+
+<CodexEntry data={DbKeepsakes.crystalFigurine}>
   After the next **Guardian**, activate **3** random **Arcana Cards**.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Aromatic Phial</TextHighlight>
+### Aromatic Phial
 
-<Boon flavor="From Narcissus">
+<CodexEntry data={DbKeepsakes.aromaticPhial}>
   **Fountains** restore **+20%** <IconLife />. The next makes **1** random **Common
   Boon** of yours <TextHighlight type="heroic">**Heroic**</TextHighlight>.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Concave Stone</TextHighlight>
+### Concave Stone
 
-<Boon flavor="From Echo">
+<CodexEntry data={DbKeepsakes.concaveStone}>
   After choosing a **Boon**, **75%** of the time randomly take **1** more, once
   this night.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Experimental Hammer</TextHighlight>
+### Experimental Hammer
 
-<Boon flavor="From Icarus">
+<CodexEntry data={DbKeepsakes.experimentalHammer}>
   Gain **1** random <IconHammer /> that lasts for **20 Encounters**.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Transcendent Embryo</TextHighlight>
+### Transcendent Embryo
 
-<Boon flavor="From Primordial Chaos">
+<CodexEntry data={DbKeepsakes.transcendentEmbryo}>
   Gain a random <TextHighlight type="epic">**Epic**</TextHighlight> **Chaos**
   blessing once this night. Every **8 Encounters**, replace it.
-</Boon>
+</CodexEntry>
 
 ## Olympians
 
-### <TextHighlight type="epic">Cloud Bangle</TextHighlight> (Zeus)
+### Cloud Bangle (Zeus)
 
-<Boon flavor="From Zeus">
+<CodexEntry data={DbKeepsakes.cloudBangle}>
   A **Boon** of **Zeus** is likely. You can **Rarify** his
   <TextHighlight type="epic">**Epic**</TextHighlight> blessings once this night.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Iridescent Fan</TextHighlight> (Hera)
+### Iridescent Fan (Hera)
 
-<Boon flavor="From Hera">
+<CodexEntry data={DbKeepsakes.iridescentFan}>
   A **Boon** of **Hera** is likely. You can **Rarify** her
   <TextHighlight type="epic">**Epic**</TextHighlight> blessings once this night.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Vivid Sea</TextHighlight> (Poseidon)
+### Vivid Sea (Poseidon)
 
-<Boon flavor="From Poseidon">
+<CodexEntry data={DbKeepsakes.vividSea}>
   A **Boon** of **Poseidon** is likely. You can **Rarify** his
   <TextHighlight type="epic">**Epic**</TextHighlight> blessings once this night.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Barley Sheaf</TextHighlight> (Demeter)
+### Barley Sheaf (Demeter)
 
-<Boon flavor="From Demeter">
+<CodexEntry data={DbKeepsakes.barleySheaf}>
   A **Boon** of **Demeter** is likely. You can **Rarify** her
   <TextHighlight type="epic">**Epic**</TextHighlight> blessings once this night.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Purest Hope</TextHighlight> (Apollo)
+### Purest Hope (Apollo)
 
-<Boon flavor="From Apollo">
+<CodexEntry data={DbKeepsakes.purestHope}>
   A **Boon** of **Apollo** is likely. You can **Rarify** his
   <TextHighlight type="epic">**Epic**</TextHighlight> blessings once this night.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Beautiful Mirror</TextHighlight> (Aphrodite)
+### Beautiful Mirror (Aphrodite)
 
-<Boon flavor="From Aphrodite">
+<CodexEntry data={DbKeepsakes.beautifulMirror}>
   A **Boon** of **Aphrodite** is likely. You can **Rarify** her
   <TextHighlight type="epic">**Epic**</TextHighlight> blessings once this night.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Adamant Shard</TextHighlight> (Hephaestus)
+### Adamant Shard (Hephaestus)
 
-<Boon flavor="From Hephaestus">
+<CodexEntry data={DbKeepsakes.adamantShard}>
   A **Boon** of **Hephaestus** is likely. You can **Rarify** his
   <TextHighlight type="epic">**Epic**</TextHighlight> blessings once this night.
-</Boon>
+</CodexEntry>
 
-### <TextHighlight type="epic">Everlasting Ember</TextHighlight> (Hestia)
+### Everlasting Ember (Hestia)
 
-<Boon flavor="From Hestia">
+<CodexEntry data={DbKeepsakes.everlastingEmber}>
   A **Boon** of **Hestia** is likely. You can **Rarify** her
   <TextHighlight type="epic">**Epic**</TextHighlight> blessings once this night.
-</Boon>
+</CodexEntry>

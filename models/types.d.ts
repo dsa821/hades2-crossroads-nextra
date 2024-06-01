@@ -34,8 +34,8 @@ export type BoonData = {
 export type CodexData = {
   name: string;
   type: Rarity;
-  iconUrl: string;
   href: string;
-  extraIcon: React.ReactNode;
+  iconUrl?: string;
+  extraIcon?: React.ReactNode;
   flavor?: string;
 }
