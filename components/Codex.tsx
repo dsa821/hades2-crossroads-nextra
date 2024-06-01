@@ -24,7 +24,9 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
 }) => {
   const mainIcon = (
     <div className="relative">
-      <div className="absolute -top-4 -right-4">{data.extraIcon}</div>
+      {data.extraIcon && (
+        <div className="absolute -top-4 -right-4">{data.extraIcon}</div>
+      )}
       <IconCodexBase data={data} />
     </div>
   );
