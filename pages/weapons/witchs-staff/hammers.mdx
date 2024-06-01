@@ -3,8 +3,9 @@ title: Descura, The Witch's Staff (Hammers)
 description: Daedalus Hammer upgrades for the Witch's Staff weapon in Hades 2.
 ---
 
-import { Box, TextHighlight } from "@/components";
-import { IconLife, IconMagick } from '@/components/icons';
+import { Box, CodexEntry, TextHighlight } from "@/components";
+import { IconLife, IconMagick } from "@/components/icons";
+import { DbHammers } from "@/db";
 
 # Descura, The Witch's Staff (Hammers)
 
@@ -12,70 +13,78 @@ import { IconLife, IconMagick } from '@/components/icons';
 
 ### Double Wallop
 
-<Box>Your **Attack** hits **2** times.</Box>
+<CodexEntry data={DbHammers.Staff.doubleWallop}>
+  Your **Attack** hits **2** times.
+</CodexEntry>
 
 ### Marauder Wallop
 
-<Box>
+<CodexEntry data={DbHammers.Staff.marauderWallop}>
   Hold **Attack** to strike **50%** faster, but cannot use your **Ω Attack**.
-</Box>
+</CodexEntry>
 
 ### Extending Wallop
 
-<Box>
+<CodexEntry data={DbHammers.Staff.extendingWallop}>
   Your **Attack** has more range and deals **+50%** damage to distant foes.
-</Box>
+</CodexEntry>
 
 ### Melting Swipe
 
-<Box>
+<CodexEntry data={DbHammers.Staff.meltingSwipe}>
   Your **Dash-Strike** hits a larger area and destroys **60%** of any **Armor**
   _(based on the total)_.
-</Box>
+</CodexEntry>
 
 ### Cross Cataclysm
 
-<Box>
+<CodexEntry data={DbHammers.Staff.crossCataclysm}>
   Your **Ω Attack** deals **+40%** damage and also strikes sideways.
-</Box>
+</CodexEntry>
 
 ### Double Cataclysm
 
-<Box>
+<CodexEntry data={DbHammers.Staff.doubleCataclysm}>
   Your **Ω Attack** hits **2** times, but no longer strikes behind you.
-</Box>
+</CodexEntry>
 
 ### Vampiric Cataclysm
 
-<Box>After you slay a foe with your **Ω Attack**, restore **5** <IconLife />.</Box>
+<CodexEntry data={DbHammers.Staff.vampiricCataclysm}>
+  After you slay a foe with your **Ω Attack**, restore **5** <IconLife />.
+</CodexEntry>
 
 ## Special
 
 ### Double Moonshot
 
-<Box>Your **Special** fires **2** projectiles that seek foes.</Box>
+<CodexEntry data={DbHammers.Staff.doubleMoonshot}>
+  Your **Special** fires **2** projectiles that seek foes.
+</CodexEntry>
 
 ### Shimmering Moonshot
 
-<Box>
+<CodexEntry data={DbHammers.Staff.shimmeringMoonshot}>
   Your **Special** bounces toward up to **2** more foes, dealing **+10%** damage
   for each hit.
-</Box>
+</CodexEntry>
 
 ### Rapid Moonfire
 
-<Box>Your **Specials** are **20%** faster and have **+5 Power**.</Box>
+<CodexEntry data={DbHammers.Staff.rapidMoonfire}>
+  Your **Specials** are **20%** faster and have **+5 Power**.
+</CodexEntry>
 
 ### Aetheric Moonburst
 
-<Box>
+<CodexEntry data={DbHammers.Staff.aethericMoonburst}>
   Your **Ω Special** gains a **Power Shot** that deals **+20%** damage and
   restores **5** <IconMagick />.
-</Box>
+</CodexEntry>
 
 ### Giga Moonburst
 
-<Box>
-  You can **Channel +40** <IconMagick /> into your **Ω Special** to deal **+300%**
-  damage in a larger area.
-</Box>
+<CodexEntry data={DbHammers.Staff.gigaMoonburst}>
+  You can **Channel +40** <IconMagick /> into your **Ω Special** to deal
+  **+300%** damage in a larger area.
+</CodexEntry>

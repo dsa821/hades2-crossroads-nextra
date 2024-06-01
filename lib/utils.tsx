@@ -1,4 +1,4 @@
-import { BoonData, CodexData, Rarity } from "models/types";
+import { BoonData, CodexData, HammerData, Rarity } from "models/types";
 import { IconBase } from "components/icons/IconBase";
 
 export function getRarityTextColor(type: Rarity): string {
@@ -52,5 +52,14 @@ export function mapBoonToCodex(boon: BoonData): CodexData {
     
     flavor: boon.flavor,
     extraIcon: <IconBase iconKey={boon.element} size={42} />
+  } as CodexData;
+}
+
+export function mapHammerToCodex(hammer: HammerData): CodexData {
+  return {
+    name: hammer.name,
+
+    iconUrl: `/hammers/${hammer.weaponKey}/${hammer.key}.png`,
+    href: `/weapons/${hammer.weaponKey}/hammers#${hammer.key}`,
   } as CodexData;
 }

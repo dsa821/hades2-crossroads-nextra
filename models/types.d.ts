@@ -31,6 +31,12 @@ export type BoonData = {
   flavor?: string;
 };
 
+export type HammerData = {
+  name: string;
+  key: string;
+  weaponKey: string;
+}
+
 export type CodexData = {
   name: string;
   type: Rarity;
