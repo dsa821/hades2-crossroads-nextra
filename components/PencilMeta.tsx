@@ -11,7 +11,7 @@ import {
 } from "./icons";
 import { BoonData } from "models/types";
 
-import { DbBoons } from "db/boons";
+import { DbBoons } from "db";
 import { BoonTest } from "./Boon";
 import { Box } from "./Box";
 
