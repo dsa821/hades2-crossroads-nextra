@@ -3,8 +3,9 @@ title: Ygnium, The Umbral Flames (Hammers)
 description: Daedalus Hammer upgrades for the Umbral Flames weapon in Hades 2.
 ---
 
-import { Box, TextHighlight } from "@/components";
+import { Box, CodexEntry, TextHighlight } from "@/components";
 import { IconMagick } from "@/components/icons";
+import { DbHammers } from "@/db";
 
 # Ygnium, The Umbral Flames (Hammers)
 
@@ -12,69 +13,75 @@ import { IconMagick } from "@/components/icons";
 
 ### Furious Fire
 
-<Box>
+<CodexEntry data={DbHammers.Flames.furiousFire}>
   While you **Channel** your **Attacks**, they deal **+10%** damage and you move
   **+30%** faster.
-</Box>
+</CodexEntry>
 
 ### Split Fire
 
-<Box>Your **Attacks** split in **2** the first time they strike foes.</Box>
+<CodexEntry data={DbHammers.Flames.splitFire}>
+  Your **Attacks** split in **2** the first time they strike foes.
+</CodexEntry>
 
 ### Sustained Fire
 
-<Box>
+<CodexEntry data={DbHammers.Flames.sustainedFire}>
   While you **Channel** your **Attacks**, you fire **+15%** faster, but move
   **70%** slower.
-</Box>
+</CodexEntry>
 
 ### Clean Candle
 
-<Box>
-  You **Channel** your **Ω Attack** **10%** faster, and it uses **-3** <IconMagick />.
-</Box>
+<CodexEntry data={DbHammers.Flames.cleanCandle}>
+  You **Channel** your **Ω Attack** **10%** faster, and it uses **-3**{" "}
+  <IconMagick />.
+</CodexEntry>
 
 ### Dire Candle
 
-<Box>
+<CodexEntry data={DbHammers.Flames.direCandle}>
   Your **Ω Attack** fires **1** shot that deals **+1500%** damage, but uses
   **+20** <IconMagick />.
-</Box>
+</CodexEntry>
 
 ## Special
 
 ### Crushing Comet
 
-<Box>
+<CodexEntry data={DbHammers.Flames.crushingComet}>
   Your **Special** has **+50 Power**, but dissipates after striking foes.
-</Box>
+</CodexEntry>
 
 ### Melting Comet
 
-<Box>
+<CodexEntry data={DbHammers.Flames.meltingComet}>
   Your **Special** fires straight ahead and destroys **+80%** of any **Armor**
   _(based on the total)_.
-</Box>
+</CodexEntry>
 
 ### Growing Coils
 
-<Box>
+<CodexEntry data={DbHammers.Flames.growingCoils}>
   Your **Specials** grow in size and deal up to **+25%** damage the longer they
   are active.
-</Box>
+</CodexEntry>
 
 ### Clean Helix
 
-<Box>
-  You **Channel** your **Ω Special** **20%** faster, and it uses **-2** <IconMagick />.
-</Box>
+<CodexEntry data={DbHammers.Flames.cleanHelix}>
+  You **Channel** your **Ω Special** **20%** faster, and it uses **-2**{" "}
+  <IconMagick />.
+</CodexEntry>
 
 ### Origin Helix
 
-<Box>
+<CodexEntry data={DbHammers.Flames.originHelix}>
   Your **Ω Special** orbits **+50%** faster at the point where you fired it.
-</Box>
+</CodexEntry>
 
 ### Triple Helix
 
-<Box>Your **Ω Special** creates **+1** flame.</Box>
+<CodexEntry data={DbHammers.Flames.tripleHelix}>
+  Your **Ω Special** creates **+1** flame.
+</CodexEntry>
