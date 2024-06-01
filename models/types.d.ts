@@ -37,6 +37,12 @@ export type HammerData = {
   weaponKey: string;
 }
 
+export type KeepsakeData = {
+  name: string;
+  key: string;
+  flavor: string;
+}
+
 export type CodexData = {
   name: string;
   type: Rarity;

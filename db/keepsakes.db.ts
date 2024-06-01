@@ -1,192 +1,175 @@
-import { CodexData } from "models/types";
+import { mapKeepsakeToCodex } from "lib/utils";
+import { CodexData, KeepsakeData } from "models/types";
 
-export const DbKeepsakes: Record<string, CodexData> = {
+const keepsakeData: Record<string, KeepsakeData> = {
 	silverWheel: {
 		name: 'Silver Wheel',
-		type: 'epic',
-		href: '/keepsakes#silver-wheel',
+		key: 'silver-wheel',
 		flavor: 'From Hecate'
 	},
 
 	knuckleBones: {
 		name: 'Knuckle Bones',
-		type: 'epic',
-		href: '/keepsakes#knuckle-bones',
+		key: 'knuckle-bones',
 		flavor: 'From Odysseus'
 	},
 
 	luckierTooth: {
 		name: 'Luckier Tooth',
-		type: 'epic',
-		href: '/keepsakes#luckier-tooth',
+		key: 'luckier-tooth',
 		flavor: 'From Schelemeus'
 	},
 
 	ghostOnion: {
 		name: 'Ghost Onion',
-		type: 'epic',
-		href: '/keepsakes#ghost-onion',
+		key: 'ghost-onion',
 		flavor: 'From Dora'
 	},
 
 	evilEye: {
 		name: 'Evil Eye',
-		type: 'epic',
-		href: '/keepsakes#evil-eye',
+		key: 'evil-eye',
 		flavor: 'From Nemesis'
 	},
 
 	engravedPin: {
 		name: 'Engraved Pin',
-		type: 'epic',
-		href: '/keepsakes#engraved-pin',
+		key: 'engraved-pin',
 		flavor: 'From Moros'
 	},
 
 	discordantBell: {
 		name: 'Discordant Bell',
-		type: 'epic',
-		href: '/keepsakes#discordant-bell',
+		key: 'discordant-bell',
 		flavor: 'From Eris'
 	},
 
 	goldPurse: {
 		name: 'Gold Purse',
-		type: 'epic',
-		href: '/keepsakes#gold-purse',
+		key: 'gold-purse',
 		flavor: 'From Charon'
 	},
 
 	metallicDroplet: {
 		name: 'Metallic Droplet',
-		type: 'epic',
-		href: '/keepsakes#metallic-droplet',
+		key: 'metallic-droplet',
 		flavor: 'From Hermes'
 	},
 
 	whiteAntler: {
 		name: 'White Antler',
-		type: 'epic',
-		href: '/keepsakes#white-antler',
+		key: 'white-antler',
 		flavor: 'From Artemis'
 	},
 
 	moonBeam: {
 		name: 'Moon Beam',
-		type: 'epic',
-		href: '/keepsakes#moon-beam',
+		key: 'moon-beam',
 		flavor: 'From Selene'
 	},
 
 	cloudBangle: {
 		name: 'Cloud Bangle',
-		type: 'epic',
-		href: '/keepsakes#cloud-bangle-zeus',
+		key: 'cloud-bangle',
 		flavor: 'From Zeus'
 	},
 
 	iridescentFan: {
 		name: 'Iridescent Fan',
-		type: 'epic',
-		href: '/keepsakes#iridescent-fan-hera',
+		key: 'iridescent-fan',
 		flavor: 'From Hera'
 	},
 
 	vividSea: {
 		name: 'Vivid Sea',
-		type: 'epic',
-		href: '/keepsakes#vivid-sea-poseidon',
+		key: 'vivid-sea',
 		flavor: 'From Poseidon'
 	},
 
 	barleySheaf: {
 		name: 'Barley Sheaf',
-		type: 'epic',
-		href: '/keepsakes#barley-sheaf-demeter',
+		key: 'barley-sheaf',
 		flavor: 'From Demeter'
 	},
 
 	purestHope: {
 		name: 'Purest Hope',
-		type: 'epic',
-		href: '/keepsakes#purest-hope-apollo',
+		key: 'purest-hope',
 		flavor: 'From Apollo'
 	},
 
 	beautifulMirror: {
 		name: 'Beautiful Mirror',
-		type: 'epic',
-		href: '/keepsakes#beautiful-mirror-aphrodite',
+		key: 'beautiful-mirror',
 		flavor: 'From Aphrodite'
 	},
 
 	adamantShard: {
 		name: 'Adamant Shard',
-		type: 'epic',
-		href: '/keepsakes#adamant-shard-hephaestus',
+		key: 'adamant-shard',
 		flavor: 'From Hephaestus'
 	},
 
 	everlastingEmber: {
 		name: 'Everlasting Ember',
-		type: 'epic',
-		href: '/keepsakes#everlasting-ember-hestia',
+		key: 'everlasting-ember',
 		flavor: 'From Hestia'
 	},
 
 	lionFang: {
 		name: 'Lion Fang',
-		type: 'epic',
-		href: '/keepsakes#lion-fang',
+		key: 'lion-fang',
 		flavor: 'From Heracles'
 	},
 
 	blackenedFleece: {
 		name: 'Blackened Fleece',
-		type: 'epic',
-		href: '/keepsakes#blackened-fleece',
+		key: 'blackened-fleece',
 		flavor: 'From Medea'
 	},
 
 	crystalFigurine: {
 		name: 'Crystal Figurine',
-		type: 'epic',
-		href: '/keepsakes#crystal-figurine',
+		key: 'crystal-figurine',
 		flavor: 'From Circe'
 	},
 
 	silkenSash: {
 		name: 'Silken Sash',
-		type: 'epic',
-		href: '/keepsakes#silken-sash',
+		key: 'silken-sash',
 		flavor: 'From Arachne'
 	},
 
 	aromaticPhial: {
 		name: 'Aromatic Phial',
-		type: 'epic',
-		href: '/keepsakes#aromatic-phial',
+		key: 'aromatic-phial',
 		flavor: 'From Narcissus'
 	},
 
 	concaveStone: {
 		name: 'Concave Stone',
-		type: 'epic',
-		href: '/keepsakes#concave-stone',
+		key: 'concave-stone',
 		flavor: 'From Echo'
 	},
 
 	experimentalHammer: {
 		name: 'Experimental Hammer',
-		type: 'epic',
-		href: '/keepsakes#experimental-hammer',
+		key: 'experimental-hammer',
 		flavor: 'From Icarus'
 	},
 
 	transcendentEmbryo: {
 		name: 'Transcendent Embryo',
-		type: 'epic',
-		href: '/keepsakes#transcendent-embryo',
+		key: 'transcendent-embryo',
 		flavor: 'From Chaos'
 	},
 };
+
+// Convert KeepsakeData to CodexData
+const DbKeepsakes: Record<string, CodexData> = {};
+
+Object.entries(keepsakeData).forEach(([k, v]) => {
+  DbKeepsakes[k] = mapKeepsakeToCodex(v);
+});
+
+export { DbKeepsakes };
