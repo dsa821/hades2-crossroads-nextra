@@ -2,82 +2,76 @@ import { mapHammerToCodex } from "lib/utils";
 import { CodexData, HammerData } from "models/types";
 
 const hammerData: Record<string, HammerData> = {
-  marauderSlash: {
-    name: "Marauder Slash",
-    key: "marauder-slash",
-    weaponKey: "moonstone-axe",
+  bolsteredArray: {
+    name: "Bolstered Array",
+    key: "bolstered-array",
+    weaponKey: "argent-skull",
   },
 
-  unyieldingSlash: {
-    name: "Unyielding Slash",
-    key: "unyielding-slash",
-    weaponKey: "moonstone-axe",
+  destructiveArray: {
+    name: "Destructive Array",
+    key: "destructive-array",
+    weaponKey: "argent-skull",
   },
 
-  executionersChop: {
-    name: "Executioner's Chop",
-    key: "executioners-chop",
-    weaponKey: "moonstone-axe",
+  fetchingArray: {
+    name: "Fetching Array",
+    key: "fetching-array",
+    weaponKey: "argent-skull",
   },
 
-  hellSplitter: {
-    name: "Hell Splitter",
-    key: "hell-splitter",
-    weaponKey: "moonstone-axe",
+  possessedArray: {
+    name: "Possessed Array",
+    key: "possessed-array",
+    weaponKey: "argent-skull",
   },
 
-  dashingHeave: {
-    name: "Dashing Heave",
-    key: "dashing-heave",
-    weaponKey: "moonstone-axe",
+  loomingIgnition: {
+    name: "Looming Ignition",
+    key: "looming-ignition",
+    weaponKey: "argent-skull",
   },
 
-  advancingWhirlwind: {
-    name: "Advancing Whirlwind",
-    key: "advancing-whirlwind",
-    weaponKey: "moonstone-axe",
+  fullSalvo: {
+    name: "Full Salvo",
+    key: "full-salvo",
+    weaponKey: "argent-skull",
   },
 
-  concentratedWhirlwind: {
-    name: "Concentrated Whirlwind",
-    key: "concentrated-whirlwind",
-    weaponKey: "moonstone-axe",
+  rocketBombard: {
+    name: "Rocket Bombard",
+    key: "rocket-bombard",
+    weaponKey: "argent-skull",
   },
 
-  furiousWhirlwind: {
-    name: "Furious Whirlwind",
-    key: "furious-whirlwind",
-    weaponKey: "moonstone-axe",
+  suddenDriver: {
+    name: "Sudden Driver",
+    key: "sudden-driver",
+    weaponKey: "argent-skull",
   },
 
-  psychicWhirlwind: {
-    name: "Psychic Whirlwind",
-    key: "psychic-whirlwind",
-    weaponKey: "moonstone-axe",
+  colossusTackle: {
+    name: "Colossus Tackle",
+    key: "colossus-tackle",
+    weaponKey: "argent-skull",
   },
 
-  empoweringGuard: {
-    name: "Empowering Guard",
-    key: "empowering-guard",
-    weaponKey: "moonstone-axe",
+  meltingTackle: {
+    name: "Melting Tackle",
+    key: "melting-tackle",
+    weaponKey: "argent-skull",
   },
 
-  meltingShredder: {
-    name: "Melting Shredder",
-    key: "melting-shredder",
-    weaponKey: "moonstone-axe",
+  sidelongCrash: {
+    name: "Sidelong Crash",
+    key: "sidelong-crash",
+    weaponKey: "argent-skull",
   },
 
-  gigaCleaver: {
-    name: "Giga Cleaver",
-    key: "giga-cleaver",
-    weaponKey: "moonstone-axe",
-  },
-
-  suddenCleaver: {
-    name: "Sudden Cleaver",
-    key: "sudden-cleaver",
-    weaponKey: "moonstone-axe",
+  twistingCrash: {
+    name: "Twisting Crash",
+    key: "twisting-crash",
+    weaponKey: "argent-skull",
   },
 };
 

@@ -3,8 +3,9 @@ title: Revaal, The Argent Skull (Hammers)
 description: Daedalus Hammer upgrades for the Argent Skull weapon in Hades 2.
 ---
 
-import { Box, TextHighlight } from "@/components";
-import {  IconMagick, IconShell } from '@/components/icons';
+import { CodexEntry, TextHighlight } from "@/components";
+import { IconMagick, IconShell } from "@/components/icons";
+import { DbHammers } from "@/db";
 
 # Revaal, The Argent Skull (Hammers)
 
@@ -12,73 +13,80 @@ import {  IconMagick, IconShell } from '@/components/icons';
 
 ### Bolstered Array
 
-<Box>Gain **+2** <IconShell />.</Box>
+<CodexEntry data={DbHammers.Skull.bolsteredArray}>
+  Gain **+2** <IconShell />.
+</CodexEntry>
 
 ### Destructive Array
 
-<Box>
-  Every **2.5 Sec.**, your <IconShell /> deal damage around them based on **50%**
-  of your **Attack**.
-</Box>
+<CodexEntry data={DbHammers.Skull.destructiveArray}>
+  Every **2.5 Sec.**, your <IconShell /> deal damage around them based on
+  **50%** of your **Attack**.
+</CodexEntry>
 
 ### Fetching Array
 
-<Box>
-  Your <IconShell /> return to you automatically, but you have **-1** <IconShell />.
-</Box>
+<CodexEntry data={DbHammers.Skull.fetchingArray}>
+  Your <IconShell /> return to you automatically, but you have **-1**{" "}
+  <IconShell />.
+</CodexEntry>
 
 ### Possessed Array
 
-<Box>
-  Your <IconShell /> fire your **Ω Attack** for **0** <IconMagick /> whenever retrieved,
-  but take longer to drop.
-</Box>
+<CodexEntry data={DbHammers.Skull.possessedArray}>
+  Your <IconShell /> fire your **Ω Attack** for **0** <IconMagick /> whenever
+  retrieved, but take longer to drop.
+</CodexEntry>
 
 ### Looming Ignition
 
-<Box>
+<CodexEntry data={DbHammers.Skull.loomingIgnition}>
   Your **Attack** grows up to **+50%** bigger and stronger over **2 Sec.**, or
   until it explodes.
-</Box>
+</CodexEntry>
 
 ### Full Salvo
 
-<Box>
+<CodexEntry data={DbHammers.Skull.fullSalvo}>
   Your **Attacks** fire your <IconShell /> all at once in a spread pattern.
-</Box>
+</CodexEntry>
 
 ### Rocket Bombard
 
-<Box>Your **Ω Attack** fires straight ahead and has **+20 Power**.</Box>
+<CodexEntry data={DbHammers.Skull.rocketBombard}>
+  Your **Ω Attack** fires straight ahead and has **+20 Power**.
+</CodexEntry>
 
 ## Special
 
 ### Sudden Driver
 
-<Box>Your **Specials** are **35%** faster.</Box>
+<CodexEntry data={DbHammers.Skull.suddenDriver}>
+  Your **Specials** are **35%** faster.
+</CodexEntry>
 
 ### Colossus Tackle
 
-<Box>
+<CodexEntry data={DbHammers.Skull.colossusTackle}>
   Your **Special** has **+45 Power** and you take **-30%** damage while using
   it.
-</Box>
+</CodexEntry>
 
 ### Melting Tackle
 
-<Box>
+<CodexEntry data={DbHammers.Skull.meltingTackle}>
   Your **Special** destroys **50%** of any **Armor** _(based on the total)_.
-</Box>
+</CodexEntry>
 
 ### Sidelong Crash
 
-<Box>
+<CodexEntry data={DbHammers.Skull.sidelongCrash}>
   Your **Ω Special** projectiles deal **+120%** damage and shoot farther, but
   only to one side.
-</Box>
+</CodexEntry>
 
 ### Twisting Crash
 
-<Box>
+<CodexEntry data={DbHammers.Skull.twistingCrash}>
   After your **Ω Special** projectiles fire, they fire again toward you.
-</Box>
+</CodexEntry>
