@@ -4,7 +4,7 @@ description: Boons for Hera in Hades 2.
 ---
 
 import { Callout } from "nextra/components";
-import { BoonTest, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
+import { Boon, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
 import { IconEarth, IconHera, IconMagick } from "@/components/icons";
 import { DbBoons } from "@/db";
 
@@ -30,59 +30,59 @@ import QueensRansom from "@/components/duos/QueensRansom.mdx";
 
 ### Sworn Strike (Attack) [#sworn-strike]
 
-<BoonTest boon={DbBoons.Hera.swornStrike}>
+<Boon boon={DbBoons.Hera.swornStrike}>
 Your **Attacks** deal more damage and inflict **Hitch**.
 
 - Attack Damage: **+50%**
 
-</BoonTest>
+</Boon>
 
 ### Sworn Flourish (Special) [#sworn-flourish]
 
-<BoonTest boon={DbBoons.Hera.swornFlourish}>
+<Boon boon={DbBoons.Hera.swornFlourish}>
 Your **Specials** deal more damage and inflict **Hitch**.
 
 - Special Damage: **+60%**
 
-</BoonTest>
+</Boon>
 
 ### Engagement Ring (Cast) [#engagement-ring]
 
-<BoonTest boon={DbBoons.Hera.engagementRing}>
+<Boon boon={DbBoons.Hera.engagementRing}>
 Your **Casts** last **200%** longer and deal damage to _every_ foe that joins the **Encounter**.
 
 - On-Spawn Damage: **70**
 
-</BoonTest>
+</Boon>
 
 ### Nexus Sprint (Sprint) [#nexus-sprint]
 
-<BoonTest boon={DbBoons.Hera.nexusSprint}>
+<Boon boon={DbBoons.Hera.nexusSprint}>
 Your **Sprint** inflicts **Hitch** on nearby foes, which spreads to other foes near _them_.
 
 - Additional Foes Hitched: **+1**
 
-</BoonTest>
+</Boon>
 
 ### Born Gain (Magick) [#born-gain]
 
-<BoonTest boon={DbBoons.Hera.bornGain}>
+<Boon boon={DbBoons.Hera.bornGain}>
 Whenever you run out of <IconMagick />, **Prime** to restore _all_ <IconMagick /> up to the reduced limit.
 
 - Magick Primed: **10**
 
-</BoonTest>
+</Boon>
 
 ## Support
 
 ### <TextHighlight type="infusion">Proper Upbringing (Infusion)</TextHighlight> [#proper-upbringing]
 
-<BoonTest boon={DbBoons.Hera.properUpbringing}>
+<Boon boon={DbBoons.Hera.properUpbringing}>
 While you have at least **3** <IconEarth />, _all_ your **Common Boons** gain **Rarity**.
 
 - Improved Rarity: <TextHighlight type="rare">**Rare**</TextHighlight>
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required: 1** <IconEarth />
@@ -90,57 +90,57 @@ While you have at least **3** <IconEarth />, _all_ your **Common Boons** gain **
 
 ### Bridal Glow
 
-<BoonTest boon={DbBoons.Hera.bridalGlow}>
+<Boon boon={DbBoons.Hera.bridalGlow}>
 Your **Boons** become **Heroic**, then lose **Rarity** every **5 Encounters**.
 
 - Random Boons Affected: **2**
 
-</BoonTest>
+</Boon>
 
 ### Uncommon Grace
 
-<BoonTest boon={DbBoons.Hera.uncommonGrace}>
+<Boon boon={DbBoons.Hera.uncommonGrace}>
 While none of your other **Boons** are **Common**, deal more damage.
 
 - Common-Less Bonus Damage: **+10%**
 
-</BoonTest>
+</Boon>
 
 ### Nasty Comeback
 
-<BoonTest boon={DbBoons.Hera.nastyComeback}>
+<Boon boon={DbBoons.Hera.nastyComeback}>
 After you take damage, inflict your foe with **Hitch** and deal damage in greater measure.
 
 - Damage Reflected: **500%**
 
-</BoonTest>
+</Boon>
 
 ### Keen Intuition
 
-<BoonTest boon={DbBoons.Hera.keenIntuition}>
+<Boon boon={DbBoons.Hera.keenIntuition}>
 Whenever you use **Ω Moves** while you have **100%** <IconMagick />, they deal more damage.
 
 - Omega Damage: **+30%**
 
-</BoonTest>
+</Boon>
 
 ### Family Trade
 
-<BoonTest boon={DbBoons.Hera.familyTrade}>
+<Boon boon={DbBoons.Hera.familyTrade}>
 Any **Sacrifice Boons** you choose are stronger. One will be offered as soon as possible.
 
 - Bonus Lv.: **+2**
 
-</BoonTest>
+</Boon>
 
 ### Hereditary Bane
 
-<BoonTest boon={DbBoons.Hera.hereditaryBane}>
+<Boon boon={DbBoons.Hera.hereditaryBane}>
 Your **Hitch** effects deal more damage and last **+5 Sec**.
 
 - Hitch Damage: **+10%**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_
@@ -156,12 +156,12 @@ Your **Hitch** effects deal more damage and last **+5 Sec**.
 
 ### Dying Wish
 
-<BoonTest boon={DbBoons.Hera.dyingWish}>
+<Boon boon={DbBoons.Hera.dyingWish}>
 Whenever **Hitch**-afflicted foes are slain, damage all other **Hitch**-afflicted foes.
 
 - Hitch Death Damage: **40**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_
@@ -179,12 +179,12 @@ Whenever **Hitch**-afflicted foes are slain, damage all other **Hitch**-afflicte
 
 ### <TextHighlight type="legendary">Brave Face</TextHighlight>
 
-<BoonTest boon={DbBoons.Hera.braveFace}>
+<Boon boon={DbBoons.Hera.braveFace}>
 Automatically use <IconMagick /> to resist up to **50%** of any damage.
 
 - Magick Cost per Damage Point: **5**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_

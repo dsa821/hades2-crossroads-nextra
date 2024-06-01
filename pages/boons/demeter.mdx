@@ -4,7 +4,7 @@ description: Boons for Demeter in Hades 2.
 ---
 
 import { Callout } from "nextra/components";
-import { BoonTest, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
+import { Boon, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
 import {
   IconDemeter,
   IconEarth,
@@ -38,34 +38,34 @@ import HeartyAppetite from "@/components/duos/HeartyAppetite.mdx";
 
 ### Ice Strike (Attack) [#ice-strike]
 
-<BoonTest boon={DbBoons.Demeter.iceStrike}>
+<Boon boon={DbBoons.Demeter.iceStrike}>
 Your **Attacks** deal more damage and inflict **Freeze**.
 
 - Attack Damage: **+30%**
 
-</BoonTest>
+</Boon>
 
 ### Ice Flourish (Special) [#ice-flourish]
 
-<BoonTest boon={DbBoons.Demeter.iceFlourish}>
+<Boon boon={DbBoons.Demeter.iceFlourish}>
 Your **Specials** deal more damage and inflict **Freeze**.
 
 - Special Damage: **+40%**
 
-</BoonTest>
+</Boon>
 
 ### Arctic Ring (Cast) [#arctic-ring]
 
-<BoonTest boon={DbBoons.Demeter.arcticRing}>
+<Boon boon={DbBoons.Demeter.arcticRing}>
 Your **Casts** repeatedly deal damage in the area and inflict **Freeze**.
 
 - Cast Damage: **10** _(every 0.5 Sec.)_
 
-</BoonTest>
+</Boon>
 
 ### Frigid Sprint (Sprint) [#frigid-sprint]
 
-<BoonTest boon={DbBoons.Demeter.frigidSprint}>
+<Boon boon={DbBoons.Demeter.frigidSprint}>
 Your **Sprint** forms a **Cyclone** around you that lingers after you stop.
 
 - Cyclone Damage: **4** _(every 0.25 Sec.)_
@@ -73,27 +73,27 @@ Your **Sprint** forms a **Cyclone** around you that lingers after you stop.
 **Cyclone**: A vortex that makes foes **20%** slower and their ranged shots
 **60%** slower. Lasts **3 Sec.**
 
-</BoonTest>
+</Boon>
 
 ### Tranquil Gain (Magick) [#tranquil-gain]
 
-<BoonTest boon={DbBoons.Demeter.tranquilGain}>
+<Boon boon={DbBoons.Demeter.tranquilGain}>
 After remaining inactive for **1 Sec.**, rapidly restore <IconMagick /> until you act.
 
 - Magick Restoration: **+25** _(every 1 Sec.)_
 
-</BoonTest>
+</Boon>
 
 ## Support
 
 ### <TextHighlight type="infusion">Coarse Grit (Infusion)</TextHighlight> [#coarse-grit]
 
-<BoonTest boon={DbBoons.Demeter.coarseGrit}>
+<Boon boon={DbBoons.Demeter.coarseGrit}>
 While you have at least **6** <IconEarth />, you cannot take more damage per hit than the limit.
 
 - Max Damage per Hit: **15**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required: 1** <IconEarth />
@@ -101,25 +101,25 @@ While you have at least **6** <IconEarth />, you cannot take more damage per hit
 
 ### Rare Crop
 
-<BoonTest boon={DbBoons.Demeter.rareCrop}>
+<Boon boon={DbBoons.Demeter.rareCrop}>
 Your **Boons** become **Common**, then gain **Rarity** every **3 Encounters**.
 
 - Random Boons Affected: **1**
 
-</BoonTest>
+</Boon>
 
 ### Local Climate
 
-<BoonTest boon={DbBoons.Demeter.localClimate}>
+<Boon boon={DbBoons.Demeter.localClimate}>
 Your **Ω Cast** deals bonus damage and follows you, even as you start to **Channel** it.
 
 - Cast Damage: **+20%**
 
-</BoonTest>
+</Boon>
 
 ### Gale Force
 
-<BoonTest boon={DbBoons.Demeter.galeForce}>
+<Boon boon={DbBoons.Demeter.galeForce}>
 Your **Casts** also create a **Cyclone** at the binding circle.
 
 - Cyclone Damage: **4** _(every 0.25 Sec.)_
@@ -127,43 +127,43 @@ Your **Casts** also create a **Cyclone** at the binding circle.
 **Cyclone**: A vortex that makes foes **20%** slower and their ranged shots
 **60%** slower. Lasts **3 Sec.**
 
-</BoonTest>
+</Boon>
 
 ### Plentiful Forage
 
-<BoonTest boon={DbBoons.Demeter.plentifulForage}>
+<Boon boon={DbBoons.Demeter.plentifulForage}>
 Whenever you gather plants, seeds, or mushrooms, gain <IconMaxLife />. Receive **1** <IconMysterySeed /> now.
 
 - Max Life from Gathering: **5**
 
-</BoonTest>
+</Boon>
 
 ### Winter Coat (Prime) [#winter-coat]
 
-<BoonTest boon={DbBoons.Demeter.winterCoat}>
+<Boon boon={DbBoons.Demeter.winterCoat}>
 After you enter a **Location**, **Prime** a barrier that absorbs **1** instance of damage.
 
 - Magick Primed: **20**
 
-</BoonTest>
+</Boon>
 
 ### Weed Killer
 
-<BoonTest boon={DbBoons.Demeter.weedKiller}>
+<Boon boon={DbBoons.Demeter.weedKiller}>
 Your **Ω Attack** deals more damage, but uses **+10** <IconMagick />.
 
 - Omega Attack Damage: **+50%**
 
-</BoonTest>
+</Boon>
 
 ### Cold Storage
 
-<BoonTest boon={DbBoons.Demeter.coldStorage}>
+<Boon boon={DbBoons.Demeter.coldStorage}>
 Your **Freeze** effects last longer.
 
 - Freeze Duration: **+ 2 Sec.**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_
@@ -174,12 +174,12 @@ Your **Freeze** effects last longer.
 
 ### <TextHighlight type="legendary">Winter Harvest</TextHighlight>
 
-<BoonTest boon={DbBoons.Demeter.winterHarvest}>
+<Boon boon={DbBoons.Demeter.winterHarvest}>
 **Freeze**-afflicted foes shatter at **10% Life**, dealing damage in the area.
 
 - Shatter Area Damage: **100**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_

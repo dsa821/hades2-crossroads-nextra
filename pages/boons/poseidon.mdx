@@ -4,7 +4,7 @@ description: Boons for Poseidon in Hades 2.
 ---
 
 import { Callout } from "nextra/components";
-import { BoonTest, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
+import { Boon, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
 import {
   IconAshes,
   IconGold,
@@ -40,43 +40,43 @@ import ScaldingVapor from "@/components/duos/ScaldingVapor.mdx";
 
 ### Wave Strike (Attack) [#wave-strike]
 
-<BoonTest boon={DbBoons.Poseidon.waveStrike}>
+<Boon boon={DbBoons.Poseidon.waveStrike}>
 Your **Attacks** hit foes with a splash that knocks other foes away.
 
 - Splash Damage: **15**
 
-</BoonTest>
+</Boon>
 
 ### Wave Flourish (Special) [#wave-flourish]
 
-<BoonTest boon={DbBoons.Poseidon.waveFlourish}>
+<Boon boon={DbBoons.Poseidon.waveFlourish}>
 Your **Specials** hit foes with a splash that knocks other foes away.
 
 - Splash Damage: **20**
 
-</BoonTest>
+</Boon>
 
 ### Geyser Ring (Cast) [#geyser-ring]
 
-<BoonTest boon={DbBoons.Poseidon.geyserRing}>
+<Boon boon={DbBoons.Poseidon.geyserRing}>
 Your **Ω Cast** immediately detonates, dealing damage and knocking foes away.
 
 - Omega Cast Damage: **100**
 
-</BoonTest>
+</Boon>
 
 ### Breaker Sprint (Sprint) [#breaker-sprint]
 
-<BoonTest boon={DbBoons.Poseidon.breakerSprint}>
+<Boon boon={DbBoons.Poseidon.breakerSprint}>
 Your **Sprint** deals damage on impact and knocks foes away, but uses **5** <IconMagick /> per hit.
 
 - Impact Damage: **80**
 
-</BoonTest>
+</Boon>
 
 ### Fluid Gain (Magick) [#fluid-gain]
 
-<BoonTest boon={DbBoons.Poseidon.fluidGain}>
+<Boon boon={DbBoons.Poseidon.fluidGain}>
 After you strike foes with your **Weapon**, a **Spirit Bubble** may appear.
 
 - Spirit Bubble Chance: **10%**
@@ -84,18 +84,18 @@ After you strike foes with your **Weapon**, a **Spirit Bubble** may appear.
 **Spirit Bubble**: Restores **20** <IconMagick /> when you touch it. Expires
 when used, or after **30 Sec.**
 
-</BoonTest>
+</Boon>
 
 ## Support
 
 ### <TextHighlight type="infusion">Water Fitness (Infusion)</TextHighlight> [#water-fitness]
 
-<BoonTest boon={DbBoons.Poseidon.waterFitness}>
+<Boon boon={DbBoons.Poseidon.waterFitness}>
 While you have at least **4** <IconWater />, gain <IconMaxLife />.
 
 - Max Life: **+100**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required: 1** <IconWater />
@@ -103,57 +103,57 @@ While you have at least **4** <IconWater />, gain <IconMaxLife />.
 
 ### Double Up
 
-<BoonTest boon={DbBoons.Poseidon.doubleUp}>
+<Boon boon={DbBoons.Poseidon.doubleUp}>
 Whenever you claim a **Minor Find** or similar resource reward, a copy may appear.
 
 - Double Reward Chance: **20%**
 
-</BoonTest>
+</Boon>
 
 ### Hydraulic Might
 
-<BoonTest boon={DbBoons.Poseidon.hydraulicMight}>
+<Boon boon={DbBoons.Poseidon.hydraulicMight}>
 At the start of each **Encounter**, your **Attacks** and **Specials** are stronger for **10 Sec.**
 
 - Initial Damage Bonus: **+100%**
 
-</BoonTest>
+</Boon>
 
 ### Flood Control (Prime) [#flood-control]
 
-<BoonTest boon={DbBoons.Poseidon.floodControl}>
+<Boon boon={DbBoons.Poseidon.floodControl}>
 After you enter a **Location**, **Prime 30** <IconMagick /> to reduce any damage you would take.
 
 - Damage Reduction per Hit: **-2**
 
-</BoonTest>
+</Boon>
 
 ### Sunken Treasure
 
-<BoonTest boon={DbBoons.Poseidon.sunkenTreasure}>
+<Boon boon={DbBoons.Poseidon.sunkenTreasure}>
 Gain <IconGold />, <IconHealing />, and sometimes <IconAshes /> and <IconPsyche />.
 
 - Gold Received: **+90**
 
-</BoonTest>
+</Boon>
 
 ### Ocean's Bounty
 
-<BoonTest boon={DbBoons.Poseidon.oceansBounty}>
+<Boon boon={DbBoons.Poseidon.oceansBounty}>
 Any **Minor Finds** and <IconGold /> are worth more.
 
 - Reward Value: **+50%**
 
-</BoonTest>
+</Boon>
 
 ### Slippery Slope
 
-<BoonTest boon={DbBoons.Poseidon.slipperySlope}>
+<Boon boon={DbBoons.Poseidon.slipperySlope}>
 Your splash effects from **Poseidon** also inflict **Slip** on foes.
 
 - Slip Bonus Damage: **+5%**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_
@@ -164,12 +164,12 @@ Your splash effects from **Poseidon** also inflict **Slip** on foes.
 
 ### Crashing Wave
 
-<BoonTest boon={DbBoons.Poseidon.crashingWave}>
+<Boon boon={DbBoons.Poseidon.crashingWave}>
 Whenever your knock-away effects slam foes into barriers, create a blast in the area.
 
 - Blast Damage: **50**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_
@@ -187,12 +187,12 @@ Whenever your knock-away effects slam foes into barriers, create a blast in the 
 
 ### <TextHighlight type="legendary">King Tide</TextHighlight>
 
-<BoonTest boon={DbBoons.Poseidon.kingTide}>
+<Boon boon={DbBoons.Poseidon.kingTide}>
 Your splash effects from **Poseidon** are larger and deal bonus damage to **Guardians**.
 
 - Splash Damage vs. Guardians: **+150%**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_

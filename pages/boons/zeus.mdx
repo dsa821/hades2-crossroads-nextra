@@ -4,7 +4,7 @@ description: Boons for Zeus in Hades 2.
 ---
 
 import { Callout } from "nextra/components";
-import { BoonTest, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
+import { Boon, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
 import {
   IconAir,
   IconMagick,
@@ -35,59 +35,59 @@ import KingsRansom from "@/components/duos/KingsRansom.mdx";
 
 ### Heaven Strike (Attack) [#heaven-strike]
 
-<BoonTest boon={DbBoons.Zeus.heavenStrike}>
+<Boon boon={DbBoons.Zeus.heavenStrike}>
 Your **Attacks** inflict **Blitz**.
 
 - Blitz Damage: **80**
 
-</BoonTest>
+</Boon>
 
 ### Heaven Flourish (Special) [#heaven-flourish]
 
-<BoonTest boon={DbBoons.Zeus.heavenFlourish}>
+<Boon boon={DbBoons.Zeus.heavenFlourish}>
 Your **Specials** inflict **Blitz**.
 
 - Blitz Damage: **100**
 
-</BoonTest>
+</Boon>
 
 ### Storm Ring (Cast) [#storm-ring]
 
-<BoonTest boon={DbBoons.Zeus.stormRing}>
+<Boon boon={DbBoons.Zeus.stormRing}>
 Your **Ω Cast** also causes lightning bolts to repeatedly strike **1** foe at a time.
 
 - Bolt Damage: **30** _(every 0.25 Sec.)_
 
-</BoonTest>
+</Boon>
 
 ### Thunder Sprint (Sprint) [#thunder-sprint]
 
-<BoonTest boon={DbBoons.Zeus.thunderSprint}>
+<Boon boon={DbBoons.Zeus.thunderSprint}>
 Your **Sprint** causes nearby foes to be struck by lightning bolts, which use **3** <IconMagick /> each.
 
 - Bolt Damage: **20** _(every 0.15 Sec.)_
 
-</BoonTest>
+</Boon>
 
 ### Ionic Gain (Magick) [#ionic-gain]
 
-<BoonTest boon={DbBoons.Zeus.ionicGain}>
+<Boon boon={DbBoons.Zeus.ionicGain}>
 Gradually restore <IconMagick />, but your total amount is reduced by **70%.**
 
 - Magick Restoration: **+4** _(every 1 Sec.)_
 
-</BoonTest>
+</Boon>
 
 ## Support
 
 ### <TextHighlight type="infusion">Air Quality (Infusion)</TextHighlight> [#air-quality]
 
-<BoonTest boon={DbBoons.Zeus.airQuality}>
+<Boon boon={DbBoons.Zeus.airQuality}>
 While you have at least **5** <IconAir />, you can never deal less damage than the limit.
 
 - Min Damage per Hit: **30**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required: 2** <IconAir />
@@ -95,48 +95,48 @@ While you have at least **5** <IconAir />, you can never deal less damage than t
 
 ### Divine Vengeance
 
-<BoonTest boon={DbBoons.Zeus.divineVengeance}>
+<Boon boon={DbBoons.Zeus.divineVengeance}>
 After you take damage, your foe is struck by lightning, and again **50%** of the time.
 
 - Bolt Damage: **100** _(up to **2** times)_
 
-</BoonTest>
+</Boon>
 
 ### Lightning Lance
 
-<BoonTest boon={DbBoons.Zeus.lightningLance}>
+<Boon boon={DbBoons.Zeus.lightningLance}>
 Hold **Cast** to aim where the binding circle appears. Foes within are struck by lightning.
 
 - Bolt Damage: **50**
 
-</BoonTest>
+</Boon>
 
 ### Static Shock (Prime) [#static-shock]
 
-<BoonTest boon={DbBoons.Zeus.staticShock}>
+<Boon boon={DbBoons.Zeus.staticShock}>
 After you enter a **Location**, **Prime 50** <IconMagick /> to make your strikes emit chain-lightning.
 
 - Lightning Damage: **10**
 
-</BoonTest>
+</Boon>
 
 ### Spirit Surge
 
-<BoonTest boon={DbBoons.Zeus.spiritSurge}>
+<Boon boon={DbBoons.Zeus.spiritSurge}>
 While you have no more than **10** <IconMagick />, _all_ foes are occasionally struck by lightning.
 
 - Bolt Damage: **60** _(every 5 Sec.)_
 
-</BoonTest>
+</Boon>
 
 ### Double Strike
 
-<BoonTest boon={DbBoons.Zeus.doubleStrike}>
+<Boon boon={DbBoons.Zeus.doubleStrike}>
 Your lightning bolt effects may strike **1** more time.
 
 - Bonus Strike Chance: **+5%**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_
@@ -155,12 +155,12 @@ Your lightning bolt effects may strike **1** more time.
 
 ### Toasting Fork
 
-<BoonTest boon={DbBoons.Zeus.toastingFork}>
+<Boon boon={DbBoons.Zeus.toastingFork}>
 Your **Blitz** effects deal damage even if they expire without being activated.
 
 - Blitz Expiration Damage: **75%**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_
@@ -169,12 +169,12 @@ Your **Blitz** effects deal damage even if they expire without being activated.
 
 ### Electric Overload
 
-<BoonTest boon={DbBoons.Zeus.electricOverload}>
+<Boon boon={DbBoons.Zeus.electricOverload}>
 Whenever your Blitz effects activate, a bolt of chain-lightning fires from the foe.
 
 - Lightning Damage: **10**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_
@@ -185,12 +185,12 @@ Whenever your Blitz effects activate, a bolt of chain-lightning fires from the f
 
 ### <TextHighlight type="legendary">Shocking Loss</TextHighlight>
 
-<BoonTest boon={DbBoons.Zeus.shockingLoss}>
+<Boon boon={DbBoons.Zeus.shockingLoss}>
 Most foes may be instantly destroyed as soon as they enter the **Encounter**.
 
 - Instant Destruction Chance: **7%**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_

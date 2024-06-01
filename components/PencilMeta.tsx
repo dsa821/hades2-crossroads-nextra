@@ -12,7 +12,7 @@ import {
 import { BoonData } from "models/types";
 
 import { DbBoons } from "db";
-import { BoonTest } from "./Boon";
+import { Boon } from "./Boon";
 import { Box } from "./Box";
 
 const godData: {
@@ -155,7 +155,7 @@ const BoonSelect: React.FC<BoonSelectProps> = ({ boon }) => {
       className={`cursor-pointer transition ${selected && "opacity-25"}`}
       onClick={handleClick}
     >
-      <BoonTest boon={boon} compact disableLink />
+      <Boon boon={boon} compact disableLink />
     </div>
   );
 };
