@@ -4,7 +4,14 @@ description: Boons for Apollo in Hades 2.
 ---
 
 import { Callout } from "nextra/components";
-import { Boon, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
+import {
+  Boon,
+  BoonGrid,
+  Box,
+  ElementSummary,
+  GreekTitle,
+  TextHighlight,
+} from "@/components";
 import { IconApollo, IconFire, IconLife, IconMagick } from "@/components/icons";
 import { DbBoons } from "@/db";
 
@@ -27,6 +34,8 @@ import SunWorshiper from "@/components/duos/SunWorshiper.mdx";
   **Daze** _(Curse):_ Afflicted foes have **20%** chance to deal no damage.
   Lasts **9 Sec.**
 </Box>
+
+<ElementSummary boons={DbBoons.Apollo} />
 
 ## Core
 

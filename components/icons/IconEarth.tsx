@@ -1,5 +1,5 @@
 import { IconBase } from "./IconBase";
 
-export const IconEarth = () => {
-  return <IconBase iconKey="earth" />;
+export const IconEarth = ({ size = 24 }) => {
+  return <IconBase iconKey="earth" size={size} />;
 };

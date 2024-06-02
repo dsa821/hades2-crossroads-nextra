@@ -1,5 +1,5 @@
 import { IconBase } from "./IconBase";
 
-export const IconAir = () => {
-  return <IconBase iconKey="air" />;
+export const IconAir = ({ size = 24 }) => {
+  return <IconBase iconKey="air" size={size} />;
 };

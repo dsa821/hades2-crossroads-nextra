@@ -4,7 +4,14 @@ description: Boons for Hestia in Hades 2.
 ---
 
 import { Callout } from "nextra/components";
-import { Boon, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
+import {
+  Boon,
+  BoonGrid,
+  Box,
+  ElementSummary,
+  GreekTitle,
+  TextHighlight,
+} from "@/components";
 import {
   IconFire,
   IconHestia,
@@ -33,6 +40,8 @@ import ScaldingVapor from "@/components/duos/ScaldingVapor.mdx";
   **Scorch** _(Curse):_ Afflicted foes take **40** damage accrued from this
   every **1 Sec.**
 </Box>
+
+<ElementSummary boons={DbBoons.Hestia} />
 
 ## Core
 
