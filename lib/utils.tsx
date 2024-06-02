@@ -1,4 +1,5 @@
 import {
+  AspectData,
   BoonData,
   CodexData,
   HammerData,
@@ -48,6 +49,17 @@ export function getRarityBorderColor(type: Rarity): string {
   }
 }
 
+export function mapAspectToCodex(aspect: AspectData): CodexData {
+  return {
+    name: aspect.name,
+    type: "legendary",
+
+    href: `/weapons/${aspect.weaponKey}/builds#${aspect.key}`,
+
+    flavor: aspect.flavor,
+  } as CodexData;
+}
+
 export function mapBoonToCodex(boon: BoonData): CodexData {
   return {
     name: boon.name,
@@ -77,5 +89,7 @@ export function mapKeepsakeToCodex(keepsake: KeepsakeData): CodexData {
 
     iconUrl: `/keepsakes/${keepsake.key}.png`,
     href: `/keepsakes#${keepsake.key}`,
+
+    flavor: keepsake.flavor
   } as CodexData;
 }

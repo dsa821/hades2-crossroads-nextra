@@ -64,7 +64,7 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
           {props.children}
 
           {data.flavor && (
-            <div className="mt-2 italic font-semibold text-sm drop-shadow-lg text-indigo-500">
+            <div className="mt-2 italic font-semibold drop-shadow-lg text-indigo-500">
               {data.flavor}
             </div>
           )}
