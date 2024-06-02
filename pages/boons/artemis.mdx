@@ -3,16 +3,24 @@ title: Artemis
 description: Boons for Artemis in Hades 2.
 ---
 
-import { Boon, BoonGrid, GreekTitle, TextHighlight } from "@/components";
+import {
+  Boon,
+  BoonGrid,
+  ElementSummary,
+  GreekTitle,
+  TextHighlight,
+} from "@/components";
 import { IconArtemis, IconLife } from "@/components/icons";
 
-import { DbBoons } from '@/db';
+import { DbBoons } from "@/db";
 
 # <GreekTitle icon={<IconArtemis  />} name="Artemis" />
 
 > Your circumstances and training required many sacrifices; one is the warmth of
 > companionship. It was fortunate, then, that you met Artemis when you did.\
 > Olympus knows her as a wayward daughter. We know her as one of us.
+
+<ElementSummary boons={DbBoons.Artemis} />
 
 ## Support
 

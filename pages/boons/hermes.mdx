@@ -4,7 +4,13 @@ description: Boons for Hermes in Hades 2.
 ---
 
 import { Callout } from "nextra/components";
-import { Boon, BoonGrid, GreekTitle, TextHighlight } from "@/components";
+import {
+  Boon,
+  BoonGrid,
+  ElementSummary,
+  GreekTitle,
+  TextHighlight,
+} from "@/components";
 import {
   IconHermes,
   IconGold,
@@ -22,6 +28,8 @@ import { DbBoons } from "@/db";
 
 > Amongst Olympians, you know him well. His business often takes him to the edge of the Underworld, and sometimes farther below.\
 > His swiftness is renowned, but little else. His kin on the mountain underestimate him. Long has this proven to your benefit, and to this realm's.
+
+<ElementSummary boons={DbBoons.Hermes} />
 
 ## Support
 

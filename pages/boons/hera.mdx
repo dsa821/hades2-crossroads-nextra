@@ -4,7 +4,14 @@ description: Boons for Hera in Hades 2.
 ---
 
 import { Callout } from "nextra/components";
-import { Boon, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
+import {
+  Boon,
+  BoonGrid,
+  Box,
+  ElementSummary,
+  GreekTitle,
+  TextHighlight,
+} from "@/components";
 import { IconEarth, IconHera, IconMagick } from "@/components/icons";
 import { DbBoons } from "@/db";
 
@@ -25,6 +32,8 @@ import QueensRansom from "@/components/duos/QueensRansom.mdx";
   **Hitch** _(Curse):_ Afflicted foes take **30%** of damage dealt to other
   afflicted foes. Lasts **8 Sec.**
 </Box>
+
+<ElementSummary boons={DbBoons.Hera} />
 
 ## Core
 

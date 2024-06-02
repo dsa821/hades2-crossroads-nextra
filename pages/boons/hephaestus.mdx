@@ -4,7 +4,14 @@ description: Boons for Hephaestus in Hades 2.
 ---
 
 import { Callout } from "nextra/components";
-import { Boon, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
+import {
+  Boon,
+  BoonGrid,
+  Box,
+  ElementSummary,
+  GreekTitle,
+  TextHighlight,
+} from "@/components";
 import {
   IconArmor,
   IconEarth,
@@ -32,6 +39,8 @@ import MasterConductor from "@/components/duos/MasterConductor.mdx";
   **Vent** _(Curse):_ After **5 Sec.**, afflicted foes take a burst of damage.
   Timer resets if re-applied.
 </Box>
+
+<ElementSummary boons={DbBoons.Hephaestus} />
 
 ## Core
 
