@@ -3,10 +3,10 @@ title: Artemis
 description: Boons for Artemis in Hades 2.
 ---
 
-import { BoonTest, BoonGrid, GreekTitle, TextHighlight } from "@/components";
+import { Boon, BoonGrid, GreekTitle, TextHighlight } from "@/components";
 import { IconArtemis, IconLife } from "@/components/icons";
 
-import { DbBoons } from '@/db/boons';
+import { DbBoons } from '@/db';
 
 # <GreekTitle icon={<IconArtemis  />} name="Artemis" />
 
@@ -18,65 +18,65 @@ import { DbBoons } from '@/db/boons';
 
 ### Pressure Points
 
-<BoonTest boon={DbBoons.Artemis.pressurePoints}>
+<Boon boon={DbBoons.Artemis.pressurePoints}>
 Any damage you deal may be **Critical**.
 
 - Critical Chance: **+3%**
 
-</BoonTest>
+</Boon>
 
 ### Silver Streak
 
-<BoonTest boon={DbBoons.Artemis.silverStreak}>
+<Boon boon={DbBoons.Artemis.silverStreak}>
 After you **Dash**, your **Ω Moves** deal more damage for **2 Sec**.
 
 - Bonus Omega Damage: **+10%**
 
-</BoonTest>
+</Boon>
 
 ### First Blood
 
-<BoonTest boon={DbBoons.Artemis.firstBlood}>
+<Boon boon={DbBoons.Artemis.firstBlood}>
 Foes with at least **80%** <IconLife /> or **80% Armor** may take **Critical** damage.
 
 - Critical Chance: **+10%**
 
-</BoonTest>
+</Boon>
 
 ### Lethal Snare
 
-<BoonTest boon={DbBoons.Artemis.lethalSnare}>
+<Boon boon={DbBoons.Artemis.lethalSnare}>
 Foes in your **Casts** may take **Critical** damage from your **Attacks**.
 
 - Critical Chance: **+8%**
 
-</BoonTest>
+</Boon>
 
 ### Easy Shot
 
-<BoonTest boon={DbBoons.Artemis.easyShot}>
+<Boon boon={DbBoons.Artemis.easyShot}>
 A piercing arrow fires toward any foe damaged by your **Ω Cast**.
 
 - Arrow Damage: **20**
 
-</BoonTest>
+</Boon>
 
 ### Support Fire
 
-<BoonTest boon={DbBoons.Artemis.supportFire}>
+<Boon boon={DbBoons.Artemis.supportFire}>
 After you hit with your **Attacks** or **Specials**, fire a seeking arrow.
 
 - Arrow Damage: **10**
 
-</BoonTest>
+</Boon>
 
 ### Death Warrant
 
-<BoonTest boon={DbBoons.Artemis.deathWarrant}>
+<Boon boon={DbBoons.Artemis.deathWarrant}>
 A random foe occasionally becomes **Marked**. If it takes **Critical** damage, this repeats.
 
 - Time Between Marks: **20 Sec.**
 
 **Marked** _(Curse)_: Afflicted foes have **+30%** chance to take **Critical** damage. Lasts **6 Sec**.
 
-</BoonTest>
+</Boon>

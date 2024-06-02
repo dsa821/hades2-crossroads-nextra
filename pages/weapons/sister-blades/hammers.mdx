@@ -3,8 +3,9 @@ title: Lim and Oros, The Sister Blades (Hammers)
 description: Daedalus Hammer upgrades for the Sister Blades weapon in Hades 2.
 ---
 
-import { Boon, TextHighlight } from "@/components";
+import { CodexEntry, TextHighlight } from "@/components";
 import { IconMagick } from "@/components/icons";
+import { DbHammers } from "@/db";
 
 # Lim and Oros, The Sister Blades (Hammers)
 
@@ -12,72 +13,75 @@ import { IconMagick } from "@/components/icons";
 
 ### Final Slice
 
-<Boon>
+<CodexEntry data={DbHammers.Blades.finalSlice}>
   The last strike in your **Attack** sequence deals **+300%** in a larger area.
-</Boon>
+</CodexEntry>
 
 ### Marauder Slice
 
-<Boon>
+<CodexEntry data={DbHammers.Blades.marauderSlice}>
   Hold **Attack** to slice repeatedly, but cannot use your **Ω Attack**.
-</Boon>
+</CodexEntry>
 
 ### Skulking Slice
 
-<Boon>Your **Attacks** deal **+200%** damage striking foes from behind.</Boon>
+<CodexEntry data={DbHammers.Blades.skulkingSlice}>
+  Your **Attacks** deal **+200%** damage striking foes from behind.
+</CodexEntry>
 
 ### Escalating Ambush
 
-<Boon>
+<CodexEntry data={DbHammers.Blades.escalatingAmbush}>
   In each **Encounter**, your **Ω Attack** gains **+5 Power** for each foe you
   slay with it.
-</Boon>
+</CodexEntry>
 
 ### Explosive Ambush
 
-<Boon>
+<CodexEntry data={DbHammers.Blades.explosiveAmbush}>
   Your **Ω Attack** hits a wide area and deals **+400%** damage, but uses
   **+20%** <IconMagick />.
-</Boon>
+</CodexEntry>
 
 ## Special
 
 ### Dancing Knives
 
-<Boon>
+<CodexEntry data={DbHammers.Blades.dancingKnives}>
   Your **Specials** deal **+15%** damage and each hit bounces toward up to **2**
   more foes.
-</Boon>
+</CodexEntry>
 
 ### Hook Knives
 
-<Boon>
+<CodexEntry data={DbHammers.Blades.hookKnives}>
   Your **Specials** return to you and deal **+50%** damage striking foes from
   behind.
-</Boon>
+</CodexEntry>
 
 ### Spiral Knives
 
-<Boon>
+<CodexEntry data={DbHammers.Blades.spiralKnives}>
   Your **Specials** deal **+40%** damage and your **Ω Special** fires up to
   **16** shots around you.
-</Boon>
+</CodexEntry>
 
 ### Boundless Flurry
 
-<Boon>
-  Your **Ω Special** uses **-66%** <IconMagick /> and you **Channel** it much faster.
-</Boon>
+<CodexEntry data={DbHammers.Blades.boundlessFlurry}>
+  Your **Ω Special** uses **-66%** <IconMagick /> and you **Channel** it much
+  faster.
+</CodexEntry>
 
 ### Concentrated Flurry
 
-<Boon>
+<CodexEntry data={DbHammers.Blades.concentratedFlurry}>
   Your **Ω Special** gains **+4 Power** each time it keeps hitting the same foe.
-</Boon>
+</CodexEntry>
 
 ### Sureshot Flurry
 
-<Boon>
+<CodexEntry data={DbHammers.Blades.sureshotFlurry}>
   Your **Ω Special** fires each shot straight ahead and your **Specials** have
   **+20%** range.
-</Boon>
+</CodexEntry>

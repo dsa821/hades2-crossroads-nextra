@@ -24,7 +24,9 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
 }) => {
   const mainIcon = (
     <div className="relative">
-      <div className="absolute -top-4 -right-4">{data.extraIcon}</div>
+      {data.extraIcon && (
+        <div className="absolute -top-4 -right-4">{data.extraIcon}</div>
+      )}
       <IconCodexBase data={data} />
     </div>
   );
@@ -33,7 +35,7 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
   if (compact) {
     const compactContent = (
       <div className="flex flex-col items-center px-2 py-2 transition hover:bg-emerald-800">
-        {mainIcon}
+        {data.iconUrl && mainIcon}
         <div className="text-center font-bold text-lg mt-2 leading-tight">
           {name}
         </div>
@@ -52,7 +54,7 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
         <div className="flex-1">
           {data.name != null && (
             <div className="flex items-center gap-4">
-              {mainIcon}
+              {data.iconUrl && mainIcon}
 
               <div className="font-semibold text-3xl font-small-caps flex-1">
                 {name}
@@ -62,7 +64,7 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
           {props.children}
 
           {data.flavor && (
-            <div className="mt-2 italic font-semibold text-sm drop-shadow-lg text-indigo-500">
+            <div className="mt-2 italic font-semibold drop-shadow-lg text-indigo-500">
               {data.flavor}
             </div>
           )}
@@ -99,7 +101,7 @@ type IconCodexBaseProps = {
 export const IconCodexBase: React.FC<IconCodexBaseProps> = ({
   data,
   size = 72,
-}) => {
+}) => {  
   const iconClassNames = getRarityBorderColor(data.type);
 
   return (

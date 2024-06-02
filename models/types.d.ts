@@ -22,6 +22,13 @@ export type God =
   | "zeus"
   | "duos";
 
+export type AspectData = {
+  name: string;
+  key: string;
+  weaponKey: string;
+  flavor: string;
+};
+
 export type BoonData = {
   name: string;
   key: string;
@@ -31,11 +38,23 @@ export type BoonData = {
   flavor?: string;
 };
 
+export type HammerData = {
+  name: string;
+  key: string;
+  weaponKey: string;
+};
+
+export type KeepsakeData = {
+  name: string;
+  key: string;
+  flavor: string;
+};
+
 export type CodexData = {
   name: string;
   type: Rarity;
-  iconUrl: string;
   href: string;
-  extraIcon: React.ReactNode;
+  iconUrl?: string;
+  extraIcon?: React.ReactNode;
   flavor?: string;
-}
+};

@@ -4,7 +4,7 @@ description: Boons for Hermes in Hades 2.
 ---
 
 import { Callout } from "nextra/components";
-import { BoonTest, BoonGrid, GreekTitle, TextHighlight } from "@/components";
+import { Boon, BoonGrid, GreekTitle, TextHighlight } from "@/components";
 import {
   IconHermes,
   IconGold,
@@ -16,7 +16,7 @@ import {
   IconWater,
 } from "@/components/icons";
 
-import { DbBoons } from "@/db/boons";
+import { DbBoons } from "@/db";
 
 # <GreekTitle icon={<IconHermes  />} name="Hermes" />
 
@@ -27,121 +27,121 @@ import { DbBoons } from "@/db/boons";
 
 ### <TextHighlight type="infusion">Tall Order (Infusion)</TextHighlight> [#tall-order]
 
-<BoonTest boon={DbBoons.Hermes.tallOrder}>
+<Boon boon={DbBoons.Hermes.tallOrder}>
 While you have at least **2** each of <IconEarth /> <IconWater /> <IconAir /> <IconFire /> **Elements**, you deal more damage.
 
 - Infused Damage: **+20%**
 
-</BoonTest>
+</Boon>
 
 ### Greater Evasion
 
-<BoonTest boon={DbBoons.Hermes.greaterEvasion}>
+<Boon boon={DbBoons.Hermes.greaterEvasion}>
 Whenever you are struck, you may **Dodge** any damage.
 
 - Dodge Chance: **+10%**
 
-</BoonTest>
+</Boon>
 
 ### Saved Breath
 
-<BoonTest boon={DbBoons.Hermes.savedBreath}>
+<Boon boon={DbBoons.Hermes.savedBreath}>
 Your **Ω Cast** uses less <IconMagick />.
 
 - Omega Cast Cost: **-50%**
 
-</BoonTest>
+</Boon>
 
 ### Swift Flourish
 
-<BoonTest boon={DbBoons.Hermes.swiftFlourish}>
+<Boon boon={DbBoons.Hermes.swiftFlourish}>
 Your **Specials** are faster.
 
 - Special Speed: **+15%**
 
-</BoonTest>
+</Boon>
 
 ### Swift Strike
 
-<BoonTest boon={DbBoons.Hermes.swiftStrike}>
+<Boon boon={DbBoons.Hermes.swiftStrike}>
 
 Your **Attacks** are faster.
 
 - Attack Speed: **+10%**
 
-</BoonTest>
+</Boon>
 
 ### Midnight Oil
 
-<BoonTest boon={DbBoons.Hermes.midnightOil}>
+<Boon boon={DbBoons.Hermes.midnightOil}>
 
 While your **Hex** is ready, you move and strike faster.
 
 - Bonus Move & Weapon Speed: **+15%**
 
-</BoonTest>
+</Boon>
 
 ### Quick Buck
 
-<BoonTest boon={DbBoons.Hermes.quickBuck}>
+<Boon boon={DbBoons.Hermes.quickBuck}>
 
 You find <IconGold /> in greater quantities. Receive **100** <IconGold /> now, plus the bonus!
 
 - Bonus Gold: **+20%**
 
-</BoonTest>
+</Boon>
 
 ### Hard Target
 
-<BoonTest boon={DbBoons.Hermes.hardTarget}>
+<Boon boon={DbBoons.Hermes.hardTarget}>
 
 Most foes' ranged shots are slower.
 
 - Foe Projectile Speed: **-30%**
 
-</BoonTest>
+</Boon>
 
 ### Witty Retort
 
-<BoonTest boon={DbBoons.Hermes.wittyRetort}>
+<Boon boon={DbBoons.Hermes.wittyRetort}>
 
 Your **Hex** requires using less <IconMagick /> before it is ready.
 
 - Reduced Magick Cost: **-15%**
 
-</BoonTest>
+</Boon>
 
 ### Nitro Boost
 
-<BoonTest boon={DbBoons.Hermes.nitroBoost}>
+<Boon boon={DbBoons.Hermes.nitroBoost}>
 
 Your **Sprint** is **15%** faster and gives you a barrier that ignores instances of damage.
 
 - Hits Blocked per Encounter: **1**
 
-</BoonTest>
+</Boon>
 
 ### Mean Streak
 
-<BoonTest boon={DbBoons.Hermes.meanStreak}>
+<Boon boon={DbBoons.Hermes.meanStreak}>
 
 Each time you slay a foe, deal more damage for the next **30 Sec**.
 
 - Bonus Damage per Slain Foe: **+1%**
 
-</BoonTest>
+</Boon>
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
 ### <TextHighlight type="legendary">Close Call</TextHighlight>
 
-<BoonTest boon={DbBoons.Hermes.closeCall}>
+<Boon boon={DbBoons.Hermes.closeCall}>
 
 Gain **+1** use of **Death Defiance** that makes everything else move **90%** slower.
 
 - Slow Duration: **8 Sec.**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_

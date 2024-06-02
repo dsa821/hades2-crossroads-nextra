@@ -1,4 +1,11 @@
-import { BoonData, CodexData, Rarity } from "models/types";
+import {
+  AspectData,
+  BoonData,
+  CodexData,
+  HammerData,
+  KeepsakeData,
+  Rarity,
+} from "models/types";
 import { IconBase } from "components/icons/IconBase";
 
 export function getRarityTextColor(type: Rarity): string {
@@ -42,15 +49,47 @@ export function getRarityBorderColor(type: Rarity): string {
   }
 }
 
+export function mapAspectToCodex(aspect: AspectData): CodexData {
+  return {
+    name: aspect.name,
+    type: "legendary",
+
+    href: `/weapons/${aspect.weaponKey}/builds#${aspect.key}`,
+
+    flavor: aspect.flavor,
+  } as CodexData;
+}
+
 export function mapBoonToCodex(boon: BoonData): CodexData {
   return {
     name: boon.name,
     type: boon.type,
-    
+
     iconUrl: `/boons/${boon.god}/${boon.key}.png`,
     href: `/boons/${boon.god}#${boon.key}`,
-    
+
     flavor: boon.flavor,
-    extraIcon: <IconBase iconKey={boon.element} size={42} />
+    extraIcon: <IconBase iconKey={boon.element} size={42} />,
+  } as CodexData;
+}
+
+export function mapHammerToCodex(hammer: HammerData): CodexData {
+  return {
+    name: hammer.name,
+
+    iconUrl: `/hammers/${hammer.weaponKey}/${hammer.key}.png`,
+    href: `/weapons/${hammer.weaponKey}/hammers#${hammer.key}`,
+  } as CodexData;
+}
+
+export function mapKeepsakeToCodex(keepsake: KeepsakeData): CodexData {
+  return {
+    name: keepsake.name,
+    type: "epic",
+
+    iconUrl: `/keepsakes/${keepsake.key}.png`,
+    href: `/keepsakes#${keepsake.key}`,
+
+    flavor: keepsake.flavor
   } as CodexData;
 }

@@ -3,45 +3,46 @@ title: Revaal, The Argent Skull
 description: Aspects and builds for the Argent Skull weapon in Hades 2.
 ---
 
-import { Boon, TextHighlight } from "@/components";
+import { CodexEntry } from "@/components";
 import { IconShell } from "@/components/icons";
+import { DbAspects } from '@/db';
 
 # Revaal, The Argent Skull
 
 > The Argent Skull once belonged to the Adjudicator Revaal, and now Revaal belongs to you.\
 > Revaal deserves it, and indeed is very fortunate that you are more responsible than once was she.
 
-### <TextHighlight type="legendary">Aspect of Melinoë</TextHighlight> [#melinoe]
+## Aspect of Melinoë [#melinoe]
 
-<Boon>
+<CodexEntry data={DbAspects.Skull.melinoe}>
 Your **Attacks** have more **Power** for each <IconShell /> fired and not yet retrieved.
 
 - Power per Spent Shell: **+20**
 
-</Boon>
+</CodexEntry>
 
 Coming soon!
 
-### <TextHighlight type="legendary">Aspect of Medea</TextHighlight> [#medea]
+## Aspect of Medea [#medea]
 
-<Boon>
+<CodexEntry data={DbAspects.Skull.medea}>
 Your **Attack** stays within reach, and explodes in a large area on impact or after **3 Sec.**
 
 - Attack & Special Damage: **+60%**
 
-</Boon>
+</CodexEntry>
 
 Coming soon!
 
-### <TextHighlight type="legendary">Aspect of Persephone</TextHighlight> [#persephone]
+## Aspect of Persephone [#persephone]
 
-<Boon>
+<CodexEntry data={DbAspects.Skull.persephone}>
 Any damage you deal generates **Glory**, which enhances your **Ω Special**.
 
 - Omega Damage: **+30%**
 
 **Glory**: Makes your **Ω Special** last up to **5 Sec.**, firing continually while you have control.
 
-</Boon>
+</CodexEntry>
 
 Coming soon!

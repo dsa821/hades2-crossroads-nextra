@@ -4,7 +4,7 @@ description: Boons for Hephaestus in Hades 2.
 ---
 
 import { Callout } from "nextra/components";
-import { BoonTest, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
+import { Boon, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
 import {
   IconArmor,
   IconEarth,
@@ -13,7 +13,7 @@ import {
   IconMaxLife,
 } from "@/components/icons";
 
-import { DbBoons } from "@/db/boons";
+import { DbBoons } from "@/db";
 
 import RoomTemperature from "@/components/duos/RoomTemperature.mdx";
 import ChainReaction from "@/components/duos/ChainReaction.mdx";
@@ -37,59 +37,59 @@ import MasterConductor from "@/components/duos/MasterConductor.mdx";
 
 ### Volcanic Strike (Attack) [#volcanic-strike]
 
-<BoonTest boon={DbBoons.Hephaestus.volcanicStrike}>
+<Boon boon={DbBoons.Hephaestus.volcanicStrike}>
 Your **Attacks** occasionally create a blast that deals **200** damage in the area.
 
 - Blast Recharge Time: **12 Sec.**
 
-</BoonTest>
+</Boon>
 
 ### Volcanic Flourish (Special) [#volcanic-flourish]
 
-<BoonTest boon={DbBoons.Hephaestus.volcanicFlourish}>
+<Boon boon={DbBoons.Hephaestus.volcanicFlourish}>
 Your **Specials** occasionally create a blast that deals **400** damage in the area.
 
 - Blast Recharge Time: **+20 Sec.**
 
-</BoonTest>
+</Boon>
 
 ### Anvil Ring (Cast) [#anvil-ring]
 
-<BoonTest boon={DbBoons.Hephaestus.anvilRing}>
+<Boon boon={DbBoons.Hephaestus.anvilRing}>
 Your **Casts** deal damage **3** times in succession, but in a smaller area.
 
 - Cast Damage: **50** _(every 1 Sec.)_
 
-</BoonTest>
+</Boon>
 
 ### Smithy Sprint (Sprint) [#smithy-sprint]
 
-<BoonTest boon={DbBoons.Hephaestus.smithySprint}>
+<Boon boon={DbBoons.Hephaestus.smithySprint}>
 After you **Sprint** for **1 Sec.**, use **10** <IconMagick /> to create a blast that deals damage to nearby foes.
 
 - Area Damage: **200**
 
-</BoonTest>
+</Boon>
 
 ### Fixed Gain (Magick) [#fixed-gain]
 
-<BoonTest boon={DbBoons.Hephaestus.fixedGain}>
+<Boon boon={DbBoons.Hephaestus.fixedGain}>
 You take **-10%** damage, and restore some <IconMagick /> whenever you take damage.
 
 - Magick Restored from Damage: **50**
 
-</BoonTest>
+</Boon>
 
 ## Support
 
 ### <TextHighlight type="infusion">Martial Art (Infusion)</TextHighlight> [#martial-art]
 
-<BoonTest boon={DbBoons.Hephaestus.martialArt}>
+<Boon boon={DbBoons.Hephaestus.martialArt}>
 Your **Attack** and **Special** deal more damage for each <IconEarth /> you have.
 
 - Damage per Earth Boon: **+5%**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required: 1** <IconEarth />
@@ -97,66 +97,66 @@ Your **Attack** and **Special** deal more damage for each <IconEarth /> you have
 
 ### Molten Touch
 
-<BoonTest boon={DbBoons.Hephaestus.moltenTouch}>
+<Boon boon={DbBoons.Hephaestus.moltenTouch}>
 Your **Attacks** and **Specials** deal bonus damage to **Armor**.
 
 - Damage vs. Armor: **+20%**
 
-</BoonTest>
+</Boon>
 
 ### Trusty Shield
 
-<BoonTest boon={DbBoons.Hephaestus.trustyShield}>
+<Boon boon={DbBoons.Hephaestus.trustyShield}>
 After you enter a **Location**, **Prime 30** <IconMagick /> to gain <IconArmor /> until the next **Location**.
 
 - Starting Armor: **+10**
 
-</BoonTest>
+</Boon>
 
 ### Tough Trade
 
-<BoonTest boon={DbBoons.Hephaestus.toughTrade}>
+<Boon boon={DbBoons.Hephaestus.toughTrade}>
 If you take damage during your **Attacks** or **Specials**, they are stronger if they hit.
 
 - Bonus Weapon Damage: **+100%**
 
-</BoonTest>
+</Boon>
 
 ### Mint Condition
 
-<BoonTest boon={DbBoons.Hephaestus.mintCondition}>
+<Boon boon={DbBoons.Hephaestus.mintCondition}>
 At the start of each **Encounter**, you are briefly **Impervious**.
 
 - Impervious Duration: **8 Sec.**
 
-</BoonTest>
+</Boon>
 
 ### Heavy Metal
 
-<BoonTest boon={DbBoons.Hephaestus.heavyMetal}>
+<Boon boon={DbBoons.Hephaestus.heavyMetal}>
 Gain some <IconArmor />. Foes' attacks cannot knock you away.
 
 - Armor Gained: **+50**
 
-</BoonTest>
+</Boon>
 
 ### Uncanny Fortitude
 
-<BoonTest boon={DbBoons.Hephaestus.uncannyFortitude}>
+<Boon boon={DbBoons.Hephaestus.uncannyFortitude}>
 Gain bonus <IconMaxLife /> based on your <IconMagick /> limit.
 
 - Max Life from Magick: **+20%**
 
-</BoonTest>
+</Boon>
 
 ### Furnace Blast
 
-<BoonTest boon={DbBoons.Hephaestus.furnaceBlast}>
+<Boon boon={DbBoons.Hephaestus.furnaceBlast}>
 Your blast effects from **Hephaestus** also inflict **Vent** on foes.
 
 - Vent Damage: **300**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following)_:
@@ -173,12 +173,12 @@ Your blast effects from **Hephaestus** also inflict **Vent** on foes.
 
 ### <TextHighlight type="legendary">Fine Tuning</TextHighlight>
 
-<BoonTest boon={DbBoons.Hephaestus.fineTuning}>
+<Boon boon={DbBoons.Hephaestus.fineTuning}>
 Your **Aspect** of the **Nocturnal Arms** is even stronger.
 
 - Bonus Aspect Ranks: **+1**
 
-</BoonTest>
+</Boon>
 <Callout>
   **Required** _(one of the following):_  
   <BoonGrid

@@ -4,7 +4,7 @@ description: Boons for Hestia in Hades 2.
 ---
 
 import { Callout } from "nextra/components";
-import { BoonTest, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
+import { Boon, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
 import {
   IconFire,
   IconHestia,
@@ -14,7 +14,7 @@ import {
   IconMaxMagick,
 } from "@/components/icons";
 
-import { DbBoons } from "@/db/boons";
+import { DbBoons } from "@/db";
 
 import FuneralPyre from "@/components/duos/FuneralPyre.mdx";
 import PhoenixSkin from "@/components/duos/PhoenixSkin.mdx";
@@ -38,59 +38,59 @@ import ScaldingVapor from "@/components/duos/ScaldingVapor.mdx";
 
 ### Flame Strike (Attack) [#flame-strike]
 
-<BoonTest boon={DbBoons.Hestia.flameStrike}>
+<Boon boon={DbBoons.Hestia.flameStrike}>
 Your **Attacks** inflict **Scorch**.
 
 - Scorch Damage: **20**
 
-</BoonTest>
+</Boon>
 
 ### Flame Flourish (Special) [#flame-flourish]
 
-<BoonTest boon={DbBoons.Hestia.flameFlourish}>
+<Boon boon={DbBoons.Hestia.flameFlourish}>
 Your **Specials** inflict **Scorch**.
 
 - Scorch Damage: **15**
 
-</BoonTest>
+</Boon>
 
 ### Smolder Ring (Cast) [#smolder-ring]
 
-<BoonTest boon={DbBoons.Hestia.smolderRing}>
+<Boon boon={DbBoons.Hestia.smolderRing}>
 Your **Casts** repeatedly inflict **Scorch** on foes.
 
 - Scorch Damage: **30** _(every 1 Sec.)_
 
-</BoonTest>
+</Boon>
 
 ### Soot Sprint (Sprint) [#soot-sprint]
 
-<BoonTest boon={DbBoons.Hestia.sootSprint}>
+<Boon boon={DbBoons.Hestia.sootSprint}>
 Your **Sprint** destroys most ranged shots near you, and inflicts **Scorch** on foes that fired.
 
 - Scorch Damage per Projectile: **2**
 
-</BoonTest>
+</Boon>
 
 ### Hearth Gain (Magick) [#hearth-gain]
 
-<BoonTest boon={DbBoons.Hestia.hearthGain}>
+<Boon boon={DbBoons.Hestia.hearthGain}>
 Rapidly restore <IconMagick />, but you have **-20%** <IconMaxLife />.
 
 - Magick Restoration: **7** _(every 1 Sec.)_
 
-</BoonTest>
+</Boon>
 
 ## Support
 
 ### <TextHighlight type="infusion">Slow Cooker (Infusion)</TextHighlight> [#slow-cooker]
 
-<BoonTest boon={DbBoons.Hestia.slowCooker}>
+<Boon boon={DbBoons.Hestia.slowCooker}>
 Your **Attacks** and **Specials** gain **Power** for each <IconFire /> you have.
 
 - Power per Fire Boon: **+2**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required: 1** <IconFire />
@@ -98,39 +98,39 @@ Your **Attacks** and **Specials** gain **Power** for each <IconFire /> you have.
 
 ### Glowing Coal
 
-<BoonTest boon={DbBoons.Hestia.glowingCoal}>
+<Boon boon={DbBoons.Hestia.glowingCoal}>
 Hold **Cast** to aim a fiery projectile that explodes on impact. The binding circle forms there.
 
 - Blast Damage: **50**
 
-</BoonTest>
+</Boon>
 
 ### Controlled Burn
 
-<BoonTest boon={DbBoons.Hestia.controlledBurn}>
+<Boon boon={DbBoons.Hestia.controlledBurn}>
 Your **Ω Special** also launches a fiery projectile, but uses **+10** <IconMagick />
 
 - Blast Damage: **80**
 
-</BoonTest>
+</Boon>
 
 ### Burnt Offering
 
-<BoonTest boon={DbBoons.Hestia.burntOffering}>
+<Boon boon={DbBoons.Hestia.burntOffering}>
 Gain <IconMaxLife /> and <IconMaxMagick /> but give up **1 Boon** selected by **Hestia**.
 
 - Max Life & Magick: **+50**
 
-</BoonTest>
+</Boon>
 
 ### Flammable Coating
 
-<BoonTest boon={DbBoons.Hestia.flammableCoating}>
+<Boon boon={DbBoons.Hestia.flammableCoating}>
 Your **Scorch** effects deal bonus damage to **Armor**.
 
 - Scorch Damage vs. Armor: **+100%**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_
@@ -146,13 +146,13 @@ Your **Scorch** effects deal bonus damage to **Armor**.
 
 ### Fire Extinguisher
 
-<BoonTest boon={DbBoons.Hestia.fireExtinguisher}>
+<Boon boon={DbBoons.Hestia.fireExtinguisher}>
 
 Foes with at least **300 Scorch** take a burst of damage that consumes the effect.
 
 - Damage from Scorch: **50%**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_
@@ -168,13 +168,13 @@ Foes with at least **300 Scorch** take a burst of damage that consumes the effec
 
 ### Natural Gas
 
-<BoonTest boon={DbBoons.Hestia.naturalGas}>
+<Boon boon={DbBoons.Hestia.naturalGas}>
 
 Whenever **Scorch**-afflicted foes are slain, they damage nearby foes.
 
 - Blast Damage: **60**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_
@@ -190,13 +190,13 @@ Whenever **Scorch**-afflicted foes are slain, they damage nearby foes.
 
 ### Spontaneous Combustion
 
-<BoonTest boon={DbBoons.Hestia.spontaneousCombustion}>
+<Boon boon={DbBoons.Hestia.spontaneousCombustion}>
 
 Your **Ω Special** inflicts bonus **Scorch** if foes are unafflicted.
 
 - Scorch Damage: **60**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required**:
@@ -207,13 +207,13 @@ Your **Ω Special** inflicts bonus **Scorch** if foes are unafflicted.
 
 ### <TextHighlight type="legendary">Pyro Technique</TextHighlight>
 
-<BoonTest boon={DbBoons.Hestia.pyroTechnique}>
+<Boon boon={DbBoons.Hestia.pyroTechnique}>
 
 Your **Scorch** effects deal damage faster.
 
 - Scorch Damage Rate: **+100%**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_

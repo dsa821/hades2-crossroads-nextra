@@ -1,13 +1,13 @@
-import { BoonTest } from '@/components/Boon';
+import { Boon } from '@/components/Boon';
 import { IconMagick } from '@/components/icons';
-import { DbBoons } from '@/db/boons';
+import { DbBoons } from '@/db';
 
-<BoonTest boon={DbBoons.Duos.gloriousDisaster}>
+<Boon boon={DbBoons.Duos.gloriousDisaster}>
 You can **Channel +30** <IconMagick /> into your **Ω Cast** to repeatedly strike foes with lightning bolts.
 
 - Bolt Damage: **50** _(every 0.13 Sec.)_
 
-</BoonTest>
+</Boon>
 
 **Required** _(from Apollo):_
 

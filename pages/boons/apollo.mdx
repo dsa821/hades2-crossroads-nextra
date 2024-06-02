@@ -4,9 +4,9 @@ description: Boons for Apollo in Hades 2.
 ---
 
 import { Callout } from "nextra/components";
-import { BoonTest, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
+import { Boon, BoonGrid, Box, GreekTitle, TextHighlight } from "@/components";
 import { IconApollo, IconFire, IconLife, IconMagick } from "@/components/icons";
-import { DbBoons } from "@/db/boons";
+import { DbBoons } from "@/db";
 
 import GloriousDisaster from "@/components/duos/GloriousDisaster.mdx";
 import TorrentialDownpour from "@/components/duos/TorrentialDownpour.mdx";
@@ -32,59 +32,59 @@ import SunWorshiper from "@/components/duos/SunWorshiper.mdx";
 
 ### Nova Strike (Attack) [#nova-strike]
 
-<BoonTest boon={DbBoons.Apollo.novaStrike}>
+<Boon boon={DbBoons.Apollo.novaStrike}>
 Your **Attacks** deal more damage in a larger area.
 
 - Attack Damage: **+40%**
 
-</BoonTest>
+</Boon>
 
 ### Nova Flourish (Special) [#nova-flourish]
 
-<BoonTest boon={DbBoons.Apollo.novaFlourish}>
+<Boon boon={DbBoons.Apollo.novaFlourish}>
 Your **Specials** deal more damage in a larger area.
 
 - Special Damage: **+60%**
 
-</BoonTest>
+</Boon>
 
 ### Solar Ring (Cast) [#solar-ring]
 
-<BoonTest boon={DbBoons.Apollo.solarRing}>
+<Boon boon={DbBoons.Apollo.solarRing}>
 After your **Ω Cast** expires, rapidly deal damage in the area for **2 Sec.**
 
 - Omega Cast Damage: **10** _(every 0.13 Sec.)_
 
-</BoonTest>
+</Boon>
 
 ### Blinding Sprint (Sprint) [#blinding-sprint]
 
-<BoonTest boon={DbBoons.Apollo.blindingSprint}>
+<Boon boon={DbBoons.Apollo.blindingSprint}>
 Your **Sprint** is faster and inflicts **Daze** on nearby foes.
 
 - Sprint Speed: **+30%**
 
-</BoonTest>
+</Boon>
 
 ### Lucid Gain (Magick) [#lucid-gain]
 
-<BoonTest boon={DbBoons.Apollo.lucidGain}>
+<Boon boon={DbBoons.Apollo.lucidGain}>
 While standing in your **Casts**, gradually restore <IconMagick />.
 
 - Magick Restoration: **+12** _(every 1 Sec.)_
 
-</BoonTest>
+</Boon>
 
 ## Support
 
 ### <TextHighlight type="infusion">Self Healing (Infusion)</TextHighlight> [#self-healing]
 
-<BoonTest boon={DbBoons.Apollo.selfHealing}>
+<Boon boon={DbBoons.Apollo.selfHealing}>
 While you have at least **3** <IconFire />, whenever you take damage, restore some <IconLife />.
 
 - Damage Recovered: **30%** _(over 5 Sec.)_
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required: 1** <IconFire />
@@ -92,48 +92,48 @@ While you have at least **3** <IconFire />, whenever you take damage, restore so
 
 ### Super Nova
 
-<BoonTest boon={DbBoons.Apollo.superNova}>
+<Boon boon={DbBoons.Apollo.superNova}>
 Your **Casts** expand in size until they expire.
 
 - Max Cast Size: **+40%**
 
-</BoonTest>
+</Boon>
 
 ### Light Smite
 
-<BoonTest boon={DbBoons.Apollo.lightSmite}>
+<Boon boon={DbBoons.Apollo.lightSmite}>
 After you take damage, your foe takes damage and you inflict **Daze** on _all_ foes.
 
 - Revenge Damage: **50**
 
-</BoonTest>
+</Boon>
 
 ### Extra Dose
 
-<BoonTest boon={DbBoons.Apollo.extraDose}>
+<Boon boon={DbBoons.Apollo.extraDose}>
 Your **Attack** has a chance to hit **2** times.
 
 - Double Strike Chance: **+5%**
 
-</BoonTest>
+</Boon>
 
 ### Perfect Image
 
-<BoonTest boon={DbBoons.Apollo.perfectImage}>
+<Boon boon={DbBoons.Apollo.perfectImage}>
 In each **Encounter**, you deal more damage until you take damage.
 
 - No-Hit Bonus Damage: **+10%**
 
-</BoonTest>
+</Boon>
 
 ### Back Burner
 
-<BoonTest boon={DbBoons.Apollo.backBurner}>
+<Boon boon={DbBoons.Apollo.backBurner}>
 Foes with **Daze** take more damage if struck from behind.
 
 - Backstab Damage: **+50%**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required**: _(one of the following):_
@@ -148,12 +148,12 @@ Foes with **Daze** take more damage if struck from behind.
 
 ### Critical Miss
 
-<BoonTest boon={DbBoons.Apollo.criticalMiss}>
+<Boon boon={DbBoons.Apollo.criticalMiss}>
 Foes take damage whenever **Daze** causes them to miss.
 
 - Miss Damage: **100**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required**: _(one of the following):_
@@ -168,12 +168,12 @@ Foes take damage whenever **Daze** causes them to miss.
 
 ### Dazzling Display
 
-<BoonTest boon={DbBoons.Apollo.dazzlingDisplay}>
+<Boon boon={DbBoons.Apollo.dazzlingDisplay}>
 Your **Attacks** may inflict **Daze**.
 
 - Daze Chance: **+10%**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required**:
@@ -184,12 +184,12 @@ Your **Attacks** may inflict **Daze**.
 
 ### <TextHighlight type="legendary">Exceptional Talent</TextHighlight>
 
-<BoonTest boon={DbBoons.Apollo.exceptionalTalent}>
+<Boon boon={DbBoons.Apollo.exceptionalTalent}>
 Your **Ω Attack** and **Ω Special** fire **2** more times, but use more <IconMagick />.
 
 - Omega Move Cost: **+20 Magick**
 
-</BoonTest>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_

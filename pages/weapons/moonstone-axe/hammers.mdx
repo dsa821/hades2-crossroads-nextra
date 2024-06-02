@@ -3,8 +3,9 @@ title: Zorephet, The Moonstone Axe (Hammers)
 description: Daedalus Hammer upgrades for the Moonstone Axe weapon in Hades 2.
 ---
 
-import { Boon, TextHighlight } from "@/components";
+import { CodexEntry, TextHighlight } from "@/components";
 import { IconMagick } from "@/components/icons";
+import { DbHammers } from "@/db";
 
 # Zorephet, The Moonstone Axe (Hammers)
 
@@ -12,78 +13,86 @@ import { IconMagick } from "@/components/icons";
 
 ### Marauder Slash
 
-<Boon>
+<CodexEntry data={DbHammers.Axe.marauderSlash}>
   Hold **Attack** to strike **30%** faster, but cannot use your **Ω Attack**.
-</Boon>
+</CodexEntry>
 
 ### Unyielding Slash
 
-<Boon>
+<CodexEntry data={DbHammers.Axe.unyieldingSlash}>
   Your **Attacks** have **+10 Power** and you take **-20%** damage while using
   them.
-</Boon>
+</CodexEntry>
 
 ### Executioner's Chop
 
-<Boon>
+<CodexEntry data={DbHammers.Axe.executionersChop}>
   The final move in your **Attack** sequence hits **2** times, but uses **20**
   <IconMagick />.
-</Boon>
+</CodexEntry>
 
 ### Hell Splitter
 
-<Boon>Your **Attack** becomes a big chop with **300 Power**</Boon>
+<CodexEntry data={DbHammers.Axe.hellSplitter}>
+  Your **Attack** becomes a big chop with **300 Power**.
+</CodexEntry>
 
 ### Dashing Heave
 
-<Boon>Your **Dash-Strike** deals **+200%** damage in a larger area.</Boon>
+<CodexEntry data={DbHammers.Axe.dashingHeave}>
+  Your **Dash-Strike** deals **+200%** damage in a larger area.
+</CodexEntry>
 
 ### Advancing Whirlwind
 
-<Boon>Your **Ω Attack** fires ahead of you and deals **+80%** damage.</Boon>
+<CodexEntry data={DbHammers.Axe.advancingWhirlwind}>
+  Your **Ω Attack** fires ahead of you and deals **+80%** damage.
+</CodexEntry>
 
 ### Concentrated Whirlwind
 
-<Boon>
+<CodexEntry data={DbHammers.Axe.concentratedWhirlwind}>
   Your **Ω Attack** gains **+2 Power** each time it keeps hitting the same foe.
-</Boon>
+</CodexEntry>
 
 ### Furious Whirlwind
 
-<Boon>
+<CodexEntry data={DbHammers.Axe.furiousWhirlwind}>
   You **Channel** your **Ω Attack** faster, and move **+60%** faster while it is
   active.
-</Boon>
+</CodexEntry>
 
 ### Psychic Whirlwind
 
-<Boon>
+<CodexEntry data={DbHammers.Axe.psychicWhirlwind}>
   During your **Ω Attack**, you are free to use your **Attacks** and
   **Specials**.
-</Boon>
+</CodexEntry>
 
 ## Special
 
 ### Empowering Guard
 
-<Boon>
+<CodexEntry data={DbHammers.Axe.empoweringGuard}>
   After blocking a foe with your **Special**, deal **+50%** damage for **15
   Sec.**
-</Boon>
+</CodexEntry>
 
 ### Melting Shredder
 
-<Boon>
+<CodexEntry data={DbHammers.Axe.meltingShredder}>
   Your **Special** destroys **35%** of any **Armor** _(based on the total)_.
-</Boon>
+</CodexEntry>
 
 ### Giga Cleaver
 
-<Boon>
-  You can **Channel** **+15** <IconMagick /> into your **Ω Special** to fire **2** times
-  ahead of you.
-</Boon>
+<CodexEntry data={DbHammers.Axe.gigaCleaver}>
+  You can **Channel** **+15** <IconMagick /> into your **Ω Special** to fire
+  **2** times ahead of you.
+</CodexEntry>
 
 ### Sudden Cleaver
 
-<Boon>You **Channel** your **Ω Special** **50%** faster.</Boon>
+<CodexEntry data={DbHammers.Axe.suddenCleaver}>
+  You **Channel** your **Ω Special** **50%** faster.
+</CodexEntry>
