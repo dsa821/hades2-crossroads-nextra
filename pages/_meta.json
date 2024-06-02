@@ -1,11 +1,21 @@
 {
   "index": { "title": "Home", "theme": { "toc": false } },
+  "general": "General Tips",
   "builds": "Builds",
   "weapons": "Nocturnal Arms",
   "arcana": "Altar of Ashes",
   "keepsakes": "Keepsakes",
   "boons": "Boons",
 
+  "tools": {
+    "title": "Tools",
+    "type": "menu",
+    "items": {
+      "pencil-meta": {
+        "title": "Pencil Meta"
+      }
+    }
+  },
   "supergiant": {
     "title": "Supergiant",
     "type": "page",
@@ -19,15 +29,6 @@
     "newWindow": true
   },
 
-  "tools": {
-    "title": "Tools",
-    "type": "menu",
-    "items": {
-      "pencil-meta": {
-        "title": "Pencil Meta"
-      }
-    }
-  },
   "pencil-meta": {
     "display": "hidden",
 
