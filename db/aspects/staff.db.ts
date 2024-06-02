@@ -7,7 +7,7 @@ const aspectData: Record<string, AspectData> = {
     key: "melinoe",
     weaponKey: "witchs-staff",
     flavor:
-      "A waxing crescent moon; the promise of power, the responsibility to ready onself.",
+      "A waxing crescent moon; the promise of power, the responsibility to ready oneself.",
   },
 
   circe: {
