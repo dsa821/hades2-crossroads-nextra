@@ -4,7 +4,7 @@ description: Aspects and builds for the Sister Blades weapon in Hades 2.
 ---
 
 import { CodexEntry, Build } from "@/components";
-import { DbAspects } from "@/db";
+import { DbAspects, DbBoons, DbHammers, DbKeepsakes } from "@/db";
 
 # Lim and Oros, The Sister Blades
 
@@ -50,30 +50,39 @@ One of the early leaders in the meta during Early Access. This one basically wor
 ### Poseidon Special [#pan-poseidon-special]
 
 <Build>
-  <Build.Arcana>
+  {/* <Build.Arcana>
     [Sorceress](/arcana#sorceress)
     [Death](/arcana#death)
-  </Build.Arcana>
+  </Build.Arcana> */}
   
-  <Build.Keepsakes>
-    [Vivid Sea](/keepsakes#vivid-sea-poseidon)
-  </Build.Keepsakes>
+  <Build.Keepsakes data={[
+    DbKeepsakes.vividSea,
+    DbKeepsakes.transcendentEmbryo,
+    DbKeepsakes.blackenedFleece
+  ]} />
 
   <Build.Moves>
-    <Build.Moves.Core>
-      [Wave Flourish](/boons/poseidon#wave-flourish)
-    </Build.Moves.Core>
+    <Build.Moves.Core data={[
+      DbBoons.Poseidon.waveFlourish
+    ]} />
 
-    <Build.Moves.Support>
-      [Slippery Slope](/boons/poseidon#slippery-slope)
-    </Build.Moves.Support>
+    <Build.Moves.Support data={[
+      DbBoons.Hera.bornGain,
+      DbBoons.Poseidon.slipperySlope,
+      DbBoons.Poseidon.crashingWave,
+      DbBoons.Poseidon.kingTide,
+      DbBoons.Zeus.lightningLance,
+    ]} />
 
   </Build.Moves>
 
-  <Build.Hammers>
-    [Spiral Knives](/weapons/sister-blades/hammers#spiral-knives),
-    [Hook Knives](/weapons/sister-blades/hammers#hook-knives)
-  </Build.Hammers>  
+  <Build.Hammers data={[
+    DbHammers.Blades.hookKnives,
+    DbHammers.Blades.spiralKnives,
+    DbHammers.Blades.boundlessFlurry,
+    DbHammers.Blades.concentratedFlurry,
+    DbHammers.Blades.sureshotFlurry,
+  ]} />
 </Build>
 
 Poseidon is very dominant at the moment due to being the only viable flat damage god, and the free splash damage absolutely nukes everything caught in Cast.

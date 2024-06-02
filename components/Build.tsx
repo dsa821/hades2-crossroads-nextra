@@ -1,65 +1,58 @@
-import { FC } from "react";
+import { BoonGrid } from "./Boon";
+import { Box } from "./Box";
+import { CodexGrid } from "./Codex";
 
-const Build: FC = ({ children, className }) => {
-  return (
-    <div className={`card-bg ${className}`}>
-      <div className="flex flex-col gap-4">{children}</div>
-    </div>
-  );
+const Build = ({ children, className }) => {
+  return <div className={`flex flex-col gap-4 ${className}`}>{children}</div>;
 };
 
 // Declaring this separately to get strong typing
-const Keepsakes: FC = ({ children }) => {
+const Keepsakes = ({ data }) => {
   return (
-    <div className="flex items-baseline gap-2">
-      <div className="font-bold w-24">Keepsakes:</div>
-      <div>{children}</div>
-    </div>
+    <Box>
+      <div className="font-header font-bold text-xl">Keepsakes</div>
+      <CodexGrid data={data} />
+    </Box>
   );
 };
 
-const Moves: FC = ({ children }) => {
-  return (
-    <div className="flex items-baseline gap-2">
-      <div className="font-bold w-24">Boons: </div>
-      <div className="flex items-start gap-8">{children}</div>
-    </div>
-  );
+const Moves = ({ children }) => {
+  return <Box>{children}</Box>;
 };
 
-const MovesCore: FC = ({ children }) => {
+const MovesCore = ({ data }) => {
   return (
     <div>
-      <div className="font-bold">Core</div>
-      <div>{children}</div>
+      <div className="font-header font-bold text-xl">Required Boons</div>
+      <BoonGrid boons={data} />
     </div>
   );
 };
 
-const MovesSupport: FC = ({ children }) => {
+const MovesSupport = ({ data }) => {
   return (
     <div>
-      <div className="font-bold">Support</div>
-      <div>{children}</div>
+      <div className="font-header font-bold text-xl">Optional Boons</div>
+      <BoonGrid boons={data} />
     </div>
   );
 };
 
-const Hammers: FC = ({ children }) => {
+const Hammers = ({ data }) => {
   return (
-    <div className="flex items-baseline gap-2">
-      <div className="font-bold w-24">Hammers: </div>
-      <div>{children}</div>
-    </div>
+    <Box>
+      <div className="font-header font-bold text-xl">Hammers</div>
+      <CodexGrid data={data} />
+    </Box>
   );
 };
 
-const Arcana: FC = ({ children }) => {
+const Arcana = ({ children }) => {
   return (
-    <div className="flex items-baseline gap-2">
-      <div className="font-bold w-24">Arcana: </div>
+    <Box>
+      <div className="font-header font-bold text-xl">Arcana</div>
       <div>{children}</div>
-    </div>
+    </Box>
   );
 };
 
