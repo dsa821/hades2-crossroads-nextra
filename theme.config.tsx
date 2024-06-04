@@ -7,14 +7,16 @@ import { Head } from "./components/Head";
 
 const config: DocsThemeConfig = {
   logo: (
-    <Image
-      src="/images/hades2-logo.png"
-      alt="Hades 2 Logo"
-      height={60}
-      width={120}
-    ></Image>
+    <div className="flex items-center">
+      <Image
+        src="/images/hades2-logo.png"
+        alt="Hades 2 Logo"
+        height={60}
+        width={120}
+      ></Image>
+      <div className="text-gray-500">v0.91027</div>
+    </div>
   ),
-  logoLink: true,
   head: <Head />,
 
   primaryHue: 156.2,
