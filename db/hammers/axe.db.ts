@@ -2,9 +2,9 @@ import { mapHammerToCodex } from "lib/utils";
 import { CodexData, HammerData } from "models/types";
 
 const hammerData: Record<string, HammerData> = {
-  marauderSlash: {
-    name: "Marauder Slash",
-    key: "marauder-slash",
+  rapidSlash: {
+    name: "Rapid Slash",
+    key: "rapid-slash",
     weaponKey: "moonstone-axe",
   },
 
