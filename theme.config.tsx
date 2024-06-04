@@ -14,7 +14,7 @@ const config: DocsThemeConfig = {
         height={60}
         width={120}
       ></Image>
-      <div className="text-gray-500">v0.91027</div>
+      <div className="text-gray-500">v0.92170</div>
     </div>
   ),
   head: <Head />,
