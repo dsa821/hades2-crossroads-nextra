@@ -34,7 +34,7 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
 
   if (compact) {
     const compactContent = (
-      <div className="flex flex-col items-center px-2 py-2 transition hover:bg-emerald-800">
+      <div className="flex flex-col items-center px-2 py-2">
         {data.iconUrl && mainIcon}
         <div className="text-center font-bold text-lg mt-2 leading-tight">
           {name}
