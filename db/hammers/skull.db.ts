@@ -50,9 +50,9 @@ const hammerData: Record<string, HammerData> = {
     weaponKey: "argent-skull",
   },
 
-  colossusTackle: {
-    name: "Colossus Tackle",
-    key: "colossus-tackle",
+  colossusDriver: {
+    name: "Colossus Driver",
+    key: "colossus-driver",
     weaponKey: "argent-skull",
   },
 
@@ -62,9 +62,9 @@ const hammerData: Record<string, HammerData> = {
     weaponKey: "argent-skull",
   },
 
-  sidelongCrash: {
-    name: "Sidelong Crash",
-    key: "sidelong-crash",
+  megaDriver: {
+    name: "Mega Driver",
+    key: "mega-driver",
     weaponKey: "argent-skull",
   },
 
