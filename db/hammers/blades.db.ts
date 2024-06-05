@@ -8,9 +8,9 @@ const hammerData: Record<string, HammerData> = {
     weaponKey: "sister-blades",
   },
 
-  marauderSlice: {
-    name: "Marauder Slice",
-    key: "marauder-slice",
+  rapidOnslaught: {
+    name: "Rapid Onslaught",
+    key: "rapid-onslaught",
     weaponKey: "sister-blades",
   },
 
@@ -32,6 +32,18 @@ const hammerData: Record<string, HammerData> = {
     weaponKey: "sister-blades",
   },
 
+  meltingDart: {
+    name: "Melting Dart",
+    key: "melting-dart",
+    weaponKey: "sister-blades",
+  },
+
+  flickKnives: {
+    name: "Flick Knives",
+    key: "flick-knives",
+    weaponKey: "sister-blades",
+  },
+
   dancingKnives: {
     name: "Dancing Knives",
     key: "dancing-knives",
@@ -50,21 +62,15 @@ const hammerData: Record<string, HammerData> = {
     weaponKey: "sister-blades",
   },
 
-  boundlessFlurry: {
-    name: "Boundless Flurry",
-    key: "boundless-flurry",
-    weaponKey: "sister-blades",
-  },
-
-  concentratedFlurry: {
-    name: "Concentrated Flurry",
-    key: "concentrated-flurry",
-    weaponKey: "sister-blades",
-  },
-
   sureshotFlurry: {
     name: "Sureshot Flurry",
     key: "sureshot-flurry",
+    weaponKey: "sister-blades",
+  },
+
+  suddenFlurry: {
+    name: "Sudden Flurry",
+    key: "sudden-flurry",
     weaponKey: "sister-blades",
   },
 };

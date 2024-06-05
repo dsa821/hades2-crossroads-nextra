@@ -4,6 +4,7 @@ description: Aspects and builds for the Moonstone Axe weapon in Hades 2.
 ---
 
 import { CodexEntry } from "@/components";
+import { IconMaxLife } from "@/components/icons";
 import { DbAspects } from "@/db";
 
 # Zorephet, The Moonstone Axe
@@ -14,9 +15,9 @@ import { DbAspects } from "@/db";
 ## Aspect of Melinoë [#melinoe]
 
 <CodexEntry data={DbAspects.Axe.melinoe}>
-You recover faster after using your **Attacks** and **Specials**.
+Gain bonus **Attack Power** and <IconMaxLife /> this night.
 
-- Recovery Speed: **+25%**
+- Attack Power & Max Life: **+35**
 
 </CodexEntry>
 
@@ -36,9 +37,11 @@ Coming soon!
 ## Aspect of Thanatos [#thanatos]
 
 <CodexEntry data={DbAspects.Axe.thanatos}>
-Whenever you hit with **Ω Moves**, gain **+1% Critical** chance until you take damage.
+Your **Attack** is faster, and each hit grants **Mortality** until you take damage.
 
-- Max Critical Chance: **+20%**
+- Attack Speed: **+30%**
+
+**Mortality**: A fleeting bonus of **+1% Critical** chance for your **Ω Moves**, up to a max of **+13%**.
 
 </CodexEntry>
 

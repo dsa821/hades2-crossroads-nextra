@@ -2,21 +2,33 @@ import { mapHammerToCodex } from "lib/utils";
 import { CodexData, HammerData } from "models/types";
 
 const hammerData: Record<string, HammerData> = {
-  furiousFire: {
-    name: "Furious Fire",
-    key: "furious-fire",
+  invertedSpark: {
+    name: "Inverted Spark",
+    key: "inverted-spark",
     weaponKey: "umbral-flames",
   },
 
-  splitFire: {
-    name: "Split Fire",
-    key: "split-fire",
+  leadenSpark: {
+    name: "Leaden Spark",
+    key: "leaden-spark",
     weaponKey: "umbral-flames",
   },
 
-  sustainedFire: {
-    name: "Sustained Fire",
-    key: "sustained-fire",
+  megaSpark: {
+    name: "Mega Spark",
+    key: "mega-spark",
+    weaponKey: "umbral-flames",
+  },
+
+  sustainedSpark: {
+    name: "Sustained Spark",
+    key: "sustained-spark",
+    weaponKey: "umbral-flames",
+  },
+
+  splitSpark: {
+    name: "Split Spark",
+    key: "split-spark",
     weaponKey: "umbral-flames",
   },
 
@@ -38,15 +50,15 @@ const hammerData: Record<string, HammerData> = {
     weaponKey: "umbral-flames",
   },
 
-  meltingComet: {
-    name: "Melting Comet",
-    key: "melting-comet",
+  meltingCoil: {
+    name: "Melting Coil",
+    key: "melting-coil",
     weaponKey: "umbral-flames",
   },
 
-  growingCoils: {
-    name: "Growing Coils",
-    key: "growing-coils",
+  risingCoil: {
+    name: "Rising Coil",
+    key: "rising-coil",
     weaponKey: "umbral-flames",
   },
 
@@ -56,9 +68,9 @@ const hammerData: Record<string, HammerData> = {
     weaponKey: "umbral-flames",
   },
 
-  originHelix: {
-    name: "Origin Helix",
-    key: "origin-helix",
+  originCoil: {
+    name: "Origin Coil",
+    key: "origin-coil",
     weaponKey: "umbral-flames",
   },
 

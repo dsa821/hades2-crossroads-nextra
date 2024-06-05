@@ -2,21 +2,27 @@ import { mapHammerToCodex } from "lib/utils";
 import { CodexData, HammerData } from "models/types";
 
 const hammerData: Record<string, HammerData> = {
-  doubleWallop: {
-    name: "Double Wallop",
-    key: "double-wallop",
-    weaponKey: "witchs-staff",
-  },
-
-  marauderWallop: {
-    name: "Marauder Wallop",
-    key: "marauder-wallop",
-    weaponKey: "witchs-staff",
-  },
-
   extendingWallop: {
     name: "Extending Wallop",
     key: "extending-wallop",
+    weaponKey: "witchs-staff",
+  },
+
+  mirroredThrasher: {
+    name: "Mirrored Thrasher",
+    key: "mirrored-thrasher",
+    weaponKey: "witchs-staff",
+  },
+
+  rapidThrasher: {
+    name: "Rapid Thrasher",
+    key: "rapid-thrasher",
+    weaponKey: "witchs-staff",
+  },
+
+  wickedThrasher: {
+    name: "Wicked Thrasher",
+    key: "wicked-thrasher",
     weaponKey: "witchs-staff",
   },
 
@@ -32,21 +38,15 @@ const hammerData: Record<string, HammerData> = {
     weaponKey: "witchs-staff",
   },
 
-  doubleCataclysm: {
-    name: "Double Cataclysm",
-    key: "double-cataclysm",
-    weaponKey: "witchs-staff",
-  },
-
   vampiricCataclysm: {
     name: "Vampiric Cataclysm",
     key: "vampiric-cataclysm",
     weaponKey: "witchs-staff",
   },
 
-  doubleMoonshot: {
-    name: "Double Moonshot",
-    key: "double-moonshot",
+  dualMoonshot: {
+    name: "Dual Moonshot",
+    key: "dual-moonshot",
     weaponKey: "witchs-staff",
   },
 
@@ -56,9 +56,9 @@ const hammerData: Record<string, HammerData> = {
     weaponKey: "witchs-staff",
   },
 
-  rapidMoonfire: {
-    name: "Rapid Moonfire",
-    key: "rapid-moonfire",
+  rapidMoonshot: {
+    name: "Rapid Moonshot",
+    key: "rapid-moonshot",
     weaponKey: "witchs-staff",
   },
 
