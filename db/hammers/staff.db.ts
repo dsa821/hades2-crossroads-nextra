@@ -50,15 +50,15 @@ const hammerData: Record<string, HammerData> = {
     weaponKey: "witchs-staff",
   },
 
-  shimmeringMoonshot: {
-    name: "Shimmering Moonshot",
-    key: "shimmering-moonshot",
-    weaponKey: "witchs-staff",
-  },
-
   rapidMoonshot: {
     name: "Rapid Moonshot",
     key: "rapid-moonshot",
+    weaponKey: "witchs-staff",
+  },
+  
+  shimmeringMoonshot: {
+    name: "Shimmering Moonshot",
+    key: "shimmering-moonshot",
     weaponKey: "witchs-staff",
   },
 
