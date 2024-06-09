@@ -16,6 +16,7 @@ import {
   IconMaxMagick,
   IconReroll,
 } from "@/components/icons";
+import { DbArcana } from "@/db";
 
 # Arcana Cards
 
@@ -27,48 +28,33 @@ import {
 
 ### The Sorceress [#sorceress]
 
-<Arcana
-  grasp="1"
-  flavor="Left to her own devices, she learned to confront the world on her own terms."
->
+<Arcana data={DbArcana.sorceress}>
   While you **Channel** your **Ω Moves**, everything moves slower for **4 Sec.**
 </Arcana>
 
 ### The Wayward Son [#wayward-son]
 
-<Arcana
-  grasp="1"
-  flavor="Even the Underworld itself struggled to contain him, such was his lust for life"
->
+<Arcana data={DbArcana.waywardSon}>
   After you exit a **Location**, restore **4** <IconLife />, or twice that if
   you have no more than **30%** <IconLife />.
 </Arcana>
 
 ### The Huntress [#huntress]
 
-<Arcana
-  grasp="3"
-  flavor="Through discipline and instinct comes surpassing skill both in shadow and the light of the Moon."
->
+<Arcana data={DbArcana.huntress}>
   While you have less than **100%** <IconMagick />, your **Attack** and
   **Special** deal **+50%** damage.
 </Arcana>
 
 ### Death [#death]
 
-<Arcana
-  grasp="3"
-  flavor="Some mortals would sense his soft approach, others taken by surprise."
->
+<Arcana data={DbArcana.death}>
   Your **Ω Moves** have **+5%** chance to deal **Critical** damage.
 </Arcana>
 
 ### The Messenger [#messenger]
 
-<Arcana
-  grasp='0'
-  flavor='With incomparable swiftness can he travel from the highest peaks to the lowest depths.'
->
+<Arcana data={DbArcana.messenger}>
 You have **+10%** chance to **Dodge**.
 
 **Awakening**: _Activate at least **3** Cards that use the same amount of
@@ -80,49 +66,32 @@ You have **+10%** chance to **Dodge**.
 
 ### The Furies [#furies]
 
-<Arcana
-  grasp='2'
-  flavor='In the deepest reaches of the Underworld, three are as feared as the god of the dead himself.'
->
-Deal **+30%** damage to foes in your **Casts**.
-
+<Arcana data={DbArcana.furies}>
+  Deal **+30%** damage to foes in your **Casts**.
 </Arcana>
 
 ### The Titan [#titan]
 
-<Arcana
-  grasp="2"
-  flavor="He stole from gods the gift of fire, for mortals; thus he suffered, but he grew strong."
->
+<Arcana data={DbArcana.titan}>
   Gain **+40** <IconMaxLife /> and **+40** <IconMaxMagick />.
 </Arcana>
 
 ### The Unseen [#unseen]
 
-<Arcana
-  grasp='5'
-  flavor='Upon their ancient oath, in shadow, they serve; and to shadow, they return.'
->
-Restore **4** <IconMagick /> every **1 Sec.**
-
+<Arcana data={DbArcana.unseen}>
+  Restore **4** <IconMagick /> every **1 Sec.**
 </Arcana>
 
 ### Night [#night]
 
-<Arcana
-  grasp="4"
-  flavor="She sprang from Chaos, and formed much of the natural world, above the surface and below."
->
+<Arcana data={DbArcana.night}>
   Your **Hex** also charges up automatically as though you used **4**
   <IconMagick /> every **1 Sec.**
 </Arcana>
 
 ### The Lovers [#lovers]
 
-<Arcana
-  grasp="2"
-  flavor="Their music brought them together, and not even Death could keep them apart for long."
->
+<Arcana data={DbArcana.lovers}>
   In **Guardian Encounters**, you take **0** damage the first **3** time(s) you
   are hit.
 </Arcana>
@@ -131,29 +100,21 @@ Restore **4** <IconMagick /> every **1 Sec.**
 
 ### The Swift Runner [#swift-runner]
 
-<Arcana
-  grasp="1"
-  flavor="Those who attempted to confront the greatest of the Greeks merely met his spear."
->
+<Arcana data={DbArcana.swiftRunner}>
   Your **Dash** is immediate and your **Sprint** is **+10%** faster.
 </Arcana>
 
 ### Eternity [#eternity]
 
-<Arcana
-  grasp="4"
-  flavor="The inevitable cannot be prevented, though perhaps can be forestalled."
->
+<Arcana data={DbArcana.eternity}>
   Set forth each night with **3** <IconDeathDefiance />.
 </Arcana>
+
 Don't leave home without it. As close to a must-pick as you can get.
 
 ### The Centaur [#centaur]
 
-<Arcana
-  grasp='0'
-  flavor='Many of the greatest heroes mortalkind has to offer have in common his patient instruction.'
->
+<Arcana data={DbArcana.centaur}>
 After every **5 Locations**, gain **+5** <IconMaxLife /> and **+5** <IconMaxMagick />.
 
 **Awakening**: _Activate Cards that use **1 Grasp** through **5 Grasp**._
@@ -162,75 +123,51 @@ After every **5 Locations**, gain **+5** <IconMaxLife /> and **+5** <IconMaxMagi
 
 ### The Moon [#moon]
 
-<Arcana
-  grasp='3'
-  flavor='Even as she races her steeds across the fathomless sky, she bears witness to all.'
->
-Your **Ω Cast** has **+100 Power** whenever it detonates.
-
+<Arcana data={DbArcana.moon}>
+  Your **Ω Cast** has **+100 Power** whenever it detonates.
 </Arcana>
 
 ### Strength [#strength]
 
-<Arcana
-  grasp="5"
-  flavor="The power to surpass the might of the gods is one that must always be held in check."
->
-  While you have no more than **30%** <IconLife />, you take
-  **-50%** damage and deal **+50%**.
+<Arcana data={DbArcana.strength}>
+  While you have no more than **30%** <IconLife />, you take **-50%** damage and
+  deal **+50%**.
 </Arcana>
 
 ## Row 4
 
 ### The Fates [#fates]
 
-<Arcana
-  grasp="3"
-  flavor="Even the gods themselves are subject to the whims of the three weavers of destiny."
->
+<Arcana data={DbArcana.fates}>
   Set forth each night with **+3** <IconReroll />. You can alter **Location
   Rewards**.
 </Arcana>
 
 ### The Boatman [#boatman]
 
-<Arcana
-  grasp="5"
-  flavor="Vast riches lie hidden in the realm of the dead; but only a modest fee is needed to get in."
->
-  Set forth each night with **+300**
-  <IconGold />.
+<Arcana data={DbArcana.boatman}>
+  Set forth each night with **+300** <IconGold />.
 </Arcana>
 
 ### Origination [#origination]
 
-<Arcana
-  grasp="3"
-  flavor="From the infinite void emerged all that exists, and back to that void it all may yet return."
->
+<Arcana data={DbArcana.origination}>
   Deal **+50%** damage to foes afflicted with at least **2 Curse** effects.
 </Arcana>
 
 ### Excellence [#excellence]
 
-<Arcana
-  grasp="5"
-  flavor="Not even gods can always live to their fullest purpose; yet mortals all must strive."
->
+<Arcana data={DbArcana.excellence}>
   Any **Boons** you are offered have **+50%** chance to be improved to
   <TextHighlight type="rare">**Rare**</TextHighlight>.
 </Arcana>
 
 ### The Queen [#queen]
 
-<Arcana
-  grasp='0'
-  flavor='From Olympus she descends to reign in the Underworld, as the surface-land grows cold.'
->
-  Any **Boons** you are offered have **+10%** chance to be a
-  <TextHighlight type='duo'>**Duo**</TextHighlight> _(whenever possible)_.
+<Arcana data={DbArcana.queen}>
+Any **Boons** you are offered have **+10%** chance to be a <TextHighlight type='duo'>**Duo**</TextHighlight> _(whenever possible)_.
 
-    **Awakening**: _Activate no more than **2** Cards that use the same amount of **Grasp**._
+**Awakening**: _Activate no more than **2** Cards that use the same amount of **Grasp**._
 
 </Arcana>
 
@@ -238,10 +175,7 @@ Your **Ω Cast** has **+100 Power** whenever it detonates.
 
 ### The Seer [#seer]
 
-<Arcana
-  grasp='0'
-  flavor='Having been stricken blind, she saw much more than any mortal could.'
->
+<Arcana data={DbArcana.seer}>
   Set forth each night with +4 <IconReroll />.
 
 **Awakening**: _Activate each surrounding Card. ([The Fates](/arcana#the-fates),
@@ -251,43 +185,30 @@ Your **Ω Cast** has **+100 Power** whenever it detonates.
 
 ### The Champions [#champions]
 
-<Arcana
-  grasp="4"
-  flavor="Once-mortal foes, they found each other once again in death, and were exalted in Elysium."
->
+<Arcana data={DbArcana.champions}>
   Set forth each night with **+3** <IconReroll />. You can alter **Boons** and
   certain other choices.
 </Arcana>
 
 ### The Artificer [#artificer]
 
-<Arcana
-  grasp="6"
-  flavor="Few can turn raw materials into works of extraordinary genius; none as can he."
->
+<Arcana data={DbArcana.artificer}>
   Set forth each night with **3** chance(s) to turn any **Minor Find** into a
   random **Major Find**.
 </Arcana>
 
 ### Divinity [#divinity]
 
-<Arcana
-  grasp='0'
-  flavor='The privilege of godhood is bestowed at birth, save for the rarest cases, when it is earned instead.'
->
-  Any **Boons** you are offered have **+20%** chance to be improved to
-  <TextHighlight type='epic'>**Epic**</TextHighlight>.
+<Arcana data={DbArcana.divinity}>
+  Any **Boons** you are offered have **+20%** chance to be improved to <TextHighlight type='epic'>**Epic**</TextHighlight>.
 
-    **Awakening**: _Activate all **5** Cards in any other row._
+**Awakening**: _Activate all **5** Cards in any other row._
 
 </Arcana>
 
 ### Judgment [#judgment]
 
-<Arcana
-  grasp='0'
-  flavor='The Underworld King is to decide what shall become of each and every mortal life.'
->
+<Arcana data={DbArcana.judgment}>
 After you vanquish a **Guardian**, activate **5** random inactive **Arcana Cards**.
 
 **Awakening**: _Activate no more than **3** Cards._

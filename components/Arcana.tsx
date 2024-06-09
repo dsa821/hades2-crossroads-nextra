@@ -1,34 +1,55 @@
-import { FC } from "react";
-
+import Image from "next/image";
 import { Box } from "./Box";
 import { IconGrasp } from "./icons";
+import { ArcanaData } from "models/types";
 
 type ArcanaProps = {
-  title: string;
-  grasp: number;
-  flavor: string;
+  data: ArcanaData;
+  compact: boolean;
+  className?: string;
+  children?: React.ReactNode;
 };
 
-export const Arcana: FC<ArcanaProps> = (props) => {
-  return (
-    <Box className={props.className}>
-      {props.title != null && (
-        <div className="font-bold text-2xl">{props.title}</div>
-      )}
-      <div className="flex justify-between items-start gap-4">
-        <div>
-          {props.children}
+export const Arcana: React.FC<ArcanaProps> = ({
+  data,
+  compact,
+  className,
+  children,
+}) => {
+  const orderStr = `${data.order < 10 ? "0" : ""}${data.order}`;
+  const iconUrl = `/icons/arcana/${orderStr}-${data.key}.png`;
 
-          <div className="mt-2 italic font-bold text-sm drop-shadow-lg text-indigo-500">
-            {props.flavor}
+  // Full view
+  return (
+    <div className="flex flex-wrap items-start gap-4">
+      <div className="w-full lg:w-36 flex justify-center">
+        <Image
+          src={iconUrl}
+          alt={data.name}
+          title={data.name}
+          width={144}
+          height={192}
+          className={className}
+        />
+      </div>
+
+      <Box className="flex-1">
+        <div className="flex items-center">
+          <div className="font-semibold text-3xl font-small-caps flex-1">
+            {data.name}
+          </div>
+          <div className="flex items-center gap-1">
+            <div className="font-bold text-xl">{data.grasp}</div>
+            <IconGrasp />
           </div>
         </div>
 
-        <div className="flex items-center gap-1">
-          <div className="font-bold text-xl">{props.grasp}</div>
-          <IconGrasp />
+        {children}
+
+        <div className="mt-2 italic font-semibold drop-shadow-lg text-indigo-500">
+          {data.flavor}
         </div>
-      </div>
-    </Box>
+      </Box>
+    </div>
   );
 };
