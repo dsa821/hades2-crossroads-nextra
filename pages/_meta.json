@@ -3,7 +3,7 @@
   "general": "General Tips",
   "builds": "Builds",
   "weapons": "Nocturnal Arms",
-  "arcana": "Altar of Ashes",
+  "arcana": "Arcana Cards",
   "keepsakes": "Keepsakes",
   "boons": "Boons",
 
@@ -13,6 +13,9 @@
     "items": {
       "pencil-meta": {
         "title": "Pencil Meta"
+      },
+      "tool-arcana": {
+        "title": "Arcana Calculator"
       }
     }
   },
@@ -31,7 +34,10 @@
 
   "pencil-meta": {
     "display": "hidden",
-
+    "theme": { "breadcrumb": false, "toc": false }
+  },
+  "tool-arcana": {
+    "display": "hidden",
     "theme": { "breadcrumb": false, "toc": false }
   }
 }

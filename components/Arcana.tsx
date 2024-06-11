@@ -17,20 +17,35 @@ export const Arcana: React.FC<ArcanaProps> = ({
   children,
 }) => {
   const orderStr = `${data.order < 10 ? "0" : ""}${data.order}`;
-  const iconUrl = `/icons/arcana/${orderStr}-${data.key}.png`;
+  const imageUrl = `/icons/arcana/${orderStr}-${data.key}.png`;
+  const image = (
+    <Image
+      src={imageUrl}
+      alt={data.name}
+      title={data.name}
+      fill
+      className={className}
+    />
+  );
 
+  if (compact) {
+    return (
+      <div className="flex justify-center">
+        <div className="relative w-28 aspect-[3/4]">{image}</div>
+        {/* <div className="absolute bottom-2 font-semibold text-center drop-shadow-lg w-full backdrop-blur">
+          {data.name}
+        </div> */}
+        {/* <div className="absolute top-2 text-sm text-center drop-shadow-lg w-full">
+          {children}
+        </div> */}
+      </div>
+    );
+  }
   // Full view
   return (
     <div className="flex flex-wrap items-start gap-4">
-      <div className="w-full lg:w-36 flex justify-center">
-        <Image
-          src={iconUrl}
-          alt={data.name}
-          title={data.name}
-          width={144}
-          height={192}
-          className={className}
-        />
+      <div className=" w-full lg:w-36 flex justify-center">
+        <div className="relative w-36 h-48">{image}</div>
       </div>
 
       <Box className="flex-1">
