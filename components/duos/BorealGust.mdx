@@ -1,11 +1,12 @@
 import { Callout } from "nextra/components";
 import { Box, BoonGrid } from "@/components";
 import { DbBoons } from "@/db";
+import { IconMagick } from '@/components/icons';
 
 <Box>
-Your **Freeze** effects also cause lightning bolts to repeatedly strike afflicted foes.
+While standing in a **Cyclone**, you randomly fire gales every **0.3 Sec.**
 
-- Lightning Damage: **30** _(every 0.3 Sec.)_
+- Gale Damage: **70** _(every 0.5 Sec)_
 
 </Box>
 
@@ -14,7 +15,7 @@ Your **Freeze** effects also cause lightning bolts to repeatedly strike afflicte
   <BoonGrid
     boons={[
       DbBoons.Zeus.heavenStrike,
-      DbBoons.Zeus.heavenStrike,
+      DbBoons.Zeus.heavenFlourish,
       DbBoons.Zeus.stormRing,
       DbBoons.Zeus.thunderSprint,
       DbBoons.Zeus.ionicGain,

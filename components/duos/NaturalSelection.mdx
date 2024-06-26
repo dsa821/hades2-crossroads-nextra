@@ -1,4 +1,5 @@
-import { Boon } from "@/components/Boon";
+import { Callout } from "nextra/components";
+import { Boon, BoonGrid } from "@/components";
 import { TextHighlight } from "@/components/TextHighlight";
 import { IconGold, IconMaxLife, IconMaxMagick } from "@/components/icons";
 import { DbBoons } from '@/db';
@@ -6,22 +7,33 @@ import { DbBoons } from '@/db';
 <Boon boon={DbBoons.Duos.naturalSelection}>
 **Locations Rewards** exclude <IconMaxLife />, <IconMaxMagick />, and <IconGold />. **Boons** are more likely to be <TextHighlight type="rare">**Rare**</TextHighlight> or better.
 
-- Improved Rarity Chance: **+20%**
+- Improved Rarity Chance: **+45%**
 
 </Boon>
 
-**Required** _(one of the following from Poseidon):_
+<Callout>
+  **Required** _(one of the following from Poseidon):_
+  <BoonGrid
+    boons={[
+      DbBoons.Poseidon.tidalRing,
+      DbBoons.Poseidon.fluidGain,
+      DbBoons.Poseidon.breakerSprint,
+      DbBoons.Poseidon.oceansBounty,
+      DbBoons.Poseidon.doubleUp,
+    ]}
+  />
+</Callout>
 
-- [Fluid Gain](/boons/poseidon#fluid-gain)
-- [Breaker Sprint](/boons/poseidon#breaker-sprint)
-- [Ocean's Bounty](/boons/poseidon#oceans-bounty)
-- [Sunken Treasure](/boons/poseidon#sunken-treasure)
-- [Double Up](/boons/poseidon#double-up)
-
-**Required** _(one of the following from Demeter):_
-
-- [Tranquil Gain](/boons/demeter#tranquil-gain)
-- [Frigid Sprint](/boons/demeter#frigid-sprint)
-- [Winter Coat](/boons/demeter#winter-coat)
-- [Cold Storage](/boons/demeter#cold-storage)
-- [Rare Crop](/boons/demeter#rare-crop)
+<Callout>
+  **Required** _(one of the following from Demeter):_
+  <BoonGrid
+    boons={[
+      DbBoons.Demeter.arcticRing,
+      DbBoons.Demeter.tranquilGain,
+      DbBoons.Demeter.frigidSprint,
+      DbBoons.Demeter.snowQueen,
+      DbBoons.Demeter.coldStorage,
+      DbBoons.Demeter.rareCrop,
+    ]}
+  />
+</Callout>

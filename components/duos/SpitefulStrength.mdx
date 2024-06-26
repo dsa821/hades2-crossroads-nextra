@@ -1,4 +1,6 @@
-import { Box } from "@/components";
+import { Callout } from "nextra/components";
+import { Box, BoonGrid } from "@/components";
+import { DbBoons } from "@/db";
 
 <Box>
 Your **Attacks** and **Specials** deal more damage while not empowered by **Boons**.
@@ -7,20 +9,30 @@ Your **Attacks** and **Specials** deal more damage while not empowered by **Boon
 
 </Box>
 
-**Required** _(one of the following from Hera):_
+<Callout>
+  **Required** _(one of the following from Hera):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hera.nastyComeback,
+      DbBoons.Hera.familyTrade,
+      DbBoons.Hera.hereditaryBane,
+      DbBoons.Hera.dyingWish,
+      DbBoons.Hera.bloodLine,
+    ]}
+  />
+</Callout>
 
-- [Nasty Comeback](/boons/hera#nasty-comeback)
-- [Family Trade](/boons/hera#family-trade)
-- [Hereditary Bane](/boons/hera#hereditary-bane)
-- [Dying Wish](/boons/hera#dying-wish)
-- [Blood Line](/boons/hera#blood-line)
-
-**Required** _(one of the following from Hephaestus):_
-
-- [Grand Caldera](/boons/hephaestus#grand-caldera)
-- [Molten Touch](/boons/hephaestus#molten-touch)
-- [Heavy Metal](/boons/hephaestus#heavy-metal)
-- [Trusty Shield](/boons/hephaestus#trusty-shield)
-- [Mint Condition](/boons/hephaestus#mint-condition)
-- [Uncanny Fortitude](/boons/hephaestus#uncanny-fortitude)
-- [Furnace Blast](/boons/hephaestus#furnace-blast)
+<Callout>
+  **Required** _(one of the following from Hephaestus):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hephaestus.grandCaldera,
+      DbBoons.Hephaestus.moltenTouch,
+      DbBoons.Hephaestus.heavyMetal,
+      DbBoons.Hephaestus.trustyShield,
+      DbBoons.Hephaestus.mintCondition,
+      DbBoons.Hephaestus.uncannyFortitude,
+      DbBoons.Hephaestus.furnaceBlast,
+    ]}
+  />
+</Callout>

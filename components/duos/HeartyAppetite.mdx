@@ -1,5 +1,7 @@
-import { Box } from "@/components";
+import { Callout } from "nextra/components";
+import { Box, BoonGrid } from "@/components";
 import { IconLife } from "@/components/icons";
+import { DbBoons } from "@/db";
 
 <Box>
 You deal more damage the more <IconLife /> you have.
@@ -8,13 +10,28 @@ You deal more damage the more <IconLife /> you have.
 
 </Box>
 
-**Required** _(one of the following from Demeter):_
+<Callout>
+  **Required** _(one of the following from Demeter):_
+  <BoonGrid
+    boons={[
+      DbBoons.Demeter.iceStrike,
+      DbBoons.Demeter.iceFlourish,
+      DbBoons.Demeter.tranquilGain,
+      DbBoons.Demeter.frigidSprint,
+      DbBoons.Demeter.arcticRing,
+    ]}
+  />
+</Callout>
 
-- [Plentiful Forage](/boons/demeter#plentiful-forage)
-- [Winter Coat](/boons/demeter#winter-coat)
-
-**Required** _(one of the following from Aphrodite):_
-
-- [Shameless Attitude](/boons/aphrodite#shameless-attitude)
-- [Life Affirmation](/boons/aphrodite#life-affirmation)
-- [Healthy Rebound](/boons/aphrodite#healthy-rebound)
+<Callout>
+  **Required** _(one of the following from Aphrodite):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.flutterStrike,
+      DbBoons.Aphrodite.flutterFlourish,
+      DbBoons.Aphrodite.glamourGain,
+      DbBoons.Aphrodite.passionRush,
+      DbBoons.Aphrodite.healthyRebound,
+    ]}
+  />
+</Callout>

@@ -1,4 +1,6 @@
-import { Box } from "@/components";
+import { Callout } from "nextra/components";
+import { Box, BoonGrid } from "@/components";
+import { DbBoons } from "@/db";
 
 <Box>
 Your blast effects from **Hephaestus** clear **Freeze**, so you **Freeze** foes again right away.
@@ -7,13 +9,24 @@ Your blast effects from **Hephaestus** clear **Freeze**, so you **Freeze** foes 
 
 </Box>
 
-**Required** _(one of the following from Hephaestus):_
+<Callout>
+  **Required** _(one of the following from Hephaestus):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hephaestus.volcanicStrike,
+      DbBoons.Hephaestus.volcanicFlourish,
+      DbBoons.Hephaestus.smithySprint,
+    ]}
+  />
+</Callout>
 
-- [Volcanic Strike](/boons/hephaestus#volcanic-strike)
-- [Volcanic Flourish](/boons/hephaestus#volcanic-flourish)
-- [Smithy Sprint](/boons/hephaestus#smithy-sprint)
-
-**Required** _(one of the following from Demeter):_
-
-- [Ice Strike](/boons/demeter#ice-strike)
-- [Ice Flourish](/boons/demeter#ice-flourish)
+<Callout>
+  **Required** _(one of the following from Demeter):_
+  <BoonGrid
+    boons={[
+      DbBoons.Demeter.iceStrike,
+      DbBoons.Demeter.iceFlourish,
+      DbBoons.Demeter.arcticRing,
+    ]}
+  />
+</Callout>

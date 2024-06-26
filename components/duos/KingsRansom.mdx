@@ -1,5 +1,7 @@
-import { Box } from "@/components";
+import { Callout } from "nextra/components";
+import { Box, BoonGrid } from "@/components";
 import { IconBoonLvl } from "@/components/icons";
+import { DbBoons } from "@/db";
 
 <Box>
 Give up _all_ your **Boons** of **Hera**. For each, raise <IconBoonLvl /> for _all_ your **Boons** of **Zeus**.
@@ -8,16 +10,26 @@ Give up _all_ your **Boons** of **Hera**. For each, raise <IconBoonLvl /> for _a
 
 </Box>
 
-**Required** _(one of the following from Hera):_
+<Callout>
+  **Required** _(one of the following from Hera):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hera.engagementRing,
+      DbBoons.Hera.bornGain,
+      DbBoons.Hera.nexusSprint,
+    ]}
+  />
+</Callout>
 
-- [Engagement Ring](/boons/hera#engagement-ring)
-- [Born Gain](/boons/hera#born-gain)
-- [Nexus Sprint](/boons/hera#nexus-sprint)
-
-**Required** _(one of the following from Zeus):_
-
-- [Heaven Strike](/boons/zeus#heaven-strike)
-- [Heaven Flourish](/boons/zeus#heaven-flourish)
-- [Storm Ring](/boons/zeus#storm-ring)
-- [Thunder Sprint](/boons/zeus#thunder-sprint)
-- [Ionic Gain](/boons/zeus#ionic-gain)
+<Callout>
+  **Required** _(one of the following from Zeus):_
+  <BoonGrid
+    boons={[
+      DbBoons.Zeus.heavenStrike,
+      DbBoons.Zeus.heavenStrike,
+      DbBoons.Zeus.stormRing,
+      DbBoons.Zeus.thunderSprint,
+      DbBoons.Zeus.ionicGain,
+    ]}
+  />
+</Callout>

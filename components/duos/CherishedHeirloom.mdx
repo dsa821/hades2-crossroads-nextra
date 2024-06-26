@@ -1,4 +1,6 @@
-import { Box } from "@/components";
+import { Callout } from "nextra/components";
+import { Box, BoonGrid } from "@/components";
+import { DbBoons } from "@/db";
 
 <Box>
 Most other **Keepsakes** you equip are stronger this night _(if possible)_.
@@ -7,18 +9,28 @@ Most other **Keepsakes** you equip are stronger this night _(if possible)_.
 
 </Box>
 
-**Required** _(one of the following from Demeter):_
+<Callout>
+  **Required** _(one of the following from Demeter):_
+  <BoonGrid
+    boons={[
+      DbBoons.Demeter.iceStrike,
+      DbBoons.Demeter.iceFlourish,
+      DbBoons.Demeter.arcticRing,
+      DbBoons.Demeter.frigidSprint,
+      DbBoons.Demeter.tranquilGain,
+    ]}
+  />
+</Callout>
 
-- [Ice Strike](/boons/demeter#ice-strike)
-- [Ice Flourish](/boons/demeter#ice-flourish)
-- [Arctic Ring](/boons/demeter#arctic-ring)
-- [Frigid Sprint](/boons/demeter#frigid-sprint)
-- [Tranquil Gain](/boons/demeter#tranquil-gain)
-
-**Required** _(one of the following from Hera):_
-
-- [Sworn Strike](/boons/hera#sworn-strike)
-- [Sworn Flourish](/boons/hera#sworn-flourish)
-- [Engagement Ring](/boons/hera#engagement-ring)
-- [Nexus Sprint](/boons/hera#nexus-sprint)
-- [Born Gain](/boons/hera#born-gain)
+<Callout>
+  **Required** _(one of the following from Hera):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hera.swornStrike,
+      DbBoons.Hera.swornFlourish,
+      DbBoons.Hera.engagementRing,
+      DbBoons.Hera.nexusSprint,
+      DbBoons.Hera.bornGain,
+    ]}
+  />
+</Callout>

@@ -15,6 +15,7 @@ import {
 import {
   IconDemeter,
   IconEarth,
+  IconLife,
   IconMagick,
   IconMaxLife,
   IconMysterySeed,
@@ -22,7 +23,7 @@ import {
 } from "@/components/icons";
 import { DbBoons } from "@/db";
 
-import TorrentialDownpour from "@/components/duos/TorrentialDownpour.mdx";
+import BorealGust from "@/components/duos/BorealGust.mdx";
 import RoomTemperature from "@/components/duos/RoomTemperature.mdx";
 import FreezerBurn from "@/components/duos/FreezerBurn.mdx";
 import HailStorm from "@/components/duos/HailStorm.mdx";
@@ -223,7 +224,7 @@ Your **Ω Attack** deals more damage, but uses **+10** <IconMagick />.
 ### <TextHighlight type="legendary">Winter Harvest</TextHighlight>
 
 <Boon boon={DbBoons.Demeter.winterHarvest}>
-**Freeze**-afflicted foes shatter at **10% Life**, dealing damage in the area.
+**Freeze**-afflicted foes shatter at **10%** <IconLife />, dealing damage in the area.
 
 - Shatter Area Damage: **100**
 
@@ -264,21 +265,13 @@ Your **Ω Attack** deals more damage, but uses **+10** <IconMagick />.
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
 
-### <TextHighlight type="duo">Torrential Downpour</TextHighlight> (Apollo)
-
-<TorrentialDownpour />
-
-### <TextHighlight type="duo">Room Temperature</TextHighlight> (Hephaestus)
-
-<RoomTemperature />
-
 ### <TextHighlight type="duo">Freezer Burn</TextHighlight> (Hestia)
 
 <FreezerBurn />
 
-### <TextHighlight type="duo">Hail Storm</TextHighlight> (Zeus)
+### <TextHighlight type="duo">Room Temperature</TextHighlight> (Hephaestus)
 
-<HailStorm />
+<RoomTemperature />
 
 ### <TextHighlight type="duo">Natural Selection</TextHighlight> (Poseidon)
 
@@ -291,3 +284,12 @@ Your **Ω Attack** deals more damage, but uses **+10** <IconMagick />.
 ### <TextHighlight type="duo">Hearty Appetite</TextHighlight> (Aphrodite)
 
 <HeartyAppetite />
+
+### <TextHighlight type="duo">Hail Storm</TextHighlight> (Zeus)
+
+<HailStorm />
+
+### <TextHighlight type="duo">Boreal Gust</TextHighlight> (Apollo)
+
+<BorealGust />
+

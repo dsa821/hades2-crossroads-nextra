@@ -1,5 +1,7 @@
-import { Box } from "@/components";
+import { Callout } from "nextra/components";
+import { Box, BoonGrid } from "@/components";
 import { IconGold } from "@/components/icons";
+import { DbBoons } from "@/db";
 
 <Box>
 You deal more damage the more <IconGold /> you have.
@@ -8,15 +10,25 @@ You deal more damage the more <IconGold /> you have.
 
 </Box>
 
-**Required** _(one of the following from Hera):_
+<Callout>
+  **Required** _(one of the following from Hera):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hera.swornStrike,
+      DbBoons.Hera.swornFlourish,
+      DbBoons.Hera.engagementRing,
+      DbBoons.Hera.nexusSprint,
+      DbBoons.Hera.bornGain,
+    ]}
+  />
+</Callout>
 
-- [Sworn Strike](/boons/hera#sworn-strike)
-- [Sworn Flourish](/boons/hera#sworn-flourish)
-- [Engagement Ring](/boons/hera#engagement-ring)
-- [Nexus Sprint](/boons/hera#nexus-sprint)
-- [Born Gain](/boons/hera#born-gain)
-
-**Required** _(one of the following from Poseidon):_
-
-- [Ocean's Bounty](/boons/poseidon#oceans-bounty)
-- [Double Up](/boons/poseidon#double-up)
+<Callout>
+  **Required** _(one of the following from Poseidon):_
+  <BoonGrid
+    boons={[
+      DbBoons.Poseidon.oceansBounty,
+      DbBoons.Poseidon.doubleUp,
+    ]}
+  />
+</Callout>

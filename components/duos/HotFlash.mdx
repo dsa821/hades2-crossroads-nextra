@@ -3,21 +3,19 @@ import { Box, BoonGrid } from "@/components";
 import { DbBoons } from "@/db";
 
 <Box>
-During **Encounters** with multiple foes, **1** foe is always afflicted with **Charm**.
+While foes are **Weak**, any **Scorch** they have does not diminish as it deals damage.
 
-- Foes Required: **2** _(or more)_
+- Scorch Duration on Weak Foes: <span className="text-2xl">**∞**</span>
 
 </Box>
 
 <Callout>
-  **Required** _(one of the following from Hera):_
+  **Required** _(one of the following from Hestia):_
   <BoonGrid
     boons={[
-      DbBoons.Hera.swornStrike,
-      DbBoons.Hera.swornFlourish,
-      DbBoons.Hera.engagementRing,
-      DbBoons.Hera.nexusSprint,
-      DbBoons.Hera.nastyComeback,
+      DbBoons.Hestia.flameStrike,
+      DbBoons.Hestia.flameFlourish,
+      DbBoons.Hestia.smolderRing,
     ]}
   />
 </Callout>

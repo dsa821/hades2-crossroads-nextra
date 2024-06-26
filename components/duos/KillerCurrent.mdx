@@ -1,4 +1,5 @@
-import { Boon } from "@/components/Boon";
+import { Callout } from "nextra/components";
+import { Boon, BoonGrid } from "@/components/Boon";
 import { DbBoons } from '@/db';
 
 <Boon boon={DbBoons.Duos.killerCurrent}>
@@ -8,15 +9,21 @@ Your lightning deals more damage to **Slip**-afflicted foes.
 
 </Boon>
 
-**Required** _(from Poseidon):_
+<Callout>
+  **Required** _(from Poseidon):_
+  <BoonGrid boons={[DbBoons.Poseidon.slipperySlope]} />
+</Callout>
 
-- [Slippery Slope](/boons/poseidon#slippery-slope)
-
-**Required** _(one of the following from Zeus):_
-
-- [Heaven Strike](/boons/zeus#heaven-strike)
-- [Heaven Flourish](/boons/zeus#heaven-flourish)
-- [Storm Ring](/boons/zeus#storm-ring)
-- [Thunder Sprint](/boons/zeus#thunder-sprint)
-- [Divine Vengeance](/boons/zeus#divine-vengeance)
-- [Lightning Lance](/boons/zeus#lightning-lance)
+<Callout>
+  **Required** _(one of the following from Zeus):_
+  <BoonGrid
+    boons={[
+      DbBoons.Zeus.heavenStrike,
+      DbBoons.Zeus.heavenFlourish,
+      DbBoons.Zeus.stormRing,
+      DbBoons.Zeus.thunderSprint,
+      DbBoons.Zeus.divineVengeance,
+      DbBoons.Zeus.lightningLance,
+    ]}
+  />
+</Callout>

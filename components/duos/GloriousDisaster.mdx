@@ -1,6 +1,7 @@
-import { Boon } from '@/components/Boon';
-import { IconMagick } from '@/components/icons';
-import { DbBoons } from '@/db';
+import { Callout } from "nextra/components";
+import { Boon, BoonGrid } from "@/components/Boon";
+import { IconMagick } from "@/components/icons";
+import { DbBoons } from "@/db";
 
 <Boon boon={DbBoons.Duos.gloriousDisaster}>
 You can **Channel +30** <IconMagick /> into your **Ω Cast** to repeatedly strike foes with lightning bolts.
@@ -9,13 +10,19 @@ You can **Channel +30** <IconMagick /> into your **Ω Cast** to repeatedly strik
 
 </Boon>
 
-**Required** _(from Apollo):_
+<Callout>
+  **Required** _(from Apollo):_
+  <BoonGrid boons={[DbBoons.Apollo.prominenceFlare]} />
+</Callout>
 
-- [Prominence Flare](/boons/apollo#prominence-flare)
-
-**Required** _(one of the following from Zeus):_
-
-- [Heaven Strike](/boons/zeus#heaven-strike)
-- [Heaven Flourish](/boons/zeus#heaven-flourish)
-- [Storm Ring](/boons/zeus#storm-ring)
-- [Thunder Sprint](/boons/zeus#thunder-sprint)
+<Callout>
+  **Required** _(one of the following from Zeus):_
+  <BoonGrid
+    boons={[
+      DbBoons.Zeus.heavenStrike,
+      DbBoons.Zeus.heavenFlourish,
+      DbBoons.Zeus.stormRing,
+      DbBoons.Zeus.thunderSprint,
+    ]}
+  />
+</Callout>

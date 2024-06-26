@@ -1,5 +1,6 @@
-import { Boon } from '@/components/Boon';
-import { DbBoons } from '@/db';
+import { Callout } from "nextra/components";
+import { Boon, BoonGrid } from "@/components";
+import { DbBoons } from "@/db";
 
 <Boon boon={DbBoons.Duos.sunWorshiper}>
 In each **Encounter**, the first foe you slay returns to fight for you.
@@ -8,14 +9,24 @@ In each **Encounter**, the first foe you slay returns to fight for you.
 
 </Boon>
 
-**Required** _(one of the following from Hera):_
+<Callout>
+  **Required** _(one of the following from Hera):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hera.engagementRing,
+      DbBoons.Hera.nexusSprint,
+      DbBoons.Hera.bornGain,
+    ]}
+  />
+</Callout>
 
-- [Engagement Ring](/boons/hera#engagement-ring)
-- [Nexus Sprint](/boons/hera#nexus-sprint)
-- [Born Gain](/boons/hera#born-gain)
-
-**Required** _(one of the following from Apollo):_
-
-- [Solar Ring](/boons/apollo#solar-ring)
-- [Blinding Sprint](/boons/apollo#blinding-sprint)
-- [Lucid Gain](/boons/apollo#lucid-gain)
+<Callout>
+  **Required** _(one of the following from Apollo):_
+  <BoonGrid
+    boons={[
+      DbBoons.Apollo.solarRing,
+      DbBoons.Apollo.blindingSprint,
+      DbBoons.Apollo.lucidGain,
+    ]}
+  />
+</Callout>

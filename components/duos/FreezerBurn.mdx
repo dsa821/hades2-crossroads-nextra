@@ -1,18 +1,32 @@
-import { Box } from "@/components";
+import { Callout } from "nextra/components";
+import { Box, BoonGrid } from "@/components";
+import { DbBoons } from "@/db";
 
 <Box>
-Whenever you inflict **Freeze**, amplify any **Scorch** effects already on the foe.
+Whenever you inflict **Freeze** on a foe with **Scorch**, deal damage and remove **Scorch**.
 
-- Scorch Damage: **+100%**
+- Damage from Scorch: **200%**
 
 </Box>
 
-**Required** _(one of the following from Demeter):_
+<Callout>
+  **Required** _(one of the following from Demeter):_
+  <BoonGrid
+    boons={[
+      DbBoons.Demeter.iceStrike,
+      DbBoons.Demeter.iceFlourish,
+      DbBoons.Demeter.arcticRing,
+    ]}
+  />
+</Callout>
 
-- [Ice Strike](/boons/demeter#ice-strike)
-- [Ice Flourish](/boons/demeter#ice-flourish)
-
-**Required** _(one of the following from Hestia):_
-
-- [Flame Strike](/boons/hestia#flame-strike)
-- [Flame Flourish](/boons/hestia#flame-flourish)
+<Callout>
+  **Required** _(one of the following from Hestia):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hestia.flameStrike,
+      DbBoons.Hestia.flameFlourish,
+      DbBoons.Hestia.smolderRing,
+    ]}
+  />
+</Callout>

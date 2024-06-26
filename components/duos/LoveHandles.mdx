@@ -1,20 +1,24 @@
 import { Callout } from "nextra/components";
 import { Box, BoonGrid } from "@/components";
 import { DbBoons } from "@/db";
+import { IconHealing } from "@/components/icons";
 
 <Box>
-Your **Ω Cast** occasionally creates a blast that deals **500** damage in the area.
+Your blast effects from **Hephaestus** also create a **Heartthrob**.
 
-- Blast Recharge Time: **6 Sec.**
+- Heartthrob Area Damage: **120**
 
 </Box>
 
 <Callout>
-  **Required** _(one of the following from Poseidon):_
+  **Required** _(one of the following from Aphrodite):_
   <BoonGrid
     boons={[
-      DbBoons.Poseidon.tidalRing,
-      DbBoons.Poseidon.geyserSpout,
+      DbBoons.Aphrodite.flutterStrike,
+      DbBoons.Aphrodite.flutterFlourish,
+      DbBoons.Aphrodite.raptureRing,
+      DbBoons.Aphrodite.passionRush,
+      DbBoons.Aphrodite.glamourGain,
     ]}
   />
 </Callout>
