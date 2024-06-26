@@ -36,9 +36,9 @@ export const DbBoonsDemeter: Record<string, BoonData> = {
     element: "earth",
   },
 
-  coarseGrit: {
-    name: "Coarse Grit",
-    key: "coarse-grit",
+  frostyVeneer: {
+    name: "Frosty Veneer",
+    key: "frosty-veneer",
     god: "demeter",
     type: "infusion",
   },
@@ -71,9 +71,9 @@ export const DbBoonsDemeter: Record<string, BoonData> = {
     element: "earth",
   },
 
-  winterCoat: {
-    name: "Winter Coat",
-    key: "winter-coat",
+  snowQueen: {
+    name: "Snow Queen",
+    key: "snow-queen",
     god: "demeter",
     element: "earth",
   },
