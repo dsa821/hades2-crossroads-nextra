@@ -57,13 +57,6 @@ export const DbBoonsHephaestus: Record<string, BoonData> = {
     element: "earth",
   },
 
-  toughTrade: {
-    name: "Tough Trade",
-    key: "tough-trade",
-    god: "hephaestus",
-    element: "fire",
-  },
-
   mintCondition: {
     name: "Mint Condition",
     key: "mint-condition",
@@ -83,6 +76,13 @@ export const DbBoonsHephaestus: Record<string, BoonData> = {
     key: "uncanny-fortitude",
     god: "hephaestus",
     element: "earth",
+  },
+  
+  grandCaldera: {
+    name: "Grand Caldera",
+    key: "grand-caldera",
+    god: "hephaestus",
+    element: "fire",
   },
 
   furnaceBlast: {
