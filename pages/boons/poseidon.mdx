@@ -15,6 +15,7 @@ import {
 import {
   IconAshes,
   IconGold,
+  IconHammer,
   IconHealing,
   IconMagick,
   IconMaxLife,
@@ -67,10 +68,10 @@ Your **Specials** hit foes with a splash that knocks other foes away.
 
 ### Tidal Ring (Cast) [#tidal-ring]
 
-<Boon boon={DbBoons.Poseidon.TidalRing}>
-Your **Ω Cast** immediately detonates, dealing damage and knocking foes away.
+<Boon boon={DbBoons.Poseidon.tidalRing}>
+Your **Casts** also immediately hit foes in front of you with a powerful splash.
 
-- Omega Cast Damage: **100**
+- Splash Damage: **90**
 
 </Boon>
 
@@ -100,20 +101,20 @@ when used, or after **30 Sec.**
 ### <TextHighlight type="infusion">Water Fitness (Infusion)</TextHighlight> [#water-fitness]
 
 <Boon boon={DbBoons.Poseidon.waterFitness}>
-While you have at least **4** <IconWater />, gain <IconMaxLife />.
+Gain <IconMaxLife /> for each <IconWater /> you have.
 
-- Max Life: **+100**
+- Max Life per Water Boon: **15**
 
 </Boon>
 
 <Callout>
-  **Required: 1** <IconWater />
+  **Required: 2** <IconWater />
 </Callout>
 
 ### Double Up
 
 <Boon boon={DbBoons.Poseidon.doubleUp}>
-Whenever you claim a **Minor Find** or similar resource reward, a copy may appear.
+Whenever you claim rewards other than **Boons**, <IconHammer />, or rare resources, a copy may appear.
 
 - Double Reward Chance: **20%**
 
@@ -137,23 +138,46 @@ After you enter a **Location**, **Prime 30** <IconMagick /> to reduce any damage
 
 </Boon>
 
-### Sunken Treasure
+### Splash Fount
 
-<Boon boon={DbBoons.Poseidon.sunkenTreasure}>
-Gain <IconGold />, <IconHealing />, and sometimes <IconAshes /> and <IconPsyche />.
-
-- Gold Received: **+90**
+<Boon boon={DbBoons.Poseidon.splashFount}>
+Whenever you use **Ω Moves**, create a watery blast near the first foe you damage.
+- Delayed Blast Damage: **50**
 
 </Boon>
 
 ### Ocean's Bounty
 
 <Boon boon={DbBoons.Poseidon.oceansBounty}>
-Any **Minor Finds** and <IconGold /> are worth more.
+Any **Minor Finds** and <IconGold /> are worth more. Receive <IconGold />, <IconHealing />, and sometimes <IconAshes /> and <IconPsyche />, now.
 
 - Reward Value: **+50%**
 
 </Boon>
+
+### Geyser Spout
+
+<Boon boon={DbBoons.Poseidon.geyserSpout}>
+Your **Ω Cast** immediately detonates, dealing damage and knocking foes away.
+- Omega Cast Damage: **200**
+
+</Boon>
+
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.raptureRing,
+      DbBoons.Apollo.solarRing,
+      DbBoons.Demeter.arcticRing,
+      DbBoons.Hephaestus.anvilRing,
+      DbBoons.Hera.engagementRing,
+      DbBoons.Hestia.smolderRing,
+      DbBoons.Poseidon.tidalRing,
+      DbBoons.Zeus.stormRing,
+    ]}
+  />
+</Callout>
 
 ### Slippery Slope
 
@@ -167,27 +191,10 @@ Your splash effects from **Poseidon** also inflict **Slip** on foes.
 <Callout>
   **Required** _(one of the following):_
   <BoonGrid
-    boons={[DbBoons.Poseidon.waveStrike, DbBoons.Poseidon.waveFlourish]}
-  />
-</Callout>
-
-### Crashing Wave
-
-<Boon boon={DbBoons.Poseidon.crashingWave}>
-Whenever your knock-away effects slam foes into barriers, create a blast in the area.
-
-- Blast Damage: **50**
-
-</Boon>
-
-<Callout>
-  **Required** _(one of the following):_
-  <BoonGrid
     boons={[
       DbBoons.Poseidon.waveStrike,
       DbBoons.Poseidon.waveFlourish,
-      DbBoons.Poseidon.geyserRing,
-      DbBoons.Poseidon.breakerSprint,
+      DbBoons.Poseidon.tidalRing,
     ]}
   />
 </Callout>
@@ -199,21 +206,41 @@ Whenever your knock-away effects slam foes into barriers, create a blast in the 
 <Boon boon={DbBoons.Poseidon.kingTide}>
 Your splash effects from **Poseidon** are larger and deal bonus damage to **Guardians**.
 
-- Splash Damage vs. Guardians: **+150%**
+- Splash Damage vs. Guardians: **+200%**
 
 </Boon>
 
 <Callout>
   **Required** _(one of the following):_
   <BoonGrid
-    boons={[DbBoons.Poseidon.waveStrike, DbBoons.Poseidon.waveFlourish]}
+    boons={[
+      DbBoons.Poseidon.waveStrike,
+      DbBoons.Poseidon.waveFlourish,
+      DbBoons.Poseidon.tidalRing,
+    ]}
   />
 </Callout>
 
 <Callout>
   **Required**:
   <BoonGrid
-    boons={[DbBoons.Poseidon.slipperySlope, DbBoons.Poseidon.crashingWave]}
+    boons={[
+      DbBoons.Poseidon.breakerSprint,
+      DbBoons.Poseidon.fluidGain,
+      DbBoons.Poseidon.geyserSpout,
+    ]}
+  />
+</Callout>
+
+<Callout>
+  **Required**:
+  <BoonGrid
+    boons={[
+      DbBoons.Poseidon.hydraulicMight,
+      DbBoons.Poseidon.splashFount,
+      DbBoons.Poseidon.slipperySlope,
+      DbBoons.Poseidon.floodControl,
+    ]}
   />
 </Callout>
 

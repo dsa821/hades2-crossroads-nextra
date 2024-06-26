@@ -17,7 +17,7 @@ export const DbBoonsPoseidon: Record<string, BoonData> = {
 
   tidalRing: {
     name: "Tidal Ring",
-    key: "geyser-ring",
+    key: "tidal-ring",
     god: "poseidon",
     element: "water",
   },
@@ -64,9 +64,9 @@ export const DbBoonsPoseidon: Record<string, BoonData> = {
     element: "water",
   },
 
-  sunkenTreasure: {
-    name: "Sunken Treasure",
-    key: "sunken-treasure",
+  splashFount: {
+    name: "Splash Fount",
+    key: "splash-fount",
     god: "poseidon",
     element: "water",
   },
@@ -78,16 +78,16 @@ export const DbBoonsPoseidon: Record<string, BoonData> = {
     element: "water",
   },
 
-  slipperySlope: {
-    name: "Slippery Slope",
-    key: "slippery-slope",
+  geyserSpout: {
+    name: "Geyser Spout",
+    key: "geyser-spout",
     god: "poseidon",
     element: "water",
   },
 
-  crashingWave: {
-    name: "Crashing Wave",
-    key: "crashing-wave",
+  slipperySlope: {
+    name: "Slippery Slope",
+    key: "slippery-slope",
     god: "poseidon",
     element: "water",
   },
