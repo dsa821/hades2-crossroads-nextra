@@ -24,6 +24,7 @@ export const Arcana: React.FC<ArcanaProps> = ({
       alt={data.name}
       title={data.name}
       fill
+      sizes="144px"
       className={className}
     />
   );
