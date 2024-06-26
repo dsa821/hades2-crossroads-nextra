@@ -64,16 +64,16 @@ export const DbBoonsHestia: Record<string, BoonData> = {
     element: "fire",
   },
 
-  flammableCoating: {
-    name: "Flammable Coating",
-    key: "flammable-coating",
+  crispyCoating: {
+    name: "Crispy Coating",
+    key: "crispy-coating",
     god: "hestia",
     element: "fire",
   },
 
-  fireExtinguisher: {
-    name: "Fire Extinguisher",
-    key: "fire-extinguisher",
+  pyroTechnique: {
+    name: "Pyro Technique",
+    key: "pyro-technique",
     god: "hestia",
     element: "fire",
   },
@@ -85,16 +85,16 @@ export const DbBoonsHestia: Record<string, BoonData> = {
     element: "fire",
   },
 
-  spontaneousCombustion: {
-    name: "Spontaneous Combustion",
-    key: "spontaneous-combustion",
+  highlyFlammable: {
+    name: "Highly Flammable",
+    key: "highly-flammable",
     god: "hestia",
     element: "fire",
   },
 
-  pyroTechnique: {
-    name: "Pyro Technique",
-    key: "pyro-technique",
+  fireWalk: {
+    name: "Fire Walk",
+    key: "fire-walk",
     god: "hestia",
     element: "fire",
     type: "legendary",
