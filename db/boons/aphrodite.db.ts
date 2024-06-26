@@ -22,9 +22,9 @@ export const DbBoonsAphrodite: Record<string, BoonData> = {
     element: "air",
   },
 
-  passionDash: {
-    name: "Passion Dash",
-    key: "passion-dash",
+  passionRush: {
+    name: "Passion Rush",
+    key: "passion-rush",
     god: "aphrodite",
     element: "air",
   },
@@ -92,9 +92,9 @@ export const DbBoonsAphrodite: Record<string, BoonData> = {
     element: "water",
   },
 
-  ecstaticObsession: {
-    name: "Ecstatic Obsession",
-    key: "ecstatic-obsession",
+  nervousWreck: {
+    name: "Nervous Wreck",
+    key: "nervous-wreck",
     god: "aphrodite",
     element: "air",
     type: "legendary",
