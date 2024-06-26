@@ -22,6 +22,14 @@ export type God =
   | "zeus"
   | "duos";
 
+export type ArcanaData = {
+  name: string;
+  key: string;
+  order: number;
+  flavor: string;
+  grasp: number;
+};
+
 export type AspectData = {
   name: string;
   key: string;
