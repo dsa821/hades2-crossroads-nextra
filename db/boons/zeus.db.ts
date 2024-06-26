@@ -98,5 +98,7 @@ export const DbBoonsZeus: Record<string, BoonData> = {
     god: "zeus",
     element: "air",
     type: "legendary",
+    flavor:
+      "The lightning bolt forever remains a symbol of the impulsive power of the Lord of Olympus.",
   },
 };

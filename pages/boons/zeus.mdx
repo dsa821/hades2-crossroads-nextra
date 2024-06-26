@@ -21,10 +21,10 @@ import {
 import { DbBoons } from "@/db";
 
 import GloriousDisaster from "@/components/duos/GloriousDisaster.mdx";
-import ApocalypticStorm from "@/components/duos/ApocalypticStorm.mdx";
 import ThermalDynamics from "@/components/duos/ThermalDynamics.mdx";
 import KillerCurrent from "@/components/duos/KillerCurrent.mdx";
 import MasterConductor from "@/components/duos/MasterConductor.mdx";
+import HailStorm from "@/components/duos/HailStorm.mdx";
 import RomanticSpark from "@/components/duos/RomanticSpark.mdx";
 import KingsRansom from "@/components/duos/KingsRansom.mdx";
 
@@ -63,9 +63,9 @@ Your **Specials** inflict **Blitz**.
 ### Storm Ring (Cast) [#storm-ring]
 
 <Boon boon={DbBoons.Zeus.stormRing}>
-Your **Ω Cast** also causes lightning bolts to repeatedly strike **1** foe at a time.
+Your **Casts** cause lightning bolts to repeatedly strike **1** foe at a time.
 
-- Bolt Damage: **30** _(every 0.25 Sec.)_
+- Bolt Damage: **20** _(every 0.25 Sec.)_
 
 </Boon>
 
@@ -81,9 +81,11 @@ Your **Sprint** causes nearby foes to be struck by lightning bolts, which use **
 ### Ionic Gain (Magick) [#ionic-gain]
 
 <Boon boon={DbBoons.Zeus.ionicGain}>
-Gradually restore <IconMagick />, but your total amount is reduced by **70%.**
+In each **Encounter**, an **Aether Font** appears in the area and restores _all_ <IconMagick /> when used.
 
-- Magick Restoration: **+4** _(every 1 Sec.)_
+- Reappearance Time: **10 Sec.**
+
+**Aether Font**: Restores your <IconMagick /> when used, then expires, eventually reappearing in a random spot.
 
 </Boon>
 
@@ -99,7 +101,7 @@ While you have at least **5** <IconAir />, you can never deal less damage than t
 </Boon>
 
 <Callout>
-  **Required: 2** <IconAir />
+  **Required: 3** <IconAir />
 </Callout>
 
 ### Divine Vengeance
@@ -108,15 +110,6 @@ While you have at least **5** <IconAir />, you can never deal less damage than t
 After you take damage, your foe is struck by lightning, and again **50%** of the time.
 
 - Bolt Damage: **100** _(up to **2** times)_
-
-</Boon>
-
-### Lightning Lance
-
-<Boon boon={DbBoons.Zeus.lightningLance}>
-Hold **Cast** to aim where the binding circle appears. Foes within are struck by lightning.
-
-- Bolt Damage: **50**
 
 </Boon>
 
@@ -138,12 +131,37 @@ While you have no more than **10** <IconMagick />, _all_ foes are occasionally s
 
 </Boon>
 
+### Lightning Lance
+
+<Boon boon={DbBoons.Zeus.lightningLance}>
+Hold **Cast** to aim where the binding circle appears. Foes within are struck by lightning.
+
+- Bolt Damage: **50**
+
+</Boon>
+
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.raptureRing,
+      DbBoons.Apollo.solarRing,
+      DbBoons.Demeter.arcticRing,
+      DbBoons.Hephaestus.anvilRing,
+      DbBoons.Hera.engagementRing,
+      DbBoons.Hestia.smolderRing,
+      DbBoons.Poseidon.tidalRing,
+      DbBoons.Zeus.stormRing,
+    ]}
+  />
+</Callout>
+
 ### Double Strike
 
 <Boon boon={DbBoons.Zeus.doubleStrike}>
 Your lightning bolt effects may strike **1** more time.
 
-- Bonus Strike Chance: **+5%**
+- Bonus Strike Chance: **+10%**
 
 </Boon>
 
@@ -195,9 +213,9 @@ Whenever your Blitz effects activate, a bolt of chain-lightning fires from the f
 ### <TextHighlight type="legendary">Shocking Loss</TextHighlight>
 
 <Boon boon={DbBoons.Zeus.shockingLoss}>
-Most foes may be instantly destroyed as soon as they enter the **Encounter**.
+Whenever you first deal damage to susceptible foes, you may destroy them outright.
 
-- Instant Destruction Chance: **7%**
+- Instant Destruction Chance: **20%**
 
 </Boon>
 
@@ -216,12 +234,25 @@ Most foes may be instantly destroyed as soon as they enter the **Encounter**.
 
 <Callout>
   **Required** _(one of the following):_
-  <BoonGrid boons={[DbBoons.Zeus.doubleStrike, DbBoons.Zeus.toastingFork]} />
+  <BoonGrid
+    boons={[
+      DbBoons.Zeus.staticShock,
+      DbBoons.Zeus.spiritSurge,
+      DbBoons.Zeus.lightningLance,
+      DbBoons.Zeus.divineVengeance,
+    ]}
+  />
 </Callout>
 
 <Callout>
   **Required** _(one of the following):_
-  <BoonGrid boons={[DbBoons.Zeus.staticShock, DbBoons.Zeus.electricOverload]} />
+  <BoonGrid
+    boons={[
+      DbBoons.Zeus.toastingFork,
+      DbBoons.Zeus.doubleStrike,
+      DbBoons.Zeus.electricOverload,
+    ]}
+  />
 </Callout>
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
@@ -229,10 +260,6 @@ Most foes may be instantly destroyed as soon as they enter the **Encounter**.
 ### <TextHighlight type="duo">Glorious Disaster</TextHighlight> (Apollo)
 
 <GloriousDisaster />
-
-### <TextHighlight type="duo">Apocalyptic Storm</TextHighlight> (Demeter)
-
-<ApocalypticStorm />
 
 ### <TextHighlight type="duo">Thermal Dynamics</TextHighlight> (Hestia)
 
@@ -245,6 +272,10 @@ Most foes may be instantly destroyed as soon as they enter the **Encounter**.
 ### <TextHighlight type="duo">Master Conductor</TextHighlight> (Hephaestus)
 
 <MasterConductor />
+
+### <TextHighlight type="duo">Hail Storm</TextHighlight> (Demeter)
+
+<HailStorm />
 
 ### <TextHighlight type="duo">Romantic Spark</TextHighlight> (Aphrodite)
 

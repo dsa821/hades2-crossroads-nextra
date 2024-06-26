@@ -15,8 +15,8 @@ export const DbBoonsPoseidon: Record<string, BoonData> = {
     element: "water",
   },
 
-  geyserRing: {
-    name: "Geyser Ring",
+  tidalRing: {
+    name: "Tidal Ring",
     key: "geyser-ring",
     god: "poseidon",
     element: "water",
