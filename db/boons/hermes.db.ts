@@ -22,16 +22,16 @@ export const DbBoonsHermes: Record<string, BoonData> = {
     element: "earth",
   },
 
-  swiftFlourish: {
-    name: "Swift Flourish",
-    key: "swift-flourish",
+  nimbleMind: {
+    name: "Nimble Mind",
+    key: "nimble-mind",
     god: "hermes",
     element: "earth",
   },
 
-  swiftStrike: {
-    name: "Swift Strike",
-    key: "swift-strike",
+  nimbleLimbs: {
+    name: "Nimble Limbs",
+    key: "nimble-limbs",
     god: "hermes",
     element: "earth",
   },
