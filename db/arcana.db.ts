@@ -23,27 +23,27 @@ const arcanaData: Record<string, ArcanaData> = {
     name: "The Huntress",
     key: "huntress",
     order: 3,
-    grasp: 3,
+    grasp: 2,
     flavor:
       "Through discipline and instinct comes surpassing skill both in shadow and the light of the Moon.",
   },
 
-  death: {
-    name: "Death",
-    key: "death",
+  night: {
+    name: "Night",
+    key: "night",
     order: 4,
-    grasp: 3,
+    grasp: 2,
     flavor:
-      "Some mortals would sense his soft approach, others taken by surprise.",
+      "She sprang from Chaos, and formed much of the natural world, above the surface and below.",
   },
 
-  messenger: {
-    name: "The Messenger",
-    key: "messenger",
+  moon: {
+    name: "The Moon",
+    key: "moon",
     order: 5,
     grasp: 0,
     flavor:
-      "With incomparable swiftness can he travel from the highest peaks to the lowest depths.",
+      "Even as she races her steeds across the fathomless sky, she bears witness to all.",
   },
 
   furies: {
@@ -64,31 +64,31 @@ const arcanaData: Record<string, ArcanaData> = {
       "He stole from gods the gift of fire, for mortals; thus he suffered, but he grew strong.",
   },
 
+  messenger: {
+    name: "The Messenger",
+    key: "messenger",
+    order: 8,
+    grasp: 1,
+    flavor:
+      "With incomparable swiftness can he travel from the highest peaks to the lowest depths.",
+  },
+
   unseen: {
     name: "The Unseen",
     key: "unseen",
-    order: 8,
+    order: 9,
     grasp: 5,
     flavor:
       "Upon their ancient oath, in shadow, they serve; and to shadow, they return.",
   },
 
-  night: {
-    name: "Night",
-    key: "night",
-    order: 9,
-    grasp: 4,
-    flavor:
-      "She sprang from Chaos, and formed much of the natural world, above the surface and below.",
-  },
-
-  lovers: {
-    name: "The Lovers",
-    key: "lovers",
+  death: {
+    name: "Death",
+    key: "death",
     order: 10,
-    grasp: 2,
+    grasp: 3,
     flavor:
-      "Their music brought them together, and not even Death could keep them apart for long.",
+      "Some mortals would sense his soft approach, others taken by surprise.",
   },
 
   swiftRunner: {
@@ -118,22 +118,22 @@ const arcanaData: Record<string, ArcanaData> = {
       "Many of the greatest heroes mortalkind has to offer have in common his patient instruction.",
   },
 
-  moon: {
-    name: "The Moon",
-    key: "moon",
+  origination: {
+    name: "Origination",
+    key: "origination",
     order: 14,
-    grasp: 3,
-    flavor:
-      "Even as she races her steeds across the fathomless sky, she bears witness to all.",
-  },
-
-  strength: {
-    name: "Strength",
-    key: "strength",
-    order: 15,
     grasp: 5,
     flavor:
-      "The power to surpass the might of the gods is one that must always be held in check.",
+      "From the infinite void emerged all that exists, and back to that void it all may yet return.",
+  },
+
+  lovers: {
+    name: "The Lovers",
+    key: "lovers",
+    order: 15,
+    grasp: 3,
+    flavor:
+      "Their music brought them together, and not even Death could keep them apart for long.",
   },
 
   fates: {
@@ -153,14 +153,13 @@ const arcanaData: Record<string, ArcanaData> = {
     flavor:
       "Vast riches lie hidden in the realm of the dead; but only a modest fee is needed to get in.",
   },
-
-  origination: {
-    name: "Origination",
-    key: "origination",
+  artificer: {
+    name: "The Artificer",
+    key: "artificer",
     order: 18,
     grasp: 3,
     flavor:
-      "From the infinite void emerged all that exists, and back to that void it all may yet return.",
+      "Few can turn raw materials into works of extraordinary genius; none as can he.",
   },
 
   excellence: {
@@ -199,13 +198,13 @@ const arcanaData: Record<string, ArcanaData> = {
       "Once-mortal foes, they found each other once again in death, and were exalted in Elysium.",
   },
 
-  artificer: {
-    name: "The Artificer",
-    key: "artificer",
+  strength: {
+    name: "Strength",
+    key: "strength",
     order: 23,
-    grasp: 6,
+    grasp: 4,
     flavor:
-      "Few can turn raw materials into works of extraordinary genius; none as can he.",
+      "The power to surpass the might of the gods is one that must always be held in check.",
   },
 
   divinity: {
