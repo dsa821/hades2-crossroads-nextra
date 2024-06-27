@@ -44,6 +44,11 @@ export type BoonData = {
   type?: Rarity;
   element?: BoonElement;
   flavor?: string;
+  desc?: React.ReactNode;
+  scaleLabel?: React.ReactNode;
+  scaleValue?: React.ReactNode;
+  scaleRate?: number | React.ReactNode;
+  descExtra?: React.ReactNode;
 };
 
 export type HammerData = {

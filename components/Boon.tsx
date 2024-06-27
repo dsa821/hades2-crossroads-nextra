@@ -14,6 +14,27 @@ type BoonProps = {
 export const Boon: React.FC<BoonProps> = ({ boon, ...props }) => {
   return (
     <CodexEntry data={mapBoonToCodex(boon)} {...props}>
+      {boon.desc && <div className="mt-4 text-lg">{boon.desc}</div>}
+      {boon.scaleLabel && (
+        <ul className="mt-4 list-disc ml-6 text-lg">
+          <li>
+            {boon.scaleLabel}:{" "}
+            <span className="font-bold text-green-400">{boon.scaleValue}</span>
+            {boon.scaleRate && (
+              <span className="italic text-gray-300 text-sm ml-1">
+                {typeof boon.scaleRate === 'number' ? (
+                  <>(every {boon.scaleRate} Sec.)</>
+                ) : (
+                  <>{boon.scaleRate}</>
+                )}
+              </span>
+            )}
+          </li>
+        </ul>
+      )}
+
+      {boon.descExtra && <div className="mt-4">{boon.descExtra}</div>}
+
       {props.children}
     </CodexEntry>
   );
@@ -24,5 +45,5 @@ type BoonGridProps = {
   className?: string;
 };
 export const BoonGrid: React.FC<BoonGridProps> = ({ boons, ...props }) => {
-  return <CodexGrid data={boons.map(mapBoonToCodex)}  {...props} />;
+  return <CodexGrid data={boons.map(mapBoonToCodex)} {...props} />;
 };
