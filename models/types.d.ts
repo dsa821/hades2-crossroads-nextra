@@ -46,7 +46,7 @@ export type BoonData = {
   flavor?: string;
   desc?: React.ReactNode;
   scaleLabel?: React.ReactNode;
-  scaleValue?: React.ReactNode;
+  scaleValue?: any;
   scaleRate?: number | React.ReactNode;
   descExtra?: React.ReactNode;
 };

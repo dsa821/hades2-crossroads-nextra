@@ -8,7 +8,7 @@ import { Box } from "./Box";
 
 type CodexEntryProps = {
   data: CodexData;
-  compact: boolean;
+  compact?: boolean;
   disableLink?: boolean;
   hrefOverride?: string;
   children?: React.ReactNode;

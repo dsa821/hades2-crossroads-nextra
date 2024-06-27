@@ -19,7 +19,7 @@ export const Boon: React.FC<BoonProps> = ({ boon, ...props }) => {
         <ul className="mt-4 list-disc ml-6 text-lg">
           <li>
             {boon.scaleLabel}:{" "}
-            <span className="font-bold text-green-400">{boon.scaleValue}</span>
+            <span className="font-bold text-green-400">{boon.scaleValue}</span>            
             {boon.scaleRate && (
               <span className="italic text-gray-300 text-sm ml-1">
                 {typeof boon.scaleRate === 'number' ? (
