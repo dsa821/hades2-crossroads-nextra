@@ -15,10 +15,10 @@ import {
 import { IconEarth, IconHera, IconMagick } from "@/components/icons";
 import { DbBoons } from "@/db";
 
-import FuneralPyre from "@/components/duos/FuneralPyre.mdx";
+import ElementaryParticles from "@/components/duos/ElementaryParticles.mdx";
+import EcstaticObsession from "@/components/duos/EcstaticObsession.mdx";
 import SpitefulStrength from "@/components/duos/SpitefulStrength.mdx";
 import CherishedHeirloom from "@/components/duos/CherishedHeirloom.mdx";
-import SoulMate from "@/components/duos/SoulMate.mdx";
 import GoldenRule from "@/components/duos/GoldenRule.mdx";
 import SunWorshiper from "@/components/duos/SunWorshiper.mdx";
 import QueensRansom from "@/components/duos/QueensRansom.mdx";
@@ -58,18 +58,18 @@ Your **Specials** deal more damage and inflict **Hitch**.
 ### Engagement Ring (Cast) [#engagement-ring]
 
 <Boon boon={DbBoons.Hera.engagementRing}>
-Your **Casts** last **200%** longer and deal damage to _every_ foe that joins the **Encounter**.
+Your **Casts** deal damage and inflict **Hitch** whenever foes join the **Encounter**, anywhere!
 
-- On-Spawn Damage: **70**
+- On-Spawn Damage: **50**
 
 </Boon>
 
 ### Nexus Sprint (Sprint) [#nexus-sprint]
 
 <Boon boon={DbBoons.Hera.nexusSprint}>
-Your **Sprint** inflicts **Hitch** on nearby foes, which spreads to other foes near _them_.
+Your **Sprint** inflicts **Hitch** on contact with foes, and deals damage when it does.
 
-- Additional Foes Hitched: **+1**
+- Damage with Hitch: **60**
 
 </Boon>
 
@@ -78,7 +78,7 @@ Your **Sprint** inflicts **Hitch** on nearby foes, which spreads to other foes n
 <Boon boon={DbBoons.Hera.bornGain}>
 Whenever you run out of <IconMagick />, **Prime** to restore _all_ <IconMagick /> up to the reduced limit.
 
-- Magick Primed: **10**
+- Magick Primed: **20**
 
 </Boon>
 
@@ -94,7 +94,7 @@ While you have at least **3** <IconEarth />, _all_ your **Common Boons** gain **
 </Boon>
 
 <Callout>
-  **Required: 1** <IconEarth />
+  **Required: 2** <IconEarth />
 </Callout>
 
 ### Bridal Glow
@@ -124,12 +124,11 @@ After you take damage, inflict your foe with **Hitch** and deal damage in greate
 
 </Boon>
 
-### Keen Intuition
+### Blood Line
 
-<Boon boon={DbBoons.Hera.keenIntuition}>
-Whenever you use **Ω Moves** while you have **100%** <IconMagick />, they deal more damage.
-
-- Omega Damage: **+30%**
+<Boon boon={DbBoons.Hera.bloodLine}>
+Your **Ω Moves** create a rift that strikes foes in front of and behind you, but use **+15** <IconMagick />
+- Rift Damage: **100**
 
 </Boon>
 
@@ -157,6 +156,7 @@ Your **Hitch** effects deal more damage and last **+5 Sec**.
     boons={[
       DbBoons.Hera.swornStrike,
       DbBoons.Hera.swornFlourish,
+      DbBoons.Hera.engagementRing,
       DbBoons.Hera.nexusSprint,
       DbBoons.Hera.nastyComeback,
     ]}
@@ -178,6 +178,7 @@ Whenever **Hitch**-afflicted foes are slain, damage all other **Hitch**-afflicte
     boons={[
       DbBoons.Hera.swornStrike,
       DbBoons.Hera.swornFlourish,
+      DbBoons.Hera.engagementRing,
       DbBoons.Hera.nexusSprint,
       DbBoons.Hera.nastyComeback,
     ]}
@@ -197,12 +198,26 @@ Automatically use <IconMagick /> to resist up to **50%** of any damage.
 
 <Callout>
   **Required** _(one of the following):_
-  <BoonGrid boons={[DbBoons.Hera.swornStrike, DbBoons.Hera.swornFlourish]} />
+  <BoonGrid
+    boons={[
+      DbBoons.Hera.swornStrike,
+      DbBoons.Hera.swornFlourish,
+      DbBoons.Hera.engagementRing,
+      DbBoons.Hera.nexusSprint,
+    ]}
+  />
 </Callout>
 
 <Callout>
   **Required** _(one of the following):_
-  <BoonGrid boons={[DbBoons.Hera.bornGain, DbBoons.Hera.keenIntuition]} />
+  <BoonGrid
+    boons={[
+      DbBoons.Hera.bridalGlow,
+      DbBoons.Hera.familyTrade,
+      DbBoons.Hera.uncommonGrace,
+      DbBoons.Hera.bloodLine,
+    ]}
+  />
 </Callout>
 
 <Callout>
@@ -212,9 +227,13 @@ Automatically use <IconMagick /> to resist up to **50%** of any damage.
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
 
-### <TextHighlight type="duo">Funeral Pyre</TextHighlight> (Hestia)
+### <TextHighlight type="duo">Elementary Particles</TextHighlight> (Hestia)
 
-<FuneralPyre />
+<ElementaryParticles />
+
+### <TextHighlight type="duo">Ecstatic Obsession</TextHighlight> (Aphrodite)
+
+<EcstaticObsession />
 
 ### <TextHighlight type="duo">Spiteful Strength</TextHighlight> (Hephaestus)
 
@@ -223,10 +242,6 @@ Automatically use <IconMagick /> to resist up to **50%** of any damage.
 ### <TextHighlight type="duo">Cherished Heirloom</TextHighlight> (Demeter)
 
 <CherishedHeirloom />
-
-### <TextHighlight type="duo">Soul Mate</TextHighlight> (Aphrodite)
-
-<SoulMate />
 
 ### <TextHighlight type="duo">Golden Rule</TextHighlight> (Poseidon)
 

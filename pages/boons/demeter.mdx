@@ -15,16 +15,18 @@ import {
 import {
   IconDemeter,
   IconEarth,
+  IconLife,
   IconMagick,
   IconMaxLife,
   IconMysterySeed,
+  IconWater,
 } from "@/components/icons";
 import { DbBoons } from "@/db";
 
-import TorrentialDownpour from "@/components/duos/TorrentialDownpour.mdx";
+import BorealGust from "@/components/duos/BorealGust.mdx";
 import RoomTemperature from "@/components/duos/RoomTemperature.mdx";
 import FreezerBurn from "@/components/duos/FreezerBurn.mdx";
-import ApocalypticStorm from "@/components/duos/ApocalypticStorm.mdx";
+import HailStorm from "@/components/duos/HailStorm.mdx";
 import NaturalSelection from "@/components/duos/NaturalSelection.mdx";
 import CherishedHeirloom from "@/components/duos/CherishedHeirloom.mdx";
 import HeartyAppetite from "@/components/duos/HeartyAppetite.mdx";
@@ -38,7 +40,7 @@ import HeartyAppetite from "@/components/duos/HeartyAppetite.mdx";
 
 <Box className="mt-4">
   **Freeze** _(Curse):_ Afflicted foes are stopped for **2 Sec.** Can be
-  re-applied after **10 Sec.** Lasts **8 Sec.**
+  re-applied after **10 Sec.**
 </Box>
 
 <ElementSummary boons={DbBoons.Demeter} />
@@ -79,7 +81,7 @@ Your **Sprint** forms a **Cyclone** around you that lingers after you stop.
 
 - Cyclone Damage: **4** _(every 0.25 Sec.)_
 
-**Cyclone**: A vortex that makes foes **20%** slower and their ranged shots
+**Cyclone** _(Curse)_: A vortex that makes foes **20%** slower and their ranged shots
 **60%** slower. Lasts **3 Sec.**
 
 </Boon>
@@ -89,23 +91,23 @@ Your **Sprint** forms a **Cyclone** around you that lingers after you stop.
 <Boon boon={DbBoons.Demeter.tranquilGain}>
 After remaining inactive for **1 Sec.**, rapidly restore <IconMagick /> until you act.
 
-- Magick Restoration: **+25** _(every 1 Sec.)_
+- Magick Restoration: **40%** _(every 1 Sec.)_
 
 </Boon>
 
 ## Support
 
-### <TextHighlight type="infusion">Coarse Grit (Infusion)</TextHighlight> [#coarse-grit]
+### <TextHighlight type="infusion">Frosty Veneer (Infusion)</TextHighlight> [#frosty-veneer]
 
-<Boon boon={DbBoons.Demeter.coarseGrit}>
-While you have at least **6** <IconEarth />, you cannot take more damage per hit than the limit.
+<Boon boon={DbBoons.Demeter.frostyVeneer}>
+While you have at least **6** <IconWater />, you cannot take more damage per hit than the limit.
 
 - Max Damage per Hit: **15**
 
 </Boon>
 
 <Callout>
-  **Required: 1** <IconEarth />
+  **Required: 4** <IconWater />
 </Callout>
 
 ### Rare Crop
@@ -114,15 +116,6 @@ While you have at least **6** <IconEarth />, you cannot take more damage per hit
 Your **Boons** become **Common**, then gain **Rarity** every **3 Encounters**.
 
 - Random Boons Affected: **1**
-
-</Boon>
-
-### Local Climate
-
-<Boon boon={DbBoons.Demeter.localClimate}>
-Your **Ω Cast** deals bonus damage and follows you, even as you start to **Channel** it.
-
-- Cast Damage: **+20%**
 
 </Boon>
 
@@ -147,23 +140,39 @@ Whenever you gather plants, seeds, or mushrooms, gain <IconMaxLife />. Receive *
 
 </Boon>
 
-### Winter Coat (Prime) [#winter-coat]
+### Snow Queen (Prime) [#snow-queen]
 
-<Boon boon={DbBoons.Demeter.winterCoat}>
+<Boon boon={DbBoons.Demeter.snowQueen}>
 After you enter a **Location**, **Prime** a barrier that absorbs **1** instance of damage.
 
 - Magick Primed: **20**
 
 </Boon>
 
-### Weed Killer
+### Local Climate
 
-<Boon boon={DbBoons.Demeter.weedKiller}>
-Your **Ω Attack** deals more damage, but uses **+10** <IconMagick />.
+<Boon boon={DbBoons.Demeter.localClimate}>
+Your **Ω Cast** deals bonus damage and follows you, even as you start to **Channel** it.
 
-- Omega Attack Damage: **+50%**
+- Cast Damage: **+20%**
 
 </Boon>
+
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.raptureRing,
+      DbBoons.Apollo.solarRing,
+      DbBoons.Demeter.arcticRing,
+      DbBoons.Hephaestus.anvilRing,
+      DbBoons.Hera.engagementRing,
+      DbBoons.Hestia.smolderRing,
+      DbBoons.Poseidon.tidalRing,
+      DbBoons.Zeus.stormRing,
+    ]}
+  />
+</Callout>
 
 ### Cold Storage
 
@@ -176,7 +185,38 @@ Your **Freeze** effects last longer.
 
 <Callout>
   **Required** _(one of the following):_
-  <BoonGrid boons={[DbBoons.Demeter.iceStrike, DbBoons.Demeter.iceFlourish]} />
+  <BoonGrid
+    boons={[
+      DbBoons.Demeter.iceStrike,
+      DbBoons.Demeter.iceFlourish,
+      DbBoons.Demeter.arcticRing,
+    ]}
+  />
+</Callout>
+
+### Weed Killer
+
+<Boon boon={DbBoons.Demeter.weedKiller}>
+Your **Ω Attack** deals more damage, but uses **+10** <IconMagick />.
+
+- Omega Attack Damage: **+50%**
+
+</Boon>
+
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.flutterStrike,
+      DbBoons.Apollo.novaStrike,
+      DbBoons.Demeter.iceStrike,
+      DbBoons.Hephaestus.volcanicStrike,
+      DbBoons.Hera.swornStrike,
+      DbBoons.Hestia.flameStrike,
+      DbBoons.Poseidon.waveStrike,
+      DbBoons.Zeus.heavenStrike,
+    ]}
+  />
 </Callout>
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
@@ -184,7 +224,7 @@ Your **Freeze** effects last longer.
 ### <TextHighlight type="legendary">Winter Harvest</TextHighlight>
 
 <Boon boon={DbBoons.Demeter.winterHarvest}>
-**Freeze**-afflicted foes shatter at **10% Life**, dealing damage in the area.
+**Freeze**-afflicted foes shatter at **10%** <IconLife />, dealing damage in the area.
 
 - Shatter Area Damage: **100**
 
@@ -192,38 +232,46 @@ Your **Freeze** effects last longer.
 
 <Callout>
   **Required** _(one of the following):_
-  <BoonGrid boons={[DbBoons.Demeter.iceStrike, DbBoons.Demeter.iceFlourish]} />
-</Callout>
-
-<Callout>
-  **Required** _(one of the following):_
   <BoonGrid
-    boons={[DbBoons.Demeter.plentifulForage, DbBoons.Demeter.winterCoat]}
+    boons={[
+      DbBoons.Demeter.iceStrike,
+      DbBoons.Demeter.iceFlourish,
+      DbBoons.Demeter.arcticRing,
+    ]}
   />
 </Callout>
 
 <Callout>
   **Required** _(one of the following):_
-  <BoonGrid boons={[DbBoons.Demeter.weedKiller, DbBoons.Demeter.coldStorage]} />
+  <BoonGrid
+    boons={[
+      DbBoons.Demeter.plentifulForage,
+      DbBoons.Demeter.snowQueen,
+      DbBoons.Demeter.rareCrop,
+    ]}
+  />
+</Callout>
+
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Demeter.weedKiller,
+      DbBoons.Demeter.coldStorage,
+      DbBoons.Demeter.localClimate,
+    ]}
+  />
 </Callout>
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
-
-### <TextHighlight type="duo">Torrential Downpour</TextHighlight> (Apollo)
-
-<TorrentialDownpour />
-
-### <TextHighlight type="duo">Room Temperature</TextHighlight> (Hephaestus)
-
-<RoomTemperature />
 
 ### <TextHighlight type="duo">Freezer Burn</TextHighlight> (Hestia)
 
 <FreezerBurn />
 
-### <TextHighlight type="duo">Apocalyptic Storm</TextHighlight> (Zeus)
+### <TextHighlight type="duo">Room Temperature</TextHighlight> (Hephaestus)
 
-<ApocalypticStorm />
+<RoomTemperature />
 
 ### <TextHighlight type="duo">Natural Selection</TextHighlight> (Poseidon)
 
@@ -236,3 +284,12 @@ Your **Freeze** effects last longer.
 ### <TextHighlight type="duo">Hearty Appetite</TextHighlight> (Aphrodite)
 
 <HeartyAppetite />
+
+### <TextHighlight type="duo">Hail Storm</TextHighlight> (Zeus)
+
+<HailStorm />
+
+### <TextHighlight type="duo">Boreal Gust</TextHighlight> (Apollo)
+
+<BorealGust />
+

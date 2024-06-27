@@ -1,5 +1,7 @@
-import { Boon } from "@/components/Boon";
-import { DbBoons } from '@/db';
+import { Callout } from "nextra/components";
+import { Boon, BoonGrid } from "@/components";
+import { DbBoons } from "@/db";
+
 
 <Boon boon={DbBoons.Duos.islandGetaway}>
 You take less damage from nearby foes. **Boons** of **Aphrodite** treat all foes as nearby.
@@ -8,14 +10,25 @@ You take less damage from nearby foes. **Boons** of **Aphrodite** treat all foes
 
 </Boon>
 
-**Required** _(one of the following from Poseidon):_
+<Callout>
+  **Required** _(one of the following from Poseidon):_
+  <BoonGrid
+    boons={[
+      DbBoons.Poseidon.waveStrike,
+      DbBoons.Poseidon.waveFlourish,
+      DbBoons.Poseidon.tidalRing,
+      DbBoons.Poseidon.breakerSprint,
+      DbBoons.Poseidon.fluidGain,
+    ]}
+  />
+</Callout>
 
-- [Wave Strike](/boons/poseidon#wave-strike)
-- [Wave Flourish](/boons/poseidon#wave-flourish)
-- [Geyser Ring](/boons/poseidon#geyser-ring)
-- [Breaker Sprint](/boons/poseidon#breaker-sprint)
-
-**Required** _(one of the following from Aphrodite):_
-
-- [Flutter Strike](/boons/aphrodite#flutter-strike)
-- [Flutter Flourish](/boons/aphrodite#flutter-flourish)
+<Callout>
+  **Required** _(one of the following from Aphrodite):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.flutterStrike,
+      DbBoons.Aphrodite.flutterFlourish,
+    ]}
+  />
+</Callout>

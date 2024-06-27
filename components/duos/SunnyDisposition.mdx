@@ -1,5 +1,6 @@
-import { Boon } from "@/components/Boon";
-import { DbBoons } from '@/db';
+import { Callout } from "nextra/components";
+import { Boon, BoonGrid } from "@/components";
+import { DbBoons } from "@/db";
 
 <Boon boon={DbBoons.Duos.sunnyDisposition}>
 Whenever you create **Heartthrobs**, create more.
@@ -10,13 +11,24 @@ Whenever you create **Heartthrobs**, create more.
 
 </Boon>
 
-**Required** _(from Aphrodite):_
+<Callout>
+  **Required** _(from Aphrodite):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.heartBreaker,
+    ]}
+  />
+</Callout>
 
-- [Heart Breaker](/boons/aphrodite#heart-breaker)
-
-**Required** _(one of the following from Apollo):_
-
-- [Nova Strike](/boons/apollo#nova-strike)
-- [Nova Flourish](/boons/apollo#nova-flourish)
-- [Solar Ring](/boons/apollo#solar-ring)
-- [Lucid Gain](/boons/apollo#lucid-gain)
+<Callout>
+  **Required** _(one of the following from Apollo):_
+  <BoonGrid
+    boons={[
+      DbBoons.Apollo.novaStrike,
+      DbBoons.Apollo.novaFlourish,
+      DbBoons.Apollo.solarRing,
+      DbBoons.Apollo.blindingSprint,
+      DbBoons.Apollo.lucidGain,
+    ]}
+  />
+</Callout>

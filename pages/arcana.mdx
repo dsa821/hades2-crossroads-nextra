@@ -10,6 +10,7 @@ import { Arcana, TextHighlight } from "@/components";
 import {
   IconDeathDefiance,
   IconGold,
+  IconGrasp,
   IconLife,
   IconMagick,
   IconMaxLife,
@@ -44,19 +45,19 @@ import { DbArcana } from "@/db";
   **Special** deal **+50%** damage.
 </Arcana>
 
-### Death [#death]
+### Night [#night]
 
-<Arcana data={DbArcana.death}>
-  Your **Ω Moves** have **+5%** chance to deal **Critical** damage.
+<Arcana data={DbArcana.night}>
+  Your **Ω Cast** has **+100 Power** whenever it detonates.
+
 </Arcana>
 
-### The Messenger [#messenger]
+### The Moon [#moon]
 
-<Arcana data={DbArcana.messenger}>
-You have **+10%** chance to **Dodge**.
+<Arcana data={DbArcana.moon}>
+Your **Hex** also charges up automatically as though you used **4** <IconMagick /> every **1 Sec.**
 
-**Awakening**: _Activate at least **3** Cards that use the same amount of
-**Grasp**._
+**Awakening**: _Activate **any** surrounding Card. ([Night](/arcana#night), [The Unseen](/arcana#unseen), [Death](/arcana#death))_
 
 </Arcana>
 
@@ -74,24 +75,24 @@ You have **+10%** chance to **Dodge**.
   Gain **+40** <IconMaxLife /> and **+40** <IconMaxMagick />.
 </Arcana>
 
+### The Messenger [#messenger]
+
+<Arcana data={DbArcana.messenger}>
+You have **+5%** chance to **Dodge**.
+
+</Arcana>
+
 ### The Unseen [#unseen]
 
 <Arcana data={DbArcana.unseen}>
-  Restore **4** <IconMagick /> every **1 Sec.**
+  Restore **6** <IconMagick /> every **1 Sec.**
 </Arcana>
 
-### Night [#night]
+### Death [#death]
 
-<Arcana data={DbArcana.night}>
-  Your **Hex** also charges up automatically as though you used **4**
-  <IconMagick /> every **1 Sec.**
-</Arcana>
-
-### The Lovers [#lovers]
-
-<Arcana data={DbArcana.lovers}>
-  In **Guardian Encounters**, you take **0** damage the first **3** time(s) you
-  are hit.
+<Arcana data={DbArcana.death}>
+  Your **Ω Moves** have **+15%** chance to deal **Critical** damage if your last
+  one was different.
 </Arcana>
 
 ## Row 3
@@ -115,21 +116,22 @@ Don't leave home without it. As close to a must-pick as you can get.
 <Arcana data={DbArcana.centaur}>
 After every **5 Locations**, gain **+5** <IconMaxLife /> and **+5** <IconMaxMagick />.
 
-**Awakening**: _Activate Cards that use **1 Grasp** through **5 Grasp**._
+**Awakening**: _Activate Cards that use **1** <IconGrasp /> through **5** <IconGrasp />._
 
 </Arcana>
 
-### The Moon [#moon]
+### Origination [#origination]
 
-<Arcana data={DbArcana.moon}>
-  Your **Ω Cast** has **+100 Power** whenever it detonates.
+<Arcana data={DbArcana.origination}>
+  Deal **+50%** damage to foes afflicted with at least **2 Curse** effects from
+  different Olympians.
 </Arcana>
 
-### Strength [#strength]
+### The Lovers [#lovers]
 
-<Arcana data={DbArcana.strength}>
-  While you have no more than **30%** <IconLife />, you take **-50%** damage and
-  deal **+50%**.
+<Arcana data={DbArcana.lovers}>
+  In **Guardian Encounters**, you take **0** damage the first **3** time(s) you
+  are hit.
 </Arcana>
 
 ## Row 4
@@ -147,10 +149,11 @@ After every **5 Locations**, gain **+5** <IconMaxLife /> and **+5** <IconMaxMagi
   Set forth each night with **+300** <IconGold />.
 </Arcana>
 
-### Origination [#origination]
+### The Artificer [#artificer]
 
-<Arcana data={DbArcana.origination}>
-  Deal **+50%** damage to foes afflicted with at least **2 Curse** effects.
+<Arcana data={DbArcana.artificer}>
+  Set forth each night with **3** chance(s) to turn any **Minor Find** into a
+  random **Major Find**.
 </Arcana>
 
 ### Excellence [#excellence]
@@ -176,7 +179,7 @@ Any **Boons** you are offered have **+10%** chance to be a <TextHighlight type='
 <Arcana data={DbArcana.seer}>
   Set forth each night with +4 <IconReroll />.
 
-**Awakening**: _Activate each surrounding Card. ([The Fates](/arcana#the-fates),
+**Awakening**: _Activate **all** surrounding Cards. ([The Fates](/arcana#the-fates),
 [The Boatman](/arcana#the-boatman), [The Champions](/arcana#the-champions))_
 
 </Arcana>
@@ -188,11 +191,11 @@ Any **Boons** you are offered have **+10%** chance to be a <TextHighlight type='
   certain other choices.
 </Arcana>
 
-### The Artificer [#artificer]
+### Strength [#strength]
 
-<Arcana data={DbArcana.artificer}>
-  Set forth each night with **3** chance(s) to turn any **Minor Find** into a
-  random **Major Find**.
+<Arcana data={DbArcana.strength}>
+  While you have no more than **30%** <IconLife />, you take **-50%** damage and
+  deal **+50%**.
 </Arcana>
 
 ### Divinity [#divinity]
@@ -200,7 +203,7 @@ Any **Boons** you are offered have **+10%** chance to be a <TextHighlight type='
 <Arcana data={DbArcana.divinity}>
   Any **Boons** you are offered have **+20%** chance to be improved to <TextHighlight type='epic'>**Epic**</TextHighlight>.
 
-**Awakening**: _Activate all **5** Cards in any other row._
+**Awakening**: _Activate all **5** Cards in any other row or column._
 
 </Arcana>
 

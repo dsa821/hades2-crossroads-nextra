@@ -22,11 +22,11 @@ import {
 
 import { DbBoons } from "@/db";
 
+import RudeAwakening from "@/components/duos/RudeAwakening.mdx";
 import RoomTemperature from "@/components/duos/RoomTemperature.mdx";
 import ChainReaction from "@/components/duos/ChainReaction.mdx";
 import SpitefulStrength from "@/components/duos/SpitefulStrength.mdx";
-import SoftCaress from "@/components/duos/SoftCaress.mdx";
-import StellarSlam from "@/components/duos/StellarSlam.mdx";
+import LoveHandles from "@/components/duos/LoveHandles.mdx";
 import SeismicHammer from "@/components/duos/SeismicHammer.mdx";
 import MasterConductor from "@/components/duos/MasterConductor.mdx";
 
@@ -58,14 +58,14 @@ Your **Attacks** occasionally create a blast that deals **200** damage in the ar
 <Boon boon={DbBoons.Hephaestus.volcanicFlourish}>
 Your **Specials** occasionally create a blast that deals **400** damage in the area.
 
-- Blast Recharge Time: **+20 Sec.**
+- Blast Recharge Time: **+16 Sec.**
 
 </Boon>
 
 ### Anvil Ring (Cast) [#anvil-ring]
 
 <Boon boon={DbBoons.Hephaestus.anvilRing}>
-Your **Casts** deal damage **3** times in succession, but in a smaller area.
+Your **Casts** deal damage **3** times in succession.
 
 - Cast Damage: **50** _(every 1 Sec.)_
 
@@ -101,7 +101,7 @@ Your **Attack** and **Special** deal more damage for each <IconEarth /> you have
 </Boon>
 
 <Callout>
-  **Required: 1** <IconEarth />
+  **Required: 2** <IconEarth />
 </Callout>
 
 ### Molten Touch
@@ -119,15 +119,6 @@ Your **Attacks** and **Specials** deal bonus damage to **Armor**.
 After you enter a **Location**, **Prime 30** <IconMagick /> to gain <IconArmor /> until the next **Location**.
 
 - Starting Armor: **+10**
-
-</Boon>
-
-### Tough Trade
-
-<Boon boon={DbBoons.Hephaestus.toughTrade}>
-If you take damage during your **Attacks** or **Specials**, they are stronger if they hit.
-
-- Bonus Weapon Damage: **+100%**
 
 </Boon>
 
@@ -158,12 +149,34 @@ Gain bonus <IconMaxLife /> based on your <IconMagick /> limit.
 
 </Boon>
 
+### Grand Caldera
+
+<Boon boon={DbBoons.Hephaestus.grandCaldera}>
+Your blast effects from **Hephaestus** deal more damage and are **50%** larger.
+
+- Bonus Blast Damage: **+50**
+
+</Boon>
+
+<Callout>
+  **Required** _(one of the following)_:
+  <BoonGrid
+    boons={[
+      DbBoons.Hephaestus.volcanicStrike,
+      DbBoons.Hephaestus.volcanicFlourish,
+      DbBoons.Hephaestus.smithySprint,
+    ]}
+  />
+</Callout>
+
 ### Furnace Blast
 
 <Boon boon={DbBoons.Hephaestus.furnaceBlast}>
 Your blast effects from **Hephaestus** also inflict **Vent** on foes.
 
 - Vent Damage: **300**
+
+**Vent** _(Curse)_: After **4 Sec.**, afflicted foes take a burst of damage. Timer resets if re-applied.
 
 </Boon>
 
@@ -193,7 +206,8 @@ Your **Aspect** of the **Nocturnal Arms** is even stronger.
   <BoonGrid
     boons={[
       DbBoons.Hephaestus.volcanicStrike,
-      DbBoons.Hephaestus.volcanicFlourish
+      DbBoons.Hephaestus.volcanicFlourish,
+      DbBoons.Hephaestus.smithySprint
     ]}
   />
 </Callout>
@@ -213,7 +227,7 @@ Your **Aspect** of the **Nocturnal Arms** is even stronger.
   **Required** _(one of the following):_
   <BoonGrid
     boons={[
-      DbBoons.Hephaestus.toughTrade,
+      DbBoons.Hephaestus.grandCaldera,
       DbBoons.Hephaestus.moltenTouch,
       DbBoons.Hephaestus.furnaceBlast,
     ]}
@@ -221,6 +235,10 @@ Your **Aspect** of the **Nocturnal Arms** is even stronger.
 </Callout>
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
+
+### <TextHighlight type="duo">Rude Awakening</TextHighlight> (Apollo)
+
+<RudeAwakening />
 
 ### <TextHighlight type="duo">Room Temperature</TextHighlight> (Demeter)
 
@@ -234,14 +252,6 @@ Your **Aspect** of the **Nocturnal Arms** is even stronger.
 
 <SpitefulStrength />
 
-### <TextHighlight type="duo">Soft Caress</TextHighlight> (Aphrodite)
-
-<SoftCaress />
-
-### <TextHighlight type="duo">Stellar Slam</TextHighlight> (Apollo)
-
-<StellarSlam />
-
 ### <TextHighlight type="duo">Seismic Hammer</TextHighlight> (Poseidon)
 
 <SeismicHammer />
@@ -249,3 +259,7 @@ Your **Aspect** of the **Nocturnal Arms** is even stronger.
 ### <TextHighlight type="duo">Master Conductor</TextHighlight> (Zeus)
 
 <MasterConductor />
+
+### <TextHighlight type="duo">Soft Caress</TextHighlight> (Aphrodite)
+
+<LoveHandles />

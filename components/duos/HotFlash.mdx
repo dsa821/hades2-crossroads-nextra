@@ -1,0 +1,32 @@
+import { Callout } from "nextra/components";
+import { Box, BoonGrid } from "@/components";
+import { DbBoons } from "@/db";
+
+<Box>
+While foes are **Weak**, any **Scorch** they have does not diminish as it deals damage.
+
+- Scorch Duration on Weak Foes: <span className="text-2xl">**∞**</span>
+
+</Box>
+
+<Callout>
+  **Required** _(one of the following from Hestia):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hestia.flameStrike,
+      DbBoons.Hestia.flameFlourish,
+      DbBoons.Hestia.smolderRing,
+    ]}
+  />
+</Callout>
+
+<Callout>
+  **Required** _(one of the following from Aphrodite):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.raptureRing,
+      DbBoons.Aphrodite.passionRush,
+      DbBoons.Aphrodite.glamourGain,
+    ]}
+  />
+</Callout>

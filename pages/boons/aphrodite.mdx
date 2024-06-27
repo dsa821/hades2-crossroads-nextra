@@ -22,11 +22,11 @@ import {
 import { DbBoons } from "@/db";
 
 import IslandGetaway from "@/components/duos/IslandGetaway.mdx";
-import SoftCaress from "@/components/duos/SoftCaress.mdx";
+import HotFlash from "@/components/duos/HotFlash.mdx";
+import LoveHandles from "@/components/duos/LoveHandles.mdx";
 import SunnyDisposition from "@/components/duos/SunnyDisposition.mdx";
 import HeartyAppetite from "@/components/duos/HeartyAppetite.mdx";
-import SoulMate from "@/components/duos/SoulMate.mdx";
-import BurningDesire from "@/components/duos/BurningDesire.mdx";
+import EcstaticObsession from "@/components/duos/EcstaticObsession.mdx";
 import RomanticSpark from "@/components/duos/RomanticSpark.mdx";
 
 # <GreekTitle icon={<IconAphrodite />} name="Aphrodite" />
@@ -36,8 +36,8 @@ import RomanticSpark from "@/components/duos/RomanticSpark.mdx";
 > others on her mountain, yet holds fast to her carefree look and spirit.
 
 <Box className="mt-4">
-  **Weak** _(Curse):_ Afflicted foes deal at least **10%** less damage. Lasts
-  **3 Sec.**
+  **Weak** _(Curse):_ Afflicted foes deal at least **30%** less damage. Lasts
+  **4 Sec.**
 </Box>
 
 <ElementSummary boons={DbBoons.Aphrodite} />
@@ -65,25 +65,25 @@ Your **Specials** deal more damage to nearby foes.
 ### Rapture Ring (Cast) [#rapture-ring]
 
 <Boon boon={DbBoons.Aphrodite.raptureRing}>
-Your **Casts** drag foes in and inflict **Weak**.
+Your **Casts** inflict **Weak**, and damage foes while dragging them toward the center.
 
-- Weak Damage Reduction: **+10%**
+- Cast Daamge: **10** _(every 0.85 Sec.)_
 
 </Boon>
 
-### Passion Dash (Dash) [#passion-dash]
+### Passion Rush (Dash) [#passion-rush]
 
-<Boon boon={DbBoons.Aphrodite.passionDash}>
-Your **Dash** blasts foes near where you start and end, and inflicts **Weak**.
+<Boon boon={DbBoons.Aphrodite.passionRush}>
+**Dashing** damages surrounding foes and inflicts **Weak**, and again once you stop.
 
-- Blast Damage: **20**
+- Area Damage: **20**
 
 </Boon>
 
 ### Glamour Gain (Magick) [#glamour-gain]
 
 <Boon boon={DbBoons.Aphrodite.glamourGain}>
-In each **Encounter**, **1** foe is always **Weak**. You gradually restore <IconMagick /> near **Weak** foes.
+You inflict **Weak** on nearby foes, and gradually restore <IconMagick /> while any nearby foe is **Weak**.
 
 - Magick Restoration: **6** _(every 1 Sec.)_
 
@@ -94,24 +94,15 @@ In each **Encounter**, **1** foe is always **Weak**. You gradually restore <Icon
 ### <TextHighlight type="infusion">Wispy Wiles (Infusion)</TextHighlight> [#wispy-wiles]
 
 <Boon boon={DbBoons.Aphrodite.wispyWiles}>
-While you have at least **4** <IconAir />, you may **Dodge** any damage.
+Gain a chance to **Dodge** for each <IconAir /> you have.
 
-- Dodge Chance: **+15%**
+- Dodge Chance per Air Boon: **+3%**
 
 </Boon>
 
 <Callout>
-  **Required: 1** <IconAir />
+  **Required: 2** <IconAir />
 </Callout>
-
-### Healthy Rebound
-
-<Boon boon={DbBoons.Aphrodite.healthyRebound}>
-Whenever you exit a **Location**, restore **100%** <IconLife /> if you have not lost too much.
-
-- Min Life Required: **80%**
-
-</Boon>
 
 ### Secret Crush
 
@@ -134,7 +125,7 @@ Any <IconMaxLife /> rewards you find have a greater effect.
 ### Shameless Attitude
 
 <Boon boon={DbBoons.Aphrodite.shamelessAttitude}>
-While you have at least **80%** <IconLife />, you deal more damage.
+You deal more damage. While you have at least **80%** <IconLife />, the bonus is doubled.
 
 - High-Life Bonus Damage: **+10%**
 
@@ -152,6 +143,20 @@ Whenever you use **30** <IconMagick />, create a **Heartthrob**.
 
 </Boon>
 
+### Healthy Rebound
+
+<Boon boon={DbBoons.Aphrodite.healthyRebound}>
+Whenever you exit a **Location**, restore **100%** <IconLife /> if you have not lost too much.
+
+- Min Life Required: **80%**
+
+</Boon>
+
+<Callout>
+  **Required**:
+  <BoonGrid boons={[DbBoons.Aphrodite.shamelessAttitude]} />
+</Callout>
+
 ### Broken Resolve
 
 <Boon boon={DbBoons.Aphrodite.brokenResolve}>
@@ -166,7 +171,7 @@ Your **Weak** effects are more potent.
   <BoonGrid
     boons={[
       DbBoons.Aphrodite.raptureRing,
-      DbBoons.Aphrodite.passionDash,
+      DbBoons.Aphrodite.passionRush,
       DbBoons.Aphrodite.glamourGain,
     ]}
   />
@@ -186,7 +191,7 @@ Your **Weak** effects are more potent.
   <BoonGrid
     boons={[
       DbBoons.Aphrodite.raptureRing,
-      DbBoons.Aphrodite.passionDash,
+      DbBoons.Aphrodite.passionRush,
       DbBoons.Aphrodite.glamourGain,
     ]}
   />
@@ -194,28 +199,21 @@ Your **Weak** effects are more potent.
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
-### <TextHighlight type="legendary">Ecstatic Obsession</TextHighlight>
+### <TextHighlight type="legendary">Nervous Wreck</TextHighlight>
 
-<Boon boon={DbBoons.Aphrodite.ecstaticObsession}>
-During **Encounters** with multiple foes, **1** foe is always afflicted with **Charm**.
+<Boon boon={DbBoons.Aphrodite.nervousWreck}>
+Whenever you inflict **Weak**, also randomly inflict other gods' **Curses**.
 
-- Foes Required: **3** _(or more)_
+- Bonus Random Curses: **3**
 
 </Boon>
 
 <Callout>
   **Required** _(one of the following):_
   <BoonGrid
-    boons={[DbBoons.Aphrodite.brokenResolve, DbBoons.Aphrodite.sweetSurrender]}
-  />
-</Callout>
-
-<Callout>
-  **Required** _(one of the following):_
-  <BoonGrid
     boons={[
       DbBoons.Aphrodite.raptureRing,
-      DbBoons.Aphrodite.passionDash,
+      DbBoons.Aphrodite.passionRush,
       DbBoons.Aphrodite.glamourGain,
     ]}
   />
@@ -228,15 +226,31 @@ During **Encounters** with multiple foes, **1** foe is always afflicted with **C
   />
 </Callout>
 
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.brokenResolve,
+      DbBoons.Aphrodite.sweetSurrender,
+      DbBoons.Aphrodite.shamelessAttitude,
+      DbBoons.Aphrodite.secretCrush,
+    ]}
+  />
+</Callout>
+
 ## <TextHighlight type="duo">Duos</TextHighlight>
 
 ### <TextHighlight type="duo">Island Getaway</TextHighlight> (Poseidon)
 
 <IslandGetaway />
 
-### <TextHighlight type="duo">Soft Caress</TextHighlight> (Hephaestus)
+### <TextHighlight type="duo">Hot Flash</TextHighlight> (Hestia)
 
-<SoftCaress />
+<HotFlash />
+
+### <TextHighlight type="duo">Ecstatic Obsession</TextHighlight> (Hera)
+
+<EcstaticObsession />
 
 ### <TextHighlight type="duo">Sunny Disposition</TextHighlight> (Apollo)
 
@@ -246,13 +260,9 @@ During **Encounters** with multiple foes, **1** foe is always afflicted with **C
 
 <HeartyAppetite />
 
-### <TextHighlight type="duo">Soul Mate</TextHighlight> (Hera)
+### <TextHighlight type="duo">Love Handles</TextHighlight> (Hephaestus)
 
-<SoulMate />
-
-### <TextHighlight type="duo">Burning Desire</TextHighlight> (Hestia)
-
-<BurningDesire />
+<LoveHandles />
 
 ### <TextHighlight type="duo">Romantic Spark</TextHighlight> (Zeus)
 

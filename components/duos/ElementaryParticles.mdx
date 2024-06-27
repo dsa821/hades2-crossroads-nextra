@@ -1,0 +1,36 @@
+import { Callout } from "nextra/components";
+import { Box, BoonGrid, TextHighlight } from "@/components";
+import { IconEarth, IconWater, IconAir, IconFire } from "@/components/icons";
+import { DbBoons } from "@/db";
+
+<Box>
+Gain <IconEarth /> <IconWater /> <IconAir /> <IconFire /> **Elements**, and 1 <TextHighlight type="infusion">**Infusion**</TextHighlight> Boon for each.
+- Essences Gained per Element: **+1**
+
+</Box>
+
+<Callout>
+  **Required** _(one of the following from Hera):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hera.swornStrike,
+      DbBoons.Hera.swornFlourish,
+      DbBoons.Hera.engagementRing,
+      DbBoons.Hera.nexusSprint,
+      DbBoons.Hera.bornGain,
+    ]}
+  />
+</Callout>
+
+<Callout>
+  **Required** _(one of the following from Hestia):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hestia.flameStrike,
+      DbBoons.Hestia.flameFlourish,
+      DbBoons.Hestia.smolderRing,
+      DbBoons.Hestia.sootSprint,
+      DbBoons.Hestia.hearthGain,
+    ]}
+  />
+</Callout>

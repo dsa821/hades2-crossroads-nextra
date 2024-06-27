@@ -1,13 +1,6 @@
 import { BoonData } from "models/types";
 
 export const DbBoonsDuos: Record<string, BoonData> = {
-  apocalypticStorm: {
-    name: "Apocalyptic Storm",
-    key: "apocalyptic-storm",
-    god: "duos",
-    type: "duo",
-  },
-
   beachBall: {
     name: "Beach Ball",
     key: "beach-ball",
@@ -36,16 +29,16 @@ export const DbBoonsDuos: Record<string, BoonData> = {
     type: "duo",
   },
 
-  freezerBurn: {
-    name: "Freezer Burn",
-    key: "freezer-burn",
+  elementaryParticles: {
+    name: "ElementaryParticles",
+    key: "elementary-particles",
     god: "duos",
     type: "duo",
   },
 
-  funeralPyre: {
-    name: "Funeral Pyre",
-    key: "funeral-pyre",
+  freezerBurn: {
+    name: "Freezer Burn",
+    key: "freezer-burn",
     god: "duos",
     type: "duo",
   },
@@ -64,6 +57,13 @@ export const DbBoonsDuos: Record<string, BoonData> = {
     type: "duo",
   },
 
+  hailStorm: {
+    name: "Hail Storm",
+    key: "hail-storm",
+    god: "duos",
+    type: "duo",
+  },
+
   heartyAppetite: {
     name: "Hearty Appetite",
     key: "hearty-appetite",
@@ -71,7 +71,7 @@ export const DbBoonsDuos: Record<string, BoonData> = {
     type: "duo",
   },
 
-	islandGetaway: {
+  islandGetaway: {
     name: "Island Getaway",
     key: "island-getaway",
     god: "duos",
@@ -85,12 +85,12 @@ export const DbBoonsDuos: Record<string, BoonData> = {
     type: "duo",
   },
 
-	kingsRansom: {
-		name: "King's Ransom",
-		key: "kings-ransom",
-		god: "duos",
-		type: "duo",
-	},
+  kingsRansom: {
+    name: "King's Ransom",
+    key: "kings-ransom",
+    god: "duos",
+    type: "duo",
+  },
 
   masterConductor: {
     name: "Master Conductor",
@@ -155,9 +155,9 @@ export const DbBoonsDuos: Record<string, BoonData> = {
     type: "duo",
   },
 
-  soulMate: {
-    name: "Soul Mate",
-    key: "soul-mate",
+  ecstaticObsession: {
+    name: "Ecstatic Obsession",
+    key: "ecstatic-obsession",
     god: "duos",
     type: "duo",
   },

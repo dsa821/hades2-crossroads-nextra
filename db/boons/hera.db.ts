@@ -64,9 +64,9 @@ export const DbBoonsHera: Record<string, BoonData> = {
     element: "earth",
   },
 
-  keenIntuition: {
-    name: "Keen Intuition",
-    key: "keen-intuition",
+  bloodLine: {
+    name: "Blood Line",
+    key: "blood-line",
     god: "hera",
     element: "earth",
   },

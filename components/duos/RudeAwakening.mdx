@@ -3,9 +3,9 @@ import { Box, BoonGrid } from "@/components";
 import { DbBoons } from "@/db";
 
 <Box>
-If you use your blast effects from **Hephaestus** just after they recharge, they fire **2** times.
+Your blast effects from **Hephaestus** clear **Daze** and deal more damage if they do.
 
-- Double Blast Timing: **2 Sec.**
+- Bonus Blast Damage: **220**
 
 </Box>
 
@@ -15,19 +15,19 @@ If you use your blast effects from **Hephaestus** just after they recharge, they
     boons={[
       DbBoons.Hephaestus.volcanicStrike,
       DbBoons.Hephaestus.volcanicFlourish,
+      DbBoons.Hephaestus.smithySprint,
     ]}
   />
 </Callout>
 
 <Callout>
-  **Required** _(one of the following from Hestia):_
+  **Required** _(one of the following from Apollo):_
   <BoonGrid
     boons={[
-      DbBoons.Hestia.flameStrike,
-      DbBoons.Hestia.flameFlourish,
-      DbBoons.Hestia.smolderRing,
-      DbBoons.Hestia.sootSprint,
-      DbBoons.Hestia.hearthGain,
+      DbBoons.Apollo.solarRing,
+      DbBoons.Apollo.blindingSprint,
+      DbBoons.Apollo.lightSmite,
+      DbBoons.Apollo.dazzlingDisplay,
     ]}
   />
 </Callout>

@@ -78,9 +78,9 @@ export const DbBoonsApollo: Record<string, BoonData> = {
     element: "fire",
   },
 
-  criticalMiss: {
-    name: "Critical Miss",
-    key: "critical-miss",
+  prominenceFlare: {
+    name: "Prominence Flare",
+    key: "prominence-flare",
     god: "apollo",
     element: "air",
   },

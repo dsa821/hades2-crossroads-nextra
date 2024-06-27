@@ -1,12 +1,11 @@
 import { Callout } from "nextra/components";
 import { Box, BoonGrid } from "@/components";
-import { IconGold } from "@/components/icons";
 import { DbBoons } from "@/db";
 
 <Box>
-You deal more damage the more <IconGold /> you have.
+During **Encounters** with multiple foes, **1** foe is always afflicted with **Charm**.
 
-- Bonus Damage per 100 Gold: **+10%**
+- Foes Required: **2** _(or more)_
 
 </Box>
 
@@ -18,17 +17,18 @@ You deal more damage the more <IconGold /> you have.
       DbBoons.Hera.swornFlourish,
       DbBoons.Hera.engagementRing,
       DbBoons.Hera.nexusSprint,
-      DbBoons.Hera.bornGain,
+      DbBoons.Hera.nastyComeback,
     ]}
   />
 </Callout>
 
 <Callout>
-  **Required** _(one of the following from Poseidon):_
+  **Required** _(one of the following from Aphrodite):_
   <BoonGrid
     boons={[
-      DbBoons.Poseidon.oceansBounty,
-      DbBoons.Poseidon.doubleUp,
+      DbBoons.Aphrodite.raptureRing,
+      DbBoons.Aphrodite.passionRush,
+      DbBoons.Aphrodite.glamourGain,
     ]}
   />
 </Callout>

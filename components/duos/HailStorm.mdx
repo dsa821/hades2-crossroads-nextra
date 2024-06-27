@@ -3,19 +3,21 @@ import { Box, BoonGrid } from "@/components";
 import { DbBoons } from "@/db";
 
 <Box>
-Your blast effects from **Hephaestus** clear **Freeze**, so you **Freeze** foes again right away.
+Your **Freeze** effects also cause lightning bolts to repeatedly strike afflicted foes.
 
-- Freeze Re-Apply Time: **0 Sec.**
+- Lightning Damage: **30** _(every 0.3 Sec.)_
 
 </Box>
 
 <Callout>
-  **Required** _(one of the following from Hephaestus):_
+  **Required** _(one of the following from Zeus):_
   <BoonGrid
     boons={[
-      DbBoons.Hephaestus.volcanicStrike,
-      DbBoons.Hephaestus.volcanicFlourish,
-      DbBoons.Hephaestus.smithySprint,
+      DbBoons.Zeus.heavenStrike,
+      DbBoons.Zeus.heavenStrike,
+      DbBoons.Zeus.stormRing,
+      DbBoons.Zeus.thunderSprint,
+      DbBoons.Zeus.ionicGain,
     ]}
   />
 </Callout>

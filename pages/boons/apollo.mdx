@@ -16,10 +16,10 @@ import { IconApollo, IconFire, IconLife, IconMagick } from "@/components/icons";
 import { DbBoons } from "@/db";
 
 import GloriousDisaster from "@/components/duos/GloriousDisaster.mdx";
-import TorrentialDownpour from "@/components/duos/TorrentialDownpour.mdx";
+import BorealGust from "@/components/duos/BorealGust.mdx";
 import PhoenixSkin from "@/components/duos/PhoenixSkin.mdx";
 import SunnyDisposition from "@/components/duos/SunnyDisposition.mdx";
-import StellarSlam from "@/components/duos/StellarSlam.mdx";
+import RudeAwakening from "@/components/duos/RudeAwakening.mdx";
 import BeachBall from "@/components/duos/BeachBall.mdx";
 import SunWorshiper from "@/components/duos/SunWorshiper.mdx";
 
@@ -60,9 +60,9 @@ Your **Specials** deal more damage in a larger area.
 ### Solar Ring (Cast) [#solar-ring]
 
 <Boon boon={DbBoons.Apollo.solarRing}>
-After your **Ω Cast** expires, rapidly deal damage in the area for **2 Sec.**
+Your **Casts** inflict **Daze**, and deal a burst of damage before they expire.
 
-- Omega Cast Damage: **10** _(every 0.13 Sec.)_
+- Cast Damage: **60**
 
 </Boon>
 
@@ -71,16 +71,16 @@ After your **Ω Cast** expires, rapidly deal damage in the area for **2 Sec.**
 <Boon boon={DbBoons.Apollo.blindingSprint}>
 Your **Sprint** is faster and inflicts **Daze** on nearby foes.
 
-- Sprint Speed: **+30%**
+- Sprint Speed: **+15%**
 
 </Boon>
 
 ### Lucid Gain (Magick) [#lucid-gain]
 
 <Boon boon={DbBoons.Apollo.lucidGain}>
-While standing in your **Casts**, gradually restore <IconMagick />.
+If you stand in your **Casts** when they expire, immediately restore <IconMagick />.
 
-- Magick Restoration: **+12** _(every 1 Sec.)_
+- Magick Restoration: **50**
 
 </Boon>
 
@@ -96,7 +96,7 @@ While you have at least **3** <IconFire />, whenever you take damage, restore so
 </Boon>
 
 <Callout>
-  **Required: 1** <IconFire />
+  **Required: 2** <IconFire />
 </Callout>
 
 ### Super Nova
@@ -117,19 +117,10 @@ After you take damage, your foe takes damage and you inflict **Daze** on _all_ f
 
 </Boon>
 
-### Extra Dose
-
-<Boon boon={DbBoons.Apollo.extraDose}>
-Your **Attack** has a chance to hit **2** times.
-
-- Double Strike Chance: **+5%**
-
-</Boon>
-
 ### Perfect Image
 
 <Boon boon={DbBoons.Apollo.perfectImage}>
-In each **Encounter**, you deal more damage until you take damage.
+In each **Encounter**, you deal more damage until you take damage. If you take no more for **15 Sec.**, regain this.
 
 - No-Hit Bonus Damage: **+10%**
 
@@ -148,6 +139,7 @@ Foes with **Daze** take more damage if struck from behind.
   **Required**: _(one of the following):_
   <BoonGrid
     boons={[
+      DbBoons.Apollo.solarRing,
       DbBoons.Apollo.blindingSprint,
       DbBoons.Apollo.lightSmite,
       DbBoons.Apollo.dazzlingDisplay,
@@ -155,22 +147,27 @@ Foes with **Daze** take more damage if struck from behind.
   />
 </Callout>
 
-### Critical Miss
+### Prominence Flare
 
-<Boon boon={DbBoons.Apollo.criticalMiss}>
-Foes take damage whenever **Daze** causes them to miss.
+<Boon boon={DbBoons.Apollo.prominenceFlare}>
+After your **Ω Cast** expires, rapidly deal damage in the area for **2 Sec.**
 
-- Miss Damage: **100**
+- Omega Cast Damage: **10** _(every 0.13 Sec.)_
 
 </Boon>
 
 <Callout>
-  **Required**: _(one of the following):_
+  **Required** _(one of the following):_
   <BoonGrid
     boons={[
-      DbBoons.Apollo.blindingSprint,
-      DbBoons.Apollo.lightSmite,
-      DbBoons.Apollo.dazzlingDisplay,
+      DbBoons.Aphrodite.raptureRing,
+      DbBoons.Apollo.solarRing,
+      DbBoons.Demeter.arcticRing,
+      DbBoons.Hephaestus.anvilRing,
+      DbBoons.Hera.engagementRing,
+      DbBoons.Hestia.smolderRing,
+      DbBoons.Poseidon.tidalRing,
+      DbBoons.Zeus.stormRing,
     ]}
   />
 </Callout>
@@ -187,6 +184,31 @@ Your **Attacks** may inflict **Daze**.
 <Callout>
   **Required**:
   <BoonGrid boons={[DbBoons.Apollo.novaStrike]} />
+</Callout>
+
+### Extra Dose
+
+<Boon boon={DbBoons.Apollo.extraDose}>
+Your **Attack** has a chance to hit **2** times.
+
+- Double Strike Chance: **+5%**
+
+</Boon>
+
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.flutterStrike,
+      DbBoons.Apollo.novaStrike,
+      DbBoons.Demeter.iceStrike,
+      DbBoons.Hephaestus.volcanicStrike,
+      DbBoons.Hera.swornStrike,
+      DbBoons.Hestia.flameStrike,
+      DbBoons.Poseidon.waveStrike,
+      DbBoons.Zeus.heavenStrike,
+    ]}
+  />
 </Callout>
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
@@ -207,12 +229,25 @@ Your **Ω Attack** and **Ω Special** fire **2** more times, but use more <IconM
 
 <Callout>
   **Required** _(one of the following):_
-  <BoonGrid boons={[DbBoons.Apollo.solarRing, DbBoons.Apollo.lucidGain]} />
+  <BoonGrid
+    boons={[
+      DbBoons.Apollo.solarRing,
+      DbBoons.Apollo.blindingSprint,
+      DbBoons.Apollo.lucidGain,
+    ]}
+  />
 </Callout>
 
 <Callout>
   **Required** _(one of the following):_
-  <BoonGrid boons={[DbBoons.Apollo.extraDose, DbBoons.Apollo.superNova]} />
+  <BoonGrid
+    boons={[
+      DbBoons.Apollo.extraDose,
+      DbBoons.Apollo.superNova,
+      DbBoons.Apollo.backBurner,
+      DbBoons.Apollo.prominenceFlare,
+    ]}
+  />
 </Callout>
 
 ## <TextHighlight type="duo">Duos</TextHighlight>
@@ -221,9 +256,9 @@ Your **Ω Attack** and **Ω Special** fire **2** more times, but use more <IconM
 
 <GloriousDisaster />
 
-### <TextHighlight type="duo">Torrential Downpour</TextHighlight> (Demeter)
+### <TextHighlight type="duo">Rude Awakening</TextHighlight> (Hephaestus)
 
-<TorrentialDownpour />
+<RudeAwakening />
 
 ### <TextHighlight type="duo">Phoenix Skin</TextHighlight> (Hestia)
 
@@ -233,10 +268,6 @@ Your **Ω Attack** and **Ω Special** fire **2** more times, but use more <IconM
 
 <SunnyDisposition />
 
-### <TextHighlight type="duo">Stellar Slam</TextHighlight> (Hephaestus)
-
-<StellarSlam />
-
 ### <TextHighlight type="duo">Beach Ball</TextHighlight> (Poseidon)
 
 <BeachBall />
@@ -244,3 +275,7 @@ Your **Ω Attack** and **Ω Special** fire **2** more times, but use more <IconM
 ### <TextHighlight type="duo">Sun Worshiper</TextHighlight> (Hera)
 
 <SunWorshiper />
+
+### <TextHighlight type="duo">Boreal Gust</TextHighlight> (Demeter)
+
+<BorealGust />

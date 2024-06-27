@@ -1,18 +1,46 @@
-import { Box } from "@/components";
+import { Callout } from "nextra/components";
+import { Box, BoonGrid } from "@/components";
+import { DbBoons } from "@/db";
 
 <Box>
 Your **Sprint** creates a watery sphere behind you. After you stop, it surges ahead and bursts.
 
-- Blast Damage: **140**
+- Blast Damage: **300**
 
 </Box>
 
-**Required** _(one of the following from Apollo):_
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Apollo.blindingSprint,
+      DbBoons.Poseidon.breakerSprint,
+    ]}
+  />
+</Callout>
 
-- [Blinding Sprint](/boons/apollo#blinding-sprint)
-- [Lucid Gain](/boons/apollo#lucid-gain)
+<Callout>
+  **Required** _(one of the following from Apollo):_
+  <BoonGrid
+    boons={[
+      DbBoons.Apollo.novaStrike,
+      DbBoons.Apollo.novaFlourish,
+      DbBoons.Apollo.solarRing,
+      DbBoons.Apollo.blindingSprint,
+      DbBoons.Apollo.lucidGain,
+    ]}
+  />
+</Callout>
 
-**Required** _(one of the following from Poseidon):_
-
-- [Breaker Sprint](/boons/poseidon#breaker-sprint)
-- [Fluid Gain](/boons/poseidon#fluid-gain)
+<Callout>
+  **Required** _(one of the following from Poseidon):_
+  <BoonGrid
+    boons={[
+      DbBoons.Poseidon.waveStrike,
+      DbBoons.Poseidon.waveFlourish,
+      DbBoons.Poseidon.tidalRing,
+      DbBoons.Poseidon.breakerSprint,
+      DbBoons.Poseidon.fluidGain,
+    ]}
+  />
+</Callout>

@@ -12,8 +12,9 @@ import {
   IconHealing,
   IconLife,
   IconMagick,
+  IconMaxLife,
 } from "@/components/icons";
-import { DbKeepsakes } from '@/db';
+import { DbKeepsakes } from "@/db";
 
 # Keepsakes
 
@@ -37,8 +38,8 @@ import { DbKeepsakes } from '@/db';
 ### White Antler
 
 <CodexEntry data={DbKeepsakes.whiteAntler}>
-  While you have no more than **30** <IconLife />, you have **+40%** chance to
-  deal **Critical** damage.
+  For the next **Region**, gain **+30%** chance to deal **Critical** damage, but
+  you have **30** <IconMaxLife />.
 </CodexEntry>
 
 ### Lion Fang
@@ -114,21 +115,22 @@ import { DbKeepsakes } from '@/db';
 ### Moon Beam
 
 <CodexEntry data={DbKeepsakes.moonBeam}>
-  You gain **+5** upgrades for your **Hex** from the next **Path of Stars** you
-  find.
+  A reward from **Selene** is likely. The next **Path of Stars** you find grants
+  **+5** upgrades.
 </CodexEntry>
 
 ### Crystal Figurine
 
 <CodexEntry data={DbKeepsakes.crystalFigurine}>
-  After the next **Guardian**, activate **3** random **Arcana Cards**.
+  After the next **Guardian**, activate **1** random Rank 3 **Arcana Card**.
 </CodexEntry>
 
 ### Aromatic Phial
 
 <CodexEntry data={DbKeepsakes.aromaticPhial}>
-  **Fountains** restore **+20%** <IconLife />. The next makes **1** random **Common
-  Boon** of yours <TextHighlight type="heroic">**Heroic**</TextHighlight>.
+  **Fountains** restore **+20%** <IconLife />. The next makes **1** random
+  **Common Boon** of yours{" "}
+  <TextHighlight type="heroic">**Heroic**</TextHighlight>.
 </CodexEntry>
 
 ### Concave Stone

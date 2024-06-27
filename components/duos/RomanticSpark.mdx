@@ -1,5 +1,6 @@
-import { Boon } from "@/components/Boon";
-import { DbBoons } from '@/db';
+import { Callout } from "nextra/components";
+import { Boon, BoonGrid } from "@/components";
+import { DbBoons } from "@/db";
 
 <Boon boon={DbBoons.Duos.romanticSpark}>
 If you **Sprint** into **Blitz**-afflicted foes, the effect activates immediately and is stronger.
@@ -8,14 +9,25 @@ If you **Sprint** into **Blitz**-afflicted foes, the effect activates immediatel
 
 </Boon>
 
-**Required** _(one of the following from Zeus):_
+<Callout>
+  **Required** _(one of the following from Zeus):_
+  <BoonGrid
+    boons={[
+      DbBoons.Zeus.heavenStrike,
+      DbBoons.Zeus.heavenStrike,
+    ]}
+  />
+</Callout>
 
-- [Heaven Strike](/boons/zeus#heaven-strike)
-- [Heaven Flourish](/boons/zeus#heaven-flourish)
-
-**Required** _(one of the following from Aphrodite):_
-
-- [Passion Dash](/boons/aphrodite#passion-dash)
-- [Flutter Strike](/boons/aphrodite#flutter-strike)
-- [Flutter Flourish](/boons/aphrodite#flutter-flourish)
-- [Rapture Ring](/boons/aphrodite#rapture-ring)
+<Callout>
+  **Required** _(one of the following from Aphrodite):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.flutterStrike,
+      DbBoons.Aphrodite.flutterFlourish,
+      DbBoons.Aphrodite.raptureRing,
+      DbBoons.Aphrodite.passionRush,
+      DbBoons.Aphrodite.glamourGain,
+    ]}
+  />
+</Callout>

@@ -1,20 +1,28 @@
-import { Box } from "@/components";
+import { Callout } from "nextra/components";
+import { Box, BoonGrid } from "@/components";
+import { DbBoons } from "@/db";
 
 <Box>
 Your chain lightning deals more damage per bounce and can bounce to you.
 
-- Damage per Bounce: **+15%**
+- Damage per Bounce: **+20%**
 
 </Box>
 
-**Required** _(from Zeus):_
+<Callout>
+  **Required** _(one of the following from Zeus):_
+  <BoonGrid boons={[DbBoons.Zeus.staticShock, DbBoons.Zeus.electricOverload]} />
+</Callout>
 
-- [Static Shock](/boons/zeus#static-shock)
-
-**Required** _(one of the following from Hephaestus):_
-
-- [Fixed Gain](/boons/hephaestus#fixed-gain)
-- [Trusty Shield](/boons/hephaestus#trusty-shield)
-- [Heavy Metal](/boons/hephaestus#heavy-metal)
-- [Mint Condition](/boons/hephaestus#mint-condition)
-- [Tough Trade](/boons/hephaestus#tough-trade)
+<Callout>
+  **Required** _(one of the following from Hephaestus):_
+  <BoonGrid
+    boons={[
+      DbBoons.Hephaestus.volcanicStrike,
+      DbBoons.Hephaestus.volcanicFlourish,
+      DbBoons.Hephaestus.anvilRing,
+      DbBoons.Hephaestus.smithySprint,
+      DbBoons.Hephaestus.fixedGain,
+    ]}
+  />
+</Callout>

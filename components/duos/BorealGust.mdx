@@ -1,21 +1,24 @@
 import { Callout } from "nextra/components";
 import { Box, BoonGrid } from "@/components";
 import { DbBoons } from "@/db";
+import { IconMagick } from '@/components/icons';
 
 <Box>
-Your blast effects from **Hephaestus** clear **Freeze**, so you **Freeze** foes again right away.
+While standing in a **Cyclone**, you randomly fire gales every **0.3 Sec.**
 
-- Freeze Re-Apply Time: **0 Sec.**
+- Gale Damage: **70** _(every 0.5 Sec)_
 
 </Box>
 
 <Callout>
-  **Required** _(one of the following from Hephaestus):_
+  **Required** _(one of the following from Zeus):_
   <BoonGrid
     boons={[
-      DbBoons.Hephaestus.volcanicStrike,
-      DbBoons.Hephaestus.volcanicFlourish,
-      DbBoons.Hephaestus.smithySprint,
+      DbBoons.Zeus.heavenStrike,
+      DbBoons.Zeus.heavenFlourish,
+      DbBoons.Zeus.stormRing,
+      DbBoons.Zeus.thunderSprint,
+      DbBoons.Zeus.ionicGain,
     ]}
   />
 </Callout>
