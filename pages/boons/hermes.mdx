@@ -11,16 +11,7 @@ import {
   GreekTitle,
   TextHighlight,
 } from "@/components";
-import {
-  IconHermes,
-  IconGold,
-  IconLife,
-  IconMagick,
-  IconAir,
-  IconFire,
-  IconEarth,
-  IconWater,
-} from "@/components/icons";
+import { IconHermes } from "@/components/icons";
 
 import { DbBoons } from "@/db";
 
@@ -35,121 +26,53 @@ import { DbBoons } from "@/db";
 
 ### <TextHighlight type="infusion">Tall Order (Infusion)</TextHighlight> [#tall-order]
 
-<Boon boon={DbBoons.Hermes.tallOrder}>
-While you have at least **2** each of <IconEarth /> <IconWater /> <IconAir /> <IconFire /> **Elements**, you deal more damage.
-
-- Infused Damage: **+20%**
-
-</Boon>
+<Boon boon={DbBoons.Hermes.tallOrder} />
 
 ### Greater Evasion
 
-<Boon boon={DbBoons.Hermes.greaterEvasion}>
-Whenever you are struck, you may **Dodge** any damage.
-
-- Dodge Chance: **+10%**
-
-</Boon>
+<Boon boon={DbBoons.Hermes.greaterEvasion} />
 
 ### Saved Breath
 
-<Boon boon={DbBoons.Hermes.savedBreath}>
-Your **Ω Cast** uses less <IconMagick />.
-
-- Omega Cast Cost: **-50%**
-
-</Boon>
+<Boon boon={DbBoons.Hermes.savedBreath} />
 
 ### Nimble Mind
 
-<Boon boon={DbBoons.Hermes.nimbleMind}>
-Your **Ω Moves** are faster.
-
-- Omega Move Speed: **+15%**
-
-</Boon>
+<Boon boon={DbBoons.Hermes.nimbleMind} />
 
 ### Nimble Limbs
 
-<Boon boon={DbBoons.Hermes.nimbleLimbs}>
-
-Your **Attack**, **Special**, and **Cast** are faster.
-
-- Strike Speed: **+10%**
-
-</Boon>
+<Boon boon={DbBoons.Hermes.nimbleLimbs} />
 
 ### Midnight Oil
 
-<Boon boon={DbBoons.Hermes.midnightOil}>
-
-While your **Hex** is ready, you move and strike faster.
-
-- Bonus Move & Weapon Speed: **+15%**
-
-</Boon>
+<Boon boon={DbBoons.Hermes.midnightOil} />
 
 ### Quick Buck
 
-<Boon boon={DbBoons.Hermes.quickBuck}>
-
-You find <IconGold /> in greater quantities. Receive **100** <IconGold /> now, plus the bonus!
-
-- Bonus Gold: **+20%**
-
-</Boon>
+<Boon boon={DbBoons.Hermes.quickBuck} />
 
 ### Hard Target
 
-<Boon boon={DbBoons.Hermes.hardTarget}>
-
-Most foes' ranged shots are slower.
-
-- Foe Projectile Speed: **-30%**
-
-</Boon>
+<Boon boon={DbBoons.Hermes.hardTarget} />
 
 ### Witty Retort
 
-<Boon boon={DbBoons.Hermes.wittyRetort}>
-
-Your **Hex** requires using less <IconMagick /> before it is ready.
-
-- Reduced Magick Cost: **-15%**
-
-</Boon>
+<Boon boon={DbBoons.Hermes.wittyRetort} />
 
 ### Nitro Boost
 
-<Boon boon={DbBoons.Hermes.nitroBoost}>
-
-Your **Sprint** is **15%** faster and gives you a barrier that ignores instances of damage.
-
-- Hits Blocked per Encounter: **1**
-
-</Boon>
+<Boon boon={DbBoons.Hermes.nitroBoost} />
 
 ### Mean Streak
 
-<Boon boon={DbBoons.Hermes.meanStreak}>
-
-Each time you slay a foe, deal more damage for the next **30 Sec**.
-
-- Bonus Damage per Slain Foe: **+1%**
-
-</Boon>
+<Boon boon={DbBoons.Hermes.meanStreak} />
 
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
 ### <TextHighlight type="legendary">Close Call</TextHighlight>
 
-<Boon boon={DbBoons.Hermes.closeCall}>
-
-Gain **+1** use of **Death Defiance** that makes everything else move **90%** slower.
-
-- Slow Duration: **8 Sec.**
-
-</Boon>
+<Boon boon={DbBoons.Hermes.closeCall} />
 
 <Callout>
   **Required** _(one of the following):_
