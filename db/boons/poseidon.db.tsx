@@ -64,7 +64,7 @@ export const DbBoonsPoseidon: Record<string, BoonData> = {
     desc: (
       <>
         Your <strong>Sprint</strong> deals damage on impact and knocks foes
-        away, but uses <strong>5</strong> <IconMagick /> per hit.
+        away, but uses <IconMagick value="5" /> per hit.
       </>
     ),
     scaleLabel: "Impact Damage",
@@ -86,9 +86,8 @@ export const DbBoonsPoseidon: Record<string, BoonData> = {
     scaleValue: "10%",
     descExtra: (
       <>
-        <strong>Spirit Bubble</strong>: Restores <strong>20</strong>{" "}
-        <IconMagick /> when you touch it. Expires when used, or after{" "}
-        <strong>30 Sec.</strong>
+        <strong>Spirit Bubble</strong>: Restores <IconMagick value="20" /> when
+        you touch it. Expires when used, or after <strong>30 Sec.</strong>
       </>
     ),
   },
@@ -145,8 +144,8 @@ export const DbBoonsPoseidon: Record<string, BoonData> = {
     element: "water",
     desc: (
       <>
-        After you enter a <strong>Location</strong>, <strong>Prime 30</strong>{" "}
-        <IconMagick /> to reduce any damage you would take.
+        After you enter a <strong>Location</strong>, <strong>Prime</strong>{" "}
+        <IconMagick value="30" /> to reduce any damage you would take.
       </>
     ),
     scaleLabel: "Damage Reduction per Hit",
@@ -222,8 +221,8 @@ export const DbBoonsPoseidon: Record<string, BoonData> = {
     type: "legendary",
     desc: (
       <>
-        Your splash effects from <strong>Poseidon</strong> are larger and deal bonus damage
-        to <strong>Guardians</strong>.
+        Your splash effects from <strong>Poseidon</strong> are larger and deal
+        bonus damage to <strong>Guardians</strong>.
       </>
     ),
     scaleLabel: "Splash Damage vs. Guardians",

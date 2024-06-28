@@ -213,7 +213,7 @@ export const DbBoonsDemeter: Record<string, BoonData> = {
     desc: (
       <>
         Your <strong>Ω Attack</strong> deals more damage, but uses{" "}
-        <strong>+10</strong> <IconMagick />.
+        <IconMagick value="+10" />.
       </>
     ),
     scaleLabel: "Omega Attack Damage",

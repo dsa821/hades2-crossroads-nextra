@@ -1,5 +1,13 @@
 import { IconBase } from "./IconBase";
 
-export const IconMagick = () => {
-  return <IconBase iconKey="magick" />;
+type Props = {
+  value?: string;
+};
+export const IconMagick: React.FC<Props> = ({ value }) => {
+  return (
+    <>
+      {value && <span className="font-bold text-blue-500">{value}</span>}
+      <IconBase iconKey="magick" />
+    </>
+  );
 };

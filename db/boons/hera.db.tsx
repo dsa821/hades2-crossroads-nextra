@@ -154,7 +154,7 @@ export const DbBoonsHera: Record<string, BoonData> = {
     desc: (
       <>
         Your <strong>Ω Moves</strong> create a rift that strikes foes in front
-        of and behind you, but use <strong>+15</strong> <IconMagick />.
+        of and behind you, but use <IconMagick value="+15" />.
       </>
     ),
     scaleLabel: "Rift Damage",

@@ -54,7 +54,7 @@ export const DbBoonsZeus: Record<string, BoonData> = {
     desc: (
       <>
         Your <strong>Sprint</strong> causes nearby foes to be struck by
-        lightning bolts, which use <strong>3</strong> <IconMagick /> each.
+        lightning bolts, which use <IconMagick value="3" /> each.
       </>
     ),
     scaleLabel: "Bolt Damage",
@@ -125,8 +125,8 @@ export const DbBoonsZeus: Record<string, BoonData> = {
     element: "air",
     desc: (
       <>
-        After you enter a <strong>Location</strong>, <strong>Prime 50</strong>{" "}
-        <IconMagick /> to make your strikes emit chain-lightning.
+        After you enter a <strong>Location</strong>, <strong>Prime</strong>{" "}
+        <IconMagick value="50" /> to make your strikes emit chain-lightning.
       </>
     ),
     scaleLabel: "Lightning Damage",
@@ -140,8 +140,8 @@ export const DbBoonsZeus: Record<string, BoonData> = {
     element: "air",
     desc: (
       <>
-        While you have no more than <strong>10</strong> <IconMagick />,{" "}
-        <em>all</em> foes are occasionally struck by lightning.
+        While you have no more than <IconMagick value="10" />, <em>all</em> foes
+        are occasionally struck by lightning.
       </>
     ),
     scaleLabel: "Bolt Damage",
