@@ -15,10 +15,6 @@ import {
 import {
   IconDemeter,
   IconEarth,
-  IconLife,
-  IconMagick,
-  IconMaxLife,
-  IconMysterySeed,
   IconWater,
 } from "@/components/icons";
 import { DbBoons } from "@/db";
@@ -49,62 +45,32 @@ import HeartyAppetite from "@/components/duos/HeartyAppetite.mdx";
 
 ### Ice Strike (Attack) [#ice-strike]
 
-<Boon boon={DbBoons.Demeter.iceStrike}>
-Your **Attacks** deal more damage and inflict **Freeze**.
-
-- Attack Damage: **+30%**
-
-</Boon>
+<Boon boon={DbBoons.Demeter.iceStrike} />
 
 ### Ice Flourish (Special) [#ice-flourish]
 
-<Boon boon={DbBoons.Demeter.iceFlourish}>
-Your **Specials** deal more damage and inflict **Freeze**.
-
-- Special Damage: **+40%**
-
-</Boon>
+<Boon boon={DbBoons.Demeter.iceFlourish} />
 
 ### Arctic Ring (Cast) [#arctic-ring]
 
-<Boon boon={DbBoons.Demeter.arcticRing}>
-Your **Casts** repeatedly deal damage in the area and inflict **Freeze**.
-
-- Cast Damage: **10** _(every 0.5 Sec.)_
-
-</Boon>
+<Boon boon={DbBoons.Demeter.arcticRing} />
 
 ### Frigid Sprint (Sprint) [#frigid-sprint]
 
 <Boon boon={DbBoons.Demeter.frigidSprint}>
-Your **Sprint** forms a **Cyclone** around you that lingers after you stop.
 
-- Cyclone Damage: **4** _(every 0.25 Sec.)_
-
-**Cyclone** _(Curse)_: A vortex that makes foes **20%** slower and their ranged shots
-**60%** slower. Lasts **3 Sec.**
 
 </Boon>
 
 ### Tranquil Gain (Magick) [#tranquil-gain]
 
-<Boon boon={DbBoons.Demeter.tranquilGain}>
-After remaining inactive for **1 Sec.**, rapidly restore <IconMagick /> until you act.
-
-- Magick Restoration: **40%** _(every 1 Sec.)_
-
-</Boon>
+<Boon boon={DbBoons.Demeter.tranquilGain} />
 
 ## Support
 
 ### <TextHighlight type="infusion">Frosty Veneer (Infusion)</TextHighlight> [#frosty-veneer]
 
-<Boon boon={DbBoons.Demeter.frostyVeneer}>
-While you have at least **6** <IconWater />, you cannot take more damage per hit than the limit.
-
-- Max Damage per Hit: **15**
-
-</Boon>
+<Boon boon={DbBoons.Demeter.frostyVeneer} />
 
 <Callout>
   **Required: 4** <IconWater />
@@ -112,51 +78,23 @@ While you have at least **6** <IconWater />, you cannot take more damage per hit
 
 ### Rare Crop
 
-<Boon boon={DbBoons.Demeter.rareCrop}>
-Your **Boons** become **Common**, then gain **Rarity** every **3 Encounters**.
-
-- Random Boons Affected: **1**
-
-</Boon>
+<Boon boon={DbBoons.Demeter.rareCrop} />
 
 ### Gale Force
 
-<Boon boon={DbBoons.Demeter.galeForce}>
-Your **Casts** also create a **Cyclone** at the binding circle.
-
-- Cyclone Damage: **4** _(every 0.25 Sec.)_
-
-**Cyclone**: A vortex that makes foes **20%** slower and their ranged shots
-**60%** slower. Lasts **3 Sec.**
-
-</Boon>
+<Boon boon={DbBoons.Demeter.galeForce} />
 
 ### Plentiful Forage
 
-<Boon boon={DbBoons.Demeter.plentifulForage}>
-Whenever you gather plants, seeds, or mushrooms, gain <IconMaxLife />. Receive **1** <IconMysterySeed /> now.
-
-- Max Life from Gathering: **5**
-
-</Boon>
+<Boon boon={DbBoons.Demeter.plentifulForage} />
 
 ### Snow Queen (Prime) [#snow-queen]
 
-<Boon boon={DbBoons.Demeter.snowQueen}>
-After you enter a **Location**, **Prime** a barrier that absorbs **1** instance of damage.
-
-- Magick Primed: **20**
-
-</Boon>
+<Boon boon={DbBoons.Demeter.snowQueen} />
 
 ### Local Climate
 
-<Boon boon={DbBoons.Demeter.localClimate}>
-Your **Ω Cast** deals bonus damage and follows you, even as you start to **Channel** it.
-
-- Cast Damage: **+20%**
-
-</Boon>
+<Boon boon={DbBoons.Demeter.localClimate} />
 
 <Callout>
   **Required** _(one of the following):_
@@ -176,12 +114,7 @@ Your **Ω Cast** deals bonus damage and follows you, even as you start to **Chan
 
 ### Cold Storage
 
-<Boon boon={DbBoons.Demeter.coldStorage}>
-Your **Freeze** effects last longer.
-
-- Freeze Duration: **+ 2 Sec.**
-
-</Boon>
+<Boon boon={DbBoons.Demeter.coldStorage} />
 
 <Callout>
   **Required** _(one of the following):_
@@ -196,12 +129,7 @@ Your **Freeze** effects last longer.
 
 ### Weed Killer
 
-<Boon boon={DbBoons.Demeter.weedKiller}>
-Your **Ω Attack** deals more damage, but uses **+10** <IconMagick />.
-
-- Omega Attack Damage: **+50%**
-
-</Boon>
+<Boon boon={DbBoons.Demeter.weedKiller} />
 
 <Callout>
   **Required** _(one of the following):_
@@ -223,12 +151,7 @@ Your **Ω Attack** deals more damage, but uses **+10** <IconMagick />.
 
 ### <TextHighlight type="legendary">Winter Harvest</TextHighlight>
 
-<Boon boon={DbBoons.Demeter.winterHarvest}>
-**Freeze**-afflicted foes shatter at **10%** <IconLife />, dealing damage in the area.
-
-- Shatter Area Damage: **100**
-
-</Boon>
+<Boon boon={DbBoons.Demeter.winterHarvest} />
 
 <Callout>
   **Required** _(one of the following):_
@@ -292,4 +215,3 @@ Your **Ω Attack** deals more damage, but uses **+10** <IconMagick />.
 ### <TextHighlight type="duo">Boreal Gust</TextHighlight> (Apollo)
 
 <BorealGust />
-
