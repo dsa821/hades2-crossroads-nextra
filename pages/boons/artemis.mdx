@@ -10,14 +10,13 @@ import {
   GreekTitle,
   TextHighlight,
 } from "@/components";
-import { IconArtemis, IconLife } from "@/components/icons";
+import { IconArtemis } from "@/components/icons";
 
 import { DbBoons } from "@/db";
 
 # <GreekTitle icon={<IconArtemis  />} name="Artemis" />
 
-> Your circumstances and training required many sacrifices; one is the warmth of
-> companionship. It was fortunate, then, that you met Artemis when you did.\
+> Your circumstances and training required many sacrifices; one is the warmth of companionship. It was fortunate, then, that you met Artemis when you did.\
 > Olympus knows her as a wayward daughter. We know her as one of us.
 
 <ElementSummary boons={DbBoons.Artemis} />
@@ -26,65 +25,28 @@ import { DbBoons } from "@/db";
 
 ### Pressure Points
 
-<Boon boon={DbBoons.Artemis.pressurePoints}>
-Any damage you deal may be **Critical**.
-
-- Critical Chance: **+3%**
-
-</Boon>
+<Boon boon={DbBoons.Artemis.pressurePoints} />
 
 ### Silver Streak
 
-<Boon boon={DbBoons.Artemis.silverStreak}>
-After you **Dash**, your **Ω Moves** deal more damage for **2 Sec**.
-
-- Bonus Omega Damage: **+20%**
-
-</Boon>
+<Boon boon={DbBoons.Artemis.silverStreak} />
 
 ### First Blood
 
-<Boon boon={DbBoons.Artemis.firstBlood}>
-Foes with at least **80%** <IconLife /> or **80% Armor** may take **Critical** damage.
-
-- Critical Chance: **+15%**
-
-</Boon>
+<Boon boon={DbBoons.Artemis.firstBlood} />
 
 ### Lethal Snare
 
-<Boon boon={DbBoons.Artemis.lethalSnare}>
-Foes in your **Casts** may take **Critical** damage from your **Attacks**.
-
-- Critical Chance: **+10%**
-
-</Boon>
+<Boon boon={DbBoons.Artemis.lethalSnare} />
 
 ### Easy Shot
 
-<Boon boon={DbBoons.Artemis.easyShot}>
-A piercing arrow fires toward any foe damaged by your **Ω Cast**.
-
-- Arrow Damage: **30**
-
-</Boon>
+<Boon boon={DbBoons.Artemis.easyShot} />
 
 ### Support Fire
 
-<Boon boon={DbBoons.Artemis.supportFire}>
-After you hit with your **Attacks** or **Specials**, fire a seeking arrow.
-
-- Arrow Damage: **10**
-
-</Boon>
+<Boon boon={DbBoons.Artemis.supportFire} />
 
 ### Death Warrant
 
-<Boon boon={DbBoons.Artemis.deathWarrant}>
-A random foe occasionally becomes **Marked**. If it takes **Critical** damage, this repeats.
-
-- Time Between Marks: **20 Sec.**
-
-**Marked** _(Curse)_: Afflicted foes have **+30%** chance to take **Critical** damage. Lasts **6 Sec**.
-
-</Boon>
+<Boon boon={DbBoons.Artemis.deathWarrant} />

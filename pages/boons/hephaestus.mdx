@@ -12,13 +12,7 @@ import {
   GreekTitle,
   TextHighlight,
 } from "@/components";
-import {
-  IconArmor,
-  IconEarth,
-  IconHephaestus,
-  IconMagick,
-  IconMaxLife,
-} from "@/components/icons";
+import { IconEarth, IconHephaestus } from "@/components/icons";
 
 import { DbBoons } from "@/db";
 
@@ -46,59 +40,29 @@ import MasterConductor from "@/components/duos/MasterConductor.mdx";
 
 ### Volcanic Strike (Attack) [#volcanic-strike]
 
-<Boon boon={DbBoons.Hephaestus.volcanicStrike}>
-Your **Attacks** occasionally create a blast that deals **200** damage in the area.
-
-- Blast Recharge Time: **12 Sec.**
-
-</Boon>
+<Boon boon={DbBoons.Hephaestus.volcanicStrike} />
 
 ### Volcanic Flourish (Special) [#volcanic-flourish]
 
-<Boon boon={DbBoons.Hephaestus.volcanicFlourish}>
-Your **Specials** occasionally create a blast that deals **400** damage in the area.
-
-- Blast Recharge Time: **+16 Sec.**
-
-</Boon>
+<Boon boon={DbBoons.Hephaestus.volcanicFlourish} />
 
 ### Anvil Ring (Cast) [#anvil-ring]
 
-<Boon boon={DbBoons.Hephaestus.anvilRing}>
-Your **Casts** deal damage **3** times in succession.
-
-- Cast Damage: **50** _(every 1 Sec.)_
-
-</Boon>
+<Boon boon={DbBoons.Hephaestus.anvilRing} />
 
 ### Smithy Sprint (Sprint) [#smithy-sprint]
 
-<Boon boon={DbBoons.Hephaestus.smithySprint}>
-After you **Sprint** for **1 Sec.**, use **10** <IconMagick /> to create a blast that deals damage to nearby foes.
-
-- Area Damage: **200**
-
-</Boon>
+<Boon boon={DbBoons.Hephaestus.smithySprint} />
 
 ### Fixed Gain (Magick) [#fixed-gain]
 
-<Boon boon={DbBoons.Hephaestus.fixedGain}>
-You take **-10%** damage, and restore some <IconMagick /> whenever you take damage.
-
-- Magick Restored from Damage: **50**
-
-</Boon>
+<Boon boon={DbBoons.Hephaestus.fixedGain} />
 
 ## Support
 
 ### <TextHighlight type="infusion">Martial Art (Infusion)</TextHighlight> [#martial-art]
 
-<Boon boon={DbBoons.Hephaestus.martialArt}>
-Your **Attack** and **Special** deal more damage for each <IconEarth /> you have.
-
-- Damage per Earth Boon: **+5%**
-
-</Boon>
+<Boon boon={DbBoons.Hephaestus.martialArt} />
 
 <Callout>
   **Required: 2** <IconEarth />
@@ -106,57 +70,27 @@ Your **Attack** and **Special** deal more damage for each <IconEarth /> you have
 
 ### Molten Touch
 
-<Boon boon={DbBoons.Hephaestus.moltenTouch}>
-Your **Attacks** and **Specials** deal bonus damage to **Armor**.
-
-- Damage vs. Armor: **+20%**
-
-</Boon>
+<Boon boon={DbBoons.Hephaestus.moltenTouch} />
 
 ### Trusty Shield
 
-<Boon boon={DbBoons.Hephaestus.trustyShield}>
-After you enter a **Location**, **Prime 30** <IconMagick /> to gain <IconArmor /> until the next **Location**.
-
-- Starting Armor: **+10**
-
-</Boon>
+<Boon boon={DbBoons.Hephaestus.trustyShield} />
 
 ### Mint Condition
 
-<Boon boon={DbBoons.Hephaestus.mintCondition}>
-At the start of each **Encounter**, you are briefly **Impervious**.
-
-- Impervious Duration: **8 Sec.**
-
-</Boon>
+<Boon boon={DbBoons.Hephaestus.mintCondition} />
 
 ### Heavy Metal
 
-<Boon boon={DbBoons.Hephaestus.heavyMetal}>
-Gain some <IconArmor />. Foes' attacks cannot knock you away.
-
-- Armor Gained: **+50**
-
-</Boon>
+<Boon boon={DbBoons.Hephaestus.heavyMetal} />
 
 ### Uncanny Fortitude
 
-<Boon boon={DbBoons.Hephaestus.uncannyFortitude}>
-Gain bonus <IconMaxLife /> based on your <IconMagick /> limit.
-
-- Max Life from Magick: **+20%**
-
-</Boon>
+<Boon boon={DbBoons.Hephaestus.uncannyFortitude} />
 
 ### Grand Caldera
 
-<Boon boon={DbBoons.Hephaestus.grandCaldera}>
-Your blast effects from **Hephaestus** deal more damage and are **50%** larger.
-
-- Bonus Blast Damage: **+50**
-
-</Boon>
+<Boon boon={DbBoons.Hephaestus.grandCaldera} />
 
 <Callout>
   **Required** _(one of the following)_:
@@ -171,14 +105,7 @@ Your blast effects from **Hephaestus** deal more damage and are **50%** larger.
 
 ### Furnace Blast
 
-<Boon boon={DbBoons.Hephaestus.furnaceBlast}>
-Your blast effects from **Hephaestus** also inflict **Vent** on foes.
-
-- Vent Damage: **300**
-
-**Vent** _(Curse)_: After **4 Sec.**, afflicted foes take a burst of damage. Timer resets if re-applied.
-
-</Boon>
+<Boon boon={DbBoons.Hephaestus.furnaceBlast} />
 
 <Callout>
   **Required** _(one of the following)_:
@@ -195,19 +122,15 @@ Your blast effects from **Hephaestus** also inflict **Vent** on foes.
 
 ### <TextHighlight type="legendary">Fine Tuning</TextHighlight>
 
-<Boon boon={DbBoons.Hephaestus.fineTuning}>
-Your **Aspect** of the **Nocturnal Arms** is even stronger.
+<Boon boon={DbBoons.Hephaestus.fineTuning} />
 
-- Bonus Aspect Ranks: **+1**
-
-</Boon>
 <Callout>
-  **Required** _(one of the following):_  
+  **Required** _(one of the following):_
   <BoonGrid
     boons={[
       DbBoons.Hephaestus.volcanicStrike,
       DbBoons.Hephaestus.volcanicFlourish,
-      DbBoons.Hephaestus.smithySprint
+      DbBoons.Hephaestus.smithySprint,
     ]}
   />
 </Callout>
