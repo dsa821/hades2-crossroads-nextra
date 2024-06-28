@@ -17,7 +17,7 @@ export const Boon: React.FC<BoonProps> = ({ boon, ...props }) => {
 
   return (
     <CodexEntry data={mapBoonToCodex(boon)} {...props}>
-      {boon.desc && <div className="mt-4 text-lg">{boon.desc}</div>}
+      {boon.desc && <div className="mt-4">{boon.desc}</div>}
       {boon.scaleLabel && (
         <ul className="mt-4 list-disc ml-6 text-lg">
           <li>
