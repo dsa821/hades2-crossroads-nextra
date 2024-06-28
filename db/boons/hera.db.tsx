@@ -201,8 +201,7 @@ export const DbBoonsHera: Record<string, BoonData> = {
     desc: (
       <>
         Whenever <strong>Hitch</strong>-afflicted foes are slain, damage all
-        other
-        <strong>Hitch</strong>-afflicted foes.
+        other <strong>Hitch</strong>-afflicted foes.
       </>
     ),
 

@@ -90,7 +90,22 @@ export const DbBoonsZeus: Record<string, BoonData> = {
     type: "infusion",
     desc: (
       <>
-        After you take damage, your foe is struck by lightning, and again
+        While you have at least <strong>5</strong> <IconAir />, you can never
+        deal less damage than the limit.
+      </>
+    ),
+    scaleLabel: "Min Damage per Hit",
+    scaleValue: 30,
+  },
+
+  divineVengeance: {
+    name: "Divine Vengeance",
+    key: "divine-vengeance",
+    god: "zeus",
+    element: "air",
+    desc: (
+      <>
+        After you take damage, your foe is struck by lightning, and again{" "}
         <strong>50%</strong> of the time.
       </>
     ),
@@ -101,21 +116,6 @@ export const DbBoonsZeus: Record<string, BoonData> = {
         (up to <strong>2</strong> times)
       </>
     ),
-  },
-
-  divineVengeance: {
-    name: "Divine Vengeance",
-    key: "divine-vengeance",
-    god: "zeus",
-    element: "air",
-    desc: (
-      <>
-        While you have at least <strong>5</strong> <IconAir />, you can never
-        deal less damage than the limit.
-      </>
-    ),
-    scaleLabel: "Min Damage per Hit",
-    scaleValue: 30,
   },
 
   staticShock: {
@@ -221,7 +221,7 @@ export const DbBoonsZeus: Record<string, BoonData> = {
       </>
     ),
     scaleLabel: "Instant Destruction Chance",
-    scaleValue: '20%',
+    scaleValue: "20%",
     flavor:
       "The lightning bolt forever remains a symbol of the impulsive power of the Lord of Olympus.",
   },
