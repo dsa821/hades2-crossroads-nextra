@@ -12,14 +12,7 @@ import {
   GreekTitle,
   TextHighlight,
 } from "@/components";
-import {
-  IconFire,
-  IconHestia,
-  IconLife,
-  IconMagick,
-  IconMaxLife,
-  IconMaxMagick,
-} from "@/components/icons";
+import { IconFire, IconHestia } from "@/components/icons";
 
 import { DbBoons } from "@/db";
 
@@ -47,59 +40,29 @@ import ScaldingVapor from "@/components/duos/ScaldingVapor.mdx";
 
 ### Flame Strike (Attack) [#flame-strike]
 
-<Boon boon={DbBoons.Hestia.flameStrike}>
-Your **Attacks** inflict **Scorch**.
-
-- Scorch Damage: **20**
-
-</Boon>
+<Boon boon={DbBoons.Hestia.flameStrike} />
 
 ### Flame Flourish (Special) [#flame-flourish]
 
-<Boon boon={DbBoons.Hestia.flameFlourish}>
-Your **Specials** inflict **Scorch**.
-
-- Scorch Damage: **15**
-
-</Boon>
+<Boon boon={DbBoons.Hestia.flameFlourish} />
 
 ### Smolder Ring (Cast) [#smolder-ring]
 
-<Boon boon={DbBoons.Hestia.smolderRing}>
-Your **Casts** repeatedly inflict **Scorch** on foes.
-
-- Scorch Damage: **40** _(every 1 Sec.)_
-
-</Boon>
+<Boon boon={DbBoons.Hestia.smolderRing} />
 
 ### Soot Sprint (Sprint) [#soot-sprint]
 
-<Boon boon={DbBoons.Hestia.sootSprint}>
-Your **Sprint** destroys most ranged shots near you, and inflicts **Scorch** on foes that fired.
-
-- Scorch Damage per Projectile: **2**
-
-</Boon>
+<Boon boon={DbBoons.Hestia.sootSprint} />
 
 ### Hearth Gain (Magick) [#hearth-gain]
 
-<Boon boon={DbBoons.Hestia.hearthGain}>
-Whenever your **Attack** or **Special** deal damage, restore <IconMagick />.
-
-- Magick Restored per Strike: **4**
-
-</Boon>
+<Boon boon={DbBoons.Hestia.hearthGain} />
 
 ## Support
 
 ### <TextHighlight type="infusion">Slow Cooker (Infusion)</TextHighlight> [#slow-cooker]
 
-<Boon boon={DbBoons.Hestia.slowCooker}>
-Your **Attacks** and **Specials** gain **Power** the more <IconFire /> you have.
-
-- Power per Fire Boon: **+2**
-
-</Boon>
+<Boon boon={DbBoons.Hestia.slowCooker} />
 
 <Callout>
   **Required: 2** <IconFire />
@@ -107,39 +70,19 @@ Your **Attacks** and **Specials** gain **Power** the more <IconFire /> you have.
 
 ### Glowing Coal
 
-<Boon boon={DbBoons.Hestia.glowingCoal}>
-Hold **Cast** to aim a fiery projectile that explodes on impact. The binding circle forms there.
-
-- Blast Damage: **60**
-
-</Boon>
+<Boon boon={DbBoons.Hestia.glowingCoal} />
 
 ### Controlled Burn
 
-<Boon boon={DbBoons.Hestia.controlledBurn}>
-Your **Ω Special** also launches a fiery projectile, but uses **+10** <IconMagick />
-
-- Blast Damage: **100**
-
-</Boon>
+<Boon boon={DbBoons.Hestia.controlledBurn} />
 
 ### Burnt Offering
 
-<Boon boon={DbBoons.Hestia.burntOffering}>
-Gain <IconMaxLife /> and <IconMaxMagick /> but give up **1 Boon** selected by **Hestia**.
-
-- Max Life & Magick: **+50**
-
-</Boon>
+<Boon boon={DbBoons.Hestia.burntOffering} />
 
 ### Crispy Coating
 
-<Boon boon={DbBoons.Hestia.crispyCoating}>
-Your **Scorch** effects deal bonus damage to **Armor**.
-
-- Scorch Damage vs. Armor: **+100%**
-
-</Boon>
+<Boon boon={DbBoons.Hestia.crispyCoating} />
 
 <Callout>
   **Required** _(one of the following):_
@@ -154,13 +97,7 @@ Your **Scorch** effects deal bonus damage to **Armor**.
 
 ### Natural Gas
 
-<Boon boon={DbBoons.Hestia.naturalGas}>
-
-Whenever **Scorch**-afflicted foes are slain, they damage nearby foes.
-
-- Blast Damage: **60**
-
-</Boon>
+<Boon boon={DbBoons.Hestia.naturalGas} />
 
 <Callout>
   **Required** _(one of the following):_
@@ -175,13 +112,7 @@ Whenever **Scorch**-afflicted foes are slain, they damage nearby foes.
 
 ### Pyro Technique
 
-<Boon boon={DbBoons.Hestia.pyroTechnique}>
-
-Your **Scorch** effects deal damage faster.
-
-- Scorch Damage Rate: **+50%**
-
-</Boon>
+<Boon boon={DbBoons.Hestia.pyroTechnique} />
 
 <Callout>
   **Required** _(one of the following):_
@@ -196,13 +127,7 @@ Your **Scorch** effects deal damage faster.
 
 ### Highly Flammable
 
-<Boon boon={DbBoons.Hestia.highlyFlammable}>
-
-Whenever you inflict **Scorch** on a foe for the first time, inflict more.
-
-- First-Time Scorch Damage: **+50**
-
-</Boon>
+<Boon boon={DbBoons.Hestia.highlyFlammable} />
 
 <Callout>
   **Required**:
@@ -219,13 +144,7 @@ Whenever you inflict **Scorch** on a foe for the first time, inflict more.
 
 ### <TextHighlight type="legendary">Fire Walk</TextHighlight>
 
-<Boon boon={DbBoons.Hestia.fireWalk}>
-
-You take no more than **1** damage at a time from fire, and leave flames where you **Sprint**.
-
-- Flame Trail Damage: **20** _(every 0.25 Sec.)_
-
-</Boon>
+<Boon boon={DbBoons.Hestia.fireWalk} />
 
 <Callout>
   **Required** _(one of the following):_

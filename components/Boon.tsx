@@ -19,7 +19,7 @@ export const Boon: React.FC<BoonProps> = ({ boon, ...props }) => {
     <CodexEntry data={mapBoonToCodex(boon)} {...props}>
       {boon.desc && <div className="mt-4">{boon.desc}</div>}
       {boon.scaleLabel && (
-        <ul className="mt-4 list-disc ml-6 text-lg">
+        <ul className="mt-4 list-disc ml-6">
           <li>
             {boon.scaleLabel}:{" "}
             <span className={`font-bold ${isScalable ? "text-green-400" : ""}`}>
