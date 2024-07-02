@@ -32,13 +32,7 @@ export const Arcana: React.FC<ArcanaProps> = ({
   if (compact) {
     return (
       <div className="flex justify-center">
-        <div className="relative w-28 aspect-[3/4]">{image}</div>
-        {/* <div className="absolute bottom-2 font-semibold text-center drop-shadow-lg w-full backdrop-blur">
-          {data.name}
-        </div> */}
-        {/* <div className="absolute top-2 text-sm text-center drop-shadow-lg w-full">
-          {children}
-        </div> */}
+        <div className="relative w-24 aspect-[3/4]">{image}</div>
       </div>
     );
   }
