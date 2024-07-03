@@ -72,4 +72,10 @@ export type CodexData = {
   iconUrl?: string;
   extraIcon?: React.ReactNode;
   flavor?: string;
+
+  desc?: React.ReactNode;
+  scaleLabel?: React.ReactNode;
+  scaleValue?: any;
+  scaleRate?: number | React.ReactNode;
+  descExtra?: React.ReactNode;
 };

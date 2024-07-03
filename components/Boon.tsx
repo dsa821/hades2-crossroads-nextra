@@ -1,5 +1,5 @@
 import { mapBoonToCodex } from "lib/utils";
-import { BoonData, Rarity } from "models/types";
+import { BoonData } from "models/types";
 
 import { CodexEntry, CodexGrid } from "./Codex";
 
@@ -12,34 +12,8 @@ type BoonProps = {
   children?: React.ReactNode;
 };
 export const Boon: React.FC<BoonProps> = ({ boon, ...props }) => {
-  const scalableTypes: Rarity[] = ["common", "rare", "epic", "heroic"];
-  const isScalable = scalableTypes.includes(boon.type) || boon.type == null;
-
   return (
     <CodexEntry data={mapBoonToCodex(boon)} {...props}>
-      {boon.desc && <div className="mt-4">{boon.desc}</div>}
-      {boon.scaleLabel && (
-        <ul className="mt-4 list-disc ml-6">
-          <li>
-            {boon.scaleLabel}:{" "}
-            <span className={`font-bold ${isScalable ? "text-green-400" : ""}`}>
-              {boon.scaleValue}
-            </span>
-            {boon.scaleRate && (
-              <span className="italic text-gray-300 text-sm ml-1">
-                {typeof boon.scaleRate === "number" ? (
-                  <>(every {boon.scaleRate} Sec.)</>
-                ) : (
-                  <>{boon.scaleRate}</>
-                )}
-              </span>
-            )}
-          </li>
-        </ul>
-      )}
-
-      {boon.descExtra && <div className="mt-4">{boon.descExtra}</div>}
-
       {props.children}
     </CodexEntry>
   );

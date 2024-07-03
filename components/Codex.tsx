@@ -1,6 +1,7 @@
 import Link from "next/link";
+import Tippy from "@tippyjs/react";
 
-import { CodexData } from "models/types";
+import { CodexData, Rarity } from "models/types";
 import { TextHighlight } from "./TextHighlight";
 import Image from "next/image";
 import { getRarityBorderColor } from "lib/utils";
@@ -32,10 +33,43 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
   );
   const name = <TextHighlight type={data.type}>{data.name}</TextHighlight>;
 
+  const scalableTypes: Rarity[] = ["common", "rare", "epic", "heroic"];
+  const isScalable = scalableTypes.includes(data.type) || data.type == null;
+  const scaleContent = data.scaleLabel && (
+    <ul className="mt-4 list-disc ml-6">
+      <li>
+        {data.scaleLabel}:{" "}
+        <span className={`font-bold ${isScalable ? "text-green-400" : ""}`}>
+          {data.scaleValue}
+        </span>
+        {data.scaleRate && (
+          <span className="italic text-gray-300 text-sm ml-1">
+            {typeof data.scaleRate === "number" ? (
+              <>(every {data.scaleRate} Sec.)</>
+            ) : (
+              <>{data.scaleRate}</>
+            )}
+          </span>
+        )}
+      </li>
+    </ul>
+  );
+
   if (compact) {
     const compactContent = (
       <div className="flex flex-col items-center px-2 py-2">
-        {data.iconUrl && mainIcon}
+        {data.iconUrl && (
+          <Tippy
+            content={
+              <>
+                <div className="text-base">{data.desc}</div>
+                {scaleContent}
+              </>
+            }
+          >
+            {mainIcon}
+          </Tippy>
+        )}
         <div className="text-center font-bold text-lg mt-2 leading-tight">
           {name}
         </div>
@@ -61,6 +95,11 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
               </div>
             </div>
           )}
+
+          {data.desc && <div className="mt-4">{data.desc}</div>}
+          {scaleContent}
+          {data.descExtra && <div className="mt-4">{data.descExtra}</div>}
+
           {props.children}
 
           {data.flavor && (
@@ -101,14 +140,13 @@ type IconCodexBaseProps = {
 export const IconCodexBase: React.FC<IconCodexBaseProps> = ({
   data,
   size = 72,
-}) => {  
+}) => {
   const iconClassNames = getRarityBorderColor(data.type);
 
   return (
     <Image
       src={`/icons${data.iconUrl}`}
       alt={data.name}
-      title={data.name}
       width={size}
       height={size}
       className={`inline rounded-3xl border-[3px] ${iconClassNames}`}

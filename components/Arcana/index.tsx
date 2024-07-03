@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Tippy from "@tippyjs/react";
+
 import { Box } from "../Box";
 import { IconGrasp } from "../icons";
 import { ArcanaData } from "models/types";
 
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 
 type ArcanaProps = {
   data: ArcanaData;
@@ -24,7 +26,6 @@ export const Arcana: React.FC<ArcanaProps> = ({
     <Image
       src={imageUrl}
       alt={data.name}
-      title={data.name}
       fill
       sizes="144px"
       className={className}
@@ -34,7 +35,16 @@ export const Arcana: React.FC<ArcanaProps> = ({
   if (compact) {
     return (
       <div className="flex justify-center">
-        <div className="relative w-24 aspect-[3/4]">{image}</div>
+        <Tippy
+          content={
+            <>
+              <div className="font-bold text-lg font-small-caps">{data.name}</div>
+              <div className="mt-2">{data.desc}</div>
+            </>
+          }
+        >
+          <div className="relative w-24 aspect-[3/4]">{image}</div>
+        </Tippy>
       </div>
     );
   }

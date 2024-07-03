@@ -1,4 +1,4 @@
 .link a {
-	text-decoration: underline;
-	@apply text-emerald-400;
+  text-decoration: underline;
+  @apply text-emerald-400;
 }
