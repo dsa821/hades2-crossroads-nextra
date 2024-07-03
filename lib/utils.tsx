@@ -71,6 +71,12 @@ export function mapBoonToCodex(boon: BoonData): CodexData {
 
     flavor: boon.flavor,
     extraIcon: <IconBase iconKey={boon.element} size={42} />,
+    
+    desc: boon.desc,
+    scaleLabel: boon.scaleLabel,
+    scaleValue: boon.scaleValue,
+    scaleRate: boon.scaleRate,
+    descExtra: boon.descExtra,
   } as CodexData;
 }
 

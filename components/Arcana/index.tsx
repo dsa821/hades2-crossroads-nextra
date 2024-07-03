@@ -1,7 +1,11 @@
 import Image from "next/image";
-import { Box } from "./Box";
-import { IconGrasp } from "./icons";
+import Tippy from "@tippyjs/react";
+
+import { Box } from "../Box";
+import { IconGrasp } from "../icons";
 import { ArcanaData } from "models/types";
+
+import styles from "./styles.module.css";
 
 type ArcanaProps = {
   data: ArcanaData;
@@ -22,7 +26,6 @@ export const Arcana: React.FC<ArcanaProps> = ({
     <Image
       src={imageUrl}
       alt={data.name}
-      title={data.name}
       fill
       sizes="144px"
       className={className}
@@ -32,13 +35,16 @@ export const Arcana: React.FC<ArcanaProps> = ({
   if (compact) {
     return (
       <div className="flex justify-center">
-        <div className="relative w-28 aspect-[3/4]">{image}</div>
-        {/* <div className="absolute bottom-2 font-semibold text-center drop-shadow-lg w-full backdrop-blur">
-          {data.name}
-        </div> */}
-        {/* <div className="absolute top-2 text-sm text-center drop-shadow-lg w-full">
-          {children}
-        </div> */}
+        <Tippy
+          content={
+            <>
+              <div className="font-bold text-lg font-small-caps">{data.name}</div>
+              <div className="mt-2">{data.desc}</div>
+            </>
+          }
+        >
+          <div className="relative w-24 aspect-[3/4]">{image}</div>
+        </Tippy>
       </div>
     );
   }
@@ -60,6 +66,13 @@ export const Arcana: React.FC<ArcanaProps> = ({
           </div>
         </div>
 
+        {data.desc && <div className="mt-4">{data.desc}</div>}
+        {data.awakening && (
+          <div className="mt-2">
+            <span className="font-bold">Awakening:</span>{" "}
+            <span className={`italic ${styles.link}`}>{data.awakening}</span>
+          </div>
+        )}
         {children}
 
         <div className="mt-2 italic font-semibold drop-shadow-lg text-indigo-500">
