@@ -36,9 +36,13 @@ export const Arcana: React.FC<ArcanaProps> = ({
     return (
       <div className="flex justify-center">
         <Tippy
+          appendTo="parent"
+          delay={500}
           content={
             <>
-              <div className="font-bold text-lg font-small-caps">{data.name}</div>
+              <div className="font-bold text-lg font-small-caps">
+                {data.name}
+              </div>
               <div className="mt-2">{data.desc}</div>
             </>
           }

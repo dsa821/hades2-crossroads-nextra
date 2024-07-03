@@ -32,5 +32,5 @@ button.btn-default {
 }
 
 .tippy-box {
-  @apply bg-gradient-to-br from-slate-700 to-slate-900 p-1;
+  @apply bg-gradient-to-br from-emerald-700 to-slate-900 p-1;
 }
