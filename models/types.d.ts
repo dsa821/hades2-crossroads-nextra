@@ -28,6 +28,8 @@ export type ArcanaData = {
   order: number;
   flavor: string;
   grasp: number;
+  desc?: React.ReactNode;
+  awakening?: React.ReactNode;
 };
 
 export type AspectData = {

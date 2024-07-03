@@ -1,7 +1,9 @@
 import Image from "next/image";
-import { Box } from "./Box";
-import { IconGrasp } from "./icons";
+import { Box } from "../Box";
+import { IconGrasp } from "../icons";
 import { ArcanaData } from "models/types";
+
+import styles from './styles.module.css';
 
 type ArcanaProps = {
   data: ArcanaData;
@@ -54,6 +56,13 @@ export const Arcana: React.FC<ArcanaProps> = ({
           </div>
         </div>
 
+        {data.desc && <div className="mt-4">{data.desc}</div>}
+        {data.awakening && (
+          <div className="mt-2">
+            <span className="font-bold">Awakening:</span>{" "}
+            <span className={`italic ${styles.link}`}>{data.awakening}</span>
+          </div>
+        )}
         {children}
 
         <div className="mt-2 italic font-semibold drop-shadow-lg text-indigo-500">
