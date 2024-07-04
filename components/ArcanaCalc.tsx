@@ -30,7 +30,7 @@ export const ArcanaCalc: React.FC = () => {
         <div className="font-bold ">
           <span
             className={`text-4xl ${
-              graspCount < 30 ? "text-emerald-500" : "text-red-700"
+              graspCount <= 30 ? "text-emerald-500" : "text-red-700"
             }`}
           >
             {graspCount}
