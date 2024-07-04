@@ -60,7 +60,7 @@ export const CodexEntry: React.FC<CodexEntryProps> = ({
       <div className="flex flex-col items-center px-2 py-2">
         {data.iconUrl && (
           <Tippy
-            delay={[500, 0]}
+            delay={[250, 0]}
             content={
               <>
                 <div className="text-base">{data.desc}</div>

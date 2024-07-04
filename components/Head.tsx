@@ -13,7 +13,7 @@ export const Head = () => {
       {/* <meta property="og:url" content={url} /> */}
       <meta
         property="og:title"
-        content={frontMatter.title || "Hades 2 - The Crossroads"}
+        content={`${frontMatter.title} : Hades 2 - The Crossroads` || "Hades 2 - The Crossroads"}
       />
       <meta
         property="og:description"
