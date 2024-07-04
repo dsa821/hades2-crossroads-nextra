@@ -1,7 +1,6 @@
 import { Callout } from "nextra/components";
 import { Box, BoonGrid } from "@/components";
 import { DbBoons } from "@/db";
-import { IconMagick } from '@/components/icons';
 
 <Box>
 While standing in a **Cyclone**, you randomly fire gales every **0.3 Sec.**
@@ -11,25 +10,19 @@ While standing in a **Cyclone**, you randomly fire gales every **0.3 Sec.**
 </Box>
 
 <Callout>
-  **Required** _(one of the following from Zeus):_
+  **Required** _(one of the following from Apollo):_
   <BoonGrid
     boons={[
-      DbBoons.Zeus.heavenStrike,
-      DbBoons.Zeus.heavenFlourish,
-      DbBoons.Zeus.stormRing,
-      DbBoons.Zeus.thunderSprint,
-      DbBoons.Zeus.ionicGain,
+      DbBoons.Apollo.novaStrike,
+      DbBoons.Apollo.novaFlourish,
+      DbBoons.Apollo.solarRing,
+      DbBoons.Apollo.blindingSprint,
+      DbBoons.Apollo.lucidGain,
     ]}
   />
 </Callout>
 
 <Callout>
   **Required** _(one of the following from Demeter):_
-  <BoonGrid
-    boons={[
-      DbBoons.Demeter.iceStrike,
-      DbBoons.Demeter.iceFlourish,
-      DbBoons.Demeter.arcticRing,
-    ]}
-  />
+  <BoonGrid boons={[DbBoons.Demeter.frigidSprint, DbBoons.Demeter.galeForce]} />
 </Callout>
