@@ -7,15 +7,19 @@
   "keepsakes": "Keepsakes",
   "boons": "Boons",
 
-  "tools": {
+  "toolsMenu": {
     "title": "Tools",
     "type": "menu",
     "items": {
+      "arcana-calc": {
+        "title": "Arcana Calculator"
+      },
       "pencil-meta": {
         "title": "Pencil Meta"
       }
     }
   },
+
   "supergiant": {
     "title": "Supergiant",
     "type": "page",
@@ -33,7 +37,7 @@
     "display": "hidden",
     "theme": { "breadcrumb": false, "toc": false }
   },
-  "tool-arcana": {
+  "arcana-calc": {
     "display": "hidden",
     "theme": { "breadcrumb": false, "toc": false }
   }

@@ -36,18 +36,25 @@ export const Arcana: React.FC<ArcanaProps> = ({
     return (
       <div className="flex justify-center">
         <Tippy
-          appendTo="parent"
-          delay={500}
+          delay={[250, 0]}
           content={
             <>
-              <div className="font-bold text-lg font-small-caps">
-                {data.name}
-              </div>
-              <div className="mt-2">{data.desc}</div>
+              <div>{data.desc}</div>
+              {data.awakening && (
+                <div className="mt-2">
+                  <span className="font-bold">Awakening:</span>{" "}
+                  <span className="italic">{data.awakening}</span>
+                </div>
+              )}
             </>
           }
         >
-          <div className="relative w-24 aspect-[3/4]">{image}</div>
+          <div className="flex flex-col justify-stretch items-center">
+            <div className="relative w-16 md:w-24 aspect-[3/4]">{image}</div>
+            <div className="text-center text-xs md:text-sm font-small-caps">
+              {data.name.replace("The ", "")}
+            </div>
+          </div>
         </Tippy>
       </div>
     );
