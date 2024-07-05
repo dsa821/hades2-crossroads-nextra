@@ -5,19 +5,21 @@ import Image from "next/image";
 
 import { Head } from "./components/Head";
 
+const baseUrl = "https://hades2-crossroads.vercel.app";
+
 const config: DocsThemeConfig = {
   logo: (
     <div className="flex items-center">
       <Image
         src="/images/hades2-logo.png"
         alt="Hades 2 Logo"
-        height={60}
-        width={120}
+        height={54}
+        width={105}
       ></Image>
       <div className="text-gray-500">v0.93741</div>
     </div>
   ),
-  head: <Head />,
+  head: <></>,  // handled by useNextSeoProps
 
   primaryHue: 156.2,
   primarySaturation: 72.6,
@@ -49,7 +51,21 @@ const config: DocsThemeConfig = {
 
   useNextSeoProps() {
     const { asPath } = useRouter();
-    const seoProps = { titleTemplate: "Hades 2: The Crossroads " };
+    const seoProps: any = {
+      defaultTitle: "Hades 2: The Crossroads",
+      openGraph: {
+        type: "website",
+        url: `${baseUrl}${asPath}`,
+        images: [
+          {
+            url: `${baseUrl}/images/hades2-logo.png"`,
+            width: 210,
+            height: 108,
+            alt: "Hades 2: The Crossroads",
+          },
+        ],
+      },
+    };
     if (asPath !== "/") {
       seoProps.titleTemplate = "%s - Hades 2: The Crossroads";
     }

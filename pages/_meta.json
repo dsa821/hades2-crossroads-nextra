@@ -16,6 +16,9 @@
       },
       "pencil-meta": {
         "title": "Pencil Meta"
+      },
+      "ephyra-map": {
+        "title": "Ephyra Map"
       }
     }
   },
@@ -40,5 +43,9 @@
   "arcana-calc": {
     "display": "hidden",
     "theme": { "breadcrumb": false, "toc": false }
+  },
+  "ephyra-map": {
+    "display": "hidden",
+    "theme": { "breadcrumb": false, "layout": "full" }
   }
 }
