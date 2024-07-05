@@ -58,7 +58,7 @@ const config: DocsThemeConfig = {
         url: `${baseUrl}${asPath}`,
         images: [
           {
-            url: `${baseUrl}/images/hades2-logo.png"`,
+            url: `${baseUrl}/images/hades2-logo.png`,
             width: 210,
             height: 108,
             alt: "Hades 2: The Crossroads",
