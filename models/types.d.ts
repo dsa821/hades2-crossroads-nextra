@@ -1,3 +1,5 @@
+import JSXStyle from "styled-jsx/style";
+
 export type Rarity =
   | "common"
   | "rare"
@@ -31,6 +33,15 @@ export type ArcanaData = {
   desc?: React.ReactNode;
   awakening?: React.ReactNode;
 };
+
+type FearDescProps = { scaleValues: number[] };
+export type FearData = {
+  name: string;
+  fearValues: number[];
+  scaleValues: number[];
+  desc: (props: FearDescProps) => JSX.Element;
+  flavor: string;
+}
 
 export type AspectData = {
   name: string;

@@ -9,7 +9,7 @@ import {
   IconMaxMagick,
   IconReroll,
 } from "components/icons";
-import { CodexData, ArcanaData } from "models/types";
+import { ArcanaData } from "models/types";
 import Link from "next/link";
 
 const arcanaData: Record<string, ArcanaData> = {

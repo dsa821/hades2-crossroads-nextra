@@ -52,7 +52,7 @@ const config: DocsThemeConfig = {
   useNextSeoProps() {
     const { asPath } = useRouter();
     const seoProps: any = {
-      defaultTitle: "Hades 2: The Crossroads",
+      titleTemplate: "Hades 2: The Crossroads",
       openGraph: {
         type: "website",
         url: `${baseUrl}${asPath}`,

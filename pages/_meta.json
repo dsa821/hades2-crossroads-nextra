@@ -14,6 +14,9 @@
       "arcana-calc": {
         "title": "Arcana Calculator"
       },
+      "fear-calc": {
+        "title": "Fear Calculator"
+      },
       "pencil-meta": {
         "title": "Pencil Meta"
       },
@@ -43,6 +46,10 @@
   "arcana-calc": {
     "display": "hidden",
     "theme": { "breadcrumb": false, "toc": false }
+  },
+  "fear-calc": {
+    "display": "hidden",
+    "theme": { "breadcrumb": false, "toc": false, "layout": "full" }
   },
   "ephyra-map": {
     "display": "hidden",
