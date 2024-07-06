@@ -2,8 +2,7 @@ import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
 import { useRouter } from "next/router";
 import Image from "next/image";
-
-import { Head } from "./components/Head";
+import Link from "next/link";
 
 const baseUrl = "https://hades2-crossroads.vercel.app";
 
@@ -19,7 +18,7 @@ const config: DocsThemeConfig = {
       <div className="text-gray-500">v0.93741</div>
     </div>
   ),
-  head: <></>,  // handled by useNextSeoProps
+  head: <></>, // handled by useNextSeoProps
 
   primaryHue: 156.2,
   primarySaturation: 72.6,
@@ -39,7 +38,19 @@ const config: DocsThemeConfig = {
     placeholder: "Search...",
   },
   footer: {
-    text: <span className="italic">So mote it be...</span>,
+    text: (
+      <span>
+        Contact:{" "}
+        <Link
+          href="https://discord.com/users/234804700921331713"
+          target="_blank"
+          className="text-emerald-500"
+        >
+          @Kuro
+        </Link>{" "}
+        on Discord
+      </span>
+    ),
   },
   editLink: {
     component: null,
@@ -70,6 +81,21 @@ const config: DocsThemeConfig = {
       seoProps.titleTemplate = "%s - Hades 2: The Crossroads";
     }
     return seoProps;
+  },
+
+  banner: {
+    key: "v0.93741",
+    text: (
+      <>
+        <Link
+          href="https://store.steampowered.com/news/app/1145350/view/6085006571972858968"
+          target="_blank"
+        >
+          ✨ Updated for Early Access Patch 3!{" "}
+          <span className="text-emerald-500">Patch Notes</span> →
+        </Link>
+      </>
+    ),
   },
 };
 

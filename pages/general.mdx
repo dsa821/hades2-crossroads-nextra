@@ -1,7 +1,13 @@
 import { Callout, Card, Cards } from "nextra/components";
 
 import { TextHighlight } from "@/components";
-import { IconHammer } from "@/components/icons";
+import {
+  IconAir,
+  IconEarth,
+  IconFire,
+  IconHammer,
+  IconWater,
+} from "@/components/icons";
 
 # General Tips
 
@@ -18,7 +24,7 @@ It's usually best to focus on a single move as your primary source of damage for
 - Ω Special
 - Ω Cast
 
-There will be meme builds floating around like Revenge or perhaps Sprint-based builds eventually, but these are really the core options for serious builds. Read what your chosen aspect does and it's pretty obvious what move it wants to build around.
+There will be meme builds floating around like Revenge or perhaps Sprint-based builds eventually, but these are really the core options for serious builds. Read what your chosen aspect does and it's usually pretty obvious what move(s) it wants to build around.
 
 ## Fast vs. Slow Weapons
 
@@ -28,11 +34,17 @@ The remaining 4 gods are built around flat damage boons ([Zeus](/boons/zeus), [P
 
 ## The God Pool
 
-This mechanic just means how many primary gods/goddesses you will see boons from on a given run (Artemis and Hermes don't count, as they are purely supports). In **Hades 2**, as with **Hades 1**, this number is **4**. It is possible to go over that if you are using [God Keepsakes](/keepsakes#olympians) (letting you force a 5th god after you've already picked up boons from 4), but it's generally inadvisable because it makes for a stronger build to focus on 2 or 3 gods.
+This mechanic just means how many primary gods/goddesses you will see boons from on a given run (Artemis and Hermes don't count, as they are purely supports). In **Hades 2**, as with **Hades 1**, this number is **4**. It is possible to go over that if you equip a [God Keepsakes](/keepsakes#olympians) after you've already locked in 4 other gods, but it's generally inadvisable to dilute your god pool like that.
 
 ## Infusions
 
 Infusions are a new mechanic introduced in **Hades 2**. Each boon has an element associated with it, and if you pick up an Infusion boon and have enough elements to meet the requirement, you can unlock some strong bonuses. Taking the God Pool mechanic into account, this means it's even more important to choose what gods you want to focus on and consider what elements they share.
+
+- <IconWater />: [Poseidon](/boons/poseidon), [Demeter](/boons/demeter),
+  [Aphrodite](/boons/aphrodite)
+- <IconEarth />: [Hera](/boons/hera), [Demeter](/boons/demeter), [Hephaestus](/boons/hephaestus)
+- <IconFire />: [Hestia](/boons/hestia), [Apollo](/boons/apollo), [Hephaestus](/boons/hephaestus)
+- <IconAir />: [Zeus](/boons/zeus), [Apollo](/boons/apollo), [Aphrodite](/boons/aphrodite)
 
 ## Keepsakes
 
@@ -85,7 +97,8 @@ What this means in practical terms is that with additive damage, you will start 
 // Adding another 50% buff
 20 + (20 * 3) + (20 * 0.5) = 90
 ```
- The next +50% buff you find is only adding 10 more damage because of the base 20 damage.
+
+The next +50% buff you find is only adding 10 more damage because of the base 20 damage.
 
 This also makes **+ Power** effects very strong because they increase your base damage (things like [Moon](/arcana#moon), [Slow Cooker](/boons/hestia#slow-cooker), or [Aspect of Momus](/weapons/witchs-staff/builds/#momus)). Adding a **+10 Power** buff instead of **+50%** to the previous example:
 
