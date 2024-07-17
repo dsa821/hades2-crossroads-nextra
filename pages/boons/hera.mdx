@@ -83,10 +83,6 @@ import QueensRansom from "@/components/duos/QueensRansom.mdx";
 
 <Boon boon={DbBoons.Hera.bloodLine} />
 
-### Family Trade
-
-<Boon boon={DbBoons.Hera.familyTrade} />
-
 ### Hereditary Bane
 
 <Boon boon={DbBoons.Hera.hereditaryBane} />
@@ -121,6 +117,26 @@ import QueensRansom from "@/components/duos/QueensRansom.mdx";
   />
 </Callout>
 
+### Rousing Reception
+
+<Boon boon={DbBoons.Hera.rousingReception} />
+
+<Callout>
+  **Required** _(one of the following):_
+  <BoonGrid
+    boons={[
+      DbBoons.Aphrodite.raptureRing,
+      DbBoons.Apollo.solarRing,
+      DbBoons.Demeter.arcticRing,
+      DbBoons.Hephaestus.anvilRing,
+      DbBoons.Hera.engagementRing,
+      DbBoons.Hestia.smolderRing,
+      DbBoons.Poseidon.tidalRing,
+      DbBoons.Zeus.stormRing,
+    ]}
+  />
+</Callout>
+
 ## <TextHighlight type="legendary">Legendary</TextHighlight>
 
 ### <TextHighlight type="legendary">Brave Face</TextHighlight>
@@ -144,7 +160,6 @@ import QueensRansom from "@/components/duos/QueensRansom.mdx";
   <BoonGrid
     boons={[
       DbBoons.Hera.bridalGlow,
-      DbBoons.Hera.familyTrade,
       DbBoons.Hera.uncommonGrace,
       DbBoons.Hera.bloodLine,
     ]}
@@ -153,7 +168,7 @@ import QueensRansom from "@/components/duos/QueensRansom.mdx";
 
 <Callout>
   **Required** _(one of the following):_
-  <BoonGrid boons={[DbBoons.Hera.hereditaryBane, DbBoons.Hera.dyingWish]} />
+  <BoonGrid boons={[DbBoons.Hera.hereditaryBane, DbBoons.Hera.rousingReception]} />
 </Callout>
 
 ## <TextHighlight type="duo">Duos</TextHighlight>

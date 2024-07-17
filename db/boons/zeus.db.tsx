@@ -140,13 +140,13 @@ export const DbBoonsZeus: Record<string, BoonData> = {
     element: "air",
     desc: (
       <>
-        While you have no more than <IconMagick value="10" />, <em>all</em> foes
-        are occasionally struck by lightning.
+        Whenever you use <IconMagick />, a random surrounding foe is struck by
+        lightning.
       </>
     ),
     scaleLabel: "Bolt Damage",
-    scaleValue: 60,
-    scaleRate: 5,
+    scaleValue: 20,
+    scaleRate: 0.25,
   },
 
   lightningLance: {
