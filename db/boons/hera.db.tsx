@@ -40,12 +40,11 @@ export const DbBoonsHera: Record<string, BoonData> = {
     element: "earth",
     desc: (
       <>
-        Your <strong>Casts</strong> deal damage and inflict{" "}
-        <strong>Hitch</strong> whenever foes join the <strong>Encounter</strong>
-        , anywhere!
+        Your <strong>Casts</strong> inflict <strong>Hitch</strong>. Whenever
+        foes within are slain, they damage surrounding foes.
       </>
     ),
-    scaleLabel: "On-Spawn Damage",
+    scaleLabel: "Death Blast Damage",
     scaleValue: 50,
   },
 
@@ -161,22 +160,6 @@ export const DbBoonsHera: Record<string, BoonData> = {
     scaleValue: 100,
   },
 
-  familyTrade: {
-    name: "Family Trade",
-    key: "family-trade",
-    god: "hera",
-    element: "earth",
-    desc: (
-      <>
-        Any <strong>Sacrifice Boons</strong> you choose are stronger. One will
-        be offered as soon as possible.
-      </>
-    ),
-
-    scaleLabel: "Bonus Lv.",
-    scaleValue: "+2",
-  },
-
   hereditaryBane: {
     name: "Hereditary Bane",
     key: "hereditary-bane",
@@ -207,6 +190,22 @@ export const DbBoonsHera: Record<string, BoonData> = {
 
     scaleLabel: "Hitch Death Damage",
     scaleValue: 40,
+  },
+
+  rousingReception: {
+    name: "Rousing Reception",
+    key: "rousing-reception",
+    god: "hera",
+    element: "earth",
+    desc: (
+      <>
+        Your <strong>Casts</strong> damage any foes as they join the{" "}
+        <strong>Encounter</strong>, whever they appear.
+      </>
+    ),
+
+    scaleLabel: "On-Spawn Damage",
+    scaleValue: 60,
   },
 
   braveFace: {

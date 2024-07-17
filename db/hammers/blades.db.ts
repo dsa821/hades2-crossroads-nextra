@@ -20,9 +20,9 @@ const hammerData: Record<string, HammerData> = {
     weaponKey: "sister-blades",
   },
 
-  escalatingAmbush: {
-    name: "Escalating Ambush",
-    key: "escalating-ambush",
+  wickedOnslaught: {
+    name: "Wicked Onslaught",
+    key: "wicked-onslaught",
     weaponKey: "sister-blades",
   },
 

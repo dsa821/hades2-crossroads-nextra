@@ -15,7 +15,7 @@ const config: DocsThemeConfig = {
         height={54}
         width={105}
       ></Image>
-      <div className="text-gray-500">v0.93741</div>
+      <div className="text-gray-500">v0.94522</div>
     </div>
   ),
   head: <></>, // handled by useNextSeoProps
@@ -84,14 +84,14 @@ const config: DocsThemeConfig = {
   },
 
   banner: {
-    key: "v0.93741",
+    key: "v0.94522",
     text: (
       <>
         <Link
-          href="https://store.steampowered.com/news/app/1145350/view/6085006571972858968"
+          href="https://store.steampowered.com/news/app/1145350/view/6231376270663101766"
           target="_blank"
         >
-          ✨ Updated for Early Access Patch 3!{" "}
+          ✨ Updated for Early Access Patch 4!{" "}
           <span className="text-emerald-500">Patch Notes</span> →
         </Link>
       </>

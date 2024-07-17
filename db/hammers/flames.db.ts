@@ -44,9 +44,9 @@ const hammerData: Record<string, HammerData> = {
     weaponKey: "umbral-flames",
   },
 
-  crushingComet: {
-    name: "Crushing Comet",
-    key: "crushing-comet",
+  tripleComet: {
+    name: "Triple Comet",
+    key: "triple-comet",
     weaponKey: "umbral-flames",
   },
 
@@ -68,9 +68,9 @@ const hammerData: Record<string, HammerData> = {
     weaponKey: "umbral-flames",
   },
 
-  originCoil: {
-    name: "Origin Coil",
-    key: "origin-coil",
+  whirlingCoil: {
+    name: "Whirling Coil",
+    key: "whirling-coil",
     weaponKey: "umbral-flames",
   },
 
