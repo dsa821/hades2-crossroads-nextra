@@ -1,14 +1,14 @@
 import { Callout } from "nextra/components";
-import { Box, BoonGrid } from "@/components";
+import { Boon, BoonGrid } from "@/components";
 import { IconGold } from "@/components/icons";
 import { DbBoons } from "@/db";
 
-<Box>
+<Boon boon={DbBoons.Duos.goldenRule}>
 You deal more damage the more <IconGold /> you have.
 
 - Bonus Damage per 100 Gold: **+3%**
 
-</Box>
+</Boon>
 
 <Callout>
   **Required** _(one of the following from Hera):_

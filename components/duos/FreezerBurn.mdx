@@ -1,13 +1,13 @@
 import { Callout } from "nextra/components";
-import { Box, BoonGrid } from "@/components";
+import { Boon, BoonGrid } from "@/components";
 import { DbBoons } from "@/db";
 
-<Box>
+<Boon boon={DbBoons.Duos.freezerBurn}>
 Whenever you inflict **Freeze** on a foe with **Scorch**, deal damage and remove **Scorch**.
 
 - Damage from Scorch: **200%**
 
-</Box>
+</Boon>
 
 <Callout>
   **Required** _(one of the following from Demeter):_

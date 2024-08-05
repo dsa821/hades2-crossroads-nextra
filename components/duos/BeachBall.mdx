@@ -1,13 +1,13 @@
 import { Callout } from "nextra/components";
-import { Box, BoonGrid } from "@/components";
+import { Boon, BoonGrid } from "@/components";
 import { DbBoons } from "@/db";
 
-<Box>
+<Boon boon={DbBoons.Duos.beachBall}>
 Your **Sprint** creates a watery sphere behind you, which surges ahead once you stop.
 
 - Max Blast Damage: **300** _(after 2 Sec.)_
 
-</Box>
+</Boon>
 
 <Callout>
   **Required** _(one of the following):_

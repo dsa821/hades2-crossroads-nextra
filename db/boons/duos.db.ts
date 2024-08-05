@@ -7,84 +7,98 @@ export const DbBoonsDuos: Record<string, BoonData> = {
     god: "duos",
     type: "duo",
   },
-
-  burningDesire: {
-    name: "Burning Desire",
-    key: "burning-desire",
+  
+  borealGust: {
+    name: "Boreal Gust",
+    key: "boreal-gust",
     god: "duos",
     type: "duo",
   },
-
+  
   chainReaction: {
     name: "Chain Reaction",
     key: "chain-reaction",
     god: "duos",
     type: "duo",
   },
-
+  
   cherishedHeirloom: {
     name: "Cherished Heirloom",
     key: "cherished-heirloom",
     god: "duos",
     type: "duo",
   },
-
+  
+  ecstaticObsession: {
+    name: "Ecstatic Obsession",
+    key: "ecstatic-obsession",
+    god: "duos",
+    type: "duo",
+  },
+  
   elementaryParticles: {
-    name: "ElementaryParticles",
+    name: "Elementary Particles",
     key: "elementary-particles",
     god: "duos",
     type: "duo",
   },
-
+  
   freezerBurn: {
     name: "Freezer Burn",
     key: "freezer-burn",
     god: "duos",
     type: "duo",
   },
-
+  
   gloriousDisaster: {
     name: "Glorious Disaster",
     key: "glorious-disaster",
     god: "duos",
     type: "duo",
   },
-
+  
   goldenRule: {
     name: "Golden Rule",
     key: "golden-rule",
     god: "duos",
     type: "duo",
   },
-
+  
   hailStorm: {
     name: "Hail Storm",
     key: "hail-storm",
     god: "duos",
     type: "duo",
   },
-
+  
   heartyAppetite: {
     name: "Hearty Appetite",
     key: "hearty-appetite",
     god: "duos",
     type: "duo",
   },
-
+  
+  hotFlash: {
+    name: "Hot Flash",
+    key: "hot-flash",
+    god: "duos",
+    type: "duo",
+  },
+  
   islandGetaway: {
     name: "Island Getaway",
     key: "island-getaway",
     god: "duos",
     type: "duo",
   },
-
+  
   killerCurrent: {
     name: "Killer Current",
     key: "killer-current",
     god: "duos",
     type: "duo",
   },
-
+  
   kingsRansom: {
     name: "King's Ransom",
     key: "kings-ransom",
@@ -92,6 +106,13 @@ export const DbBoonsDuos: Record<string, BoonData> = {
     type: "duo",
   },
 
+  loveHandles: {
+    name: "Love Handles",
+    key: "love-handles",
+    god: "duos",
+    type: "duo",
+  },
+  
   masterConductor: {
     name: "Master Conductor",
     key: "master-conductor",
@@ -148,20 +169,6 @@ export const DbBoonsDuos: Record<string, BoonData> = {
     type: "duo",
   },
 
-  softCaress: {
-    name: "Soft Caress",
-    key: "soft-caress",
-    god: "duos",
-    type: "duo",
-  },
-
-  ecstaticObsession: {
-    name: "Ecstatic Obsession",
-    key: "ecstatic-obsession",
-    god: "duos",
-    type: "duo",
-  },
-
   spitefulStrength: {
     name: "Spiteful Strength",
     key: "spiteful-strength",
@@ -169,9 +176,9 @@ export const DbBoonsDuos: Record<string, BoonData> = {
     type: "duo",
   },
 
-  stellarSlam: {
-    name: "Stellar Slam",
-    key: "stellar-slam",
+  rudeAwakening: {
+    name: "Rude Awakening",
+    key: "rude-awakening",
     god: "duos",
     type: "duo",
   },
@@ -193,13 +200,6 @@ export const DbBoonsDuos: Record<string, BoonData> = {
   thermalDynamics: {
     name: "Thermal Dynamics",
     key: "thermal-dynamics",
-    god: "duos",
-    type: "duo",
-  },
-
-  torrentialDownpour: {
-    name: "Torrential Downpour",
-    key: "torrential-downpour",
     god: "duos",
     type: "duo",
   },

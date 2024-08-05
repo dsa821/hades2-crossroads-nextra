@@ -1,13 +1,13 @@
 import { Callout } from "nextra/components";
-import { Box, BoonGrid, TextHighlight } from "@/components";
+import { Boon, BoonGrid, TextHighlight } from "@/components";
 import { IconEarth, IconWater, IconAir, IconFire } from "@/components/icons";
 import { DbBoons } from "@/db";
 
-<Box>
+<Boon boon={DbBoons.Duos.elementaryParticles}>
 Gain <IconEarth /> <IconWater /> <IconAir /> <IconFire /> **Elements**, and 1 <TextHighlight type="infusion">**Infusion**</TextHighlight> Boon for each.
 - Essences Gained per Element: **+1**
 
-</Box>
+</Boon>
 
 <Callout>
   **Required** _(one of the following from Hera):_

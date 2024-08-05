@@ -1,13 +1,13 @@
 import { Callout } from "nextra/components";
-import { Box, BoonGrid } from "@/components";
+import { Boon, BoonGrid } from "@/components";
 import { DbBoons } from "@/db";
 
-<Box>
+<Boon boon={DbBoons.Duos.borealGust}>
 While standing in a **Cyclone**, you randomly fire gales every **0.3 Sec.**
 
 - Gale Damage: **70** _(every 0.5 Sec)_
 
-</Box>
+</Boon>
 
 <Callout>
   **Required** _(one of the following from Apollo):_

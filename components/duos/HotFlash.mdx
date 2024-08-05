@@ -1,13 +1,13 @@
 import { Callout } from "nextra/components";
-import { Box, BoonGrid } from "@/components";
+import { Boon, BoonGrid } from "@/components";
 import { DbBoons } from "@/db";
 
-<Box>
+<Boon boon={DbBoons.Duos.hotFlash}>
 While foes are **Weak**, any **Scorch** they have does not diminish as it deals damage.
 
 - Scorch Duration on Weak Foes: <span className="text-2xl">**∞**</span>
 
-</Box>
+</Boon>
 
 <Callout>
   **Required** _(one of the following from Hestia):_

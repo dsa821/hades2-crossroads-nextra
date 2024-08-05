@@ -1,13 +1,13 @@
 import { Callout } from "nextra/components";
-import { Box, BoonGrid } from "@/components";
+import { Boon, BoonGrid } from "@/components";
 import { DbBoons } from "@/db";
 
-<Box>
+<Boon boon={DbBoons.Duos.hailStorm}>
 Your **Freeze** effects also cause lightning bolts to repeatedly strike afflicted foes.
 
 - Lightning Damage: **30** _(every 0.3 Sec.)_
 
-</Box>
+</Boon>
 
 <Callout>
   **Required** _(one of the following from Zeus):_

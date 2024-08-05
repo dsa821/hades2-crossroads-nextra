@@ -1,13 +1,13 @@
 import { Callout } from "nextra/components";
-import { Box, BoonGrid } from "@/components";
+import { Boon, BoonGrid } from "@/components";
 import { DbBoons } from "@/db";
 
-<Box>
+<Boon boon={DbBoons.Duos.spitefulStrength}>
 Your **Attacks** and **Specials** deal more damage while not empowered by **Boons**.
 
 - Boon-Less Bonus Damage: **+200%**
 
-</Box>
+</Boon>
 
 <Callout>
   **Required** _(one of the following from Hera):_

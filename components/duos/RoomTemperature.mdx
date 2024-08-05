@@ -1,13 +1,13 @@
 import { Callout } from "nextra/components";
-import { Box, BoonGrid } from "@/components";
+import { Boon, BoonGrid } from "@/components";
 import { DbBoons } from "@/db";
 
-<Box>
+<Boon boon={DbBoons.Duos.roomTemperature}>
 Your blast effects from **Hephaestus** clear **Freeze**, so you **Freeze** foes again right away.
 
 - Freeze Re-Apply Time: **0 Sec.**
 
-</Box>
+</Boon>
 
 <Callout>
   **Required** _(one of the following from Hephaestus):_

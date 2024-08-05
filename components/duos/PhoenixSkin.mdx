@@ -1,14 +1,14 @@
 import { Callout } from "nextra/components";
-import { Box, BoonGrid } from "@/components";
+import { Boon, BoonGrid } from "@/components";
 import { DbBoons } from "@/db";
 import { IconLife, IconMaxLife } from "@/components/icons";
 
-<Box>
+<Boon boon={DbBoons.Duos.phoenixSkin}>
 Give up **-100** <IconMaxLife />. If you do not take or deal damage for **3 Sec.**, rapidly restore <IconLife />.
 
 - Life Restoration: **3** _(every 1 Sec.)_
 
-</Box>
+</Boon>
 
 <Callout>
   **Required** _(one of the following from Apollo):_

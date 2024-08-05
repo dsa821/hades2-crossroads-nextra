@@ -1,13 +1,13 @@
 import { Callout } from "nextra/components";
-import { Box, BoonGrid } from "@/components";
+import { Boon, BoonGrid } from "@/components";
 import { DbBoons } from "@/db";
 
-<Box>
+<Boon boon={DbBoons.Duos.seismicHammer}>
 Your **Ω Cast** occasionally creates a blast that deals **500** damage in the area.
 
 - Blast Recharge Time: **6 Sec.**
 
-</Box>
+</Boon>
 
 <Callout>
   **Required** _(one of the following from Poseidon):_
